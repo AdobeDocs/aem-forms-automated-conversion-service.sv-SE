@@ -1,21 +1,21 @@
 ---
-title: Frågor och svar
-seo-title: Frågor och svar
+title: Vanliga frågor
+seo-title: Vanliga frågor
 description: Vanliga frågor eller vanliga frågor
 seo-description: vanliga frågor och svar om tjänsten Automatisk formulärkonvertering
 uuid: 0f6dc39c-99b7-49a4-8e9e-ecc4a35110c0
 topic-tags: introduction
 discoiquuid: e17c2d2c-8300-4467-aa01-57365697939f
 translation-type: tm+mt
-source-git-commit: 1e22587a832ca8d09f33141a9ba4e4b1748e0312
+source-git-commit: 022b86b77c4a524f320cbcbcd6bad4403ddf57d8
 
 ---
 
 
-# Frågor och svar{#frequently-asked-questions}
+# Vanliga frågor{#frequently-asked-questions}
 
 1. **Vilken version av AEM Forms stöder tjänsten Automated Forms Conversion?**
-   <p>Tjänsten Automated Forms Conversion stöder AEM 6.5 Forms. Det fungerar med både AEM Forms på OSGi- och AEM-formulär på JEE. Du behöver det senaste AEM Forms-tilläggspaketet ovanpå AEM-författarinstansen för att kunna använda tjänsten. Detaljerade instruktioner finns i <a href="configure-service.md">Konfigurera tjänsten Automated Forms Conversion</a> .</p> 
+   <p>Tjänsten Automated Forms Conversion stöder AEM 6.4 Forms och AEM 6.5 Forms. Det fungerar med både AEM Forms på OSGi- och AEM-formulär på JEE. Du behöver det senaste AEM Forms-tilläggspaketet ovanpå AEM-författarinstansen för att kunna använda tjänsten. Detaljerade instruktioner finns i <a href="configure-service.md">Konfigurera tjänsten Automated Forms Conversion</a> .</p> 
     <br>
 
 1. **Kan tjänsten installeras lokalt?**
@@ -26,7 +26,7 @@ source-git-commit: 1e22587a832ca8d09f33141a9ba4e4b1748e0312
    <p>Tjänsten kan konvertera icke-interaktiva PDF-formulär, XFA-baserade XDP- och PDF-formulär samt AcroForms till adaptiva formulär. Tjänsten stöder inte skannade eller ifyllda formulär. Andra begränsningar finns i artikeln <a href="known-issues.md">Kända fel</a> .<br /> </p> 
     <p>Vi lägger regelbundet till stöd för andra källtyper. Se till att avsnittet <a href="introduction.md">PDF-formulär</a> som stöds finns med på bevakningslistan för att få en regelbunden uppdatering av nya funktioner och funktioner.</p>
 
-   Tjänsten kan endast konvertera engelska formulär till anpassningsbara formulär. Du kan översätta de genererade anpassningsbara formulären till ett annat språk med hjälp av arbetsflödet för [AEM-översättning.](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)</br> </br>
+   Tjänsten kan endast konvertera formulär på engelska till anpassningsbara formulär. Du kan översätta de genererade anpassningsbara formulären till ett annat språk med [AEM:s översättningsflöde.](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)</br> </br>
 
 1. **Kan tjänsten producera en XDP istället för en adaptiv blankett?**
    <p>Tjänsten producerar inte XDP-utdata. Vi lägger regelbundet till funktioner och tjänster. Ha de språk och PDF-formulär som <a href="introduction.md">stöds</a> i din bevakningslista för att få en regelbunden uppdatering av nya funktioner.</p> <br>
@@ -97,11 +97,11 @@ Tjänsten stöder endast tomma eller ofyllda formulär. Ladda inte upp ifyllda f
 1. **Hur mycket tid sparar tjänsten jämfört med den manuella processen att planera, skapa resurser (teman, mallar), skapa och publicera ett anpassat formulär?**
    <p>Hur lång tid det tar beror på storleken och komplexiteten i indataformulären och antalet förfrågningar. Tjänsten har för avsikt att avsevärt minska tiden till värde genom att konvertera PDF-formulär till anpassningsbara formulär i mycket snabbare takt jämfört med den manuella processen att konvertera formulär. </p> <br />
 
-1. **Vad ska jag göra om jag råkar ut för ett fel relaterat till RSA-bibliotek?** Felmeddelandet liknar det som anges nedan: <br/>
+1. **Vad ska jag göra om jag råkar ut för ett fel relaterat till RSA-bibliotek? Felmeddelandet liknar det som anges nedan:** <br/>
    `*ERROR* [0:0:0:0:0:0:0:1 [1565757652491] POST /content/dam/formsanddocuments/demo004.affBatchProcessor.html HTTP/1.1] org.apache.sling.engine.impl.SlingRequestProcessorImpl service: Uncaught Throwable java.lang.NoClassDefFoundError: Could not initialize class com.rsa.cryptoj.o.dl at com.rsa.jsafe.JSAFE_SecureRandom.getInstance(Unknown Source) at com.adobe.internal.pdfm.util.Util.appendRandomNumberToPrefix(Util.java: 169) [com.adobe.aemfd.adobe-aemfd-assembler:6.0.34] at com.adobe.internal.pdfm.logging.JobLog.&amp;lt;init&amp;gt;(JobLog.java:126) [com.adobe.aemfd.adobe-aemfd-assembler:6.0.34]` <br>Ovannämnda fel inträffar när startdelegering inte har konfigurerats för RSA/BouncyCastle-bibliotek. Utför följande steg för att lösa problemet:
    <p> </p>
 
-   1. Stoppa AEM-instansen. Navigera till `[AEM installation directory]\crx-quickstart\conf\` mappen. Öppna filen sling.properties för redigering. Om du använder `[AEM installation directory]\crx-quickstart\bin\start.bat` för att starta en AEM-instans redigerar du sling.properties som finns på `[AEM_root]\crx-quickstart\`.
+   1. Stoppa AEM-instansen. Navigate to the `[AEM installation directory]\crx-quickstart\conf\` folder. Öppna filen sling.properties för redigering. Om du använder `[AEM installation directory]\crx-quickstart\bin\start.bat` för att starta en AEM-instans redigerar du sling.properties som finns på `[AEM_root]\crx-quickstart\`.
    1. Lägg till följande egenskaper i filen sling.properties:<br/> `sling.bootdelegation.class.com.rsa.jsafe.provider.JsafeJCE=com.rsa.*`<br />  `sling.bootdelegation.class.org.bouncycastle.jce.provider.BouncyCastleProvider=org.bouncycastle.*`<br /> `sling.bootdelegation.xerces=org.apache.xerces.*`
    1. Spara och stäng filen. <br/>
    1. Starta AEM-instansen.<br/>
