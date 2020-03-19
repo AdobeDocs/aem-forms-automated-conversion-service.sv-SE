@@ -5,12 +5,12 @@ uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
 topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
 translation-type: tm+mt
-source-git-commit: b879a0ddecd5370c754dfe9e1bf33121dd5ecc97
+source-git-commit: c552f4073ac88ca9016a746116a27a5898df7f7d
 
 ---
 
 
-# Integrera adaptiva formulär med databaser med hjälp av AEM-arbetsflöde {#submit-forms-to-database-using-forms-portal}
+# Integrera anpassningsbara formulär med databas med hjälp av AEM-arbetsflöde {#submit-forms-to-database-using-forms-portal}
 
 Med tjänsten Automated Forms Conversion kan du konvertera ett icke-interaktivt PDF-formulär, ett Acro-formulär eller ett XFA-baserat PDF-formulär till ett adaptivt formulär. När du startar konverteringsprocessen kan du generera ett anpassat formulär antingen med eller utan databindningar.
 
@@ -24,10 +24,11 @@ I den här artikeln beskrivs de stegvisa instruktionerna för att köra alla des
 
 ## Krav {#pre-requisites}
 
-* AEM 6.5-författarinstans med senaste AEM 6.5 Service Pack
+* Konfigurera en AEM 6.4- eller 6.5-författarinstans
+* Installera [senaste Service Pack](https://helpx.adobe.com/experience-manager/aem-releases-updates.html) för din AEM-instans
 * Senaste versionen av AEM Forms-tilläggspaketet
-* [Tjänsten Automatisk formulärkonvertering](configure-service.md)
-* En databas att integrera med. Databasen som används i exempelimplementeringen är MySQL 5.6.24. Du kan emellertid integrera det konverterade adaptiva formuläret med valfri databas.
+* Configure [Automated Forms Conversion service](configure-service.md)
+* Konfigurera en databas. Databasen som används i exempelimplementeringen är MySQL 5.6.24. Du kan emellertid integrera det konverterade adaptiva formuläret med valfri databas.
 
 ## Exempel på anpassningsbart formulär {#sample-adaptive-form}
 
@@ -154,9 +155,9 @@ När du har konfigurerat MYSQL som datakälla skapar du en formulärdatamodell g
 
 1. I AEM-författarinstansen går du till **[!UICONTROL Forms]** > **[!UICONTROL Data Integrations]**.
 
-1. Tryck **[!UICONTROL Create]** > **[!UICONTROL Form Data Model]**.
+1. Tryck på **[!UICONTROL Create]** > **[!UICONTROL Form Data Model]**.
 
-1. I **[!UICONTROL Create Form Data Model]** guiden anger du **workflow_submit** som namn på formulärdatamodellen. Tryck **[!UICONTROL Next]**.
+1. I **[!UICONTROL Create Form Data Model]** guiden anger du **workflow_submit** som namn på formulärdatamodellen. Tryck på **[!UICONTROL Next]**.
 
 1. Markera MYSQL-datakällan som du har konfigurerat i föregående avsnitt och tryck på **[!UICONTROL Create]**.
 
