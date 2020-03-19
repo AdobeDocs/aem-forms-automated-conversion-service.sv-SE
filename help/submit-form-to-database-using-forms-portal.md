@@ -5,7 +5,7 @@ uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
 topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
 translation-type: tm+mt
-source-git-commit: 040b0ddb489b5bdfd640a93b22cd7bc512a39aea
+source-git-commit: c552f4073ac88ca9016a746116a27a5898df7f7d
 
 ---
 
@@ -26,10 +26,11 @@ Exemplet, som behandlas i den här artikeln, är en referensimplementering av an
 
 ## Krav {#pre-requisites}
 
-* AEM 6.5-författarinstans med senaste AEM 6.5 Service Pack
+* Konfigurera en AEM 6.4- eller 6.5-författarinstans
+* Installera [senaste Service Pack](https://helpx.adobe.com/experience-manager/aem-releases-updates.html) för din AEM-instans
 * Senaste versionen av AEM Forms-tilläggspaketet
-* [Tjänsten Automatisk formulärkonvertering](configure-service.md)
-* En databas att integrera med. Databasen som används i exempelimplementeringen är MySQL 5.6.24. Du kan emellertid integrera Forms Portal med valfri databas.
+* Configure [Automated Forms Conversion service](configure-service.md)
+* Konfigurera en databas. Databasen som används i exempelimplementeringen är MySQL 5.6.24. Du kan emellertid integrera det konverterade adaptiva formuläret med valfri databas.
 
 ## Konfigurera anslutning mellan AEM-instans och databas {#set-up-connection-aem-instance-database}
 
@@ -269,7 +270,7 @@ Utför följande steg på alla författare- och publiceringsinstanser för att i
    [Hämta fil](assets/aem-fp-db-integration-sample-pkg-6.1.2.zip)
 
 1. Gå till AEM-pakethanteraren på *http://[host]:[port]/crx/packmgr/*.
-1. Click **[!UICONTROL Upload Package]**.
+1. Klicka på **[!UICONTROL Upload Package]**.
 1. Bläddra till paketet **aem-fp-db-integration-sample-pkg-6.1.2.zip** och klicka på **[!UICONTROL OK]**.
 1. Klicka **[!UICONTROL Install]** bredvid paketet för att installera paketet.
 
