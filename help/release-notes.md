@@ -2,7 +2,7 @@
 title: Vad är nytt? Versionsinformation - automatisk formulärkonverteringstjänst
 description: 'Läs om de senaste funktionerna och felen som har åtgärdats för tjänsten Automated Forms Conversion '
 translation-type: tm+mt
-source-git-commit: 6d658dbb181c09e42073e328e0232e40d4fb6b58
+source-git-commit: ec3a85ccd4c5d535ebc31c55702adab9aa92cf4e
 
 ---
 
@@ -24,7 +24,7 @@ Automated Forms Conversion Service får kontinuerliga förbättringar. Om du vil
 
 **Identifiera logiska avsnitt i ett formulär automatiskt**
 
-Som standard skapar tjänsten en separat panel på den översta nivån för varje sida i ett PDF-formulär. Nu kan du använda alternativet för **[!UICONTROL Auto-detect logical sections]** att släppa paneler på sidnivå (sidnummerbaserade paneler) och endast skapa logiska paneler.  Det klär också de fält som inte hör till något avsnitt med föregående logiska avsnitt. Det förenar även fält i ett logiskt avsnitt som sprids över två intilliggande sidor till ett enda logiskt avsnitt. Om t.ex. vissa fält i ett logiskt avsnitt finns i slutet av sida ett och vissa finns i början av sida två, klubbar alla sådana fält in i ett enda logiskt avsnitt.
+Som standard skapar tjänsten en separat panel på den översta nivån för varje sida i ett PDF-formulär. Nu kan du använda alternativet för **[!UICONTROL Auto-detect logical sections]** att släppa paneler på sidnivå (sidnummerbaserade paneler) och endast skapa logiska paneler.  Det klär också de fält som inte hör till något avsnitt med föregående logiska avsnitt och fält i ett logiskt avsnitt som sprids över två intilliggande sidor till ett enda logiskt avsnitt. Om t.ex. vissa fält i ett logiskt avsnitt finns i slutet av sida ett och vissa finns i början av sida två, klubbar alla sådana fält in i ett enda logiskt avsnitt.
 
 ### Förbättringar
 
