@@ -2,7 +2,7 @@
 title: Konfigurera den automatiserade konverteringstjänsten för formulär
 description: Gör din AEM-instans redo att använda tjänsten för automatisk formulärkonvertering
 translation-type: tm+mt
-source-git-commit: c552f4073ac88ca9016a746116a27a5898df7f7d
+source-git-commit: 5f27fcbf756350a03b7143af489f737e01a7f0e3
 
 ---
 
@@ -43,6 +43,7 @@ Innan du använder tjänsten förbereder du AEM-författarinstansen för att ans
 1. [Hämta och installera AEM 6.4 eller AEM 6.5](#aemquickstart)
 1. [Hämta och installera det senaste AEM Service Pack](#servicepack)
 1. [Hämta och installera det senaste AEM Forms-tilläggspaketet](#downloadaemformsaddon)
+1. [Hämta och installera det senaste kopplingspaketet](#installConnectorPackage)
 1. [Skapa egna teman och mallar](#referencepackage)
 
 ### Hämta och installera AEM 6.4 eller AEM 6.5 {#aemquickstart}
@@ -65,8 +66,20 @@ Hämta och installera det senaste AEM Service Pack-paketet. Mer information finn
 En AEM-instans innehåller grundläggande formulärfunktioner. Konverteringstjänsten kräver alla funktioner i AEM Forms. Hämta och installera tilläggspaketet AEM Forms för att utnyttja alla funktioner i AEM Forms. Paketet krävs för att konfigurera och köra konverteringstjänsten. Detaljerade anvisningar finns i [Installera och konfigurera datainhämtningsfunktioner.](https://helpx.adobe.com/experience-manager/6-5/forms/using/installing-configuring-aem-forms-osgi.html)
 
 >[!NOTE]
-> Om du redan använder tjänsten Automated Forms Conversion installerar du det senaste tillägget för AEM Forms för att fortsätta använda tjänsten. Kopplingspaketet kopplas till AEM Forms-tilläggspaketet. Det extra kopplingspaketet krävs inte längre.
 > Kontrollera att du utför de obligatoriska konfigurationerna efter installationen när du har installerat tilläggspaketet.
+
+
+### Hämta och installera anslutningsprogram {#installConnectorPackage}
+
+Du behöver kopplingspaketet 1.1.38 eller senare för att kunna använda de senaste funktionerna och förbättringarna som levererades i version AFC-2020.03.1. Du kan hämta kopplingspaketet från AEM Package Share.
+
+| Operativsystem | Länk för hämtning av kopplingspaket |
+| ------------- | ------------- |
+| Microsoft Windows | https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/servicepack/fd/AEM-Forms-6.5.4.0-WIN |
+| Linux | https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/servicepack/fd/AEM-Forms-6.5.4.0-WIN |
+
+>[!NOTE]
+> Om du redan har en installerad och igång miljö för automatisk formulärkonvertering kan du använda de senaste funktionerna i konverteringstjänsten genom att installera det senaste Service Pack-paketet, det senaste AEM Forms-tilläggspaketet och det senaste kopplingspaketet i den tidigare ordningen.
 
 
 ### Skapa egna teman och mallar {#referencepackage}
