@@ -1,5 +1,5 @@
 ---
-title: Rekommenderade arbetsflöden för förifyllnad och inskickning av datakällor för anpassningsbara formulär
+title: Rekommenderad ifyllning baserad på datakälla och skicka in arbetsflöden för anpassningsbara formulär
 seo-title: Alternativ för förifyllning och sändning av anpassade formulär
 description: Datakällsbaserade arbetsflöden för förifyllning och sändning av adaptiva formulär som genererats med automatisk Forms Conversion Service.
 seo-description: Datakällsbaserade arbetsflöden för förifyllning och sändning av adaptiva formulär som genererats med automatisk Forms Conversion Service.
@@ -9,12 +9,12 @@ topic-tags: forms
 discoiquuid: cad34fff-7f9f-4a27-8b5c-d0a523903eec
 privatebeta: true
 translation-type: tm+mt
-source-git-commit: f598871fd41c402f98d94d7b2174ab8b2e487075
+source-git-commit: caccb547a5741eb0e70ddf75630a661f8fe75cb3
 
 ---
 
 
-# Rekommenderade arbetsflöden för förifyllnad och inskickning av datakällor för anpassningsbara formulär {#recommended-data-source-btased-prefill-and-submit-workflows-for-adaptive-forms}
+# Rekommenderad ifyllning baserad på datakälla och skicka in arbetsflöden för anpassningsbara formulär {#recommended-data-source-btased-prefill-and-submit-workflows-for-adaptive-forms}
 
 Du kan använda någon av följande datakällor med adaptiva formulär som har konverterats med tjänsten Automated Forms Conversion:
 
@@ -91,9 +91,9 @@ I den här artikeln beskrivs de rekommenderade arbetsflödena för att förifyll
 
 Mer information om tjänsten Automated Forms Conversion finns i följande artiklar:
 
-* [Introduktion till tjänsten Automatiserad formulärkonvertering](introduction.md)
-* [Konfigurera tjänsten Automated Forms Conversion](configure-service.md)
-* [Konvertera tryckta formulär till anpassningsbara formulär](convert-existing-forms-to-adaptive-forms.md)
+* [Introduktion till den automatiserade konverteringstjänsten för formulär](introduction.md)
+* [Konfigurera den automatiserade konverteringstjänsten för formulär](configure-service.md)
+* [Konvertera utskriftsformulär till anpassningsbara formulär](convert-existing-forms-to-adaptive-forms.md)
 * [Granska och korrigera konverterade formulär](review-correct-ui-edited.md)
 
 Informationen i den här artikeln bygger på antagandet att alla som läser den har grundläggande kunskaper i adaptiva formulärkoncept.
@@ -268,17 +268,17 @@ Utför följande steg:
    1. I **[!UICONTROL Submission]** avsnittet väljer du **[!UICONTROL Submit using Form Data Model]** i **[!UICONTROL Submit Action]** listrutan.
 
    1. Markera datamodellen med hjälp av **[!UICONTROL Data Model to submit]** fältet.
-   1. Tryck på ![ikonen](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) Klar för att spara egenskaperna.
+   1. Tryck på ![ikonen](assets/save_icon.svg) Klar för att spara egenskaperna.
 
-1. Tryck på textrutan Sökandes namn och välj ![konfigurationsikonen](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/configure_icon.png) (Konfigurera).
+1. Tryck på textrutan Sökandes namn och välj ![konfigurationsikonen](assets/configure_icon.svg) (Konfigurera).
 
-   1. Välj **Sökande** > **Namn** i fältet Bindningsreferens och tryck på ![ikonen](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) Klart för att spara egenskaperna. Skapa på samma sätt en databindning för **adress**, **telefonnummer**, **e-post**, **yrke**, **årlig lön (i dollar)****och¥No. av beroende familjemedlemmars** fält med formulärdatamodellsenheter.
+   1. Välj **Sökande** > **Namn** i fältet Bindningsreferens och tryck på ![ikonen](assets/save_icon.svg) Klart för att spara egenskaperna. Skapa på samma sätt en databindning för **adress**, **telefonnummer**, **e-post**, **yrke**, **årlig lön (i dollar)****och¥No. av beroende familjemedlemmars** fält med formulärdatamodellsenheter.
    ![Bindningsreferenser](assets/bind_references.png)
 
 1. Tryck **[!UICONTROL Preview]** för att visa förfyllda värden för anpassade formulärfält.
 1. Ändra fältvärdena, om det behövs, och skicka det anpassade formuläret. Fältvärdena skickas till MySQL-databasen. Du kan uppdatera den **ansökande** tabellen i databasen för att visa de uppdaterade värdena i tabellen.
 
-**** Användningsfall: Du genererar ett adaptivt formulär utan databindning med hjälp av tjänsten Automated Forms Conversion och konfigurerar MYSQL-databasen som datakälla. Du binder de adaptiva formulärfälten med regelredigeraren till förifyllda fältvärden. Ändra fältvärdena, om det behövs, och skicka data till crx-databasen.
+**Användningsfall:** Du genererar ett adaptivt formulär utan databindning med hjälp av tjänsten Automated Forms Conversion och konfigurerar MYSQL-databasen som datakälla. Du binder de adaptiva formulärfälten med regelredigeraren till förifyllda fältvärden. Ändra fältvärdena, om det behövs, och skicka data till crx-databasen.
 
 Utför följande steg för att använda [regelredigeraren](https://helpx.adobe.com/experience-manager/6-5/forms/using/rule-editor.html) för att anropa formulärdatamodelltjänsten för att binda fält och förifyllda värden i ett anpassat formulär:
 
@@ -304,7 +304,7 @@ Utför följande steg för att använda [regelredigeraren](https://helpx.adobe.c
 
    1. Skapa en bindning för anpassade formulärfält med formulärdatamodellenheter med hjälp av avsnittet Utdata. Du kan t.ex. binda **[!UICONTROL Applicant Name]** adaptiva formulärfält med **namnentiteten** .
 
-   1. Tryck **[!UICONTROL Done]**. Tryck **[!UICONTROL Done]** igen på sidan Regelredigerare.
+   1. Tryck på **[!UICONTROL Done]**. Tryck **[!UICONTROL Done]** igen på sidan Regelredigerare.
    ![Regelredigerare som binder referenser](assets/rule_editor_bind_references.png)
 
 1. Tryck **[!UICONTROL Preview]** för att visa förfyllda värden för anpassade formulärfält.
@@ -319,7 +319,7 @@ Utför följande steg för att använda [regelredigeraren](https://helpx.adobe.c
 
 ### Använd JSON-schema som datakälla {#jsondatasource}
 
-**** Användningsfall: Du genererar ett anpassat formulär utan databindning med hjälp av tjänsten Automated Forms Conversion och konfigurerar JSON-schemat som datakälla. Du binder de adaptiva formulärfälten till JSON-schemat manuellt och använder alternativet **Förhandsgranska med data** för att förifylla fältvärden. Ändra fältvärdena, om det behövs, och skicka data till crx-databasen.
+**Användningsfall:** Du genererar ett anpassat formulär utan databindning med hjälp av tjänsten Automated Forms Conversion och konfigurerar JSON-schemat som datakälla. Du binder de adaptiva formulärfälten till JSON-schemat manuellt och använder alternativet **Förhandsgranska med data** för att förifylla fältvärden. Ändra fältvärdena, om det behövs, och skicka data till crx-databasen.
 
 Kontrollera att du har:
 
@@ -331,9 +331,9 @@ Utför följande steg:
 1. Välj det konverterade **exempelformuläret** för låneansökan i **utdatamappen** och tryck **[!UICONTROL Properties]**.
 1. Tryck på **[!UICONTROL Form Model]** fliken, välj **[!UICONTROL Schema]** i den **[!UICONTROL Select From]** nedrullningsbara listan och tryck på **[!UICONTROL Select Schema]** för att överföra det **demo.schema-JSON** -schema som har sparats i det lokala filsystemet. Tryck **[!UICONTROL Save & Close]** för att spara formuläret.
 1. Välj **exempelformuläret** för låneansökan och tryck **[!UICONTROL Edit]**.
-1. Tryck på textrutan Sökandes namn och välj ![konfigurationsikonen](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/configure_icon.png) (Konfigurera).
+1. Tryck på textrutan Sökandes namn och välj ![konfigurationsikonen](assets/configure_icon.svg) (Konfigurera).
 
-   Välj **Sökande** > **Namn** i fältet Bindningsreferens och tryck på ![ikonen](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) Klart för att spara egenskaperna. Skapa på samma sätt en databindning för **adress**, **telefonnummer**, **e-post**, **yrke**, **årlig lön (i dollar)****och¥No. av beroende familjemedlemmsfält** med JSON-schemaentiteter.
+   Välj **Sökande** > **Namn** i fältet Bindningsreferens och tryck på ![ikonen](assets/save_icon.svg) Klart för att spara egenskaperna. Skapa på samma sätt en databindning för **adress**, **telefonnummer**, **e-post**, **yrke**, **årlig lön (i dollar)****och¥No. av beroende familjemedlemmsfält** med JSON-schemaentiteter.
 
 1. Markera det konverterade **exempellåneansökningsformuläret** som finns i **[!UICONTROL output]** mappen igen och välj **[!UICONTROL Preview]** > **[!UICONTROL Preview with Data]**.</br>
 
@@ -347,7 +347,7 @@ Utför följande steg:
 
 ### Använd XSD-schema som datakälla {#xsddatasource}
 
-**** Användningsfall: Du genererar ett anpassat formulär utan databindning med hjälp av tjänsten Automated Forms Conversion och konfigurerar XSD-schemat som datakälla. Du binder de adaptiva formulärfälten till XSD-schemat manuellt och använder **Förhandsgranska med data** för att förifylla fältvärden. Ändra fältvärdena, om det behövs, och skicka data till crx-databasen.
+**Användningsfall:** Du genererar ett anpassat formulär utan databindning med hjälp av tjänsten Automated Forms Conversion och konfigurerar XSD-schemat som datakälla. Du binder de adaptiva formulärfälten till XSD-schemat manuellt och använder **Förhandsgranska med data** för att förifylla fältvärden. Ändra fältvärdena, om det behövs, och skicka data till crx-databasen.
 
 Kontrollera att du har:
 
@@ -359,8 +359,8 @@ Utför följande steg:
 1. Välj det konverterade **exempelformuläret** för låneansökan i **[!UICONTROL output]** mappen och tryck sedan på **[!UICONTROL Properties]**.
 1. Tryck på **[!UICONTROL Form Model]** fliken, välj **[!UICONTROL Schema]** i den **[!UICONTROL Select From]** nedrullningsbara listan och tryck på **[!UICONTROL Select Schema]** för att överföra **det XSD-schema som sparats i det lokala filsystemet** . Välj rotelementet för XSD-schemat och tryck på **[!UICONTROL Save & Close]** för att spara formuläret.
 1. Välj **exempelformuläret** för låneansökan och tryck **[!UICONTROL Edit]**.
-1. Tryck på textrutan Sökandes namn och välj ![konfigurationsikonen](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/configure_icon.png) (Konfigurera).
-I fältet Bindningsreferens väljer du **Sökande** > **Namn** och trycker på ![Klar-ikonen](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) för att spara egenskaperna. Skapa på samma sätt en databindning för **adress**, **telefonnummer**, **e-post**, **yrke**, **årlig lön (i dollar)****och¥No. av beroende familjemedlemmsfält** med XSD-schemaentiteter.
+1. Tryck på textrutan Sökandes namn och välj ![konfigurationsikonen](assets/configure_icon.svg) (Konfigurera).
+I fältet Bindningsreferens väljer du **Sökande** > **Namn** och trycker på ![Klar-ikonen](assets/save_icon.svg) för att spara egenskaperna. Skapa på samma sätt en databindning för **adress**, **telefonnummer**, **e-post**, **yrke**, **årlig lön (i dollar)****och¥No. av beroende familjemedlemmsfält** med XSD-schemaentiteter.
 
 1. Markera det konverterade **exempellåneansökningsformuläret** som finns i **utdatamappen** igen och välj **[!UICONTROL Preview]** > **[!UICONTROL Preview with Data]**.</br>
 
@@ -381,7 +381,7 @@ Använd tjänsten [Automated Forms Conversion för att konvertera](convert-exist
 
 ### Använd JSON-schema som datakälla {#jsonwithdatabinding}
 
-**** Användningsfall: Du genererar ett anpassat formulär med JSON-databindning med hjälp av tjänsten Automated Forms Conversion. Förifyllningstjänsten och funktionen för att skicka formulär fungerar smidigt. Du behöver inte utföra några konfigurationssteg.
+**Användningsfall:** Du genererar ett anpassat formulär med JSON-databindning med hjälp av tjänsten Automated Forms Conversion. Förifyllningstjänsten och funktionen för att skicka formulär fungerar smidigt. Du behöver inte utföra några konfigurationssteg.
 
 Kontrollera att du har [ett anpassningsbart formulär med databindning](#generate-adaptive-forms-with-json-binding)innan du kör användningsexemplet.
 
