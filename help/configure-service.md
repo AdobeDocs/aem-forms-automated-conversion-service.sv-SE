@@ -2,7 +2,7 @@
 title: Konfigurera den automatiserade konverteringstjänsten för formulär
 description: Gör din AEM-instans redo att använda tjänsten för automatisk formulärkonvertering
 translation-type: tm+mt
-source-git-commit: 5f27fcbf756350a03b7143af489f737e01a7f0e3
+source-git-commit: 01dfd20951314017d47713bfb1a2a5f2d563f434
 
 ---
 
@@ -79,7 +79,7 @@ Du behöver kopplingspaketet 1.1.38 eller senare för att kunna använda de sena
 | Linux | https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/servicepack/fd/AEM-Forms-6.5.4.0-WIN |
 
 >[!NOTE]
-> Om du redan har en installerad och igång miljö för automatisk formulärkonvertering kan du använda de senaste funktionerna i konverteringstjänsten genom att installera det senaste Service Pack-paketet, det senaste AEM Forms-tilläggspaketet och det senaste kopplingspaketet i den tidigare ordningen.
+> Om du redan har en installerad och igång miljö för automatisk formulärkonvertering kan du använda de senaste funktionerna i konverteringstjänsten genom att installera det senaste Service Pack-paketet, det senaste AEM Forms-tilläggspaketet och det senaste kopplingspaketet i den angivna ordningen.
 
 
 ### Skapa egna teman och mallar {#referencepackage}
