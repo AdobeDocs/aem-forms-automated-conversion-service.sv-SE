@@ -2,7 +2,7 @@
 title: Vad är nytt? Versionsinformation - automatisk formulärkonverteringstjänst
 description: 'Läs om de senaste funktionerna och felen som har åtgärdats för tjänsten Automated Forms Conversion '
 translation-type: tm+mt
-source-git-commit: 01dfd20951314017d47713bfb1a2a5f2d563f434
+source-git-commit: 6d658dbb181c09e42073e328e0232e40d4fb6b58
 
 ---
 
@@ -18,15 +18,13 @@ Automated Forms Conversion Service får kontinuerliga förbättringar. Om du vil
 * Specialinstruktioner
 * Framtida planer för ändringar
 
-Den här sidan uppdateras varje månad, så gå tillbaka dit regelbundet.
-
 ## 20 mars 2020 (AFC-2020.03.1)
 
 ### Nyheter
 
 **Identifiera logiska avsnitt i ett formulär automatiskt**
 
-Som standard skapar tjänsten en separat panel på den översta nivån för varje sida i ett PDF-indataformulär. Nu kan du välja alternativet att ta bort **[!UICONTROL Auto-detect logical sections]** begreppet att skapa en separat panel på den översta nivån för varje PDF-sida och automatiskt identifiera logiska avsnitt. Tjänstklubbarna kopplade fält i ett formulär till en logisk sektion. Alla fält som är relaterade till faktureringsadressen är t.ex. grupperade i ett avsnitt och alla fält som är kopplade till leveransadressen är grupperade i ett annat avsnitt. Tjänsten skapar också en separat panel på den översta nivån för varje automatiskt identifierat logiskt avsnitt.
+Som standard skapar tjänsten en separat panel på den översta nivån för varje sida i ett PDF-formulär. Nu kan du använda alternativet för **[!UICONTROL Auto-detect logical sections]** att släppa paneler på sidnivå (sidnummerbaserade paneler) och endast skapa logiska paneler.  Det klär också de fält som inte hör till något avsnitt med föregående logiska avsnitt. Det förenar även fält i ett logiskt avsnitt som sprids över två intilliggande sidor till ett enda logiskt avsnitt. Om t.ex. vissa fält i ett logiskt avsnitt finns i slutet av sida ett och vissa finns i början av sida två, klubbar alla sådana fält in i ett enda logiskt avsnitt.
 
 ### Förbättringar
 
