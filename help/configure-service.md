@@ -2,7 +2,7 @@
 title: Konfigurera den automatiserade konverteringstjänsten för formulär
 description: Gör din AEM-instans redo att använda tjänsten för automatisk formulärkonvertering
 translation-type: tm+mt
-source-git-commit: 01dfd20951314017d47713bfb1a2a5f2d563f434
+source-git-commit: e01334d9a22ab95749e9b9b459da8886ae1ccd78
 
 ---
 
@@ -71,12 +71,7 @@ En AEM-instans innehåller grundläggande formulärfunktioner. Konverteringstjä
 
 ### Hämta och installera anslutningsprogram {#installConnectorPackage}
 
-Du behöver kopplingspaketet 1.1.38 eller senare för att kunna använda de senaste funktionerna och förbättringarna som levererades i version AFC-2020.03.1. Du kan hämta kopplingspaketet från AEM Package Share.
-
-| Operativsystem | Länk för hämtning av kopplingspaket |
-| ------------- | ------------- |
-| Microsoft Windows | https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/servicepack/fd/AEM-Forms-6.5.4.0-WIN |
-| Linux | https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/servicepack/fd/AEM-Forms-6.5.4.0-WIN |
+Du behöver kopplingspaketet 1.1.38 eller senare för att kunna använda de senaste funktionerna och förbättringarna som levererades i version AFC-2020.03.1. Du kan [hämta kopplingspaketet från AEM Package Share](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/featurepack/AFCS-Connector-2020.03.1).
 
 >[!NOTE]
 > Om du redan har en installerad och igång miljö för automatisk formulärkonvertering kan du använda de senaste funktionerna i konverteringstjänsten genom att installera det senaste Service Pack-paketet, det senaste AEM Forms-tilläggspaketet och det senaste kopplingspaketet i den angivna ordningen.
