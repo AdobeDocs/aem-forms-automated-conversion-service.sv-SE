@@ -8,12 +8,12 @@ contentOwner: khsingh
 topic-tags: forms
 discoiquuid: 9358219c-6079-4552-92b9-b427a23811af
 translation-type: tm+mt
-source-git-commit: bbf39e3bae55654f92a50f52a22cee5da938236d
+source-git-commit: bcd55fa59f37b71b95b7cbfd80fcda368eaba408
 
 ---
 
 
-#  Konvertera PDF-formulär till anpassningsbara formulär {#convert-print-forms-to-adaptive-forms}
+# Konvertera PDF-formulär till anpassningsbara formulär {#convert-print-forms-to-adaptive-forms}
 
 Tjänsten AEM Forms Automated Forms Conversion, som drivs av Adobe Sensei, konverterar automatiskt dina PDF-formulär till enhetsvänliga och responsiva anpassningsbara formulär. Vare sig du använder icke-interaktiva PDF-formulär, Acro-formulär eller XFA-baserade PDF-formulär kan tjänsten Automated Forms Conversion enkelt konvertera dessa formulär till anpassningsbara formulär. Mer information om funktioner, konverteringsarbetsflöde och introduktionsinformation finns i [tjänsten Automated Forms Conversion](introduction.md) .
 
@@ -21,13 +21,13 @@ Tjänsten AEM Forms Automated Forms Conversion, som drivs av Adobe Sensei, konve
 
 * [**Konfigurera konverteringstjänsten **](configure-service.md)
 
-* **[Förbered](https://helpx.adobe.com/experience-manager/6-5/forms/using/template-editor.html)mallarna** som ska användas i konverterade formulär: Om du använder en mall kan du använda en enhetlig profilering för alla anpassade formulär. Tjänsten Automated Forms Conversion extraherar och använder inte heller sidhuvud och sidfot i PDF-källdokument. Du kan använda adaptiva formulärmallar för att ange sidhuvud och sidfot. Sidhuvud och sidfot som anges i mallen används i anpassningsbara formulär under konverteringen.
+* **Förbered[mallarna](https://helpx.adobe.com/experience-manager/6-5/forms/using/template-editor.html)som ska användas i konverterade formulär:** Om du använder en mall kan du använda en enhetlig profilering för alla anpassade formulär. Tjänsten Automated Forms Conversion extraherar och använder inte heller sidhuvud och sidfot i PDF-källdokument. Du kan använda adaptiva formulärmallar för att ange sidhuvud och sidfot. Sidhuvud och sidfot som anges i mallen används i anpassningsbara formulär under konverteringen.
 
-* **[Förbered](https://helpx.adobe.com/experience-manager/6-5/forms/using/themes.html)teman** som ska användas i konverterade formulär: Om du använder ett tema kan du använda en konsekvent stil på alla anpassade former i din organisation.
+* **Förbered[teman](https://helpx.adobe.com/experience-manager/6-5/forms/using/themes.html)som ska användas i konverterade formulär:** Om du använder ett tema kan du använda en konsekvent stil på alla anpassade former i din organisation.
 
 ## Starta konverteringsprocessen {#start-the-conversion-process}
 
-När du har anslutit din AEM-instans till AEM Forms Conversion Service kan du konvertera dina PDF-formulär till anpassningsbara formulär. Följ de här stegen för att konvertera formulären:
+När du har anslutit din AEM-instans till AEM Forms Conversion Service kan du konvertera PDF-formulären till anpassningsbara formulär. Följ de här stegen för att konvertera formulären:
 
 * [Överföra PDF-formulär till din AEM Forms-server](convert-existing-forms-to-adaptive-forms.md#upload-pdf-forms-to-your-aem-forms-server)
 * [Kör konverteringen](convert-existing-forms-to-adaptive-forms.md#run-the-conversion)
@@ -35,24 +35,24 @@ När du har anslutit din AEM-instans till AEM Forms Conversion Service kan du ko
 
 ### Överföra PDF-formulär till din AEM Forms-server {#upload-pdf-forms-to-your-aem-forms-server}
 
-Konverteringstjänsten konverterar PDF-formulär som finns i AEM Forms-instansen till adaptiva formulär. Du kan överföra alla PDF-formulär samtidigt eller i faser efter behov. Innan du överför formulären bör du tänka på följande:
+Konverteringstjänsten konverterar PDF-formulär som finns i AEM Forms-instansen till adaptiva formulär. Du kan överföra alla PDF-formulär samtidigt eller i faser efter behov. Tänk på följande innan du laddar upp formulären:
 
 * Behåll antalet formulär i en mapp under 15 och behåll det totala antalet sidor i en mapp under 50.
 * Behåll mappstorleken mindre än 10 MB. Behåll inte formulär i en undermapp.
 * Behåll antalet sidor i ett formulär under 15.
 * Överför inte skyddade formulär. Tjänsten konverterar inte lösenordsskyddade och skyddade formulär.
 * Ladda inte upp källformulär med blanksteg i filnamnet. Ta bort utrymmet från filnamnet innan du överför formulären.
-* Överför inte [PDF-portföljer](https://helpx.adobe.com/acrobat/using/overview-pdf-portfolios.html). Tjänsten konverterar inte en PDF-portfölj till adaptiva formulär.
+* Ladda inte upp [PDF-portfolios](https://helpx.adobe.com/acrobat/using/overview-pdf-portfolios.html). Tjänsten konverterar inte en PDF-portfolio till anpassningsbara formulär.
 * Läs avsnitten [Kända fel](known-issues.md) och [Bästa praxis och överväganden](styles-and-pattern-considerations-and-best-practices.md) och gör föreslagna ändringar i formulär.
 
 Utför följande steg för att överföra formulären som ska konverteras till en mapp på din AEM Forms-instans:
 
 1. Logga in på AEM Forms-instansen.
 
-1. Tryck **[!UICONTROL Adobe Experience Manager]** > ![](assets/adobeexperiencemanager.png) **[!UICONTROL Navigation]** > ![](assets/compass.png) > **[!UICONTROL Forms]** **[!UICONTROL Forms & Documents]**.
-1. Tryck **[!UICONTROL Create]**> **[!UICONTROL Folder]**. Ange **mappens namn** och **namn** . Tryck **[!UICONTROL Create]**. En mapp skapas.
+1. Tap **[!UICONTROL Adobe Experience Manager]** ![](assets/adobeexperiencemanager.png) > **[!UICONTROL Navigation]** ![](assets/compass.png) > **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**.
+1. Tryck på **[!UICONTROL Create]**> **[!UICONTROL Folder]**. Ange **mappens namn** och **namn** . Tryck på **[!UICONTROL Create]**. En mapp skapas.
 1. Tryck för att öppna den nyligen skapade mappen.
-1. Tryck **[!UICONTROL Create]**> **[!UICONTROL File Upload]**. Markera formulären som ska överföras, klicka **[!UICONTROL Open]** och klicka på **[!UICONTROL Upload]**. Formulären överförs.
+1. Tryck på **[!UICONTROL Create]**> **[!UICONTROL File Upload]**. Markera formulären som ska överföras, klicka **[!UICONTROL Open]** och klicka på **[!UICONTROL Upload]**. Formulären överförs.
 
 ### Kör konverteringen {#run-the-conversion}
 
@@ -91,10 +91,14 @@ Om du väljer det här alternativet genererar konverteringstjänsten ett adaptiv
 
 
    * Välj alternativet **[!UICONTROL Auto-detect multi-column layout of input forms]** om du vill behålla layouten för källformuläret för stora skärmar som stationära och bärbara datorer. Alternativet är användbart när du vill bevara layouten med flera kolumner för källformulär. Om en PDF-källfil till exempel har en layout med två kolumner, genererar tjänsten ett anpassat utdataformulär med en layout med två kolumner för stora skärmar och en layout med en kolumn för små skärmar som mobiltelefoner. Funktionen har några kända problem med datakällans schemastruktur. Mer information finns i artikeln [Kända fel](known-issues.md) .
+   * Som standard skapar tjänsten en separat panel på den översta nivån för varje sida i ett PDF-formulär. Nu kan du använda alternativet för **[!UICONTROL Auto-detect logical sections]** att släppa paneler på sidnivå (sidnummerbaserade paneler) och endast skapa logiska paneler. Det klär också de fält som inte hör till något avsnitt med föregående logiska avsnitt och fält i ett logiskt avsnitt som sprids över två intilliggande sidor till ett enda logiskt avsnitt. Om t.ex. vissa fält i ett logiskt avsnitt finns i slutet av sida ett och vissa finns i början av sida två, klubbar alla sådana fält in i ett enda logiskt avsnitt.
+
+      >[!NOTE]
+      > Du behöver kopplingspaketet 1.1.38 eller senare för att kunna använda **[!UICONTROL Auto-detect logical sections]** funktionen.
 
 
 
-1. Tryck **[!UICONTROL Start Conversion]**. Konverteringen har startats. Konverteringsförloppet visas i mappen eller formuläret tills konverteringen pågår. Meddelandet ersätts av ett annat statusmeddelande (Konverterad, Delvis konverterad eller Konvertering misslyckades) när konverteringen är klar. När konverteringen är klar skickas även ett e-postmeddelande med status på den konfigurerade e-postadressen:
+1. Tryck på **[!UICONTROL Start Conversion]**. Konverteringen har startats. Konverteringsförloppet visas i mappen eller formuläret tills konverteringen pågår. Meddelandet ersätts av ett annat statusmeddelande (Konverterad, Delvis konverterad eller Konvertering misslyckades) när konverteringen är klar. När konverteringen är klar skickas även ett e-postmeddelande med status på den konfigurerade e-postadressen:
 
    * Vid en lyckad konvertering hämtas det konverterade adaptiva formuläret och det relaterade schemat till den sökväg som anges på fliken **[!UICONTROL Basic]** i konverteringsdialogrutan. Formulärfragment och motsvarande schema hämtas bara om alternativet Extrahera fragment är markerat innan konverteringen startas.
    * Vid en misslyckad konvertering visas **[!UICONTROL Conversion Failed]** ett meddelande om alla inmatningsformulär inte kan konverteras eller om **[!UICONTROL Partially Failed]** meddelandet visas när endast ett fåtal av alla inmatningsformulären inte kan konverteras. Ett statusmeddelande skickas till den [konfigurerade e-postadressen](configure-service.md#configureemailnotification) och ett fel loggas till filen error.log.
@@ -127,6 +131,6 @@ Om du väljer det här alternativet genererar konverteringstjänsten ett adaptiv
    >
    >Om konverteringsprocessen tar mer än 60 minuter och PDF-formuläret fortfarande inte konverteras till ett anpassat formulär skapar du en ny mapp på AEM Forms-instansen, överför PDF-formuläret till den nya mappen och startar om konverteringen.
 
-## Granska och korrigera konverterade formulär {#review-and-correct-the-converted-forms}
+## Review and correct the converted forms {#review-and-correct-the-converted-forms}
 
 Real world forms has complex data capture requirements. När den automatiska konverteringen är klar kan man granska konverteringskvaliteten på blanketten och göra nödvändiga uppdateringar i den. I AEM Forms finns en [recension och en korrekt](review-correct-ui-edited.md) redigerare som gör nödvändiga ändringar. Det gör att du kan förbättra den automatiska identifieringen av formulärfält och konvertera identifierade fält från en typ till en annan. Du kan till exempel identifiera layout med två kolumner i ett formulär och ändra ett fält som automatiskt identifieras som en alternativknapp till flera alternativfält.
