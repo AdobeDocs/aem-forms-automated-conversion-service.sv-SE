@@ -2,7 +2,7 @@
 title: Konfigurera den automatiserade konverteringstjänsten för formulär
 description: Gör din AEM-instans redo att använda tjänsten för automatisk formulärkonvertering
 translation-type: tm+mt
-source-git-commit: e01334d9a22ab95749e9b9b459da8886ae1ccd78
+source-git-commit: 68824c2f398d00141d67996121f7b758af16d2e4
 
 ---
 
@@ -43,7 +43,7 @@ Innan du använder tjänsten förbereder du AEM-författarinstansen för att ans
 1. [Hämta och installera AEM 6.4 eller AEM 6.5](#aemquickstart)
 1. [Hämta och installera det senaste AEM Service Pack](#servicepack)
 1. [Hämta och installera det senaste AEM Forms-tilläggspaketet](#downloadaemformsaddon)
-1. [Hämta och installera det senaste kopplingspaketet](#installConnectorPackage)
+1. (valfritt) [Hämta och installera det senaste kopplingspaketet](#installConnectorPackage)
 1. [Skapa egna teman och mallar](#referencepackage)
 
 ### Hämta och installera AEM 6.4 eller AEM 6.5 {#aemquickstart}
@@ -69,9 +69,9 @@ En AEM-instans innehåller grundläggande formulärfunktioner. Konverteringstjä
 > Kontrollera att du utför de obligatoriska konfigurationerna efter installationen när du har installerat tilläggspaketet.
 
 
-### Hämta och installera anslutningsprogram {#installConnectorPackage}
+### (Valfritt) Hämta och installera anslutningsprogram {#installConnectorPackage}
 
-Du behöver kopplingspaketet 1.1.38 eller senare för att kunna använda de senaste funktionerna och förbättringarna som levererades i version AFC-2020.03.1. Du kan [hämta kopplingspaketet från AEM Package Share](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/featurepack/AFCS-Connector-2020.03.1).
+Installera kopplingspaketet 1.1.38 eller senare om du vill använda de funktioner och förbättringar för [automatisk identifiering av logiska avsnitt](convert-existing-forms-to-adaptive-forms.md#run-the-conversion) som levererades i version AFC-2020.03.1. Du kan [hämta kopplingspaketet från AEM Package Share](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/featurepack/AFCS-Connector-2020.03.1).
 
 >[!NOTE]
 > Om du redan har en installerad och igång miljö för automatisk formulärkonvertering kan du använda de senaste funktionerna i konverteringstjänsten genom att installera det senaste Service Pack-paketet, det senaste AEM Forms-tilläggspaketet och det senaste kopplingspaketet i den angivna ordningen.
