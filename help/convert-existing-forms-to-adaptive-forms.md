@@ -8,7 +8,7 @@ contentOwner: khsingh
 topic-tags: forms
 discoiquuid: 9358219c-6079-4552-92b9-b427a23811af
 translation-type: tm+mt
-source-git-commit: bcd55fa59f37b71b95b7cbfd80fcda368eaba408
+source-git-commit: c0ca850a0a1e82e34364766601011d6367b218ac
 
 ---
 
@@ -21,7 +21,7 @@ Tjänsten AEM Forms Automated Forms Conversion, som drivs av Adobe Sensei, konve
 
 * [**Konfigurera konverteringstjänsten **](configure-service.md)
 
-* **Förbered[mallarna](https://helpx.adobe.com/experience-manager/6-5/forms/using/template-editor.html)som ska användas i konverterade formulär:** Om du använder en mall kan du använda en enhetlig profilering för alla anpassade formulär. Tjänsten Automated Forms Conversion extraherar och använder inte heller sidhuvud och sidfot i PDF-källdokument. Du kan använda adaptiva formulärmallar för att ange sidhuvud och sidfot. Sidhuvud och sidfot som anges i mallen används i anpassningsbara formulär under konverteringen.
+* **Förbered[mallarna](https://helpx.adobe.com/experience-manager/6-5/forms/using/template-editor.html)som ska användas i konverterade formulär:** Om du använder en mall kan du använda en enhetlig profilering för alla anpassade formulär. Tjänsten Automated Forms Conversion extraherar och använder inte heller sidhuvud och sidfot i PDF-källdokument. Du kan använda adaptiva formulärmallar för att ange sidhuvud och sidfot. Sidhuvud och sidfot som anges i mallen används i det adaptiva formuläret under konverteringen.
 
 * **Förbered[teman](https://helpx.adobe.com/experience-manager/6-5/forms/using/themes.html)som ska användas i konverterade formulär:** Om du använder ett tema kan du använda en konsekvent stil på alla anpassade former i din organisation.
 
@@ -42,7 +42,7 @@ Konverteringstjänsten konverterar PDF-formulär som finns i AEM Forms-instansen
 * Behåll antalet sidor i ett formulär under 15.
 * Överför inte skyddade formulär. Tjänsten konverterar inte lösenordsskyddade och skyddade formulär.
 * Ladda inte upp källformulär med blanksteg i filnamnet. Ta bort utrymmet från filnamnet innan du överför formulären.
-* Ladda inte upp [PDF-portfolios](https://helpx.adobe.com/acrobat/using/overview-pdf-portfolios.html). Tjänsten konverterar inte en PDF-portfolio till anpassningsbara formulär.
+* Ladda inte upp [PDF-portfolios](https://helpx.adobe.com/acrobat/using/overview-pdf-portfolios.html). Tjänsten konverterar inte en PDF-portfölj till ett anpassningsbart formulär.
 * Läs avsnitten [Kända fel](known-issues.md) och [Bästa praxis och överväganden](styles-and-pattern-considerations-and-best-practices.md) och gör föreslagna ändringar i formulär.
 
 Utför följande steg för att överföra formulären som ska konverteras till en mapp på din AEM Forms-instans:
@@ -68,7 +68,7 @@ När du har överfört formulären och konfigurerat tjänsten utför du följand
    * **[!UICONTROL Select a cloud configuration]**. När du väljer en konfiguration har standardmallen och -temat redan angetts. Om det behövs kan du ange en annan mall eller ett tema.
    * Ange en plats där du vill spara genererade adaptiva formulär och motsvarande schema. Du kan använda standardsökvägar eller ange anpassade sökvägar.
    * Använd alternativet **Generera adaptiva formulär utan bindningar** till datamodell för att välja om du vill generera ett adaptivt formulär med eller utan bindningar till datamodellen.
-Om du inte väljer det här alternativet associerar konverteringstjänsten automatiskt adaptiva formulär med ett JSON-schema och skapar en databindning mellan fälten som är tillgängliga i det adaptiva formuläret och JSON-schemat. I **[!UICONTROL Save generated data model schema at]** fältet visas standardplatsen där det genererade JSON-schemat ska sparas. Du kan också anpassa platsen för att spara det genererade schemat.
+Om du inte väljer det här alternativet associerar konverteringstjänsten automatiskt de adaptiva formulären med ett JSON-schema och skapar en databindning mellan fälten som är tillgängliga i det adaptiva formuläret och JSON-schemat. I **[!UICONTROL Save generated data model schema at]** fältet visas standardplatsen där det genererade JSON-schemat ska sparas. Du kan också anpassa platsen för att spara det genererade schemat.
 Om du väljer det här alternativet genererar konverteringstjänsten ett adaptivt formulär utan bindningar till datamodellen. När konverteringen är klar kan du koppla ett adaptivt formulär till en formulärdatamodell, ett XML-schema eller ett JSON-schema. Mer information finns i [Skapa ett anpassat formulär](https://helpx.adobe.com/experience-manager/6-5/forms/using/creating-adaptive-form.html).
    <!--
    Comment Type: draft
@@ -91,7 +91,7 @@ Om du väljer det här alternativet genererar konverteringstjänsten ett adaptiv
 
 
    * Välj alternativet **[!UICONTROL Auto-detect multi-column layout of input forms]** om du vill behålla layouten för källformuläret för stora skärmar som stationära och bärbara datorer. Alternativet är användbart när du vill bevara layouten med flera kolumner för källformulär. Om en PDF-källfil till exempel har en layout med två kolumner, genererar tjänsten ett anpassat utdataformulär med en layout med två kolumner för stora skärmar och en layout med en kolumn för små skärmar som mobiltelefoner. Funktionen har några kända problem med datakällans schemastruktur. Mer information finns i artikeln [Kända fel](known-issues.md) .
-   * Som standard skapar tjänsten en separat panel på den översta nivån för varje sida i ett PDF-formulär. Nu kan du använda alternativet för **[!UICONTROL Auto-detect logical sections]** att släppa paneler på sidnivå (sidnummerbaserade paneler) och endast skapa logiska paneler. Det klär också de fält som inte hör till något avsnitt med föregående logiska avsnitt och fält i ett logiskt avsnitt som sprids över två intilliggande sidor till ett enda logiskt avsnitt. Om t.ex. vissa fält i ett logiskt avsnitt finns i slutet av sida ett och vissa finns i början av sida två, klubbar alla sådana fält in i ett enda logiskt avsnitt.
+   * Som standard skapar tjänsten en separat panel på den översta nivån för varje sida i ett PDF-formulär. Nu kan du använda **[!UICONTROL Auto-detect logical sections]** alternativet för att inte skapa sidnivåpaneler (sidnummerbaserade paneler) och bara skapa logiska paneler. Det klär också de fält som inte hör till något avsnitt med föregående logiska avsnitt och fält i ett logiskt avsnitt som sprids över två intilliggande sidor till ett enda logiskt avsnitt. Om t.ex. vissa fält i ett logiskt avsnitt finns i slutet av sida ett och vissa finns i början av sida två, klubbar alla sådana fält in i ett enda logiskt avsnitt.
 
       >[!NOTE]
       > Du behöver kopplingspaketet 1.1.38 eller senare för att kunna använda **[!UICONTROL Auto-detect logical sections]** funktionen.
@@ -129,7 +129,7 @@ Om du väljer det här alternativet genererar konverteringstjänsten ett adaptiv
 
    >[!NOTE]
    >
-   >Om konverteringsprocessen tar mer än 60 minuter och PDF-formuläret fortfarande inte konverteras till ett anpassat formulär skapar du en ny mapp på AEM Forms-instansen, överför PDF-formuläret till den nya mappen och startar om konverteringen.
+   >Om konverteringsprocessen tar mer än 60 minuter och PDF-formuläret fortfarande inte konverteras till ett anpassat formulär skapar du en mapp på AEM Forms-instansen, överför PDF-formuläret till den nya mappen och startar om konverteringen.
 
 ## Review and correct the converted forms {#review-and-correct-the-converted-forms}
 
