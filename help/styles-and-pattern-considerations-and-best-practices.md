@@ -1,13 +1,13 @@
 ---
-title: 'Bästa praxis och överväganden '
-seo-title: 'Bästa praxis och överväganden '
+title: 'Rekommenderad praxis och saker att tänka på '
+seo-title: 'Rekommenderad praxis och saker att tänka på '
 description: Metodtips och överväganden för tjänsten Automatisk formulärkonvertering
 seo-description: Lista över format och mönster i PDF-källformulär som tjänsten Automated Forms Conversion har svårt att identifiera
 uuid: e24773a2-be14-4184-a168-48aa976d459a
 topic-tags: introduction
 discoiquuid: 79f2026e-73a5-4bd1-b041-d1399b4ad23e
 translation-type: tm+mt
-source-git-commit: 0f413a8bc0bb444b6faaddaf32f84f36e38438a5
+source-git-commit: 8e373b978535cd6616072cf50c223bd7f4f7c35a
 
 ---
 
@@ -18,14 +18,14 @@ Det här dokumentet innehåller riktlinjer och rekommendationer som formuläradm
 
 ## Bästa praxis
 
-Konverteringstjänsten konverterar PDF-formulär som finns i AEM Forms-instansen till adaptiva formulär. Du kan överföra alla PDF-formulär samtidigt eller i faser efter behov. Innan du överför formulären bör du tänka på följande:
+Konverteringstjänsten konverterar PDF-formulär som finns i AEM Forms-instansen till adaptiva formulär. Du kan överföra alla PDF-formulär samtidigt eller i faser efter behov. Tänk på följande innan du laddar upp formulären:
 
 * Behåll antalet formulär i en mapp under 15 och behåll det totala antalet sidor i en mapp under 50.
 * Behåll mappstorleken mindre än 10 MB. Behåll inte formulär i en undermapp.
 * Behåll antalet sidor i ett formulär under 15.
 * Överför inte skyddade formulär. Tjänsten konverterar inte lösenordsskyddade och skyddade formulär.
-* Överför inte [PDF-portföljer](https://helpx.adobe.com/acrobat/using/overview-pdf-portfolios.html). Tjänsten konverterar inte en PDF-portfölj till adaptiva formulär.
-* Överför inte skannade, färgade, icke-engelska och ifyllda formulär. Sådana formulär stöds inte.
+* Do not upload the [PDF Portfolios](https://helpx.adobe.com/acrobat/using/overview-pdf-portfolios.html). Tjänsten konverterar inte en PDF-portfolio till anpassningsbara formulär.
+* Ladda inte upp inskannade formulär, formulär med färg, formulär som inte är på engelska eller ifyllda formulär. Sådana formulär stöds inte.
 * Ladda inte upp källformulär med blanksteg i filnamnet. Ta bort utrymmet från filnamnet innan du överför formulären.
 * Använd adaptiva formulärmallar för att ange sidhuvud och sidfot för det anpassningsbara utdataformuläret. Tjänsten ignorerar sidhuvud-fot i PDF-källdokument och använder sidhuvud-fot som anges i den adaptiva formulärmallen.
 
@@ -39,7 +39,7 @@ Tjänsten börjar identifiera och tilldela rätt fält eller paneler till dessa 
 
 ### Allmänna mönster {#general}
 
-| Mönster | Upplösning |
+| Mönster | Exempel |
 |--- |--- |
 | **Mönstertjänsten**<br> konverterar inte färgade PDF-formulär till anpassningsbara formulär. <br><br>**Upplösning **Använd PDF-formulär i svartvitt eller gråskala<br>. | ![Färgat formulär](assets/best-practice-coloured-forms.png) |
 | **Pattern** <br>Service konverterar inte ifyllda PDF-formulär till anpassningsbara formulär. <br><br>**Upplösning **<br>Använd tomma adaptiva formulär. | ![Ifyllt formulär](assets/best-practice-filled-forms.png) |
