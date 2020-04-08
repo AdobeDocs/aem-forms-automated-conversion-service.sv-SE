@@ -7,7 +7,7 @@ uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
 topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
 translation-type: tm+mt
-source-git-commit: 5d4dba8fea7439b991a7a15872e6f4ed48156ac9
+source-git-commit: ffab4d916cbd545078f4b72b8de5c9968f23b0da
 
 ---
 
@@ -26,7 +26,7 @@ Tjänsten Automated Forms Conversion har en standardmetamodell. Det är ett JSON
 
 http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/global.schema.json.
 
-Schemat för metamodellen härleds från schemaentiteter på https://schema.org/docs/schemas.html. Den har Person, PostalAddress, LocalBusiness och fler entiteter enligt definitionen på https://schema.org. Alla entiteter i metamodellen följer JSON-schemaobjekttypen. Följande kod representerar en exempelmetamodellstruktur:
+Schemat för metamodellen härleds från schemaentiteter på https://schema.org/docs/schemas.html. Den har Person, PostalAddress, LocalBusiness och fler enheter enligt definitionen på https://schema.org. Alla entiteter i metamodellen följer JSON-schemaobjekttypen. Följande kod representerar en exempelmetamodellstruktur:
 
 ```
    "Entity": {
@@ -50,7 +50,7 @@ Följ de här stegen för att hämta standardmetamodellen till det lokala filsys
 
 1. Logga in på din AEM Forms-instans.
 1. Navigera till **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]** **>** **[!UICONTROL Meta Model]** .
-1. Markera **[!UICONTROL global.schema.json]** filen och tryck på **[!UICONTROL Download]**. En dialogruta för hämtning visas. Välj **[!UICONTROL Download asset(s) as binary files]** alternativet. Tryck **[!UICONTROL Download]**. Ett arkiv laddas ned.
+1. Markera **[!UICONTROL global.schema.json]** filen och tryck på **[!UICONTROL Download]**. En dialogruta för hämtning visas. Välj **[!UICONTROL Download asset(s) as binary files]** alternativet. Tryck på **[!UICONTROL Download]**. Ett arkiv laddas ned.
 
    <!--
    Comment Type: draft
@@ -156,7 +156,7 @@ Metamodellen har stöd för följande gemensamma egenskaper för JSON-scheman f�
   </tr>
   <td><p>enum och enumNames</p></td> 
    <td> 
-    <p>Egenskaperna enum och enumNames begränsar värdena för fälten för nedrullningsbara menyer, kryssrutor och alternativknappar till en fast uppsättning. Värden som anges i enumNames visas i användargränssnittet. Värdena som anges med enum-egenskapen används för beräkning.<br>Mer information finns i <strong>Konvertera ett formulärfält till kryssrutor med flera val i det adaptiva formuläret</strong>, <strong>Konvertera ett textfält till nedrullningsbar lista i det adaptiva formuläret</strong>och <strong>Lägg till ytterligare alternativ i listrutan</strong> i exempel för <a href="#custommetamodelexamples">anpassade metamodeller.</a></p> </td> 
+    <p>Egenskaperna enum och enumNames begränsar värdena för fälten för nedrullningsbara menyer, kryssrutor och alternativknappar till en fast uppsättning. Värden som anges i enumNames visas i användargränssnittet. Värdena som anges med enum-egenskapen används för beräkning.<br>Mer information finns i <strong>Konvertera ett formulärfält till kryssrutor med flera val i det adaptiva formuläret</strong>, <strong>Konvertera ett textfält till nedrullningsbar lista i det adaptiva formuläret</strong>och <strong>Lägg till ytterligare alternativ i listrutan</strong> i <a href="#custommetamodelexamples">Exempel på anpassade metamodeller.</a></p> </td> 
   </tr>
  </tbody> 
 </table>
@@ -189,9 +189,9 @@ Du kan använda egenskapen **aem:afProperties** i metamodellen för att definier
    <th><strong>Beskrivning</strong></th> 
   </tr> 
   <tr> 
-   <td><p>multiline</p></td> 
+   <td><p>multiLine</p></td> 
    <td> 
-    <p>Egenskapen multiline konverterar ett källformulärfält till ett fält med flera rader i det adaptiva formuläret efter konverteringen. Mer information finns i <strong>Konvertera ett strängfält till ett flerradigt fält</strong> i Exempel på <a href="#custommetamodelexamples">anpassade metamodeller.</a></p> </td> 
+    <p>Egenskapen multiLine konverterar ett källformulärfält till ett fält med flera rader i det adaptiva formuläret efter konverteringen. Mer information finns i <strong>Konvertera ett strängfält till ett flerradigt fält</strong> i Exempel på <a href="#custommetamodelexamples">anpassade metamodeller.</a></p> </td> 
   </tr>
   <td><p>mandatory</p></td> 
    <td> 
@@ -252,7 +252,7 @@ Några vanliga exempel på hur du använder en anpassad metamodell för att änd
 
 #### Ändra etiketten för ett formulärfält {#modify-the-label-of-a-form-field}
 
-**** Exempel: Ändra etiketten för bankkontonumret i formuläret till Anpassat kontonummer i det adaptiva formuläret efter konvertering.
+**Exempel:** Ändra etiketten för bankkontonumret i formuläret till Anpassat kontonummer i det adaptiva formuläret efter konvertering.
 
 I den här anpassade metamodellen använder konverteringstjänsten egenskapen **title** som söknyckelord. När texten för **bankkontonumret** har hämtats i formuläret ersätter konverteringstjänsten texten med strängen för **kundkontonummer** som anges med egenskapen **jcr:title** i avsnittet **aem:afProperties** .
 
@@ -351,7 +351,7 @@ I den här anpassade metamodellen använder konverteringstjänsten text inom **a
 
 #### Lägga till valideringar i anpassade formulärfält {#add-validations-to-adaptive-form-fields}
 
-**** Exempel 1: Lägg till en validering i fältet **Postnummer** i det adaptiva formuläret.
+**Exempel 1:** Lägg till en validering i fältet **Postnummer** i det adaptiva formuläret.
 
 I den här anpassade metamodellen använder konverteringstjänsten text inom **aem:affKeyword** som söknyckelord. När du har hämtat texten **Postnummer** i formuläret lägger konverteringstjänsten till en validering i fältet med egenskapen **validatePictureClause** som definieras i avsnittet **aem:afProperties** . Baserat på valideringen måste de indata som du anger för fältet **Postnummer** i det adaptiva formuläret efter konverteringen innehålla sex tecken.
 
@@ -367,7 +367,7 @@ I den här anpassade metamodellen använder konverteringstjänsten text inom **a
 }
 ```
 
-**** Exempel 2: Lägg till en validering i fältet **Bankkontonummer** i det adaptiva formuläret.
+**Exempel 2:** Lägg till en validering i fältet **Bankkontonummer** i det adaptiva formuläret.
 
 I den här anpassade metamodellen använder konverteringstjänsten text inom **aem:affKeyword** som söknyckelord. När du har hämtat texten för **bankkontonummer** i formuläret lägger konverteringstjänsten till en validering i fältet med den **obligatoriska** egenskapen som definieras i avsnittet **aem:afProperties** . Baserat på valideringen måste du ange ett värde för fältet **Bankkontonummer** innan du skickar formuläret efter konverteringen.
 
@@ -419,7 +419,7 @@ I den här anpassade metamodellen använder konverteringstjänsten text inom **a
 
 #### Lägg till ytterligare alternativ i listrutan {#add-additional-options-to-the-drop-down-list}
 
-**** Exempel: Lägg till **Sri Lanka** som ett extra alternativ i en befintlig listruta med en anpassad metamodell.
+**Exempel:** Lägg till **Sri Lanka** som ett extra alternativ i en befintlig listruta med en anpassad metamodell.
 
 Om du vill lägga till ett extra alternativ uppdaterar du **enum** -egenskapen med det nya alternativet. I det här exemplet uppdaterar du **enum** -egenskapen med **Sri Lanka** som ett extra alternativ. Värden som visas i **enum** -egenskapen visas i listrutan.
 
@@ -447,19 +447,19 @@ Om du vill lägga till ett extra alternativ uppdaterar du **enum** -egenskapen m
 
 #### Konvertera ett strängfält till ett flerradigt fält {#convert-a-string-field-to-a-multi-line-field}
 
-**** Exempel: Konvertera **adressfältet** av strängtyp till ett flerradigt fält i formuläret efter konvertering.
+**Exempel:** Konvertera **adressfältet** av strängtyp till ett flerradigt fält i formuläret efter konvertering.
 
-I den här anpassade metamodellen använder konverteringstjänsten text inom **aem:affKeyword** som söknyckelord. När du har hämtat **adresstexten** i formuläret, konverterar tjänsten textfältet till ett flerradigt fält med hjälp av den **flerradiga** egenskapen som definieras i avsnittet **aem:afProperties** .
+I den här anpassade metamodellen använder konverteringstjänsten text inom **aem:affKeyword** som söknyckelord. När du har hämtat **adresstexten** i formuläret konverterar tjänsten textfältet till ett flerradigt fält med hjälp av egenskapen **multiLine** som definieras i **avsnittet aem:afProperties** .
 
 ```
 {
- "multiline" : {
+ "multiLine" : {
    "aem:affKeyword": [
       "Address"
     ],
     "type" : "string",
     "aem:afProperties": {
-      "multiline": "true"
+      "multiLine": "true"
     }
   }
 }
