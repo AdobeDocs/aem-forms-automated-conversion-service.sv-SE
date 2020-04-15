@@ -7,27 +7,49 @@ uuid: e24773a2-be14-4184-a168-48aa976d459a
 topic-tags: introduction
 discoiquuid: 79f2026e-73a5-4bd1-b041-d1399b4ad23e
 translation-type: tm+mt
-source-git-commit: 8e373b978535cd6616072cf50c223bd7f4f7c35a
+source-git-commit: 12b4df8feb19fdc6e723c4d7301d299f26676716
 
 ---
 
 
 # Bästa praxis och kända komplexa mönster {#Best-practices-and-considerations2}
 
-Det här dokumentet innehåller riktlinjer och rekommendationer som formuläradministratörer, författare och utvecklare kan dra nytta av när de arbetar med tjänsten Automated Forms Conversion. Här diskuteras bästa praxis direkt från att förbereda källformulär till att korrigera komplexa mönster som kräver extra arbete för automatiserad konvertering. Dessa bästa metoder bidrar tillsammans till prestanda och resultat i tjänsten Automated Forms Conversion.
+Det här dokumentet innehåller riktlinjer och rekommendationer som formuläradministratörer, författare och utvecklare kan dra nytta av när de arbetar med tjänsten Automated Forms Conversion. Här diskuteras bästa praxis direkt från att förbereda källformulär till att korrigera komplexa mönster som kräver extra arbete för automatiserad konvertering. Dessa bästa metoder bidrar tillsammans till det övergripande resultatet för tjänsten Automated Forms Conversion.
 
 ## Bästa praxis
 
-Konverteringstjänsten konverterar PDF-formulär som finns i AEM Forms-instansen till adaptiva formulär. Du kan överföra alla PDF-formulär samtidigt eller i faser efter behov. Tänk på följande innan du laddar upp formulären:
+Konverteringstjänsten konverterar PDF-formulär som finns i AEM Forms-instansen till adaptiva formulär. De bästa metoderna nedan hjälper dig att förbättra konverteringshastigheten och exaktheten. Dessutom kan du spara tid på konverteringsaktiviteter med hjälp av de här metoderna.
+
+### Innan du överför källformulär
+Du kan överföra alla PDF-formulär samtidigt eller i faser efter behov. Tänk på följande innan du laddar upp formulären:
 
 * Behåll antalet formulär i en mapp under 15 och behåll det totala antalet sidor i en mapp under 50.
 * Behåll mappstorleken mindre än 10 MB. Behåll inte formulär i en undermapp.
 * Behåll antalet sidor i ett formulär under 15.
+* Ordna källdokumenten i en grupp om 8-15 dokument. Behåll källformulären med vanliga adaptiva formulärfragment i en enda batch.
 * Överför inte skyddade formulär. Tjänsten konverterar inte lösenordsskyddade och skyddade formulär.
-* Do not upload the [PDF Portfolios](https://helpx.adobe.com/acrobat/using/overview-pdf-portfolios.html). Tjänsten konverterar inte en PDF-portfolio till anpassningsbara formulär.
-* Ladda inte upp inskannade formulär, formulär med färg, formulär som inte är på engelska eller ifyllda formulär. Sådana formulär stöds inte.
+* Do not upload the [PDF Portfolios](https://helpx.adobe.com/acrobat/using/overview-pdf-portfolios.html). Tjänsten konverterar inte en PDF-portfölj till ett anpassningsbart formulär.
+* Överför inte skannade, färgade, icke-engelska och ifyllda formulär. Sådana formulär stöds inte.
 * Ladda inte upp källformulär med blanksteg i filnamnet. Ta bort utrymmet från filnamnet innan du överför formulären.
-* Använd adaptiva formulärmallar för att ange sidhuvud och sidfot för det anpassningsbara utdataformuläret. Tjänsten ignorerar sidhuvud-fot i PDF-källdokument och använder sidhuvud-fot som anges i den adaptiva formulärmallen.
+
+När du använder ett XDP-formulär för konvertering utför du följande steg innan du överför XPD-källformulären:
+
+* Analysera XDP-formuläret och åtgärda visuella problem. Kontrollera att källdokumentet använder avsedda kontroller och strukturer. Källformuläret kan t.ex. ha kryssrutor i stället för alternativknappar för en enskild markering. Ändra kryssrutorna till alternativknappar för att skapa ett anpassat formulär med avsedda komponenter.
+* [Lägg till bindningar i XDP-formuläret](http://www.adobe.com/go/learn_aemforms_designer_65) innan konverteringen startar. När bindningar är tillgängliga i XDP-källformuläret lägger tjänsten automatiskt till bindningar till motsvarande adaptiva formulärfält under konverteringen. Den sparar tid som krävs för att manuellt tillämpa bindningarna.
+* [Lägg till Adobe Sign-taggar](https://helpx.adobe.com/sign/using/text-tag.html) i XDP-filen. Tjänsten konverterar automatiskt Adobe Sign-taggar till motsvarande anpassningsbara formulärfält. Adaptiva formulär har stöd för ett begränsat antal Adobe Sign-fält. En fullständig lista över fält som stöds finns i [Använda Adobe Sign i en adaptiv formulärdokumentation](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-advanced-authoring/working-with-adobe-sign.html) .
+* Använd delformulär i XDP-dokument för att skapa paneler i anpassningsbara formulär. Tjänsten konverterar varje delformulär till en anpassningsbar formulärpanel under konverteringen.
+* Konvertera om möjligt komplexa tabeller i XDP-dokument till enkla tabeller.
+
+### Innan du påbörjar konverteringen
+
+* Skapa anpassningsbara blankettmallar. Med mallar kan du ange en enhetlig struktur för formulär i din organisation eller avdelning.
+* Ange sidhuvud och sidfot i de adaptiva formulärmallarna. Tjänsten ignorerar sidhuvud-fot i källdokument och använder sidhuvud-fot som anges i den adaptiva formulärmallen.
+* Skapa anpassningsbara formulärteman. Teman ger ett enhetligt utseende och en enhetlig känsla för olika delar av organisationen eller avdelningen.
+* Konfigurera formulärdatamodellen för att spara och hämta från en datakälla. Skapa och konfigurera läs- och skrivtjänster för formulärdatamodellen.
+* Skapa adaptiva formulärfragment och konfigurera tjänsten så att den använder dina adaptiva formulärfragment.
+* Ta fram arbetsflödesmodeller för de blanketter som kräver automatisering av affärsprocesser.
+* Konfigurera Adobe Analytics, om det behövs
+
 
 ## Lär känna komplexa mönster
 
