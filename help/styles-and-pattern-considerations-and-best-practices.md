@@ -7,7 +7,7 @@ uuid: e24773a2-be14-4184-a168-48aa976d459a
 topic-tags: introduction
 discoiquuid: 79f2026e-73a5-4bd1-b041-d1399b4ad23e
 translation-type: tm+mt
-source-git-commit: 83e35b3cf21c1348c09dcddbae3edf77990457d0
+source-git-commit: 43b9b30e7e912081756050aa002a9e398d1d74fc
 
 ---
 
@@ -16,7 +16,7 @@ source-git-commit: 83e35b3cf21c1348c09dcddbae3edf77990457d0
 
 Det här dokumentet innehåller riktlinjer och rekommendationer som formuläradministratörer, författare och utvecklare kan dra nytta av när de arbetar med tjänsten Automated Forms Conversion. Här diskuteras bästa praxis direkt från att förbereda källformulär till att korrigera komplexa mönster som kräver extra arbete för automatiserad konvertering. Dessa bästa metoder bidrar tillsammans till det övergripande resultatet för tjänsten Automated Forms Conversion.
 
-## Bästa praxis
+## God praxis
 
 Konverteringstjänsten konverterar PDF-formulär som finns i AEM Forms-instansen till adaptiva formulär. De bästa metoderna nedan hjälper dig att förbättra konverteringshastigheten och exaktheten. Dessutom kan du spara tid på konverteringsaktiviteter med hjälp av de här metoderna.
 
@@ -25,7 +25,7 @@ Konverteringstjänsten konverterar PDF-formulär som finns i AEM Forms-instansen
 Du kan överföra alla PDF-formulär samtidigt eller i faser efter behov. Tänk på följande innan du laddar upp formulären:
 
 * Behåll antalet formulär i en mapp under 15 och behåll det totala antalet sidor i en mapp under 50.
-* Behåll mappstorleken mindre än 10 MB. Behåll inte formulär i en undermapp.
+* Låt mappen vara mindre än 10 MB. Behåll inte formulär i en undermapp.
 * Behåll antalet sidor i ett formulär under 15.
 * Ordna källdokumenten i en grupp om 8-15 dokument. Behåll källformulären med vanliga adaptiva formulärfragment i en enda batch.
 * Överför inte skyddade formulär. Tjänsten konverterar inte lösenordsskyddade och skyddade formulär.
@@ -44,7 +44,7 @@ När du använder ett XDP-formulär för konvertering utför du följande steg i
 ### Innan du påbörjar konverteringen
 
 * Skapa anpassningsbara blankettmallar. Med mallar kan du ange en enhetlig struktur för formulär i din organisation eller avdelning.
-* Ange sidhuvud och sidfot i de adaptiva formulärmallarna. Tjänsten ignorerar sidhuvud-fot i källdokument och använder sidhuvud-fot som anges i den adaptiva formulärmallen.
+* Ange sidhuvud och sidfot i de adaptiva formulärmallarna. Tjänsten ignorerar sidhuvudet/sidfoten i källdokument och använder sidhuvud/sidfot som anges i den adaptiva formulärmallen.
 * Skapa anpassningsbara formulärteman. Teman ger ett enhetligt utseende och en enhetlig känsla för olika delar av organisationen eller avdelningen.
 * Konfigurera formulärdatamodellen för att spara och hämta från en datakälla. Skapa och konfigurera läs- och skrivtjänster för formulärdatamodellen.
 * Skapa adaptiva formulärfragment och konfigurera tjänsten så att den använder dina adaptiva formulärfragment.
@@ -54,9 +54,9 @@ När du använder ett XDP-formulär för konvertering utför du följande steg i
 
 ## Lär känna komplexa mönster
 
-AEM Forms automatiserade konverteringstjänst använder artificiell intelligens och algoritmer för maskininlärning för att förstå källformulärets layout och fält. Alla maskininlärningstjänster lär sig kontinuerligt av källdata och skapar bättre resultat vid varje förändring. Dessa tjänster lär sig av upplevelser som människor.
+AEM Forms automatiserade konverteringstjänst använder artificiell intelligens och algoritmer för maskininlärning för att förstå källformulärets layout och fält. Alla maskininlärningstjänster lär sig kontinuerligt av källdata och skapar bättre resultat vid varje förändring. Dessa tjänster lär sig av erfarenheter som människor.
 
-Tjänsten Automated Forms Conversion har utbildats i en stor uppsättning formulär. Den identifierar enkelt fält i ett källformulär och skapar anpassningsbara formulär. Det finns emellertid vissa fält och format i PDF-formulär som är lätta att se för det mänskliga ögat men svåra att förstå för tjänsten. Tjänsten kan tilldela vissa fält eller format andra än tillämpliga fälttyper eller paneler. Alla sådana fält- och formatmönster listas nedan.
+Tjänsten Automated Forms Conversion har utbildats i en stor uppsättning formulär. Den identifierar enkelt fält i ett källformulär och skapar anpassningsbara formulär. Det finns emellertid vissa fält och format i PDF-formulär som är lätta att se för det mänskliga ögat men svåra att förstå för tjänsten. Tjänsten kan tilldela vissa fält eller format andra fälttyper eller paneler än de som är tillämpliga. Alla sådana fält- och formatmönster listas nedan.
 
 Tjänsten börjar identifiera och tilldela rätt fält eller paneler till dessa mönster när den lär sig av källdata. Just nu kan du använda [Gransknings- och Korrigera](review-correct-ui-edited.md) -redigeraren för att korrigera sådana problem. Innan du börjar åtgärda problemen eller läser mer bör du bekanta dig med [adaptiva formulärkomponenter](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html).
 
@@ -65,12 +65,12 @@ Tjänsten börjar identifiera och tilldela rätt fält eller paneler till dessa 
 | Mönster | Exempel |
 |--- |--- |
 | **Mönstertjänsten**<br> konverterar inte färgade PDF-formulär till anpassningsbara formulär. <br><br>**Upplösning **Använd PDF-formulär i svartvitt eller gråskala<br>. | ![Färgat formulär](assets/best-practice-coloured-forms.png) |
-| **Pattern** <br>Service konverterar inte ifyllda PDF-formulär till anpassningsbara formulär. <br><br>**Upplösning **<br>Använd tomma adaptiva formulär. | ![Ifyllt formulär](assets/best-practice-filled-forms.png) |
+| **Pattern** <br>Service konverterar inte ifyllda PDF-formulär till ett anpassat formulär. <br><br>**Upplösning **<br>Använd tomma adaptiva formulär. | ![Ifyllt formulär](assets/best-practice-filled-forms.png) |
 | **Mönstertjänsten** <br>kan inte identifiera text och fält i tätt format. <br><br>**Upplösning **<br>Öka bredden mellan text och fält i ett kompakt formulär innan konverteringen startar. |  |
 | **Pattern** <br>Service stöder inte skannade formulär. <br><br>**Upplösning **Använd<br>inte skannade formulär. | ![Skannat formulär](assets/scanned-forms.png) |
 | **Pattern** <br>Service extraherar inte bilder och text i bilder. <br><br>**Upplösning **Lägg till bilder eller text i konverterade formulär manuellt<br>. | ![Bild med textformulär](assets/best-practice-image-with-text.png) |
 | **Mönstertabeller** med <br>prickade eller otydliga gränser och kanter konverteras inte. <br><br>**Upplösning **<br>Använd tabeller med tydliga gränser och kanter. stöds. | ![Otydligt tabellformulär](assets/best-practice-table-dotted-non-clear.png) |
-| **Mönster** med adaptiv <br> form stöder inte lodrät text från rutan. Tjänsten konverterar alltså inte lodrät text till motsvarande text i adaptiva formulär. <br><br>**Upplösning **<br>Använd adaptiv formulärredigerare för att lägga till lodrät text, om det behövs. | ![Otydligt tabellformulär](assets/vertical-text.png) |
+| **Mönster** med adaptiva <br> former har inte stöd för lodrät text från kartongen. Tjänsten konverterar alltså inte lodrät text till motsvarande text i adaptiva formulär. <br><br>**Upplösning **<br>Använd adaptiv formulärredigerare för att lägga till lodrät text, om det behövs. | ![Otydligt tabellformulär](assets/vertical-text.png) |
 
 
 
