@@ -6,7 +6,7 @@ seo-description: Vanliga AFCS-problem och deras lösningar
 contentOwner: khsingh
 topic-tags: forms
 translation-type: tm+mt
-source-git-commit: 638d2adec39a4ecba335ae7bdebebd8bf9ab2274
+source-git-commit: ccf30bc990c1a7cdb261332403668af6f35aeb9e
 
 ---
 
@@ -22,4 +22,4 @@ Artikeln innehåller information om installations-, konfigurations- och administ
 |--- |--- |
 | **Felmeddelande** <br> Åtkomsttokenhuvudet är inte tillgängligt. <br><br>**Orsak **till att<br>en administratör har skapat flera IMS-konfigurationer eller att IMS-konfigurationen inte kan nå AFCS-tjänsten på Adobe Cloud.<br><br>**Upplösning** <br> Om det finns flera konfigurationer tar du bort alla konfigurationer och [skapar en ny konfiguration](configure-service.md#obtainpubliccertificates). <br> Om det finns en enda konfiguration använder du **[!UICONTROL Health Check]** för att [kontrollera anslutningen](configure-service.md#createintegrationoption). | ![Åtkomsttokenhuvudet är inte tillgängligt](assets/invalid-ims-configuration.png) |
 | **Felmeddelande** <br> Det gick inte att ansluta till tjänsten.  <br><br>**Orsak **<br>till felaktig tjänst-URL eller ingen tjänst-URL anges i molntjänsterna för automatisk formulärkonvertering.<br><br>**URL** för <br> tjänsten [Korrigera upplösning](configure-service.md#configure-the-cloud-service) i molntjänster för automatisk formulärkonvertering. | ![Det går inte att ansluta till tjänsten.](assets/wrong-endpoint-configured.png) |
-| **Felmeddelande** <br> Det gick inte att ansluta till tjänsten.  <br><br>**Orsak **<br>till felaktig tjänst-URL eller ingen tjänst-URL anges i molntjänsterna för automatisk formulärkonvertering.<br><br>**URL** för <br> tjänsten [Korrigera upplösning](configure-service.md#configure-the-cloud-service) i molntjänster för automatisk formulärkonvertering. | ![Det går inte att ansluta till tjänsten.](assets/wrong-endpoint-configured.png) |
+| **Felmeddelande** <br> Tjänsten kunde inte konvertera formuläret.  <br><br>**Orsak **<br>till nätverksanslutningsproblem eller till att tjänsten inte är tillgänglig på grund av planerat underhåll eller driftstopp i Adobe Cloud.<br><br>**Upplösning** <br> Lös problem med nätverksanslutningen när du är klar och kontrollera tjänstens status på https://status.adobe.com/# för planerade eller oplanerade driftavbrott. | ![Det går inte att ansluta till tjänsten.](assets/service-failure.png) |
