@@ -7,7 +7,7 @@ uuid: e24773a2-be14-4184-a168-48aa976d459a
 topic-tags: introduction
 discoiquuid: 79f2026e-73a5-4bd1-b041-d1399b4ad23e
 translation-type: tm+mt
-source-git-commit: cab926fc408a1a680853ee557e36354938f7424a
+source-git-commit: a5d663c2a59895eb71eb5287586bc6b3862927fc
 
 ---
 
@@ -39,7 +39,7 @@ När du använder ett XDP-formulär för konvertering utför du följande steg i
 * [Lägg till bindningar i XDP-formuläret](http://www.adobe.com/go/learn_aemforms_designer_65) innan konverteringen startar. När bindningar är tillgängliga i XDP-källformuläret lägger tjänsten automatiskt till bindningar till motsvarande adaptiva formulärfält under konverteringen. Den sparar tid som krävs för att manuellt tillämpa bindningarna.
 * [Lägg till Adobe Sign-taggar](https://helpx.adobe.com/sign/using/text-tag.html) i XDP-filen. Tjänsten konverterar automatiskt Adobe Sign-taggar till motsvarande anpassningsbara formulärfält. Adaptiva formulär har stöd för ett begränsat antal Adobe Sign-fält. En fullständig lista över fält som stöds finns i [Använda Adobe Sign i en adaptiv formulärdokumentation](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-advanced-authoring/working-with-adobe-sign.html) .
 * Använd delformulär i XDP-dokument för att skapa paneler i anpassningsbara formulär. Tjänsten konverterar varje delformulär till en anpassningsbar formulärpanel under konverteringen.
-* Konvertera om möjligt komplexa tabeller i XDP-dokument till enkla tabeller.
+* Konvertera om möjligt komplexa tabeller i XDP-dokument till enkla tabeller. En tabell med formulärfält i tabellceller, celler med olika storlek, celler med rad- eller kolumnutvidgning, sammanfogade celler, partiella kanter eller utan synliga kantlinjer anses vara en komplex tabell. En tabell med någon av de ovannämnda posterna anses vara en komplex tabell.
 
 ### Innan du påbörjar konverteringen
 
