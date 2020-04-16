@@ -7,7 +7,7 @@ uuid: e24773a2-be14-4184-a168-48aa976d459a
 topic-tags: introduction
 discoiquuid: 79f2026e-73a5-4bd1-b041-d1399b4ad23e
 translation-type: tm+mt
-source-git-commit: 12b4df8feb19fdc6e723c4d7301d299f26676716
+source-git-commit: cab926fc408a1a680853ee557e36354938f7424a
 
 ---
 
@@ -20,7 +20,8 @@ Det här dokumentet innehåller riktlinjer och rekommendationer som formuläradm
 
 Konverteringstjänsten konverterar PDF-formulär som finns i AEM Forms-instansen till adaptiva formulär. De bästa metoderna nedan hjälper dig att förbättra konverteringshastigheten och exaktheten. Dessutom kan du spara tid på konverteringsaktiviteter med hjälp av de här metoderna.
 
-### Innan du överför källformulär
+### Innan du överför källan
+
 Du kan överföra alla PDF-formulär samtidigt eller i faser efter behov. Tänk på följande innan du laddar upp formulären:
 
 * Behåll antalet formulär i en mapp under 15 och behåll det totala antalet sidor i en mapp under 50.
