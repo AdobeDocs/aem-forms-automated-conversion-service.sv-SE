@@ -6,15 +6,16 @@ seo-description: Vanliga AFCS-problem och deras lösningar
 contentOwner: khsingh
 topic-tags: forms
 translation-type: tm+mt
-source-git-commit: 3a82102feffa7fc618dc37c9a745c254a46a0700
+source-git-commit: c413c5dc2da3a3e7e116b3355c63620f9dab17f8
 
 ---
 
 
 # Felsöka automatisk formulärkonverteringstjänst
 
+Dokumentet innehåller grundläggande felsökningssteg för vanliga fel.
 
-<!--The article provides information on installation, configuration and administration issues that may arise in an Automated Forms Conversion Service production environment. --> The document  provides basic troubleshooting steps for common errors.
+<!--The article provides information on installation, configuration and administration issues that may arise in an Automated Forms Conversion Service production environment. -->
 
 ## Vanliga fel {#commonerrors}
 
