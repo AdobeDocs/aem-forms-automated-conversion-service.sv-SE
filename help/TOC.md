@@ -5,12 +5,13 @@ sub-product: formulärkonverteringstjänst
 audience: end-user
 user-guide-title: Adobe Experience Manager Forms Automated Conversion Service
 translation-type: tm+mt
-source-git-commit: 90f577a3bc75afdb596ad1dea27cd833e1c996ce
+source-git-commit: 56e4696c0372223e0b27f1c313382a2a637b6db1
 
 ---
 
 
 # Innehållsförteckning {#using}
+
 + [Versionsinformation](release-notes.md)
 + [Introduktion](introduction.md)
 + [Konfigurera tjänsten](configure-service.md)
@@ -24,4 +25,3 @@ source-git-commit: 90f577a3bc75afdb596ad1dea27cd833e1c996ce
 + [Rekommenderad praxis och saker att tänka på](styles-and-pattern-considerations-and-best-practices.md)
 + [Kända fel](known-issues.md)
 + [Felsökning](troubleshoot-afcs.md)
-
