@@ -6,7 +6,7 @@ seo-description: Vanliga AFCS-problem och deras lösningar
 contentOwner: khsingh
 topic-tags: forms
 translation-type: tm+mt
-source-git-commit: e905833e5b58c05aac612e3a8139eb7fb60ef4bf
+source-git-commit: 3a82102feffa7fc618dc37c9a745c254a46a0700
 
 ---
 
@@ -20,7 +20,10 @@ source-git-commit: e905833e5b58c05aac612e3a8139eb7fb60ef4bf
 
 | Fel | Exempel |
 |--- |--- |
-| **Felmeddelande** <br> Åtkomsttokenhuvudet är inte tillgängligt. <br><br>**Orsak **till att<br>en administratör har skapat flera IMS-konfigurationer eller att IMS-konfigurationen inte kan nå AFCS-tjänsten på Adobe Cloud.<br><br>**Upplösning** <br> Om det finns flera konfigurationer tar du bort alla konfigurationer och [skapar en ny konfiguration](configure-service.md#obtainpubliccertificates). <br> Om det finns en enda konfiguration använder du **[!UICONTROL Health Check]** för att [kontrollera anslutningen](configure-service.md#createintegrationoption). | ![Åtkomsttokenhuvudet är inte tillgängligt](assets/invalid-ims-configuration.png) |
+| **Felmeddelande** <br> Åtkomsttokenhuvudet är inte tillgängligt. <br><br> **Orsak** till att <br> en administratör har skapat flera IMS-konfigurationer eller att IMS-konfigurationen inte kan nå AFCS-tjänsten på Adobe Cloud. <br><br>**Upplösning **<br>Om det finns flera konfigurationer tar du bort alla konfigurationer och[skapar en ny konfiguration](configure-service.md#obtainpubliccertificates).<br>Om det finns en enda konfiguration använder du** Hälsokontroll **för att[kontrollera anslutningen](configure-service.md#createintegrationoption). | ![Åtkomsttokenhuvudet är inte tillgängligt](assets/invalid-ims-configuration.png) |
+
+| Fel | Exempel |
+|--- |--- |
 | **Felmeddelande** <br> Det gick inte att ansluta till tjänsten.  <br><br>**Orsak **<br>till felaktig tjänst-URL eller ingen tjänst-URL anges i molntjänsterna för automatisk formulärkonvertering.<br><br>**URL** för <br> tjänsten [Korrigera upplösning](configure-service.md#configure-the-cloud-service) i molntjänster för automatisk formulärkonvertering. | ![Det går inte att ansluta till tjänsten.](assets/wrong-endpoint-configured.png) |
 | **Felmeddelande** <br> Tjänsten kunde inte konvertera formuläret.  <br><br>**Orsak **till att<br>nätverksanslutningsproblem uppstår när du avslutar tjänsten på grund av planerat underhåll eller driftstopp i Adobe Cloud.<br><br>**Upplösning** <br> Lös problem med nätverksanslutningen när du är klar och kontrollera statusen för tjänsten på https://status.adobe.com/ för ett planerat eller oplanerat avbrott. | ![Det går inte att ansluta till tjänsten.](assets/service-failure.png) |
 | **Felmeddelande** <br> Antalet sidor är fler än 15.  <br><br>**Orsak **till att<br>källformuläret är längre än 15 sidor.<br><br>**Upplösning** <br> Använd Adobe Acrobat för att dela upp formulär med mer än 15 sidor. Använd färre än 15 sidor i ett formulär. | ![Det går inte att ansluta till tjänsten.](assets/number-of-pages.png) |
