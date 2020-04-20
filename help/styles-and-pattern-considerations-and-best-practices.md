@@ -7,18 +7,18 @@ uuid: e24773a2-be14-4184-a168-48aa976d459a
 topic-tags: introduction
 discoiquuid: 79f2026e-73a5-4bd1-b041-d1399b4ad23e
 translation-type: tm+mt
-source-git-commit: 43b9b30e7e912081756050aa002a9e398d1d74fc
+source-git-commit: fa3b365b9762a044fddb3820ad3c091d211e0ae6
 
 ---
 
 
 # Bästa praxis och kända komplexa mönster {#Best-practices-and-considerations2}
 
-Det här dokumentet innehåller riktlinjer och rekommendationer som formuläradministratörer, författare och utvecklare kan dra nytta av när de arbetar med tjänsten Automated Forms Conversion. Här diskuteras bästa praxis direkt från att förbereda källformulär till att korrigera komplexa mönster som kräver extra arbete för automatiserad konvertering. Dessa bästa metoder bidrar tillsammans till det övergripande resultatet för tjänsten Automated Forms Conversion.
+Det här dokumentet innehåller riktlinjer och rekommendationer som formuläradministratörer, författare och utvecklare kan dra nytta av när de arbetar med [!DNL Automated Forms Conversion service]. Här diskuteras bästa praxis direkt från att förbereda källformulär till att korrigera komplexa mönster som kräver extra arbete för automatiserad konvertering. Dessa bästa metoder bidrar tillsammans till programmets övergripande prestanda och resultat [!DNL Automated Forms Conversion service].
 
 ## God praxis
 
-Konverteringstjänsten konverterar PDF-formulär som finns i AEM Forms-instansen till adaptiva formulär. De bästa metoderna nedan hjälper dig att förbättra konverteringshastigheten och exaktheten. Dessutom kan du spara tid på konverteringsaktiviteter med hjälp av de här metoderna.
+Konverteringstjänsten konverterar PDF-formulär som finns i AEM- [!DNL Forms] instansen till adaptiva formulär. De bästa metoderna nedan hjälper dig att förbättra konverteringshastigheten och exaktheten. Dessutom kan du spara tid på konverteringsaktiviteter med hjälp av de här metoderna.
 
 ### Innan du överför källan
 
@@ -54,9 +54,9 @@ När du använder ett XDP-formulär för konvertering utför du följande steg i
 
 ## Lär känna komplexa mönster
 
-AEM Forms automatiserade konverteringstjänst använder artificiell intelligens och algoritmer för maskininlärning för att förstå källformulärets layout och fält. Alla maskininlärningstjänster lär sig kontinuerligt av källdata och skapar bättre resultat vid varje förändring. Dessa tjänster lär sig av erfarenheter som människor.
+AEM [!DNL Forms Automated Conversion service] använder artificiell intelligens och algoritmer för maskininlärning för att förstå källformulärets layout och fält. Alla maskininlärningstjänster lär sig kontinuerligt av källdata och skapar bättre resultat vid varje förändring. Dessa tjänster lär sig av erfarenheter som människor.
 
-Tjänsten Automated Forms Conversion har utbildats i en stor uppsättning formulär. Den identifierar enkelt fält i ett källformulär och skapar anpassningsbara formulär. Det finns emellertid vissa fält och format i PDF-formulär som är lätta att se för det mänskliga ögat men svåra att förstå för tjänsten. Tjänsten kan tilldela vissa fält eller format andra fälttyper eller paneler än de som är tillämpliga. Alla sådana fält- och formatmönster listas nedan.
+[!DNL Automated Forms Conversion service] har utbildats i en stor uppsättning formulär. Den identifierar enkelt fält i ett källformulär och skapar anpassningsbara formulär. Det finns emellertid vissa fält och format i PDF-formulär som är lätta att se för det mänskliga ögat men svåra att förstå för tjänsten. Tjänsten kan tilldela vissa fält eller format andra fälttyper eller paneler än de som är tillämpliga. Alla sådana fält- och formatmönster listas nedan.
 
 Tjänsten börjar identifiera och tilldela rätt fält eller paneler till dessa mönster när den lär sig av källdata. Just nu kan du använda [Gransknings- och Korrigera](review-correct-ui-edited.md) -redigeraren för att korrigera sådana problem. Innan du börjar åtgärda problemen eller läser mer bör du bekanta dig med [adaptiva formulärkomponenter](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html).
 
