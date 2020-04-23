@@ -1,38 +1,38 @@
 ---
-title: Vad är nytt? Versionsinformation - automatisk formulärkonverteringstjänst
-description: 'Läs om de senaste funktionerna och felen som har åtgärdats för tjänsten Automated Forms Conversion '
-translation-type: tm+mt
+title: Nyheter Versionsinformation – konverteringstjänsten för automatiserade formulär
+description: 'Lär dig mer om de senaste funktionerna och åtgärdade fel för konverteringstjänsten för automatiserade formulär '
+translation-type: ht
 source-git-commit: c0ca850a0a1e82e34364766601011d6367b218ac
 
 ---
 
 
-# Tjänsten Automated Forms Conversion: Versionsinformation
+# Konverteringstjänsten för automatiserade formulär: versionsinformation
 
-Automated Forms Conversion Service får kontinuerliga förbättringar. Om du vill hålla dig uppdaterad med den senaste utvecklingen går du regelbundet till den här sidan. Den här sidan innehåller information om:
+Konverteringstjänsten för automatiserade formulär förbättras fortlöpande. Besök sidan regelbundet för att hålla dig uppdaterad om den senaste utvecklingen. Sidan innehåller information om:
 
-* Tidig åtkomst
-* Senaste releaser
+* Tidig tillgång
+* Senaste versioner
 * Nya funktioner
 * förbättringar
 * Felkorrigeringar
-* Föråldrade funktioner
+* Inaktuell funktionalitet
 * Specialinstruktioner
 * Framtida planer för ändringar
 
 ## 20 mars 2020 (AFC-2020.03.1)
 
-### Tidig åtkomst
+### Tidig tillgång
 
-**Identifiera logiska avsnitt i ett formulär automatiskt**
+**Identifiera automatiskt logiska avsnitt i ett formulär**
 
-Som standard skapar tjänsten en separat panel på den översta nivån för varje sida i ett PDF-formulär. Nu kan du använda alternativet för **[!UICONTROL Auto-detect logical sections]** att släppa paneler på sidnivå (sidnummerbaserade paneler) och endast skapa logiska paneler. Det klär också de fält som inte hör till något avsnitt med föregående logiska avsnitt och fält i ett logiskt avsnitt som sprids över två intilliggande sidor till ett enda logiskt avsnitt. Om t.ex. vissa fält i ett logiskt avsnitt finns i slutet av sida ett och vissa finns i början av sida två, klubbar alla sådana fält in i ett enda logiskt avsnitt.
+Som standard skapar tjänsten en separat toppnivåpanel för varje sida i ett PDF-formulär. Nu kan du använda alternativet **[!UICONTROL Auto-detect logical sections]** för att släppa sidnivåpaneler (sidnummerbaserade paneler) och endast skapa logiska paneler. Det enar också fälten som inte tillhör något avsnitt med föregående logiska avsnitt och fält i ett logisk avsnitt spritt över två angränsande sidor i ett enda logiskt avsnitt. Till exempel, om vissa fält i ett logiskt avsnitt finns i slutet av sidan ett och vissa är i början av sidan två, enas alla sådana fält i ett enda logiskt avsnitt.
 
 ### Förbättringar
 
-**Förbättringar i listidentifiering**
+**Förbättringar i listdetektering**
 
-Tjänsten är nu mer effektiv när det gäller att identifiera punktlistor och numrerade listor.
+Tjänsten är nu effektivare när det gäller att upptäcka numrerade och spaltade listor.
 
 ### Specialinstruktioner
 
@@ -40,4 +40,4 @@ Tjänsten är nu mer effektiv när det gäller att identifiera punktlistor och n
 
 Du behöver kopplingspaketet 1.1.38 eller senare för att kunna använda de senaste funktionerna och förbättringarna som levererades i version AFC-2020.03.1. Du kan hämta kopplingspaketet från [AEM Package Share](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/featurepack/AFCS-Connector-2020.03.1).
 
-Om du redan har en installerad och igång miljö för automatisk formulärkonvertering kan du använda de senaste funktionerna i konverteringstjänsten genom att installera det senaste Service Pack-paketet, det senaste AEM Forms-tilläggspaketet och det senaste kopplingspaketet i den angivna ordningen. Detaljerade instruktioner finns i artikeln [Konfigurera tjänsten](configure-service.md) Automated Forms Conversion.
+Om du redan har en miljö som är installerad och körs för konvertering av automatiserade formulär kan du använda de senaste funktionerna i konverteringstjänsten genom att installera det senaste Service Pack-paketet, det senaste AEM Forms-tilläggspaketet och det senaste kopplingspaketet, i angiven ordning. För detaljerade instruktioner, se artikel [Konfigurera konverteringstjänsten för automatiserade formulär](configure-service.md).
