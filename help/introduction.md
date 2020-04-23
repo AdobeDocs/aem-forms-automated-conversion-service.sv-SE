@@ -1,7 +1,7 @@
 ---
 title: Introduktion
 description: 'Påskynda konverteringen av utskriftsformulär till anpassningsbara formulär '
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: ceff5cb56aa9896a28004628c5e26c262b7918bd
 
 ---
@@ -21,7 +21,7 @@ Den automatiserade konverteringstjänsten för formulär hjälper till att påsk
 
 ## Onboarding {#onboarding}
 
-Tjänsten är kostnadsfri för kunder som har AEM 6.4 Forms och AEM 6.5 Forms On-Premise samt företagskunder med Adobe Managed Service. Du kan kontakta Adobes säljteam eller din Adobe-representant för att begära åtkomst till tjänsten.
+Tjänsten är tillgänglig utan kostnad för AEM 6.4 Forms och AEM6.5 Forms On-Premise-kunder och Adobe Managed Service-företagskunder. Du kan kontakta Adobes säljteam eller din Adobe-representant för att begära åtkomst till tjänsten.
 
 Adobe aktiverar åtkomst för organisationen och tillhandahåller behörigheter åt den person som utses till administratör i organisationen. Administratören kan ge åtkomst till AEM Forms-utvecklare (användare) i organisationen så att de kan ansluta till tjänsten. Mer information finns i [Konfigurera den automatiserade konverteringstjänsten för formulär](configure-service.md).
 
