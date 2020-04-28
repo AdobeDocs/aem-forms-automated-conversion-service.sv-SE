@@ -1,10 +1,10 @@
 ---
 cloud: experience-cloud
 product: experience manager
-sub-product: formulärkonverteringstjänst
+sub-product: konverteringstjänst för formulär
 audience: end-user
-user-guide-title: Adobe Experience Manager Forms Automated Conversion Service
-translation-type: tm+mt
+user-guide-title: Adobe Experience Manager – konverteringstjänst för automatiserade formulär
+translation-type: ht
 source-git-commit: 56e4696c0372223e0b27f1c313382a2a637b6db1
 
 ---
@@ -24,4 +24,4 @@ source-git-commit: 56e4696c0372223e0b27f1c313382a2a637b6db1
 + [Vanliga frågor](frequently-asked-questions.md)
 + [Rekommenderad praxis och saker att tänka på](styles-and-pattern-considerations-and-best-practices.md)
 + [Kända fel](known-issues.md)
-+ [Felsökning](troubleshoot-afcs.md)
++ [Felsök](troubleshoot-afcs.md)
