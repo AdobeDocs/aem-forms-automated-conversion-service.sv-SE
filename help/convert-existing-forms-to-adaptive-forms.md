@@ -8,7 +8,10 @@ contentOwner: khsingh
 topic-tags: forms
 discoiquuid: 9358219c-6079-4552-92b9-b427a23811af
 translation-type: tm+mt
-source-git-commit: c0ca850a0a1e82e34364766601011d6367b218ac
+source-git-commit: 5031050795a558795c151e9f3c26a16736566adf
+workflow-type: tm+mt
+source-wordcount: '1464'
+ht-degree: 8%
 
 ---
 
@@ -27,7 +30,7 @@ Tjänsten AEM Forms Automated Forms Conversion, som drivs av Adobe Sensei, konve
 
 ## Starta konverteringsprocessen {#start-the-conversion-process}
 
-När du har anslutit din AEM-instans till AEM Forms Conversion Service kan du konvertera PDF-formulären till anpassningsbara formulär. Följ de här stegen för att konvertera formulären:
+När du har anslutit din AEM-instans till AEM Forms Conversion Service kan du konvertera dina PDF-formulär till anpassningsbara formulär. Följ de här stegen för att konvertera formulären:
 
 * [Överföra PDF-formulär till din AEM Forms-server](convert-existing-forms-to-adaptive-forms.md#upload-pdf-forms-to-your-aem-forms-server)
 * [Kör konverteringen](convert-existing-forms-to-adaptive-forms.md#run-the-conversion)
@@ -91,7 +94,7 @@ Om du väljer det här alternativet genererar konverteringstjänsten ett adaptiv
 
 
    * Välj alternativet **[!UICONTROL Auto-detect multi-column layout of input forms]** om du vill behålla layouten för källformuläret för stora skärmar som stationära och bärbara datorer. Alternativet är användbart när du vill bevara layouten med flera kolumner för källformulär. Om en PDF-källfil till exempel har en layout med två kolumner, genererar tjänsten ett anpassat utdataformulär med en layout med två kolumner för stora skärmar och en layout med en kolumn för små skärmar som mobiltelefoner. Funktionen har några kända problem med datakällans schemastruktur. Mer information finns i artikeln [Kända fel](known-issues.md) .
-   * Som standard skapar tjänsten en separat panel på den översta nivån för varje sida i ett PDF-formulär. Nu kan du använda **[!UICONTROL Auto-detect logical sections]** alternativet för att inte skapa sidnivåpaneler (sidnummerbaserade paneler) och bara skapa logiska paneler. Det klär också de fält som inte hör till något avsnitt med föregående logiska avsnitt och fält i ett logiskt avsnitt som sprids över två intilliggande sidor till ett enda logiskt avsnitt. Om t.ex. vissa fält i ett logiskt avsnitt finns i slutet av sida ett och vissa finns i början av sida två, klubbar alla sådana fält in i ett enda logiskt avsnitt.
+   * Som standard skapar tjänsten en separat toppnivåpanel för varje sida i ett PDF-formulär. Now, you can use the **[!UICONTROL Auto-detect logical sections]** option to not create page level panels (page number-based panels) and create only logical panels. Det enar också fälten som inte tillhör något avsnitt med föregående logiska avsnitt och fält i ett logisk avsnitt spritt över två angränsande sidor i ett enda logiskt avsnitt. Till exempel, om vissa fält i ett logiskt avsnitt finns i slutet av sidan ett och vissa är i början av sidan två, enas alla sådana fält i ett enda logiskt avsnitt.
 
       >[!NOTE]
       > Du behöver kopplingspaketet 1.1.38 eller senare för att kunna använda **[!UICONTROL Auto-detect logical sections]** funktionen.
