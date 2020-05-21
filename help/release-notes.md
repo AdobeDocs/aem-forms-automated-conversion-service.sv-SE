@@ -1,13 +1,16 @@
 ---
 title: Nyheter Versionsinformation – konverteringstjänsten för automatiserade formulär
 description: 'Lär dig mer om de senaste funktionerna och åtgärdade fel för konverteringstjänsten för automatiserade formulär '
-translation-type: ht
-source-git-commit: c0ca850a0a1e82e34364766601011d6367b218ac
+translation-type: tm+mt
+source-git-commit: 5031050795a558795c151e9f3c26a16736566adf
+workflow-type: tm+mt
+source-wordcount: '305'
+ht-degree: 100%
 
 ---
 
 
-# Konverteringstjänsten för automatiserade formulär: versionsinformation
+# Versionsinformation
 
 Konverteringstjänsten för automatiserade formulär förbättras fortlöpande. Besök sidan regelbundet för att hålla dig uppdaterad om den senaste utvecklingen. Sidan innehåller information om:
 
