@@ -2,10 +2,10 @@
 title: Konfigurera den automatiserade konverteringstjänsten för formulär
 description: Gör din AEM-instans redo att använda tjänsten för automatisk formulärkonvertering
 translation-type: tm+mt
-source-git-commit: e1ef5be14fd3f1ec7e6ccf569c8d76518dfc5c6b
+source-git-commit: 7e94acb29f30603d9b22fbee9dc8052fafa5704b
 workflow-type: tm+mt
-source-wordcount: '2519'
-ht-degree: 8%
+source-wordcount: '2528'
+ht-degree: 7%
 
 ---
 
@@ -123,7 +123,7 @@ När en administratör har gett dig utvecklaråtkomst kan du ansluta din lokala 
 * [Konfigurera e-postmeddelanden](configure-service.md#configureemailnotification)
 * [Lägg till användare i gruppen för formuläranvändare](#adduserstousergroup)
 * [Hämta offentliga certifikat](#obtainpubliccertificates)
-* [Skapa en Adobe I/O-integrering](#createintegration)
+* [Konfigurera tjänst-API:erna på Adobe Developer Console](#createintegration)
 * [Konfigurera molntjänsten](configure-service.md#configure-the-cloud-service)
 
 #### Konfigurera e-postmeddelande {#configureemailnotification}
@@ -159,12 +159,12 @@ Med ett offentligt certifikat kan du autentisera din profil på Adobe I/O.
 
 1. Markera **[!UICONTROL Create new certificate]** kryssrutan och ange ett alias. Aliaset används som namn på dialogrutan. Tryck på **[!UICONTROL Create certificate]**. En dialogruta visas. Klicka på **[!UICONTROL OK]**. Certifikatet skapas.
 
-1. Tap **[!UICONTROL Download Public Key]** and save the *AEM-Adobe-IMS.crt* certificate file on your machine. The certificate file is used to [create integration on Adobe I/O Console](#createintegration). Tryck på **[!UICONTROL Next]**.
+1. Tap **[!UICONTROL Download Public Key]** and save the *AEM-Adobe-IMS.crt* certificate file on your machine. Certifikatfilen används för att [konfigurera tjänstens API:er på Adobe Developer Console](#createintegration). Tryck på **[!UICONTROL Next]**.
 
 1. Ange följande:
 
    * Titel: Ange en titel.
-   * Auktoriseringsserver: [https://ims-na1.adobelogin.com](https://ims-na1.adobelogin.com)
+   * Auktoriseringsserver: [https://ims-na1.adobelogin.com](https://ims-na1.adobelogin.com)\
    Lämna de andra fälten tomma (kommer senare). Håll sidan öppen.
 
    <!--
@@ -179,9 +179,9 @@ Med ett offentligt certifikat kan du autentisera din profil på Adobe I/O.
    <li>Step text</li>
    -->
 
-#### Skapa en Adobe I/O-integrering{#createintegration}
+#### Konfigurera tjänst-API:erna på Adobe Developer Console {#createintegration}
 
-Om du vill använda tjänsten Automated Forms Conversion skapar du en integrering i Adobe I/O. Integreringen genererar API-nyckel, klienthemlighet, nyttolast (JWT).
+Om du vill använda tjänsten Automated Forms Conversion skapar du ett projekt och lägger till API:t för tjänsten Automated Forms Configuration i projektet på Adobe Developer Console. Integreringen genererar API-nyckel, klienthemlighet, nyttolast (JWT).
 
 1. Logga in på https://console.adobe.io/. Använd ditt Adobe ID, utvecklarkonto som administratören har etablerat för inloggning på Adobe I/O-konsolen.
 1. Välj organisation i det övre högra hörnet. Kontakta administratören om du inte känner till din organisation.
@@ -203,8 +203,6 @@ Om du vill använda tjänsten Automated Forms Conversion skapar du en integrerin
    >För nyttolast använder du koden som finns på fliken Generera JWT på JWT-sidan (Service Account) på Adobe Developer Console.
 
 1. Tryck på **[!UICONTROL Save]**. IMS-konfigurationen skapas.
-
-   ![Använd JWT-fältets värden för nyttolastfältet](assets/jwt.png)
 
    >[!CAUTION]
    >
