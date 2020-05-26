@@ -2,9 +2,9 @@
 title: Konfigurera den automatiserade konverteringstjänsten för formulär
 description: Gör din AEM-instans redo att använda tjänsten för automatisk formulärkonvertering
 translation-type: tm+mt
-source-git-commit: 7e94acb29f30603d9b22fbee9dc8052fafa5704b
+source-git-commit: 117280695bfddad627e5f7bcb54ff019bbf2026a
 workflow-type: tm+mt
-source-wordcount: '2528'
+source-wordcount: '2531'
 ht-degree: 7%
 
 ---
@@ -139,7 +139,7 @@ Tjänsten Automated Forms Conversion använder e-posttjänsten Day CQ för att s
 
 #### Lägg till användare i gruppen för formuläranvändare {#adduserstousergroup}
 
-Ange en e-postadress i profilen för den AEM-användare som är utsedd att köra tjänsten. Kontrollera att användaren är medlem i [formuläranvändargruppen](https://helpx.adobe.com/experience-manager/6-4/forms/using/forms-groups-privileges-tasks.html) . E-post skickas till e-postadressen till den användare som kör konverteringen. Så här anger du en e-postadress för användaren och lägger till användare i formuläranvändargruppen:
+Ange en e-postadress i profilen för den AEM-användare som är utsedd att köra tjänsten. Kontrollera att användaren är medlem i [formuläranvändargruppen](https://helpx.adobe.com/experience-manager/6-4/forms/using/forms-groups-privileges-tasks.html) . E-post skickas till e-postadressen till den användare som kör konverteringen. Så här anger du en e-postadress för användaren och lägger till användare i användargruppen`e-formulär:
 
 1. Logga in på din AEM Forms-författarinstans som AEM-administratör. Använd dina lokala AEM-inloggningsuppgifter för att logga in. Använd inte Adobe ID för inloggning. Tap **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Users]**.
 
@@ -183,7 +183,7 @@ Med ett offentligt certifikat kan du autentisera din profil på Adobe I/O.
 
 Om du vill använda tjänsten Automated Forms Conversion skapar du ett projekt och lägger till API:t för tjänsten Automated Forms Configuration i projektet på Adobe Developer Console. Integreringen genererar API-nyckel, klienthemlighet, nyttolast (JWT).
 
-1. Logga in på https://console.adobe.io/. Använd ditt Adobe ID, utvecklarkonto som administratören har etablerat för inloggning på Adobe I/O-konsolen.
+1. Logga in på [https://console.adobe.io/](https://console.adobe.io/). Använd ditt Adobe ID, utvecklarkonto som administratören har etablerat för inloggning på Adobe I/O-konsolen.
 1. Välj organisation i det övre högra hörnet. Kontakta administratören om du inte känner till din organisation.
 1. Tryck på **[!UICONTROL Create new project]**. En skärm för att komma igång med ditt nya projekt visas. Tryck på **[!UICONTROL Add API]**. En skärm med en lista över alla API:er som är aktiverade för ditt konto visas.
 1. Markera **[!UICONTROL Automated Forms Conversion service]** och tryck **[!UICONTROL Next]**. En skärm som konfigurerar API:t visas.
