@@ -7,7 +7,10 @@ uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
 topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
 translation-type: tm+mt
-source-git-commit: ffab4d916cbd545078f4b72b8de5c9968f23b0da
+source-git-commit: 77bdb4e88194bd634dea125852ff2a897bc24678
+workflow-type: tm+mt
+source-wordcount: '2372'
+ht-degree: 1%
 
 ---
 
@@ -22,9 +25,7 @@ Metamodellen är ett JSON-schema. Innan du börjar med metamodellen måste du se
 
 ## Standardmetamodell {#default-meta-model}
 
-Tjänsten Automated Forms Conversion har en standardmetamodell. Det är ett JSON-schema och finns i Adobe Cloud tillsammans med andra komponenter i tjänsten Automated Forms Conversion. Du kan hitta en kopia av metamodellen på din lokala AEM-server på:
-
-http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/global.schema.json.
+Tjänsten Automated Forms Conversion har en standardmetamodell. Det är ett JSON-schema och finns i Adobe Cloud tillsammans med andra komponenter i tjänsten Automated Forms Conversion. Du kan hitta en kopia av metamodellen på din lokala AEM-server på: http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/global.schema.json. Du kan också [klicka här](assets/global.schema.json) för att komma åt eller hämta standardschemat.
 
 Schemat för metamodellen härleds från schemaentiteter på https://schema.org/docs/schemas.html. Den har Person, PostalAddress, LocalBusiness och fler enheter enligt definitionen på https://schema.org. Alla entiteter i metamodellen följer JSON-schemaobjekttypen. Följande kod representerar en exempelmetamodellstruktur:
 
