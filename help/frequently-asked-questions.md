@@ -7,9 +7,9 @@ uuid: 0f6dc39c-99b7-49a4-8e9e-ecc4a35110c0
 topic-tags: introduction
 discoiquuid: e17c2d2c-8300-4467-aa01-57365697939f
 translation-type: tm+mt
-source-git-commit: b1df14a331dc4aef7ce6383dec0091fa6db1fd7b
+source-git-commit: 3b3bb98352e23544d32c39f0bfb5f0d9b7ae99cf
 workflow-type: tm+mt
-source-wordcount: '1685'
+source-wordcount: '1686'
 ht-degree: 5%
 
 ---
@@ -92,13 +92,13 @@ De vanligaste orsakerna till att konverteringen misslyckas är:</p>
    Du kan använda en metamodell för att mappa formulärobjekten till valfri adaptiv formulärkomponent och förkonfigurera validering, regler, datamönster, hjälptext och hjälpmedelsegenskaper för komponenterna. Alla angivna egenskaper används under konverteringen. Du kan använda metamodell för att tillämpa gemensamma egenskaper på fält. Det kan hjälpa dig att minska antalet upprepade problem i olika formulär.<br/><br/>
 
 1. **Vilka alternativ finns för formulär med känsliga data, som PII-information (Personal Identiable Information)?**
-Tjänsten stöder endast tomma eller ofyllda formulär. Ladda inte upp ifyllda formulär eller formulär med personligt identifierbar information (PII). Du kan även ta bort förfyllda data och vit etikett-PII, konfidentiell och personlig information i källformulär. <br/>
+Tjänsten stöder endast tomma eller ofyllda formulär. Ladda inte upp ifyllda formulär eller formulär med personligt identifierbar information (PII). Du kan även ta bort förfyllda data, personligt identifierbar information, konfidentiell och företagsspecifik information i källformulär. <br/>
 
 1. **Var ska sidhuvud och sidfot placeras?**
    <p>Placera sidhuvud och sidfot i en anpassad formulärmall. Om PDF-källformuläret har sidhuvud och sidfot upptäcks och ersätts det identifierade sidhuvudet och sidfoten med sidhuvud och sidfot som är tillgängliga i en anpassningsbar formulärmall under konverteringen. Om det finns ett extra sidhuvud eller en extra sidfot i det adaptiva formuläret kan du använda redigeraren <a href="review-correct-ui-edited.md">Granska och korrigera</a> för att korrigera eller ta bort ett sådant sidhuvud eller en sådan sidfot.</p> <br />
 
 1. **Hur mycket tid sparar tjänsten jämfört med den manuella processen att planera, skapa resurser (teman, mallar), skapa och publicera ett anpassat formulär?**
-   <p>Hur lång tid det tar beror på storleken och komplexiteten i indataformulären och antalet förfrågningar. Tjänsten har för avsikt att avsevärt minska time to value genom att konvertera PDF forms till anpassningsbara formulär i mycket snabbare takt jämfört med den manuella konverteringen av formulär. </p> <br />
+   <p>Hur lång tid det tar beror på storleken och komplexiteten i indataformulären och antalet förfrågningar. Tjänsten har för avsikt att avsevärt minska time to value genom att konvertera PDF forms till anpassningsbara formulär i mycket snabbare takt jämfört med den manuella konverteringsprocessen. </p> <br />
 
 1. **Vad ska jag göra om jag råkar ut för ett fel relaterat till RSA-bibliotek? Felmeddelandet liknar det som anges nedan:** <br/>
    `*ERROR* [0:0:0:0:0:0:0:1 [1565757652491] POST /content/dam/formsanddocuments/demo004.affBatchProcessor.html HTTP/1.1] org.apache.sling.engine.impl.SlingRequestProcessorImpl service: Uncaught Throwable java.lang.NoClassDefFoundError: Could not initialize class com.rsa.cryptoj.o.dl at com.rsa.jsafe.JSAFE_SecureRandom.getInstance(Unknown Source) at com.adobe.internal.pdfm.util.Util.appendRandomNumberToPrefix(Util.java: 169) [com.adobe.aemfd.adobe-aemfd-assembler:6.0.34] at com.adobe.internal.pdfm.logging.JobLog.&amp;lt;init&amp;gt;(JobLog.java:126) [com.adobe.aemfd.adobe-aemfd-assembler:6.0.34]` <br>
