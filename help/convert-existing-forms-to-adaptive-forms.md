@@ -1,16 +1,16 @@
 ---
 title: 'Konvertera PDF-formulär till anpassningsbara formulär '
 seo-title: 'Konvertera PDF-formulär till anpassningsbara formulär '
-description: Kör tjänsten Automatiserad formulärkonvertering för att konvertera PDF-formulär till anpassningsbara formulär
-seo-description: Kör tjänsten Automatiserad formulärkonvertering för att konvertera PDF-formulär till anpassningsbara formulär
+description: Kör tjänsten Automatiserad formulärkonvertering för att konvertera PDF forms till anpassningsbara formulär
+seo-description: Kör tjänsten Automatiserad formulärkonvertering för att konvertera PDF forms till anpassningsbara formulär
 uuid: 49fcd5c0-0e72-496d-9831-00f79d582f57
 contentOwner: khsingh
 topic-tags: forms
 discoiquuid: 9358219c-6079-4552-92b9-b427a23811af
 translation-type: tm+mt
-source-git-commit: 5031050795a558795c151e9f3c26a16736566adf
+source-git-commit: 019ae541117f037f11703a88162ec3ab4cb67947
 workflow-type: tm+mt
-source-wordcount: '1464'
+source-wordcount: '1480'
 ht-degree: 8%
 
 ---
@@ -18,27 +18,27 @@ ht-degree: 8%
 
 # Konvertera PDF-formulär till anpassningsbara formulär {#convert-print-forms-to-adaptive-forms}
 
-Tjänsten AEM Forms Automated Forms Conversion, som drivs av Adobe Sensei, konverterar automatiskt dina PDF-formulär till enhetsvänliga och responsiva anpassningsbara formulär. Vare sig du använder icke-interaktiva PDF-formulär, Acro-formulär eller XFA-baserade PDF-formulär kan tjänsten Automated Forms Conversion enkelt konvertera dessa formulär till anpassningsbara formulär. Mer information om funktioner, konverteringsarbetsflöde och introduktionsinformation finns i [tjänsten Automated Forms Conversion](introduction.md) .
+Tjänsten AEM Forms Automated Forms Conversion, som drivs av Adobe Sensei, konverterar automatiskt PDF forms till enhetsvänliga och responsiva adaptiva formulär. Vare sig du använder icke-interaktiv PDF forms, Acro Forms eller XFA-baserad PDF forms kan tjänsten Automated Forms Conversion enkelt konvertera dessa formulär till adaptiva formulär. Mer information om funktioner, konverteringsarbetsflöde och introduktionsinformation finns i [tjänsten Automated Forms Conversion](introduction.md) .
 
 ## Krav {#pre-requisites}
 
 * [**Konfigurera konverteringstjänsten **](configure-service.md)
 
-* **Förbered[mallarna](https://helpx.adobe.com/experience-manager/6-5/forms/using/template-editor.html)som ska användas i konverterade formulär:** Om du använder en mall kan du använda en enhetlig profilering för alla anpassade formulär. Tjänsten Automated Forms Conversion extraherar och använder inte heller sidhuvud och sidfot i PDF-källdokument. Du kan använda adaptiva formulärmallar för att ange sidhuvud och sidfot. Sidhuvud och sidfot som anges i mallen används i det adaptiva formuläret under konverteringen.
+* **Förbered[mallarna](https://helpx.adobe.com/experience-manager/6-5/forms/using/template-editor.html)som ska användas i konverterade formulär:** Om du använder en mall kan du använda en enhetlig profilering för alla anpassade formulär. Tjänsten Automated Forms Conversion extraherar och använder inte heller sidhuvud och sidfot i PDF-källdokument. Du kan använda adaptiva formulärmallar för att ange sidhuvud och sidfot. Sidhuvud och sidfot som anges i mallen används i det adaptiva formuläret under konverteringen. När du skapar en mapp för mallarna väljer du alternativet **[!UICBläddra bland konfigurationer]** för alla.
 
 * **Förbered[teman](https://helpx.adobe.com/experience-manager/6-5/forms/using/themes.html)som ska användas i konverterade formulär:** Om du använder ett tema kan du använda en konsekvent stil på alla anpassade former i din organisation.
 
 ## Starta konverteringsprocessen {#start-the-conversion-process}
 
-När du har anslutit din AEM-instans till AEM Forms Conversion Service kan du konvertera dina PDF-formulär till anpassningsbara formulär. Följ de här stegen för att konvertera formulären:
+När du har anslutit din AEM-instans till AEM Forms Conversion Service kan du konvertera PDF forms till adaptiva formulär. Följ de här stegen för att konvertera formulären:
 
-* [Överföra PDF-formulär till din AEM Forms-server](convert-existing-forms-to-adaptive-forms.md#upload-pdf-forms-to-your-aem-forms-server)
+* [Överför PDF forms till AEM Forms-servern](convert-existing-forms-to-adaptive-forms.md#upload-pdf-forms-to-your-aem-forms-server)
 * [Kör konverteringen](convert-existing-forms-to-adaptive-forms.md#run-the-conversion)
 * [Granska och korrigera konverterade formulär](review-correct-ui-edited.md)
 
-### Överföra PDF-formulär till din AEM Forms-server {#upload-pdf-forms-to-your-aem-forms-server}
+### Överför PDF forms till AEM Forms-servern {#upload-pdf-forms-to-your-aem-forms-server}
 
-Konverteringstjänsten konverterar PDF-formulär som finns i AEM Forms-instansen till adaptiva formulär. Du kan överföra alla PDF-formulär samtidigt eller i faser efter behov. Tänk på följande innan du laddar upp formulären:
+Konverteringstjänsten konverterar PDF forms som finns i din AEM Forms-instans till adaptiva formulär. Du kan överföra alla PDF forms samtidigt eller i faser efter behov. Tänk på följande innan du laddar upp formulären:
 
 * Behåll antalet formulär i en mapp under 15 och behåll det totala antalet sidor i en mapp under 50.
 * Behåll mappstorleken mindre än 10 MB. Behåll inte formulär i en undermapp.
@@ -61,8 +61,8 @@ Utför följande steg för att överföra formulären som ska konverteras till e
 
 När du har överfört formulären och konfigurerat tjänsten utför du följande steg för att starta konverteringen:
 
-1. I din AEM Forms-instans trycker du på **[!UICONTROL Adobe Experience Manager]** dialogrutan ![Konverteringsinställningar >](assets/adobeexperiencemanager.png) **[!UICONTROL Navigation]** > ![](assets/compass.png) > **[!UICONTROL Forms]** **[!UICONTROL Forms & Documents]**.
-1. Välj ett formulär eller den mapp som innehåller PDF-formulär (formulär som ska konverteras) och tryck på **[!UICONTROL Start Automated Conversion]**. Dialogrutan **[!UICONTROL Conversion Settings]** visas.
+1. Tryck på **[!UICONTROL Adobe Experience Manager]** dialogrutan ![Konverteringsinställningar >](assets/adobeexperiencemanager.png) **[!UICONTROL Navigation]** > ![](assets/compass.png) > **[!UICONTROL Forms]** **[!UICONTROL Forms & Documents]** i AEM Forms.
+1. Markera ett formulär eller den mapp som innehåller PDF forms (formulär som ska konverteras) och tryck på **[!UICONTROL Start Automated Conversion]**. Dialogrutan **[!UICONTROL Conversion Settings]** visas.
 
    ![Ange konfigurationer](assets/conversion-settings-dialog.png)
 
@@ -84,12 +84,12 @@ Om du väljer det här alternativet genererar konverteringstjänsten ett adaptiv
 
 1. På fliken **[!UICONTROL Additional]** i dialogrutan Konverteringsinställningar
    * Välj alternativet om du vill att konverteringstjänsten ska kunna identifiera, extrahera och hämta formulärfragment för konverterade formulär. **[!UICONTROL Extract fragment from adaptive forms]** När du väljer **[!UICONTROL Extract fragment from adaptive forms]** alternativet aktiveras alternativen för att ange sökvägar för att spara extraherade formulärfragment och motsvarande formulärfragmentscheman.
-   * Ange platsen för **[!UICONTROL existing adaptive form fragments]** om du har befintliga JSON-schemabaserade och schemamindre anpassningsbara formulärfragment och du planerar att använda dessa fragment i automatiskt genererade adaptiva formulär. Konverteringstjänsten matchar tillgängliga JSON-schemabaserade och schemamindre anpassningsbara formulärfragment med PDF-indataformulär (endast icke-interaktiva PDF-formulär). Om det finns en matchning används det matchande adaptiva formulärfragmentet i motsvarande adaptiva formulär.
+   * Ange platsen för **[!UICONTROL existing adaptive form fragments]** om du har befintliga JSON-schemabaserade och schemamindre anpassningsbara formulärfragment och du planerar att använda dessa fragment i automatiskt genererade adaptiva formulär. Konverteringstjänsten matchar tillgängliga JSON-schemabaserade och schemamindre adaptiva formulärfragment med indata-PDF forms (endast icke-interaktiv PDF forms). Om det finns en matchning används det matchande adaptiva formulärfragmentet i motsvarande adaptiva formulär.
    >[!NOTE]
    >
    >
    > * Du kan bara använda **[!UICONTROL  Extract Fragment]** eller **[!UICONTROL Use existing adaptive form fragments]** alternativ åt gången. Du kan inte använda båda alternativen samtidigt.
-   > * Du kan bara använda alternativet **[!UICONTROL Use existing adaptive form fragments]** med icke-interaktiva PDF-formulär. Andra formulärtyper stöds inte ännu.
+   > * Du kan bara använda det här **[!UICONTROL Use existing adaptive form fragments]** alternativet med icke-interaktiv PDF forms. Andra formulärtyper stöds inte ännu.
    > * Du kan bara använda obundna fragment eller fragment som är bundna till ett JSON-schema med den automatiserade konverteringstjänsten. Använd inte XFA-fragment. XFA-fragment stöds inte.
 
 
@@ -132,8 +132,8 @@ Om du väljer det här alternativet genererar konverteringstjänsten ett adaptiv
 
    >[!NOTE]
    >
-   >Om konverteringsprocessen tar mer än 60 minuter och PDF-formuläret fortfarande inte konverteras till ett anpassat formulär skapar du en mapp på AEM Forms-instansen, överför PDF-formuläret till den nya mappen och startar om konverteringen.
+   >Om konverteringsprocessen tar mer än 60 minuter och PDF-formuläret fortfarande inte konverteras till ett anpassat formulär skapar du en mapp på instansen AEM Forms, överför PDF-formuläret till den nyligen skapade mappen och startar om konverteringen.
 
 ## Review and correct the converted forms {#review-and-correct-the-converted-forms}
 
-Real world forms has complex data capture requirements. När den automatiska konverteringen är klar kan man granska konverteringskvaliteten på blanketten och göra nödvändiga uppdateringar i den. I AEM Forms finns en [recension och en korrekt](review-correct-ui-edited.md) redigerare som gör nödvändiga ändringar. Det gör att du kan förbättra den automatiska identifieringen av formulärfält och konvertera identifierade fält från en typ till en annan. Du kan till exempel identifiera layout med två kolumner i ett formulär och ändra ett fält som automatiskt identifieras som en alternativknapp till flera alternativfält.
+Real world forms has complex data capture requirements. När den automatiska konverteringen är klar kan man granska konverteringskvaliteten på blanketten och göra nödvändiga uppdateringar i den. AEM Forms tillhandahåller en [recension och en korrekt](review-correct-ui-edited.md) redigerare för att göra nödvändiga ändringar. Det gör att du kan förbättra den automatiska identifieringen av formulärfält och konvertera identifierade fält från en typ till en annan. Du kan till exempel identifiera layout med två kolumner i ett formulär och ändra ett fält som automatiskt identifieras som en alternativknapp till flera alternativfält.
