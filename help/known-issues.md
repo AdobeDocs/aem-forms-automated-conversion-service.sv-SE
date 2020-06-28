@@ -7,9 +7,9 @@ uuid: b1dc661b-ccd3-457f-acbb-4bd25db86e1e
 topic-tags: introduction
 discoiquuid: 9cd2363c-47a0-46e9-98cd-1fe088b9cd6e
 translation-type: tm+mt
-source-git-commit: 902131e27d458b88f7f5c5f85c90de89f77e4bd7
+source-git-commit: 1c48cc1b271bfea19ac2394eaf40be21060a349e
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '774'
 ht-degree: 1%
 
 ---
@@ -28,7 +28,7 @@ Innan du börjar använda tjänsten AEM Forms Automated Forms Conversion bör du
    * Har inte stöd för repeterbara paneler för XFA-baserat formulär.
    * Om du ändrar en lista i en tabell med redigeraren Granska och Korrigera justeras inte radbredden automatiskt och texten kan flyttas till nästa rad i tabellen.
    * Funktionen **[!UICONTROL Auto-detect multi-column layout from input forms]** fungerar inte med gransknings- och korrigeringsredigerare samt formulärfragment.
-   * Skriptsignaturer som skapats med Gransknings- och Korrigeringsredigerare kan inte läsas in i publicerade adaptiva formulär. Användare kan inte signera ett anpassat formulär med sådana komponenter för klottersignaturer.
+   * Skriptsignatur som skapats med Gransknings- och Korrigeringsredigerare kan inte läsas in för publicerade adaptiva formulär.
 
 
 * För XFA-baserade formulär:
