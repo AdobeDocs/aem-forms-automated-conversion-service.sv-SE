@@ -8,9 +8,9 @@ contentOwner: khsingh
 topic-tags: forms
 discoiquuid: 9358219c-6079-4552-92b9-b427a23811af
 translation-type: tm+mt
-source-git-commit: 019ae541117f037f11703a88162ec3ab4cb67947
+source-git-commit: 5fdf997fdde07cc4546accebddb85a248f36e057
 workflow-type: tm+mt
-source-wordcount: '1480'
+source-wordcount: '1477'
 ht-degree: 8%
 
 ---
@@ -24,7 +24,7 @@ Tjänsten AEM Forms Automated Forms Conversion, som drivs av Adobe Sensei, konve
 
 * [**Konfigurera konverteringstjänsten **](configure-service.md)
 
-* **Förbered[mallarna](https://helpx.adobe.com/experience-manager/6-5/forms/using/template-editor.html)som ska användas i konverterade formulär:** Om du använder en mall kan du använda en enhetlig profilering för alla anpassade formulär. Tjänsten Automated Forms Conversion extraherar och använder inte heller sidhuvud och sidfot i PDF-källdokument. Du kan använda adaptiva formulärmallar för att ange sidhuvud och sidfot. Sidhuvud och sidfot som anges i mallen används i det adaptiva formuläret under konverteringen. När du skapar en mapp för mallarna väljer du alternativet **[!UICBläddra bland konfigurationer]** för alla.
+* **Förbered[mallarna](https://helpx.adobe.com/experience-manager/6-5/forms/using/template-editor.html)som ska användas i konverterade formulär:** Om du använder en mall kan du använda en enhetlig profilering för alla anpassade formulär. Tjänsten Automated Forms Conversion extraherar och använder inte heller sidhuvud och sidfot i PDF-källdokument. Du kan använda adaptiva formulärmallar för att ange sidhuvud och sidfot. Sidhuvud och sidfot som anges i mallen används i det adaptiva formuläret under konverteringen. När du skapar en mapp för mallarna väljer du **[!UICONTROL Browse configurations]** alternativet för alla.
 
 * **Förbered[teman](https://helpx.adobe.com/experience-manager/6-5/forms/using/themes.html)som ska användas i konverterade formulär:** Om du använder ett tema kan du använda en konsekvent stil på alla anpassade former i din organisation.
 
