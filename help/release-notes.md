@@ -2,10 +2,10 @@
 title: Nyheter Versionsinformation – konverteringstjänsten för automatiserade formulär
 description: 'Lär dig mer om de senaste funktionerna och åtgärdade fel för konverteringstjänsten för automatiserade formulär '
 translation-type: tm+mt
-source-git-commit: caa019d1a7dd1968a52df5ec5be4755e1c6c4ee6
+source-git-commit: 1c6bdd03d5a3ac37a11a31e5c7948c28412b67aa
 workflow-type: tm+mt
 source-wordcount: '326'
-ht-degree: 94%
+ht-degree: 92%
 
 ---
 
@@ -46,7 +46,7 @@ Tjänsten är nu effektivare när det gäller att upptäcka numrerade och spalta
 
 ### Specialinstruktioner
 
-**Installera paketet Automated Forms Conversion Service Connector**
+**Installera anslutningspaketet för tjänsten för automatisk formulärkonvertering**
 
 Du behöver kopplingspaketet 1.1.38 eller senare för att kunna använda de senaste funktionerna och förbättringarna som levererades i version AFC-2020.03.1. Du kan hämta kopplingspaketet från [AEM Package Share](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/featurepack/AFCS-Connector-2020.03.1).
 
