@@ -46,7 +46,7 @@ Tjänsten är nu effektivare när det gäller att upptäcka numrerade och spalta
 
 ### Specialinstruktioner
 
-**Installera anslutningspaketet för tjänsten för automatisk formulärkonvertering**
+**Installera automatiskt Forms Conversion Service Connector-paket**
 
 Du behöver kopplingspaketet 1.1.38 eller senare för att kunna använda de senaste funktionerna och förbättringarna som levererades i version AFC-2020.03.1. Du kan hämta kopplingspaketet från [AEM Package Share](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/featurepack/AFCS-Connector-2020.03.1).
 
