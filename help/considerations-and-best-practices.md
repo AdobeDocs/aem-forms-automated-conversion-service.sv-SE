@@ -10,9 +10,9 @@ discoiquuid: b786e40a-202e-4e17-a2f5-1f77c46538c2
 privatebeta: true
 index: false
 translation-type: tm+mt
-source-git-commit: 356eb083b889a1bf151c32bc5f01a6d263b96274
+source-git-commit: e2298422e0af9b1c678e7604be3efb6da377d7dd
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '555'
 ht-degree: 6%
 
 ---
@@ -20,26 +20,13 @@ ht-degree: 6%
 
 # [PUBLICERA] INTE Bästa praxis och överväganden {#do-not-publish-best-practices-and-considerations}
 
-Tjänsten AEM Forms Automated Conversion konverterar ett PDF-formulär till ett anpassningsbart formulär. Tjänsten använder artificiell intelligens och maskininlärningsalgoritmer för att förstå källformulärets layout och fält. Alla maskininlärningstjänster lär sig kontinuerligt av källdata och skapar bättre resultat vid varje förändring. Dessa tjänster lär sig av upplevelser som människor.
+AEM Forms tjänst för automatisk konvertering konverterar ett PDF-formulär till ett anpassningsbart formulär. Tjänsten använder artificiell intelligens och maskininlärningsalgoritmer för att förstå källformulärets layout och fält. Alla maskininlärningstjänster lär sig kontinuerligt av källdata och skapar bättre resultat vid varje förändring. Dessa tjänster lär sig av upplevelser som människor.
 
-Tjänsten Automated Forms Conversion har utbildats i en stor uppsättning formulär. Den identifierar enkelt fält i ett källformulär och skapar anpassningsbara formulär. Det finns dock vissa fält och format i PDF forms som är lätta att se för det mänskliga ögat men svåra att förstå för tjänsten. Tjänsten kan tilldela vissa fält eller format andra än tillämpliga fälttyper eller paneler. Alla sådana fält- och formatmönster listas nedan.
+Automatiserad Forms Conversion-tjänst är utbildad i en stor uppsättning formulär. Den identifierar enkelt fält i ett källformulär och skapar anpassningsbara formulär. Det finns dock vissa fält och format i PDF forms som är lätta att se för det mänskliga ögat men svåra att förstå för tjänsten. Tjänsten kan tilldela vissa fält eller format andra än tillämpliga fälttyper eller paneler. Alla sådana fält- och formatmönster listas nedan.
 
 Tjänsten börjar identifiera och tilldela rätt fält eller paneler till dessa mönster när den lär sig av källdata. Just nu kan du använda [Gransknings- och Korrigera](review-correct-ui-edited.md) -redigeraren för att korrigera sådana problem. Innan du börjar åtgärda problemen eller läser mer bör du bekanta dig med [adaptiva formulärkomponenter](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html).
 
 ## Allmänt {#general}
-
-<!--
-Comment Type: draft
-
-<ul>
-<li>Service does not convert filled PDF forms to adaptive form. Use empty adaptive forms.Service does not convert colored PDF forms to adaptive form. Use  and white or grayscale adaptive forms. <br /> </li>
-<li>Service does not convert filled PDF forms to adaptive form. Use empty adaptive forms.</li>
-<li>Service does not support scanned forms. Do not use scanned forms. </li>
-<li>Service can fail to recognize text and fields in a dense form. Increase the width between text and fields of a dense form before starting the conversion.</li>
-<li>Service does not extract images. Manually add images to converted forms.</li>
-<li>Service does not extract text present within an image. Manually add text to the adaptive form.</li>
-</ul>
--->
 
 <table border="1" cellpadding="1" cellspacing="0" style="border-collapse: separate; border-spacing: 0px;" width="100%"> 
  <tbody>
@@ -47,11 +34,6 @@ Comment Type: draft
    <td width="30%">Kända mönster och upplösning</td> 
    <td width="70%">Exempel</td> 
   </tr>
-  <tr>
-   <td><p><strong>Mönster</strong></p> <p>Tjänsten konverterar inte färgad PDF forms till adaptiv form.</p> <p> </p> <p><strong>Upplösning</strong></p> <p>Använd PDF forms i svartvitt eller gråskala. </p> </td> 
-   <td style="text-align: left;"> <img src="assets/coloured-form.png" /></td> 
-  </tr>
-  <tr>
    <td><p><strong>Mönster</strong></p> <p>Tjänsten konverterar inte ifyllt PDF forms till anpassningsbara formulär.</p> <p> </p> <p><strong>Upplösning</strong></p> <p>Använd tomma adaptiva formulär.</p> </td> 
    <td style="text-align: left;"><img src="assets/pre-filled-form.png" /></td> 
   </tr>
