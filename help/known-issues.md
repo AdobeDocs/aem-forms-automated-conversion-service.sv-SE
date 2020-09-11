@@ -1,22 +1,22 @@
 ---
 title: Kända fel
 seo-title: Kända fel
-description: Kända fel och begränsningar för tjänsten Automatisk formulärkonvertering
+description: Kända fel och begränsningar i Automated Forms Conversion Service
 seo-description: Innan du börjar använda tjänsten AEM Forms Automated Forms Conversion bör du läsa om de kända problemen och begränsningarna med tjänsten
 uuid: b1dc661b-ccd3-457f-acbb-4bd25db86e1e
 topic-tags: introduction
 discoiquuid: 9cd2363c-47a0-46e9-98cd-1fe088b9cd6e
 translation-type: tm+mt
-source-git-commit: 1c48cc1b271bfea19ac2394eaf40be21060a349e
+source-git-commit: e2298422e0af9b1c678e7604be3efb6da377d7dd
 workflow-type: tm+mt
-source-wordcount: '774'
+source-wordcount: '768'
 ht-degree: 1%
 
 ---
 
 # Kända fel och begränsningar {#known-issues-limitations}
 
-Innan du börjar använda tjänsten AEM Forms Automated Forms Conversion bör du granska följande kända problem och begränsningar:
+Innan du börjar använda AEM Forms Automated Forms Conversion Service bör du läsa igenom följande kända problem och begränsningar:
 
 ## Known issues {#known-issues}
 
@@ -69,12 +69,12 @@ Innan du börjar använda tjänsten AEM Forms Automated Forms Conversion bör du
 
 ## Begränsningar {#limitations}
 
-* PDF forms med komplex dynamisk layout, fält med prickad kontur, fyllda fält eller färgade fält stöds inte.
+* PDF forms med komplex dynamisk layout, fält med prickad kontur eller fyllda fält stöds inte.
 * Bilder och text i bilderna identifieras inte. Lägg till bilder manuellt i konverterade formulär.
 * XDP-dokument för teckningar stöds inte.
 * PDF forms som är större än 15 sidor stöds inte.
 * Krypterade, lösenordsskyddade och skyddade dokument konverteras inte. Ta bort kryptering eller lösenord innan konverteringen körs.
-* Komplexa tabeller som tabeller utan kanter, kapslade tabeller, tabeller med färgade rader och tabeller med platshållarvärden stöds inte. Använd adaptiv formulärredigerare för att lägga till eller ändra komplexa tabeller efter konverteringen. Endast enkla tabeller med tomma fält, korrekta rubriker och tydliga gränser stöds.
+* Komplexa tabeller som tabeller utan kanter, kapslade tabeller och tabeller med platshållarvärden stöds inte. Använd adaptiv formulärredigerare för att lägga till eller ändra komplexa tabeller efter konverteringen. Endast enkla tabeller med tomma fält, korrekta rubriker och tydliga gränser stöds.
 * Tjänsten konverterar endast engelska formulär till anpassningsbara formulär. You can translate converted adaptive forms to another language using [AEM translation workflow](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html).
-* AEM 6.4-formulär stöder inte automatisk detektering av flerkolumnslayout för indataformulär.
+* AEM 6.4 Forms stöder inte automatisk detektering av flerkolumnslayout för indataformulär.
 
