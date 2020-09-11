@@ -2,7 +2,7 @@
 title: Nyheter Versionsinformation – konverteringstjänsten för automatiserade formulär
 description: 'Lär dig mer om de senaste funktionerna och åtgärdade fel för konverteringstjänsten för automatiserade formulär '
 translation-type: tm+mt
-source-git-commit: bf14583de678ef963b0f2084c3da4624c9304b30
+source-git-commit: 9b904622fcf421d82a183569d915926a2761d3f5
 workflow-type: tm+mt
 source-wordcount: '338'
 ht-degree: 89%
@@ -28,7 +28,7 @@ Konverteringstjänsten för automatiserade formulär förbättras fortlöpande. 
 
 ### Nyheter
 
-Stöd för konvertering av färgade PDF-formulär till adaptiva formulär har lagts till.
+Stöd för konvertering av färgat PDF forms till adaptiva formulär har lagts till.
 
 ### Förbättringar
 
