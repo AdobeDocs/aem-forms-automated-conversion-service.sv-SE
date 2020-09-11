@@ -2,10 +2,10 @@
 title: Nyheter Versionsinformation – konverteringstjänsten för automatiserade formulär
 description: 'Lär dig mer om de senaste funktionerna och åtgärdade fel för konverteringstjänsten för automatiserade formulär '
 translation-type: tm+mt
-source-git-commit: 1c6bdd03d5a3ac37a11a31e5c7948c28412b67aa
+source-git-commit: e2298422e0af9b1c678e7604be3efb6da377d7dd
 workflow-type: tm+mt
-source-wordcount: '326'
-ht-degree: 92%
+source-wordcount: '343'
+ht-degree: 88%
 
 ---
 
@@ -26,9 +26,14 @@ Konverteringstjänsten för automatiserade formulär förbättras fortlöpande. 
 
 ## 16 juli 2020 (AFC-2020.07.0)
 
+### Nyheter
+
+Du kan nu använda tjänsten för att även konvertera färgade PDF-formulär till adaptiva formulär.
+
 ### Förbättringar
 
 Förbättrad automatiserad konvertering av fält för text, formulär och urvalsgrupper till motsvarande adaptiva formulärkomponenter.
+
 
 ## 20 mars 2020 (AFC-2020.03.1)
 
