@@ -5,7 +5,7 @@ translation-type: tm+mt
 source-git-commit: 9b904622fcf421d82a183569d915926a2761d3f5
 workflow-type: tm+mt
 source-wordcount: '338'
-ht-degree: 89%
+ht-degree: 96%
 
 ---
 
@@ -32,7 +32,7 @@ Stöd för konvertering av färgat PDF forms till adaptiva formulär har lagts t
 
 ### Förbättringar
 
-Förbättrad automatiserad konvertering av fält för text, formulär och urvalsgrupper till motsvarande adaptiva formulärkomponenter.
+Förbättringar av den automatiserade konverteringen av fält för text, formulär och urvalsgrupper till motsvarande adaptiva formulärkomponenter.
 
 
 ## 20 mars 2020 (AFC-2020.03.1)
@@ -51,7 +51,7 @@ Tjänsten är nu effektivare när det gäller att upptäcka numrerade och spalta
 
 ### Specialinstruktioner
 
-**Installera automatiskt Forms Conversion Service Connector-paket**
+**Installera paketet Automated Forms Conversion Service connector**
 
 Du behöver kopplingspaketet 1.1.38 eller senare för att kunna använda de senaste funktionerna och förbättringarna som levererades i version AFC-2020.03.1. Du kan hämta kopplingspaketet från [AEM Package Share](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/featurepack/AFCS-Connector-2020.03.1).
 
