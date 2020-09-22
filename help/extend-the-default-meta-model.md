@@ -1,6 +1,6 @@
 ---
-title: '[DO NOT PUBLISH] Extend the default meta model'
-seo-title: '[DO NOT PUBLISH] Extend the default meta model'
+title: Utöka standardmetamodellen
+seo-title: Utöka standardmetamodellen
 description: 'null'
 seo-description: 'null'
 page-status-flag: never-activated
@@ -10,9 +10,16 @@ discoiquuid: 9fce5d31-0a3e-4401-b9d7-bb63799121bf
 privatebeta: true
 index: false
 translation-type: tm+mt
-source-git-commit: afe461baa5bcfc1106c16aae2d6a9c839ea675e8
+source-git-commit: bc7a0a86a211214d6e43e7c95809f6f40fe267f8
+workflow-type: tm+mt
+source-wordcount: '14'
+ht-degree: 100%
 
 ---
 
 
-# [PUBLICERA INTE] Utöka standardmetamodellen{#do-not-publish-extend-the-default-meta-model}
+# Utöka standardmetamodellen{#do-not-publish-extend-the-default-meta-model}
+
+<!--
+[DO NOT PUBLISH] 
+-->
