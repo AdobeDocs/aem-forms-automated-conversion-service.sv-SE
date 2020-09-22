@@ -7,10 +7,10 @@ uuid: 0f6dc39c-99b7-49a4-8e9e-ecc4a35110c0
 topic-tags: introduction
 discoiquuid: e17c2d2c-8300-4467-aa01-57365697939f
 translation-type: tm+mt
-source-git-commit: e2298422e0af9b1c678e7604be3efb6da377d7dd
+source-git-commit: 14e6d1fba9f27fde4fe24de83cb00c9847ea4e90
 workflow-type: tm+mt
-source-wordcount: '1709'
-ht-degree: 5%
+source-wordcount: '1822'
+ht-degree: 4%
 
 ---
 
@@ -132,4 +132,11 @@ Ovannämnda fel inträffar när startdelegering inte har konfigurerats för RSA/
    <br/>
 
 1. **Hur ändrar man automatiskt gemener och versaler i text i anpassningsbara formulär?**
+
    <p>Du kan använda adaptiva varianter från teman eller stilredigerare för att ändra skiftläget för ett fält med adaptiv form. Du kan till exempel öppna temaredigeraren och ange värdet för egenskapen Case för all text i formuläret till versaler, gemener eller camelCase. Du kan också använda alternativet CSS-åsidosättning i temaredigeraren för att skapa olika typer av format.</p>
+
+1. **Kan jag använda Adobe Sign texttaggar med den automatiska Forms Conversion-tjänsten?**
+
+   <p> När du använder Automated Forms Conversion Service för att konvertera ett PDF-formulär till ett anpassat formulär och PDF-formuläret har Adobe Sign-texttaggar, konverteras dessa taggar till motsvarande anpassningsbara formulärfält och signerarinformationen fylls i automatiskt.  Funktionen är endast tillgänglig för Acro Forms och adaptiva formulär har stöd för ett begränsat antal Adobe Sign-fält.</p>  </br>
+
+   <p> Om du vill visa en fullständig lista över de taggar som stöds öppnar du ett formulär i redigeraren för anpassade formulär och lägger till ett Adobe Sign-block. Använd Adobe Sign-blocket för att hitta alla Adobe Sign-fält som stöds. Här finns en listruta där du kan välja alla fält som stöds.</p>
