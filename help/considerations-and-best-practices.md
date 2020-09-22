@@ -1,6 +1,5 @@
 ---
-title: '[DO NOT PUBLISH] God praxis och överväganden '
-seo-title: '[DO NOT PUBLISH] God praxis och överväganden '
+title: 'Rekommenderad praxis och saker att tänka på '
 description: 'null'
 seo-description: 'null'
 page-status-flag: never-activated
@@ -10,15 +9,19 @@ discoiquuid: b786e40a-202e-4e17-a2f5-1f77c46538c2
 privatebeta: true
 index: false
 translation-type: tm+mt
-source-git-commit: e2298422e0af9b1c678e7604be3efb6da377d7dd
+source-git-commit: bc7a0a86a211214d6e43e7c95809f6f40fe267f8
 workflow-type: tm+mt
-source-wordcount: '555'
-ht-degree: 6%
+source-wordcount: '542'
+ht-degree: 8%
 
 ---
 
 
-# [PUBLICERA] INTE Bästa praxis och överväganden {#do-not-publish-best-practices-and-considerations}
+# Rekommenderad praxis och saker att tänka på {#do-not-publish-best-practices-and-considerations}
+
+<!--
+[DO NOT PUBLISH]
+-->
 
 AEM Forms tjänst för automatisk konvertering konverterar ett PDF-formulär till ett anpassningsbart formulär. Tjänsten använder artificiell intelligens och maskininlärningsalgoritmer för att förstå källformulärets layout och fält. Alla maskininlärningstjänster lär sig kontinuerligt av källdata och skapar bättre resultat vid varje förändring. Dessa tjänster lär sig av upplevelser som människor.
 
