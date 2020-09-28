@@ -8,9 +8,9 @@ contentOwner: khsingh
 topic-tags: forms
 discoiquuid: 9358219c-6079-4552-92b9-b427a23811af
 translation-type: tm+mt
-source-git-commit: 14e6d1fba9f27fde4fe24de83cb00c9847ea4e90
+source-git-commit: fa8a27021fbccdd1c6c0721a6e5c032db486e262
 workflow-type: tm+mt
-source-wordcount: '1579'
+source-wordcount: '1585'
 ht-degree: 7%
 
 ---
@@ -30,8 +30,8 @@ AEM Forms automatiserade Forms Conversion Service, som drivs av Adobe Sensei, ko
 
 * **Lägg till Adobe Sign texttaggar i PDF-källdokument:** När PDF-källformuläret har [Adobe Sign-texttaggar](https://helpx.adobe.com/sign/using/text-tag.html)konverteras dessa taggar automatiskt till motsvarande anpassningsbara formulärfält och signerarinformationen fylls i automatiskt. Funktionen är bara tillgänglig för AcroForms och adaptiva formulär har stöd för ett begränsat antal Adobe Sign-fält.
 
-
-   Om du vill visa en fullständig lista över de taggar som stöds öppnar du ett formulär i redigeraren för anpassade formulär och lägger till ett Adobe Sign-block. Använd Adobe Sign-blocket för att hitta alla Adobe Sign-fält som stöds. Här finns en listruta där du kan välja alla fält som stöds.
+   </br>
+    Anpassat formulär har endast stöd för signatur, text, nummer, datum, listruta, alternativknapp, kryssruta, inledande signaturblock, digital signatur, signerarens titel, signerarens e-postadress, signerarens företag, signeringsdatum och signerarens fullständiga namn, Adobe Sign-fält. Tjänsten konverterar därför endast texttaggar från tidigare nämnda fält till motsvarande anpassningsbara formulärfält.
 
 ## Starta konverteringsprocessen {#start-the-conversion-process}
 
