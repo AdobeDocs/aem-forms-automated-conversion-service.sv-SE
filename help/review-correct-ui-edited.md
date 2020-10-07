@@ -7,14 +7,17 @@ uuid: 5a0a6d24-dff6-4732-b607-24848b07b26d
 topic-tags: forms
 discoiquuid: f45ab2d7-5234-42d6-aeb6-b2cb1a7ce3c2
 translation-type: tm+mt
-source-git-commit: 3303c72b7d644dd183c036ba3cc48e629a9a503e
+source-git-commit: 3c12751cad2b3c04ad66a98ac17f20f648530d0f
+workflow-type: tm+mt
+source-wordcount: '2536'
+ht-degree: 0%
 
 ---
 
 
 # Granska och korrigera konverterade formulär{#review-and-correct-converted-forms}
 
-Tjänsten AEM Forms Automated Forms Conversion identifierar fält, innehåll och layout i PDF-indata och konverterar PDF-dokumentet till ett anpassat formulär. Utdataanpassningsbara formulär kan innehålla några få saknade eller felaktigt konverterade fält. Du kan använda redigeraren Granska och korrigera för att göra förbättringar i identifierade fält och återskapa det adaptiva formuläret för att få ett resultat som ligger närmare det önskade resultatet. Efter den första konverteringen kan du öppna PDF-indatadokumentet i redigeraren för att:
+AEM Forms Automated Forms Conversion Service identifierar fält, innehåll och layout i PDF-indata och konverterar PDF-dokumentet till ett anpassningsbart formulär. Utdataanpassningsbara formulär kan innehålla några få saknade eller felaktigt konverterade fält. Du kan använda redigeraren Granska och korrigera för att göra förbättringar i identifierade fält och återskapa det adaptiva formuläret för att få ett resultat som ligger närmare det önskade resultatet. Efter den första konverteringen kan du öppna PDF-indatadokumentet i redigeraren för att:
 
 * Visa alla fält och innehåll som identifieras vid konverteringen
 * Identifiera fält och innehåll som saknas under konverteringen
@@ -22,7 +25,7 @@ Tjänsten AEM Forms Automated Forms Conversion identifierar fält, innehåll och
 * Verifiera identifierade tabeller, ändra storlek på kolumnerna och ändra cellinnehåll
 * Ta bort felaktigt identifierade fält
 
-Skicka om PDF-formulären till konverteringstjänsten när du har gjort ändringarna. Vid en lyckad konvertering hämtas uppdaterade resurser, inklusive det adaptiva formuläret och schemat, till din AEM Forms-instans. Du kan upprepa processen tills önskad upplevelse uppnås. ![](assets/stages-of-form-2.gif)
+När du har gjort ändringarna skickar du om PDF forms till konverteringstjänsten. Vid en lyckad konvertering hämtas uppdaterade resurser, inklusive det adaptiva formuläret och schemat, till din AEM Forms-instans. Du kan upprepa processen tills önskad upplevelse uppnås. ![](assets/stages-of-form-2.gif)
 
 Du måste använda webbläsaren Google Chrome, Mozilla FireFox eller Microsoft Edge för att granska och korrigera redigeraren. Redigeraren stöder inte Internet Explorer.
 
@@ -42,7 +45,7 @@ Redigeraren Review and Correct är ett lättanvänt gränssnitt. Den har följan
 
 ![Granska och korrigera användargränssnitt](assets/reviewcorrectui.png)
 
-**************S. Content Browser** B. Properties Browser **C.** Toolbar **D. Egenskapsknappen** E. Filterknapp **F. Spara, knapp** G. PDF-formulär med identifierade fält överlagrade
+**S.** Content Browser **B.** Properties Browser **C.** Toolbar **D.** Egenskapsknappen **E.** Filterknapp **F.** Spara, knapp **G.** PDF-formulär med identifierade fält som överlägg
 
 Efter den första lyckade konverteringen lägger konverteringstjänsten över PDF-källdokumentet med identifierade fält och komponenter. Dessa fält eller komponenter är av typen: Text, fält, panel, alternativgrupp och tabell:
 
@@ -80,9 +83,9 @@ Om du vill börja granska konverteringar markerar du PDF-källdokumentet som anv
 
    Du kan ta bort eller dela upp en panel om du vill ta bort den. När du använder borttagningsalternativet tas även de underordnade fälten eller komponenterna på panelen bort:
 
-   * Om du vill ta bort en panel markerar du panelen och trycker på borttagningsikonen ![](assets/delete-icon.png) i verktygsfältet. Tryck på **[!UICONTROL Confirm]** i bekräftelsedialogrutan. Tryck **[!UICONTROL Save]** för att spara ändringarna.
+   * Om du vill ta bort en panel markerar du panelen och trycker på borttagningsikonen ![](assets/delete-icon.png) i verktygsfältet. Tryck på **[!UICONTROL Confirm]** i bekräftelsedialogrutan. Tap **[!UICONTROL Save]** to save the changes.
 
-   * Om du vill dela upp en panel markerar du panelen och trycker på ikonen Dela upp i verktygsfältet. Panelen är uppdelad och underordnade fält i den uppdelade panelen justeras till det överordnade fältet. Tryck på **[!UICONTROL Save]**för att spara ändringarna.
+   * Om du vill dela upp en panel markerar du panelen och trycker på ikonen Dela upp i verktygsfältet. Panelen är uppdelad och underordnade fält i den uppdelade panelen justeras till det överordnade fältet. Tap **[!UICONTROL Save]**to save the changes.
 
 1. **Skapa logiska textgrupper**: Validera de identifierade texterna för fullständighet och korrekthet. Kontrollera också att texterna är logiskt placerade i rätt paneler eller grupper. I en layout med flera kolumner kan du till exempel placera texten för en logisk grupp i en annan grupp.
 
@@ -90,13 +93,13 @@ Om du vill börja granska konverteringar markerar du PDF-källdokumentet som anv
 
    * Om du vill lägga till text i formuläret trycker du på plusknappen (+) och trycker på **[!UICONTROL Text]**. Rita rutan, öppna egenskapsläsaren och skriv texten som ska läggas till i rutan Innehåll.
 
-1. **** Granska tabeller: Se till att alla kantlinjer i tabellen identifieras. Se även till att innehållet i cellerna identifieras korrekt.
+1. **Granska tabeller:** Se till att alla kantlinjer i tabellen identifieras. Se även till att innehållet i cellerna identifieras korrekt.
 
    * Om du vill identifiera missade kanter använder du **[!UICONTROL Add Column]** eller **[!UICONTROL Add Row]** .
 
    * Om du vill ta bort extra kantlinjer använder du **[!UICONTROL Delete Column]** - eller **[!UICONTROL Delete Row]** -alternativet.
 
-När du har gjort nödvändiga ändringar trycker du på **[!UICONTROL Save & Convert]** knappen för att skicka om PDF-formulären till konverteringstjänsten. Varje fält konverteras till en motsvarande adaptiv fältkomponent. Efter konverteringen hämtas de uppdaterade resurserna, inklusive det adaptiva formuläret och schemat, till din AEM Forms-instans. Beroende på hur komplicerat formuläret är kan det ta lite tid att slutföra konverteringen.
+När du har gjort nödvändiga ändringar trycker du på **[!UICONTROL Save & Convert]** -knappen för att skicka om PDF forms till konverteringstjänsten. Varje fält konverteras till en motsvarande adaptiv fältkomponent. Efter konverteringen hämtas de uppdaterade resurserna, inklusive det adaptiva formuläret och schemat, till din AEM Forms-instans. Beroende på hur komplicerat formuläret är kan det ta lite tid att slutföra konverteringen.
 
 ![Spara och konvertera](assets/save-and-convert.png)
 
@@ -125,7 +128,7 @@ Konverteringstjänsten kanske inte identifierar vissa komponenter i utskriftsfor
 
 Om du vill lägga till en komponent i formuläret trycker du **[!UICONTROL +]** och trycker **[!UICONTROL Field]**. Rita en ruta som omfattar etiketten och inmatningsrutan för fältet. I exempelbilden ovan används fältkomponenten för att lägga till etiketten **Födelsedatum** och värderutan nedanför till formuläret. När du ritar rutan identifierar konverteringstjänsten fälttypen. Du kan ändra fälttypen i egenskapswebbläsaren om det behövs. När du har skapat komponenten öppnar du egenskapsläsaren och anger komponentens egenskaper.
 
-Tryck på **[!UICONTROL Save]** knappen om du vill spara ändringarna eller använda **[!UICONTROL Save & Convert]** knappen för att skicka om PDF-formulären till konverteringstjänsten.
+Tryck på **[!UICONTROL Save]** knappen för att spara ändringarna eller använd **[!UICONTROL Save & Convert]** knappen för att skicka om PDF forms till konverteringstjänsten.
 
 ### Lägga till eller redigera en tabell {#addedittable}
 
@@ -154,7 +157,7 @@ Markera fältet som du vill konvertera, tryck ![](assets/smock_shuffle_18_n.svg)
 | Fält | Text eller alternativgrupp |
 | Urvalsgrupp | Text eller panel |
 
-När du har konverterat egenskaperna öppnar du egenskapsläsaren, anger etikett och anger andra obligatoriska egenskaper. Tryck på **[!UICONTROL Save]** knappen för att spara ändringarna eller använd knappen Spara och konvertera för att skicka om PDF-formulären till konverteringstjänsten.
+När du har konverterat egenskaperna öppnar du egenskapsläsaren, anger etikett och anger andra obligatoriska egenskaper. Tryck på **[!UICONTROL Save]** knappen för att spara ändringarna eller använd knappen Spara och konvertera för att skicka om PDF forms till konverteringstjänsten.
 
 ### Skapa eller ta bort en panel {#create-or-remove-a-panel}
 
@@ -166,7 +169,7 @@ Med konverteringstjänsten kan du skapa paneler som har komponenter utan relatio
 
 * Om du vill skapa en panel använder du Ctrl-tangenten (Windows eller Linux) eller Ctrl-tangenten (Mac) för att markera relaterade komponenter, och trycker på ![gruppen](assets/group.jpg) för att skapa en panel. Öppna egenskapsbläddraren och ange panelens egenskaper.
 
-Tryck på **[!UICONTROL Save]** knappen om du vill spara ändringarna eller använda **[!UICONTROL Save & Convert]** knappen för att skicka om PDF-formulären till konverteringstjänsten.
+Tryck på **[!UICONTROL Save]** knappen för att spara ändringarna eller använd **[!UICONTROL Save & Convert]** knappen för att skicka om PDF forms till konverteringstjänsten.
 
 ### Ta bort en panel eller komponent {#delete-a-panel-or-component}
 
@@ -178,7 +181,7 @@ Om du vill ta bort en panel eller komponent markerar du en panel eller komponent
 
 Varje komponent i formuläret har en uppsättning egenskaper som namn, titel, typ. Om du vill ange egenskaperna för en komponent markerar du komponenten och trycker på egenskapsläsaren. Egenskaper för den markerade komponenten visas. Ändra eller ange egenskaperna.
 
-Tryck på **[!UICONTROL Save]** knappen om du vill spara ändringarna eller använda **[!UICONTROL Save & Convert]** knappen för att skicka om PDF-formulären till konverteringstjänsten.
+Tryck på **[!UICONTROL Save]** knappen för att spara ändringarna eller använd **[!UICONTROL Save & Convert]** knappen för att skicka om PDF forms till konverteringstjänsten.
 
 ### Skicka ett formulär för konvertering {#send-a-form-for-conversion}
 
@@ -204,3 +207,4 @@ Comment Type: draft
 ## Previous {#previous}
 
 [Use Automated Forms Conversion service](convert-existing-forms-to-adaptive-forms.md)
+-->
