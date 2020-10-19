@@ -8,9 +8,9 @@ contentOwner: khsingh
 topic-tags: forms
 discoiquuid: 9358219c-6079-4552-92b9-b427a23811af
 translation-type: tm+mt
-source-git-commit: fa8a27021fbccdd1c6c0721a6e5c032db486e262
+source-git-commit: 19c688ae925774c008683be8b92afcbfb9f2bcdb
 workflow-type: tm+mt
-source-wordcount: '1585'
+source-wordcount: '1599'
 ht-degree: 7%
 
 ---
@@ -24,14 +24,15 @@ AEM Forms automatiserade Forms Conversion Service, som drivs av Adobe Sensei, ko
 
 * [**Konfigurera konverteringstjänsten**](configure-service.md)
 
-* **Förbered[mallarna](https://helpx.adobe.com/experience-manager/6-5/forms/using/template-editor.html)som ska användas i konverterade formulär:** Om du använder en mall kan du använda en enhetlig profilering för alla anpassade formulär. Tjänsten Automated Forms Conversion extraherar och använder inte heller sidhuvud och sidfot i PDF-källdokument. Du kan använda adaptiva formulärmallar för att ange sidhuvud och sidfot. Sidhuvud och sidfot som anges i mallen används i det adaptiva formuläret under konverteringen. När du skapar en mapp för mallarna väljer du **[!UICONTROL Browse configurations]** alternativet för alla.
+* **Förbered [mallarna](https://helpx.adobe.com/experience-manager/6-5/forms/using/template-editor.html) som ska användas i konverterade formulär:** Om du använder en mall kan du använda en enhetlig profilering för alla anpassade formulär. Tjänsten Automated Forms Conversion extraherar och använder inte heller sidhuvud och sidfot i PDF-källdokument. Du kan använda adaptiva formulärmallar för att ange sidhuvud och sidfot. Sidhuvud och sidfot som anges i mallen används i det adaptiva formuläret under konverteringen. När du skapar en mapp för mallarna väljer du **[!UICONTROL Browse configurations]** alternativet för alla.
 
-* **Förbered[teman](https://helpx.adobe.com/experience-manager/6-5/forms/using/themes.html)som ska användas i konverterade formulär:** Om du använder ett tema kan du använda en konsekvent stil på alla anpassade former i din organisation.
+* **Förbered [teman](https://helpx.adobe.com/experience-manager/6-5/forms/using/themes.html) som ska användas i konverterade formulär:** Om du använder ett tema kan du använda en konsekvent stil på alla anpassade former i din organisation.
 
-* **Lägg till Adobe Sign texttaggar i PDF-källdokument:** När PDF-källformuläret har [Adobe Sign-texttaggar](https://helpx.adobe.com/sign/using/text-tag.html)konverteras dessa taggar automatiskt till motsvarande anpassningsbara formulärfält och signerarinformationen fylls i automatiskt. Funktionen är bara tillgänglig för AcroForms och adaptiva formulär har stöd för ett begränsat antal Adobe Sign-fält.
+* **Lägg till Adobe Sign texttaggar i PDF-källdokument:** När ett PDF-källformulär har [Adobe Sign-texttaggar](https://helpx.adobe.com/sign/using/text-tag.html), bevarar tjänsten all signerarrelaterad information under konverteringen. Det genererade adaptiva formuläret fyller i alla signeraruppgifter medan det adaptiva formuläret skickas till Adobe Sign-tjänsten för signering. Funktionen är bara tillgänglig för AcroForms och de adaptiva formuläregenskaperna är exakt justerade mot AcroForm-egenskaperna.
 
-   </br>
-    Anpassat formulär har endast stöd för signatur, text, nummer, datum, listruta, alternativknapp, kryssruta, inledande signaturblock, digital signatur, signerarens titel, signerarens e-postadress, signerarens företag, signeringsdatum och signerarens fullständiga namn, Adobe Sign-fält. Tjänsten konverterar därför endast texttaggar från tidigare nämnda fält till motsvarande anpassningsbara formulärfält.
+Om du vill lägga till Adobe Sign-texttaggar i PDF-källdokument ska du ersätta fältnamnet i PDF-källdokumentet med en [texttagg](https://helpx.adobe.com/sign/using/text-tag.html) eller använda Konvertera till Adobe Sign-formulär enligt beskrivningen i [Skapa formulär med Acrobat DC](https://helpx.adobe.com/sign/using/create-forms-with-acrobat.html#) -artikeln.
+
+
 
 ## Starta konverteringsprocessen {#start-the-conversion-process}
 
