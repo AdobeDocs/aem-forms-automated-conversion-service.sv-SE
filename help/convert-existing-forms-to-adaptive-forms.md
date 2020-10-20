@@ -8,9 +8,9 @@ contentOwner: khsingh
 topic-tags: forms
 discoiquuid: 9358219c-6079-4552-92b9-b427a23811af
 translation-type: tm+mt
-source-git-commit: 0bff37d64df233dc52310266e306edb734887727
+source-git-commit: 773dae94d4e65b72de3518ebf5be4350db34fbb0
 workflow-type: tm+mt
-source-wordcount: '1599'
+source-wordcount: '1605'
 ht-degree: 7%
 
 ---
@@ -28,7 +28,7 @@ AEM Forms automatiserade Forms Conversion Service, som drivs av Adobe Sensei, ko
 
 * **Förbered [teman](https://helpx.adobe.com/experience-manager/6-5/forms/using/themes.html) som ska användas i konverterade formulär:** Om du använder ett tema kan du använda en konsekvent stil på alla anpassade former i din organisation.
 
-* **Lägg till Adobe Sign texttaggar i PDF-källdokument:** När ett PDF-källformulär har [Adobe Sign-texttaggar](https://helpx.adobe.com/sign/using/text-tag.html), bevarar tjänsten all signerarrelaterad information under konverteringen. Det genererade adaptiva formuläret fyller i alla signeraruppgifter medan det adaptiva formuläret skickas till Adobe Sign-tjänsten för signering. Funktionen är bara tillgänglig för AcroForms och de adaptiva formuläregenskaperna är exakt justerade mot AcroForm-egenskaperna.
+* **Lägg till Adobe Sign texttaggar i PDF-källdokument:** När ett PDF-källformulär har [Adobe Sign texttaggar](https://helpx.adobe.com/sign/using/text-tag.html), bevarar tjänsten all information som rör Adobe Sign vid konverteringen. Det skapade adaptiva formuläret bevarar signerarinformationen som hör till motsvarande adaptiva formulärfält intakt när det adaptiva formuläret skickas till Adobe Sign-tjänsten för signering. Funktionen är bara tillgänglig för AcroForms och de adaptiva formuläregenskaperna är exakt justerade mot AcroForm-egenskaperna.
 
    Om du vill lägga till Adobe Sign-texttaggar i PDF-källdokument ska du ersätta fältnamnet i PDF-källdokumentet med en [texttagg](https://helpx.adobe.com/sign/using/text-tag.html) eller använda Konvertera till Adobe Sign-formulär enligt beskrivningen i [Skapa formulär med Acrobat DC](https://helpx.adobe.com/sign/using/create-forms-with-acrobat.html#) -artikeln.
 
