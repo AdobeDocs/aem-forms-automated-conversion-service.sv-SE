@@ -8,10 +8,10 @@ contentOwner: khsingh
 topic-tags: forms
 discoiquuid: 9358219c-6079-4552-92b9-b427a23811af
 translation-type: tm+mt
-source-git-commit: 1c4eb103b1d3b40ead4137f05e6af01d581365e5
+source-git-commit: c4f0d07b38cdb6aa162a0b61abe12fe9d1677a8c
 workflow-type: tm+mt
-source-wordcount: '1616'
-ht-degree: 7%
+source-wordcount: '1487'
+ht-degree: 8%
 
 ---
 
@@ -28,8 +28,7 @@ AEM Forms automatiserade Forms Conversion Service, som drivs av Adobe Sensei, ko
 
 * **Förbered [teman](https://helpx.adobe.com/experience-manager/6-5/forms/using/themes.html) som ska användas i konverterade formulär:** Om du använder ett tema kan du använda en konsekvent stil på alla anpassade former i din organisation.
 
-* **Lägg till Adobe Sign texttaggar i PDF-källdokument:** När ett PDF-källformulär har [Adobe Sign texttaggar](https://helpx.adobe.com/sign/using/text-tag.html), bevarar tjänsten all information som rör Adobe Sign vid konverteringen. Det genererade adaptiva formuläret associerar signerarinformationen i AcroForm med adaptiva formulärfält, och bevarar data som relaterar till motsvarande adaptiva formulärfält samtidigt som det adaptiva formuläret skickas till Adobe-signeringstjänsten för signering. Funktionen är bara tillgänglig för AcroForms och de adaptiva formuläregenskaperna är exakt justerade mot AcroForm-egenskaperna <br>\
-   Om du vill lägga till Adobe Sign-texttaggar i PDF-källdokument ska du ersätta fältnamnet i PDF-källdokumentet med en [texttagg](https://helpx.adobe.com/sign/using/text-tag.html) eller använda Konvertera till Adobe Sign-formulär enligt beskrivningen i [Skapa formulär med Acrobat DC](https://helpx.adobe.com/sign/using/create-forms-with-acrobat.html#) -artikeln.
+* **(valfritt)** [**Konvertera PDF forms till Adobe Sign**](frequently-asked-questions.md)
 
 
 ## Starta konverteringsprocessen {#start-the-conversion-process}
