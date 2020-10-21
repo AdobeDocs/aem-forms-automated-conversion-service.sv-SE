@@ -7,7 +7,7 @@ uuid: 0f6dc39c-99b7-49a4-8e9e-ecc4a35110c0
 topic-tags: introduction
 discoiquuid: e17c2d2c-8300-4467-aa01-57365697939f
 translation-type: tm+mt
-source-git-commit: c4f0d07b38cdb6aa162a0b61abe12fe9d1677a8c
+source-git-commit: 49f1b6c93529ab30141503ab884801cf1c37b20b
 workflow-type: tm+mt
 source-wordcount: '1866'
 ht-degree: 4%
@@ -142,4 +142,4 @@ Ovannämnda fel inträffar när startdelegering inte har konfigurerats för RSA/
    <p> Om du vill visa en fullständig lista över de taggar som stöds öppnar du ett formulär i redigeraren för anpassade formulär och lägger till ett Adobe Sign-block. Använd Adobe Sign-blocket för att hitta alla Adobe Sign-fält som stöds. Här finns en listruta där du kan välja alla fält som stöds.</p>
 
 1. **Hur skapar man ett Adobe Sign-aktiverat PDF-formulär?**
-Om du vill skapa ett PDF-formulär som är aktiverat för Adobe Sign lägger du till [Adobe Sign-texttaggar](https://helpx.adobe.com/sign/using/text-tag.html) i fältnamn eller använder alternativet [Konvertera till Adobe Sign-formulär](https://helpx.adobe.com/sign/using/create-forms-with-acrobat.html) . </br>
+   </p>Så här skapar du ett Adobe Sign-aktiverat PDF-formulär:</p> Lägg till [Adobe Sign texttaggar](https://helpx.adobe.com/sign/using/text-tag.html) i fältnamn eller använd alternativet [Konvertera till Adobe Sign-formulär](https://helpx.adobe.com/sign/using/create-forms-with-acrobat.html). </br>
