@@ -1,8 +1,11 @@
 ---
 title: Introduktion
 description: 'Påskynda konverteringen av utskriftsformulär till anpassningsbara formulär '
-translation-type: ht
-source-git-commit: ceff5cb56aa9896a28004628c5e26c262b7918bd
+translation-type: tm+mt
+source-git-commit: c4f0d07b38cdb6aa162a0b61abe12fe9d1677a8c
+workflow-type: tm+mt
+source-wordcount: '674'
+ht-degree: 92%
 
 ---
 
@@ -28,6 +31,8 @@ Adobe aktiverar åtkomst för organisationen och tillhandahåller behörigheter 
 ## PDF-formulär och språk som stöds {#supported-languages-and-pdf-forms}
 
 Tjänsten stöder icke-interaktiva PDF-formulär, formulär som är skapade med Adobe Acrobat, kända som AcroForms, och XFA-baserade formulär som är skapade med AEM Forms eller Adobe LiveCycle.
+
+Tjänsten stöder även Adobe Sign-aktiverade PDF forms. Om PDF-källformuläret har Adobe Sign-texttaggar, bevarar tjänsten all Adobe Sign-relaterad information under konverteringen och associerar signerarinformationen som finns i PDF-källfilen med motsvarande adaptiva formulärfält. Funktionen är bara tillgänglig för AcroForms.
 
 Tjänsten kan endast konvertera formulär på engelska till anpassningsbara formulär. Du kan översätta de genererade anpassningsbara formulären till ett annat språk med [AEM:s översättningsflöde](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html).
 
