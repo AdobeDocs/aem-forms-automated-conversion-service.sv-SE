@@ -7,9 +7,9 @@ uuid: b1dc661b-ccd3-457f-acbb-4bd25db86e1e
 topic-tags: introduction
 discoiquuid: 9cd2363c-47a0-46e9-98cd-1fe088b9cd6e
 translation-type: tm+mt
-source-git-commit: e2298422e0af9b1c678e7604be3efb6da377d7dd
+source-git-commit: 589eacfd6200f4336b7a4a7708e10f3dfe08406d
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '808'
 ht-degree: 1%
 
 ---
@@ -77,4 +77,7 @@ Innan du börjar använda AEM Forms Automated Forms Conversion Service bör du l
 * Komplexa tabeller som tabeller utan kanter, kapslade tabeller och tabeller med platshållarvärden stöds inte. Använd adaptiv formulärredigerare för att lägga till eller ändra komplexa tabeller efter konverteringen. Endast enkla tabeller med tomma fält, korrekta rubriker och tydliga gränser stöds.
 * Tjänsten konverterar endast engelska formulär till anpassningsbara formulär. You can translate converted adaptive forms to another language using [AEM translation workflow](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html).
 * AEM 6.4 Forms stöder inte automatisk detektering av flerkolumnslayout för indataformulär.
+* Information som kodats med färger i PDF-källformulär överförs inte till adaptiv form.
+* Färgerna på PDF-källformuläret överförs till adaptiva formulärteman.
+* Färgat PDF forms behandlas som gråskaleformulär och fält identifieras därefter.
 
