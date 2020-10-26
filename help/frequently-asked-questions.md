@@ -7,9 +7,9 @@ uuid: 0f6dc39c-99b7-49a4-8e9e-ecc4a35110c0
 topic-tags: introduction
 discoiquuid: e17c2d2c-8300-4467-aa01-57365697939f
 translation-type: tm+mt
-source-git-commit: 7b8e013af91430e86c0014c7a1695abb05c3c0f2
+source-git-commit: 92cd241915ef5818fb004a8982674b4f6753c171
 workflow-type: tm+mt
-source-wordcount: '1866'
+source-wordcount: '1825'
 ht-degree: 4%
 
 ---
@@ -138,8 +138,6 @@ Ovannämnda fel inträffar när startdelegering inte har konfigurerats för RSA/
 1. **Kan jag använda Adobe Sign texttaggar med den automatiska Forms Conversion-tjänsten?**
 
    <p> När du använder Automated Forms Conversion Service för att konvertera ett PDF-formulär till ett anpassat formulär och PDF-formuläret har Adobe Sign-texttaggar, konverteras dessa taggar till motsvarande anpassningsbara formulärfält och signerarinformationen fylls i automatiskt.  Funktionen är endast tillgänglig för Acro Forms och adaptiva formulär har stöd för ett begränsat antal Adobe Sign-fält.</p>  </br>
-
-   <p> Om du vill visa en fullständig lista över de taggar som stöds öppnar du ett formulär i redigeraren för anpassade formulär och lägger till ett Adobe Sign-block. Använd Adobe Sign-blocket för att hitta alla Adobe Sign-fält som stöds. Här finns en listruta där du kan välja alla fält som stöds.</p>
 
 1. **Hur skapar man ett Adobe Sign-aktiverat PDF-formulär?**
 
