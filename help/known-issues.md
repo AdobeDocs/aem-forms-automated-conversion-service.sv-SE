@@ -7,9 +7,9 @@ uuid: b1dc661b-ccd3-457f-acbb-4bd25db86e1e
 topic-tags: introduction
 discoiquuid: 9cd2363c-47a0-46e9-98cd-1fe088b9cd6e
 translation-type: tm+mt
-source-git-commit: 589eacfd6200f4336b7a4a7708e10f3dfe08406d
+source-git-commit: 92cd241915ef5818fb004a8982674b4f6753c171
 workflow-type: tm+mt
-source-wordcount: '808'
+source-wordcount: '809'
 ht-degree: 1%
 
 ---
@@ -78,6 +78,6 @@ Innan du börjar använda AEM Forms Automated Forms Conversion Service bör du l
 * Tjänsten konverterar endast engelska formulär till anpassningsbara formulär. You can translate converted adaptive forms to another language using [AEM translation workflow](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html).
 * AEM 6.4 Forms stöder inte automatisk detektering av flerkolumnslayout för indataformulär.
 * Information som kodats med färger i PDF-källformulär överförs inte till adaptiv form.
-* Färgerna på PDF-källformuläret överförs till adaptiva formulärteman.
+* Färger i PDF-källformuläret överförs inte till anpassningsbara formulärteman.
 * Färgat PDF forms behandlas som gråskaleformulär och fält identifieras därefter.
 
