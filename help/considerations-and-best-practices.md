@@ -25,9 +25,9 @@ ht-degree: 8%
 
 AEM Forms tjänst för automatisk konvertering konverterar ett PDF-formulär till ett anpassningsbart formulär. Tjänsten använder artificiell intelligens och maskininlärningsalgoritmer för att förstå källformulärets layout och fält. Alla maskininlärningstjänster lär sig kontinuerligt av källdata och skapar bättre resultat vid varje förändring. Dessa tjänster lär sig av upplevelser som människor.
 
-Automatiserad Forms Conversion-tjänst är utbildad i en stor uppsättning formulär. Den identifierar enkelt fält i ett källformulär och skapar anpassningsbara formulär. Det finns dock vissa fält och format i PDF forms som är lätta att se för det mänskliga ögat men svåra att förstå för tjänsten. Tjänsten kan tilldela vissa fält eller format andra än tillämpliga fälttyper eller paneler. Alla sådana fält- och formatmönster listas nedan.
+automated forms conversion är utbildad i ett stort antal blanketter. Den identifierar enkelt fält i ett källformulär och skapar anpassningsbara formulär. Det finns dock vissa fält och format i PDF forms som är lätta att se för det mänskliga ögat men svåra att förstå för tjänsten. Tjänsten kan tilldela vissa fält eller format andra än tillämpliga fälttyper eller paneler. Alla sådana fält- och formatmönster listas nedan.
 
-Tjänsten börjar identifiera och tilldela rätt fält eller paneler till dessa mönster när den lär sig av källdata. Just nu kan du använda [Gransknings- och Korrigera](review-correct-ui-edited.md) -redigeraren för att korrigera sådana problem. Innan du börjar åtgärda problemen eller läser mer bör du bekanta dig med [adaptiva formulärkomponenter](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html).
+Tjänsten börjar identifiera och tilldela rätt fält eller paneler till dessa mönster när den lär sig av källdata. Du kan använda redigeraren [Granska och korrigera](review-correct-ui-edited.md) för att korrigera sådana problem. Innan du börjar åtgärda problemen eller läser mer bör du bekanta dig med [adaptiva formulärkomponenter](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html).
 
 ## Allmänt {#general}
 
@@ -59,7 +59,7 @@ Tjänsten börjar identifiera och tilldela rätt fält eller paneler till dessa 
  </tbody>
 </table>
 
-## Urvalsgrupp  {#choice-group}
+## Alternativgrupp {#choice-group}
 
 <table border="1" cellpadding="1" cellspacing="0" width="100%"> 
  <tbody>
@@ -74,7 +74,7 @@ Tjänsten börjar identifiera och tilldela rätt fält eller paneler till dessa 
  </tbody>
 </table>
 
-## Form fields {#form-fields}
+## Formulärfält {#form-fields}
 
 <table border="1" cellpadding="1" cellspacing="0" width="100%"> 
  <tbody>
