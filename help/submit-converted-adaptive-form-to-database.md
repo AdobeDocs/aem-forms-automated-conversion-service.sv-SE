@@ -1,18 +1,21 @@
 ---
 title: Skicka de konverterade adaptiva formulären med ett JSON-schema till databasen
-description: Skicka de konverterade adaptiva formulären med ett JSON-schema till databasen genom att skapa en formulärdatamodell och referera till den i ett AEM-arbetsflöde.
+description: Skicka de konverterade adaptiva formulären med ett JSON-schema till databasen genom att skapa en formulärdatamodell och referera till den i ett AEM arbetsflöde.
 uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
 topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
 translation-type: tm+mt
 source-git-commit: c552f4073ac88ca9016a746116a27a5898df7f7d
+workflow-type: tm+mt
+source-wordcount: '1505'
+ht-degree: 1%
 
 ---
 
 
 # Integrera anpassningsbara formulär med databas med hjälp av AEM-arbetsflöde {#submit-forms-to-database-using-forms-portal}
 
-Med tjänsten Automated Forms Conversion kan du konvertera ett icke-interaktivt PDF-formulär, ett Acro-formulär eller ett XFA-baserat PDF-formulär till ett adaptivt formulär. När du startar konverteringsprocessen kan du generera ett anpassat formulär antingen med eller utan databindningar.
+Med tjänsten Automated forms conversion kan du konvertera ett icke-interaktivt PDF-formulär, ett Acro-formulär eller ett XFA-baserat PDF-formulär till ett anpassningsbart formulär. När du startar konverteringsprocessen kan du generera ett anpassat formulär antingen med eller utan databindningar.
 
 Om du väljer att generera ett adaptivt formulär utan databindningar kan du integrera det konverterade adaptiva formuläret med en formulärdatamodell, ett XML-schema eller ett JSON-schema efter konverteringen. För formulärdatamodellen måste du binda adaptiva formulärfält manuellt med formulärdatamodellen. Men om du genererar ett adaptivt formulär med databindningar associerar konverteringstjänsten automatiskt adaptiva formulär med ett JSON-schema och skapar en databindning mellan fälten som finns i det adaptiva formuläret och JSON-schemat. Sedan kan du integrera det anpassade formuläret med en valfri databas, fylla i data i formuläret och skicka det till databasen. När integreringen med databasen är klar kan du konfigurera fälten i det konverterade adaptiva formuläret så att de hämtar värden från databasen och fyller i adaptiva formulärfält i förväg.
 
@@ -25,20 +28,20 @@ I den här artikeln beskrivs de stegvisa instruktionerna för att köra alla des
 ## Krav {#pre-requisites}
 
 * Konfigurera en AEM 6.4- eller 6.5-författarinstans
-* Installera [senaste Service Pack](https://helpx.adobe.com/experience-manager/aem-releases-updates.html) för din AEM-instans
+* Installera [den senaste Service Pack](https://helpx.adobe.com/experience-manager/aem-releases-updates.html) för din AEM
 * Senaste versionen av AEM Forms-tilläggspaketet
-* Configure [Automated Forms Conversion service](configure-service.md)
+* Konfigurera [tjänsten Automated forms conversion](configure-service.md)
 * Konfigurera en databas. Databasen som används i exempelimplementeringen är MySQL 5.6.24. Du kan emellertid integrera det konverterade adaptiva formuläret med valfri databas.
 
 ## Exempel på anpassningsbart formulär {#sample-adaptive-form}
 
-Ladda ned följande exempel på en PDF-fil om du vill köra ett användningsexempel för att integrera konverterade adaptiva formulär med en databas med hjälp av ett AEM-arbetsflöde.
+Ladda ned följande exempel på en PDF-fil om du vill köra ett användningsexempel för att integrera konverterade adaptiva formulär med en AEM databas.
 
 Du kan hämta exempelformuläret Kontakta oss med:
 
 [Hämta fil](assets/sample_contact_us_form.pdf)
 
-PDF-filen fungerar som indata till tjänsten Automated Forms Conversion. Tjänsten konverterar den här filen till ett anpassat formulär. Följande bild visar exemplet som kontaktar oss i PDF-format.
+PDF-filen fungerar som indata till tjänsten Automated forms conversion. Tjänsten konverterar den här filen till ett anpassat formulär. Följande bild visar exemplet som kontaktar oss i PDF-format.
 
 ![exempelformulär för låneansökan](assets/sample_contact_us_form.png)
 
@@ -48,20 +51,20 @@ Utför följande steg på alla författare- och publiceringsinstanser för att i
 
 1. Navigera till `http://server:port/system/console/depfinder` och sök efter paketet com.mysql.jdbc.
 1. I kolumnen Exporterad av kontrollerar du om paketet exporteras av något paket. Fortsätt om paketet inte exporteras av något paket.
-1. Navigera till `http://server:port/system/console/bundles` och klicka **[!UICONTROL Install/Update]**.
-1. Klicka **[!UICONTROL Choose File]** och bläddra till filen mysql-connector-java-5.1.39-bin.jar. Markera **[!UICONTROL Start Bundle]** och **[!UICONTROL Refresh Packages]** markera kryssrutor.
+1. Navigera till `http://server:port/system/console/bundles` och klicka på **[!UICONTROL Install/Update]**.
+1. Klicka på **[!UICONTROL Choose File]** och bläddra till filen mysql-connector-java-5.1.39-bin.jar. Markera även kryssrutorna **[!UICONTROL Start Bundle]** och **[!UICONTROL Refresh Packages]**.
 1. Klicka på **[!UICONTROL Install]** eller **[!UICONTROL Update]**. Starta om servern när du är klar.
 1. (Endast Windows) Stäng av operativsystemets brandvägg.
 
 ## Förbered data för formulärmodellen {#prepare-data-for-form-model}
 
-Med dataintegrering i AEM Forms kan du konfigurera och ansluta till olika datakällor. När du har genererat ett anpassat formulär med konverteringsprocessen kan du definiera formulärmodellen baserat på en formulärdatamodell, XSD eller ett JSON-schema. Du kan använda en databas, Microsoft Dynamics eller någon annan tredjepartstjänst för att skapa en formulärdatamodell.
+Med AEM Forms dataintegrering kan du konfigurera och ansluta till olika datakällor. När du har genererat ett anpassat formulär med konverteringsprocessen kan du definiera formulärmodellen baserat på en formulärdatamodell, XSD eller ett JSON-schema. Du kan använda en databas, Microsoft Dynamics eller någon annan tredjepartstjänst för att skapa en formulärdatamodell.
 
-I den här självstudien används MySQL-databasen som källa för att skapa en formulärdatamodell. Skapa ett schema i databasen och lägg till en **kontakttabell** i schemat baserat på de fält som är tillgängliga i det adaptiva formuläret.
+I den här självstudien används MySQL-databasen som källa för att skapa en formulärdatamodell. Skapa ett schema i databasen och lägg till tabellen **kontakter** i schemat baserat på fälten som är tillgängliga i det adaptiva formuläret.
 
 ![Exempeldata mysql](assets/db_entries_sample_form.png)
 
-Du kan använda följande DDL-programsats för att skapa **kontakttabellen** i databasen.
+Du kan använda följande DDL-programsats för att skapa tabellen **kontakter** i databasen.
 
 ```sql
 CREATE TABLE `contactus` (
@@ -73,11 +76,11 @@ CREATE TABLE `contactus` (
  ) ENGINE=InnoDB DEFAULT CHARSET=utf8
 ```
 
-## Konfigurera anslutning mellan AEM-instans och databas {#configure-connection-between-aem-instance-and-database}
+## Konfigurera anslutning mellan AEM och databas {#configure-connection-between-aem-instance-and-database}
 
-Utför följande konfigurationssteg för att skapa en anslutning mellan AEM-instansen och MYSQL-databasen:
+Utför följande konfigurationssteg för att skapa en anslutning mellan AEM och MYSQL-databasen:
 
-1. Gå till konfigurationssidan för AEM Web Console på `http://server:port/system/console/configMgr`.
+1. Gå till AEM webbkonsolkonfigurationssida på `http://server:port/system/console/configMgr`.
 1. Sök och klicka för att öppna **[!UICONTROL Apache Sling Connection Pooled DataSource]** i redigeringsläge i webbkonsolkonfigurationen. Ange värdena för egenskaperna enligt följande tabell:
 
    <table> 
@@ -153,25 +156,25 @@ Utför följande konfigurationssteg för att skapa en anslutning mellan AEM-inst
 
 När du har konfigurerat MYSQL som datakälla skapar du en formulärdatamodell genom att utföra följande steg:
 
-1. I AEM-författarinstansen går du till **[!UICONTROL Forms]** > **[!UICONTROL Data Integrations]**.
+1. I AEM författarinstans går du till **[!UICONTROL Forms]** > **[!UICONTROL Data Integrations]**.
 
 1. Tryck på **[!UICONTROL Create]** > **[!UICONTROL Form Data Model]**.
 
-1. I **[!UICONTROL Create Form Data Model]** guiden anger du **workflow_submit** som namn på formulärdatamodellen. Tryck på **[!UICONTROL Next]**.
+1. I guiden **[!UICONTROL Create Form Data Model]** anger du **workflow_submit** som namn på formulärdatamodellen. Tryck på **[!UICONTROL Next]**.
 
 1. Markera MYSQL-datakällan som du har konfigurerat i föregående avsnitt och tryck på **[!UICONTROL Create]**.
 
-1. Tryck **[!UICONTROL Edit]** och expandera datakällan som visas i den vänstra rutan för att välja **kontakttabell** , **[!UICONTROL get]** och **[!UICONTROL insert]** tjänster, och tryck sedan på **[!UICONTROL Add Selected]**.
+1. Tryck på **[!UICONTROL Edit]** och expandera datakällan som visas i den vänstra rutan för att välja tjänsterna **contactus**, **[!UICONTROL get]** och **[!UICONTROL insert]** och tryck sedan på **[!UICONTROL Add Selected]**.
 
    ![Exempeldata mysql](assets/fdm_details_workfdlow_submit.png)
 
-1. Markera datamodellsobjektet i den högra rutan och tryck på **[!UICONTROL Edit Properties]**. Välj **[!UICONTROL get]** och **[!UICONTROL insert]** från **[!UICONTROL Read Service]** och **[!UICONTROL Write Service]** nedrullningsbara listor. Ange argumenten för lästjänsten och tryck på **[!UICONTROL Done]**.
+1. Markera datamodellsobjektet i den högra rutan och tryck på **[!UICONTROL Edit Properties]**. Välj **[!UICONTROL get]** och **[!UICONTROL insert]** i listrutorna **[!UICONTROL Read Service]** och **[!UICONTROL Write Service]**. Ange argumenten för lästjänsten och tryck på **[!UICONTROL Done]**.
 
-1. Markera **[!UICONTROL Services]** tjänsten på **[!UICONTROL get]** fliken och tryck sedan på **[!UICONTROL Edit Properties]**. Markera **[!UICONTROL Output Model Object]**, inaktivera **[!UICONTROL Return array]** växlingsknappen och tryck på **[!UICONTROL Done]**.
+1. På fliken **[!UICONTROL Services]** väljer du tjänsten **[!UICONTROL get]** och trycker på **[!UICONTROL Edit Properties]**. Välj **[!UICONTROL Output Model Object]**, inaktivera växlingsknappen **[!UICONTROL Return array]** och tryck på **[!UICONTROL Done]**.
 
-1. Markera **[!UICONTROL Insert]** tjänsten och tryck på **[!UICONTROL Edit Properties]**. Markera **[!UICONTROL Input Model Object]** och tryck **[!UICONTROL Done]**.
+1. Välj tjänsten **[!UICONTROL Insert]** och tryck på **[!UICONTROL Edit Properties]**. Markera **[!UICONTROL Input Model Object]** och tryck på **[!UICONTROL Done]**.
 
-1. Tryck **[!UICONTROL Save]** för att spara formulärdatamodellen.
+1. Tryck på **[!UICONTROL Save]** för att spara formulärdatamodellen.
 
 Du kan hämta exempelformulärdatamodellen med:
 
@@ -179,13 +182,13 @@ Du kan hämta exempelformulärdatamodellen med:
 
 ## Generera anpassningsbara formulär med JSON-bindning {#generate-adaptive-forms-with-json-binding}
 
-Använd tjänsten [Automated Forms Conversion för att konvertera](convert-existing-forms-to-adaptive-forms.md) formuläret [](#sample-adaptive-form) Kontakta oss till ett anpassningsbart formulär med databindning. Se till att du inte markerar **[!UICONTROL Generate adaptive form(s) without data bindings]** kryssrutan när du genererar det anpassade formuläret.
+Använd tjänsten [Automated forms conversion för att konvertera ](convert-existing-forms-to-adaptive-forms.md) formuläret [Kontakta oss](#sample-adaptive-form) till ett anpassningsbart formulär med databindning. Se till att du inte markerar kryssrutan **[!UICONTROL Generate adaptive form(s) without data bindings]** när du genererar det adaptiva formuläret.
 
 ![Adaptiv form med JSON-bindning](assets/generate_af_with_data_bindings.png)
 
-Markera det konverterade formuläret **** Kontakta oss i mappen **[!UICONTROL output]** i **[!UICONTROL Forms & Documents]** och tryck på **[!UICONTROL Edit]**. Tryck **[!UICONTROL Preview]**, ange värden i de adaptiva formulärfälten och tryck sedan på **[!UICONTROL Submit]**.
+Markera det konverterade **Kontakta oss-formuläret** som finns i mappen **[!UICONTROL output]** i **[!UICONTROL Forms & Documents]** och tryck på **[!UICONTROL Edit]**. Tryck på **[!UICONTROL Preview]**, ange värden i de adaptiva formulärfälten och tryck på **[!UICONTROL Submit]**.
 
-Logga in på **crx-database** och navigera till */content/forms/fp/admin/submit/data* för att visa skickade värden i JSON-format. Nedan följer exempeldata i JSON-format när du skickar den konverterade **Kontakta oss** i anpassningsbar form:
+Logga in på **crx-database** och navigera till */content/forms/fp/admin/submit/data* för att visa skickade värden i JSON-format. Följande är exempeldata i JSON-format när du skickar den konverterade **Kontakta oss** adaptiva formen:
 
 ```json
 {
@@ -220,25 +223,25 @@ Utför följande steg för att skapa en arbetsflödesmodell och skicka data i an
 
 1. Öppna konsolen Arbetsflödesmodeller. Standardwebbadressen är `https://server:port/libs/cq/workflow/admin/console/content/models.html/etc/workflow/models`.
 
-1. Välj **[!UICONTROL Create]** sedan **[!UICONTROL Create Model]**. Dialogrutan **[!UICONTROL Add Workflow Model]** visas.
+1. Välj **[!UICONTROL Create]** och sedan **[!UICONTROL Create Model]**. Dialogrutan **[!UICONTROL Add Workflow Model]** visas.
 
-1. Ange **[!UICONTROL Title]** och **[!UICONTROL Name]** (valfritt). Exempel: **workflow_json_submit**. Tryck **[!UICONTROL Done]** för att skapa modellen.
+1. Ange **[!UICONTROL Title]** och **[!UICONTROL Name]** (valfritt). Till exempel **workflow_json_submit**. Tryck på **[!UICONTROL Done]** för att skapa modellen.
 
-1. Markera arbetsflödesmodellen och tryck för **[!UICONTROL Edit]** att öppna modellen i redigeringsläge. Tryck på + och lägg till **[!UICONTROL Invoke Form Data Model Service]** steg i arbetsflödesmodellen.
+1. Markera arbetsflödesmodellen och tryck på **[!UICONTROL Edit]** för att öppna modellen i redigeringsläge. Tryck på + och lägg till steget **[!UICONTROL Invoke Form Data Model Service]** i arbetsflödesmodellen.
 
-1. Tryck på **[!UICONTROL Invoke Form Data Model Service]** steget och tryck på ![Konfigurera](assets/configure_icon.png).
+1. Tryck på **[!UICONTROL Invoke Form Data Model Service]**-steget och tryck på ![Konfigurera](assets/configure_icon.png).
 
-1. Välj den formulärdatamodell som du har skapat i **[!UICONTROL Form Data Model]** fältet på fliken **[!UICONTROL Form Data Model path]** och välj **[!UICONTROL insert]** i **[!UICONTROL Service]** listrutan.
+1. På fliken **[!UICONTROL Form Data Model]** väljer du den formulärdatamodell som du har skapat i fältet **[!UICONTROL Form Data Model path]** och väljer **[!UICONTROL insert]** i listrutan **[!UICONTROL Service]**.
 
-1. På **[!UICONTROL Input for Service]** fliken väljer du **[!UICONTROL Provide input data using literal, variable, or a workflow metadata, and a JSON file]** i listrutan, markerar **[!UICONTROL Map input fields from input JSON]** kryssrutan, markerar **[!UICONTROL Relative to payload]** och anger **data.xml** som värde för **[!UICONTROL Select input JSON document using]** fältet.
+1. På fliken **[!UICONTROL Input for Service]** väljer du **[!UICONTROL Provide input data using literal, variable, or a workflow metadata, and a JSON file]** i listrutan, markerar kryssrutan **[!UICONTROL Map input fields from input JSON]**, väljer **[!UICONTROL Relative to payload]** och anger **data.xml** som värde för fältet **[!UICONTROL Select input JSON document using]**.
 
-1. Ange följande värden för formulärdatamodellens argument i **[!UICONTROL Service Arguments]** avsnittet:
+1. I avsnittet **[!UICONTROL Service Arguments]** anger du följande värden för formulärdatamodellens argument:
 
    ![Anropa datamodelltjänst för formulär](assets/invoke_form_data_model_service.png)
 
    Observera att formulärdatamodellsfälten, till exempel konturerar punktnamn, mappas till **afData.afBoundData.data.name1**, som refererar till JSON-schemabindningar för det skickade adaptiva formuläret.
 
-## Konfigurera adaptiv formuläröverföring {#configure-adaptive-form-submission}
+## Konfigurera adaptiv formulärsändning {#configure-adaptive-form-submission}
 
 Utför följande steg för att skicka det adaptiva formuläret till arbetsflödesmodellen som du skapade i föregående avsnitt:
 
@@ -246,11 +249,11 @@ Utför följande steg för att skicka det adaptiva formuläret till arbetsflöde
 
 1. Öppna adaptiva formuläregenskaper genom att trycka på **[!UICONTROL Form Container]** och sedan trycka på ![Konfigurera](assets/configure_icon.png).
 
-1. I **[!UICONTROL Submission]** avsnittet väljer du **[!UICONTROL Invoke an AEM workflow]** från den **[!UICONTROL Submit Action]** nedrullningsbara listan, väljer arbetsflödesmodellen som du skapade i föregående avsnitt och anger **data.xml** i **[!UICONTROL Data File Path]** fältet.
+1. I avsnittet **[!UICONTROL Submission]** väljer du **[!UICONTROL Invoke an AEM workflow]** i listrutan **[!UICONTROL Submit Action]**, väljer arbetsflödesmodellen som du skapade i föregående avsnitt och anger **data.xml** i fältet **[!UICONTROL Data File Path]**.
 
 1. Tryck på ![Spara](assets/save_icon.png) för att spara egenskaperna.
 
-1. Tryck **[!UICONTROL Preview]**, ange värden i de adaptiva formulärfälten och tryck sedan på **[!UICONTROL Submit]**. De inskickade värdena visas nu i MYSQL-databastabellen i stället för i **crx-databasen**.
+1. Tryck på **[!UICONTROL Preview]**, ange värden i de adaptiva formulärfälten och tryck på **[!UICONTROL Submit]**. De skickade värdena visas nu i MYSQL-databastabellen i stället för **crx-database**.
 
 ## Konfigurera anpassningsbara formulär för förifyllningsvärden från databasen
 
@@ -258,15 +261,15 @@ Utför följande steg för att konfigurera adaptiva formulär till förifyllda v
 
 1. Tryck på fältet **E-post** i det adaptiva formuläret och tryck på ![Redigera regel](assets/edit-rules.png).
 
-1. Tryck **[!UICONTROL Create]** och välj **[!UICONTROL is changed]** i **[!UICONTROL Select State]** listrutan i **[!UICONTROL When]** avsnittet.
+1. Tryck på **[!UICONTROL Create]** och välj **[!UICONTROL is changed]** i listrutan **[!UICONTROL Select State]** i avsnittet **[!UICONTROL When]**.
 
-1. I **[!UICONTROL Then]** avsnittet väljer du **[!UICONTROL Invoke Service]** och **får** som tjänst för formulärdatamodellen som du har skapat i ett tidigare avsnitt av den här artikeln.
+1. I avsnittet **[!UICONTROL Then]** väljer du **[!UICONTROL Invoke Service]** och **get** som tjänst för formulärdatamodellen som du har skapat i ett tidigare avsnitt i den här artikeln.
 
-1. Välj **E-post** i **[!UICONTROL Input]** avsnittet och de tre övriga fälten i formulärdatamodellen, **Namn**, **Telefonnummer** och **Problembeskrivning** i **[!UICONTROL Output]** avsnittet. Tryck **[!UICONTROL Done]** för att spara inställningarna.
+1. Välj **E-post** i avsnittet **[!UICONTROL Input]** och de tre övriga fälten i formulärdatamodellen, **Namn**, **Telefonnummer** och **Beskrivning** i avsnittet **[!UICONTROL Output]**. Tryck på **[!UICONTROL Done]** för att spara inställningarna.
 
    ![Konfigurera inställningar för e-postförifyllning](assets/email_prefill_settings.png)
 
-   På grund av befintliga e-postposter i MYSQL-databasen kan du fylla i de övriga tre fälten i förväg i det anpassningsbara formulärets **[!UICONTROL Preview]** läge. Om du till exempel anger aya.tan@xyz.com i **e-postfältet** (baserat på befintliga data i avsnittet [Förbered formulärdatamodell](#prepare-data-for-form-model) i den här artikeln) och tabbar ut från fältet, visas de tre återstående fälten **Namn**, **Telefonnummer** och **Problembeskrivning** automatiskt i det anpassade formuläret.
+   Det innebär att du, baserat på befintliga e-postposter i MYSQL-databasen, kan förifylla värdena för de tre återstående fälten i det anpassade formulärets **[!UICONTROL Preview]**-läge. Om du till exempel anger aya.tan@xyz.com i **e-postfältet** (baserat på befintliga data i [Förbered formulärdatamodell](#prepare-data-for-form-model) i den här artikeln) och tabbar ut från fältet, de tre övriga fälten, **Namn**, **Telefonnummer** och **Utfärdandebeskrivning** visas automatiskt i det anpassade formuläret.
 
 Du kan hämta det konverterade adaptiva exempelformuläret med:
 
