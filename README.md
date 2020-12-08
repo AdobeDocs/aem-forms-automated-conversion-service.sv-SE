@@ -1,16 +1,12 @@
 ---
-source-git-commit: d2af4611e68447253a818e0c83ff3ec519056373
+source-git-commit: c8489a521f35c60ee28227f499e9a0a7541960b9
 workflow-type: tm+mt
 translation-type: tm+mt
-source-wordcount: '517'
-ht-degree: 16%
+source-wordcount: '435'
+ht-degree: 18%
 
 ---
 # Contribute-artikel
-
-| EXL-PR | EXL | Förhandsgranska | Aktivera | Publicerad | Hjälp |
-|--- |--- |--- |--- |--- |--- |
-| [![Byggstatus](https://docs.ci.corp.adobe.com/view/exl-pr/job/aem-forms-automated-conversion-service.en_pr-exl/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/aem-forms-automated-conversion-service.en_pr-exl/lastBuild/) | [![Byggstatus](https://docs.ci.corp.adobe.com/view/exl-pr/job/aem-forms-automated-conversion-service.en_exl/lastBuild/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/aem-forms-automated-conversion-service.en_exl/lastBuild/lastBuild) | [Förhandsgranska URL](https://experienceleague.corp.adobe.com/docs/aem-forms-automated-conversion-service/using/introduction.html?lang=en) | [activate-exl](https://docs.ci.corp.adobe.com/job/activate-exl/build/) | [Live-URL](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/introduction.html?lang=en) | [Redigeringshandbok](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html?lang=en) |
 
 Vi välkomnar bidrag till innehåll från våra medarbetare och Adobe utanför dokumentationsteamen.
 
@@ -28,7 +24,7 @@ Hur du bidrar beror på vem du är och vilken typ av ändringar du vill bidra me
 
 Om du vill skicka en begäran klickar du på länken **Logga ett problem** i en artikel som öppnar ett problem i GitHub. Ange en titel och en beskrivning och klicka sedan på **Skicka nytt utgåva**.
 
-Om du vill begära mindre uppdateringar klickar du på länken **Redigera den här sidan** i en artikel som öppnar källartikeln i GitHub. Använd GitHub-gränssnittet för att göra uppdateringar. Mer information finns i den allmänna guiden [för](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html) medverkande på Adobe Docs.
+Om du vill begära mindre uppdateringar klickar du på länken **Redigera den här sidan** i en artikel som öppnar källartikeln i GitHub. Använd GitHub-gränssnittet för att göra uppdateringar. Mer information finns i den allmänna [handboken för medverkande på Adobe Docs](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html).
 
 Mindre korrigeringar och förtydliganden som du lämnar in för dokumentation och kodexempel i den här rapporten omfattas av Adobe användarvillkoren.
 
@@ -42,7 +38,7 @@ If you submit a pull request with significant changes to documentation and code 
 
 ### Stora förändringar för anställda i Adobe
 
-Om du är teknikskribent, programchef eller utvecklare för en [!UICONTROL Adobe Experience Cloud] lösning, och det är ditt jobb att bidra till eller skriva tekniska artiklar, bör du använda den privata databasen på `https://git.corp.adobe.com/AdobeDocs`. Se [Intern Collaboration Guide](https://docs.adobe.com/content/help/en/collaborative-doc-instructions/collaboration-guide/home.html).
+Om du är teknikskribent, programchef eller utvecklare från produktteamet för en [!UICONTROL Adobe Experience Cloud]-lösning, och det är ditt jobb att bidra till eller skriva tekniska artiklar, bör du använda den privata databasen på `https://git.corp.adobe.com/AdobeDocs`. Se [Handboken för internt samarbete](https://docs.adobe.com/content/help/en/collaborative-doc-instructions/collaboration-guide/home.html).
 
 <!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
 
@@ -50,7 +46,7 @@ Om du är teknikskribent, programchef eller utvecklare för en [!UICONTROL Adobe
 
 Deltagare i communityn kan använda GitHub-gränssnittet för grundläggande redigering eller förgrena rapporten för att göra större insatser.
 
-Mer information finns i [Adobe Docs Contributor Guide](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html) .
+Mer information finns i [Adobe Docs Contributor Guide](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html).
 
 ## Så här använder du kod för att formatera ditt ämne
 
