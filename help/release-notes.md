@@ -2,10 +2,10 @@
 title: Nyheter Versionsinformation – konverteringstjänsten för automatiserade formulär
 description: 'Lär dig mer om de senaste funktionerna och åtgärdade fel för konverteringstjänsten för automatiserade formulär '
 translation-type: tm+mt
-source-git-commit: 923fee97428b8063f6a973b90eb91fdb25e5dd12
+source-git-commit: f3e8774a04d37fab70d797c528db8311abe59a5a
 workflow-type: tm+mt
-source-wordcount: '353'
-ht-degree: 95%
+source-wordcount: '361'
+ht-degree: 93%
 
 ---
 
@@ -26,7 +26,7 @@ Konverteringstjänsten för automatiserade formulär förbättras fortlöpande. 
 
 ## 01 feb 2021 (AFC-2021.01)
 
-Prestandaförbättringar när det gäller att ordna formulärfält i paneler och generera rubriker för paneler.
+Förbättrad organisering av formulärfält i paneler och generering av rubriker för paneler samtidigt som ett källformulär konverteras till ett anpassat formulär.
 
 ## 16 juli 2020 (AFC-2020.07.0)
 
