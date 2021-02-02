@@ -2,7 +2,7 @@
 title: Nyheter Versionsinformation – konverteringstjänsten för automatiserade formulär
 description: 'Lär dig mer om de senaste funktionerna och åtgärdade fel för konverteringstjänsten för automatiserade formulär '
 translation-type: tm+mt
-source-git-commit: 3fa3f484268c7cbe655408f90d53ae8d28b3a7ee
+source-git-commit: 765f7bd4126fe4b8f4dd92c4b3eb556dae4e9ff0
 workflow-type: tm+mt
 source-wordcount: '363'
 ht-degree: 93%
@@ -23,8 +23,7 @@ Konverteringstjänsten för automatiserade formulär förbättras fortlöpande. 
 * Specialinstruktioner
 * Framtida planer för ändringar
 
-
-## 1 februari 2021 (AFC-2021.01.2)
+## 02 feb 2021 (AFC-2021.01.2)
 
 ### Förbättringar
 
