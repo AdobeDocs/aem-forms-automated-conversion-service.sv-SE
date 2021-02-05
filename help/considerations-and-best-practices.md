@@ -1,7 +1,7 @@
 ---
 title: 'Rekommenderad praxis och saker att tänka på '
-description: 'null'
-seo-description: 'null'
+description: PUBLICERA INTE
+seo-description: PUBLICERA INTE
 page-status-flag: never-activated
 uuid: c2821264-39e2-44f8-b234-835c46f33fd5
 topic-tags: introduction
@@ -9,10 +9,10 @@ discoiquuid: b786e40a-202e-4e17-a2f5-1f77c46538c2
 privatebeta: true
 index: false
 translation-type: tm+mt
-source-git-commit: bc7a0a86a211214d6e43e7c95809f6f40fe267f8
+source-git-commit: b2d29c22a275f2dc6a82593cf5e441c8da0bba13
 workflow-type: tm+mt
-source-wordcount: '542'
-ht-degree: 8%
+source-wordcount: '546'
+ht-degree: 7%
 
 ---
 
