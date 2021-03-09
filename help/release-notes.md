@@ -2,10 +2,10 @@
 title: Nyheter Versionsinformation – konverteringstjänsten för automatiserade formulär
 description: 'Lär dig mer om de senaste funktionerna och åtgärdade fel för konverteringstjänsten för automatiserade formulär '
 translation-type: tm+mt
-source-git-commit: 765f7bd4126fe4b8f4dd92c4b3eb556dae4e9ff0
+source-git-commit: 70dc18347e072ccd7c1625f6831554ecfc13f2fb
 workflow-type: tm+mt
-source-wordcount: '363'
-ht-degree: 93%
+source-wordcount: '386'
+ht-degree: 88%
 
 ---
 
@@ -23,38 +23,44 @@ Konverteringstjänsten för automatiserade formulär förbättras fortlöpande. 
 * Specialinstruktioner
 * Framtida planer för ändringar
 
-## 02 feb 2021 (AFC-2021.01.2)
+## 03 mars 2021 (AFC-2021.02.2) {#mar-2021}
 
-### Förbättringar
+### Förbättringar {#march-2021-improvements}
+
+Förbättrad sortering av formulärinnehåll i urvalsgrupper och fält samtidigt som ett källformulär konverteras till ett anpassat formulär.
+
+## 02 feb 2021 (AFC-2021.01.2) {#feb-2021}
+
+### Förbättringar {#feb-2021-improvements}
 
 Förbättrad organisering av formulärinnehåll i paneler och generering av rubriker för paneler samtidigt som ett källformulär konverteras till ett anpassat formulär.
 
-## 16 juli 2020 (AFC-2020.07.2)
+## 16 juli 2020 (AFC-2020.07.2) {#jul-2020}
 
-### Nyheter
+### Nyheter {#whats-new-jul-2020-}
 
 Lagt till stöd för att konvertera PDF forms i färg till anpassningsbara formulär.
 
-### Förbättringar
+### Förbättringar {#jul-2020-improvements}
 
 Förbättringar av den automatiserade konverteringen av fält för text, formulär och urvalsgrupper till motsvarande adaptiva formulärkomponenter.
 
 
-## 20 mars 2020 (AFC-2020.03.1)
+## 20 mars 2020 (AFC-2020.03.1) {#mar-2020}
 
-### Tidig tillgång
+### Tidig tillgång {#early-access}
 
 **Identifiera automatiskt logiska avsnitt i ett formulär**
 
 Som standard skapar tjänsten en separat toppnivåpanel för varje sida i ett PDF-formulär. Nu kan du använda alternativet **[!UICONTROL Auto-detect logical sections]** för att släppa sidnivåpaneler (sidnummerbaserade paneler) och endast skapa logiska paneler. Det enar också fälten som inte tillhör något avsnitt med föregående logiska avsnitt och fält i ett logisk avsnitt spritt över två angränsande sidor i ett enda logiskt avsnitt. Till exempel, om vissa fält i ett logiskt avsnitt finns i slutet av sidan ett och vissa är i början av sidan två, enas alla sådana fält i ett enda logiskt avsnitt.
 
-### Förbättringar {#improvements}
+### Förbättringar {#mar-2020-improvements}
 
 **Förbättringar i listdetektering**
 
 Tjänsten är nu effektivare när det gäller att upptäcka numrerade och spaltade listor.
 
-### Specialinstruktioner
+### Specialinstruktioner  {#special-instructions}
 
 **Installera paketet Automated Forms Conversion Service connector**
 
