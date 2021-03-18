@@ -9,11 +9,13 @@ user-guide-title: Adobe Experience Manager Forms – automatiserad konverterings
 user-guide-description: Konvertera PDF Forms till responsiva och mobilklara HTML-formulär.
 breadcrumb-title: Guide för automatiserad konverteringstjänst för Forms
 breadcrumb-url: /docs/aem-forms-automated-conversion-service/using/introduction.html
+feature: Adaptiv Forms
+role: Yrkesverksamma inom affärsverksamhet
 translation-type: tm+mt
-source-git-commit: ab178dd8d1786c6c341d4a1a3da0aecebead31dd
+source-git-commit: b3946630c5180a600fe7acc25f1084601dec04ef
 workflow-type: tm+mt
-source-wordcount: '91'
-ht-degree: 100%
+source-wordcount: '95'
+ht-degree: 95%
 
 ---
 
