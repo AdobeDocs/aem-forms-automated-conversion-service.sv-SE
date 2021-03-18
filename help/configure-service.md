@@ -1,10 +1,11 @@
 ---
 title: Konfigurera den automatiserade konverteringstjänsten för formulär
 description: Redo för AEM att använda tjänsten Automated forms conversion
+role: Affärsledare, administratör
 translation-type: tm+mt
-source-git-commit: 741ff89370a5215b70d90c49eea220171efe9339
+source-git-commit: 9baad788f3e871eb4ce2cbda4bbf4d2e2ac6dd95
 workflow-type: tm+mt
-source-wordcount: '2547'
+source-wordcount: '2550'
 ht-degree: 8%
 
 ---
@@ -114,7 +115,7 @@ Utvecklare är medlemmar i din organisation som har utsetts att köra konverteri
 
 Upprepa stegen ovan för alla användare.  Mer information om hur du lägger till utvecklare finns i [Hantera utvecklare](https://helpx.adobe.com/enterprise/using/manage-developers.html).
 
-När en administratör lägger till utvecklare i Adobe I/O-profilen meddelas utvecklarna via e-post. När du har fått e-postmeddelandet kan utvecklarna fortsätta att [ansluta en lokal AEM Forms-instans med Automated forms conversion-tjänsten på Adobe Cloud](#connectafcadobeio).
+När en administratör lägger till utvecklare i profilen Adobe I/O meddelas utvecklarna via e-post. När du har fått e-postmeddelandet kan utvecklarna fortsätta att [ansluta en lokal AEM Forms-instans med Automated forms conversion-tjänsten på Adobe Cloud](#connectafcadobeio).
 
 ### (Endast för utvecklare) Anslut din lokala AEM Forms-instans till tjänsten Automated forms conversion i Adobe Cloud {#connectafcadobeio}
 
