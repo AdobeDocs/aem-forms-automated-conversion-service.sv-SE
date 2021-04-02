@@ -2,10 +2,10 @@
 title: Introduktion
 description: 'Påskynda konverteringen av utskriftsformulär till anpassningsbara formulär '
 translation-type: tm+mt
-source-git-commit: c4f0d07b38cdb6aa162a0b61abe12fe9d1677a8c
+source-git-commit: 53b88de185ed1b6669ecfc3c7c6649d5627741e9
 workflow-type: tm+mt
-source-wordcount: '674'
-ht-degree: 92%
+source-wordcount: '685'
+ht-degree: 69%
 
 ---
 
@@ -17,18 +17,18 @@ Den automatiserade konverteringstjänsten för formulär hjälper till att påsk
 * Spara den manuella arbetskraft som krävs för att konvertera utskriftsformulär till anpassningsbara formulär
 * Tillämpa mönster och lämpliga valideringar under konverteringen
 * Generera dokument över dataposter under konverteringen
-* Gruppera vanligt förekommande fält i återanvändbara formulärfragment
+* Gruppera vanliga fält i återanvändbara formulärfragment
 * Aktiverar Adobe Analytics under konverteringen
 
-![Det är enkelt. Du ger oss bara källformulären så gör vi resten. Vi ger dig fina anpassningsbara formulär. Självklart ändrar du dina utdata så att du blir nöjd. ](assets/pdf-to-adaptive-form-gitx50.gif)
+![Det är enkelt. Du ger oss källformulären och överlåter allt till oss. Vi erbjuder vackra, anpassningsbara formulär. Du kan alltid finslipa resultatet. ](assets/pdf-to-adaptive-form-gitx50.gif)
 
-## Onboarding {#onboarding}
+## Introduktion till {#onboarding}
 
-Tjänsten är tillgänglig utan kostnad för AEM 6.4 Forms och AEM6.5 Forms On-Premise-kunder och Adobe Managed Service-företagskunder. Du kan kontakta Adobes säljteam eller din Adobe-representant för att begära åtkomst till tjänsten.
+Tjänsten är kostnadsfri för kunder med AEM 6.4 Forms och AEM 6.5 Forms On-Premise och företagskunder med Adobe-Managed Service. Du kan kontakta Adobes säljteam eller din Adobe-representant för att begära åtkomst till tjänsten. Tjänsten är också tillgänglig kostnadsfritt och föraktiverat för AEM Forms som Cloud Service.
 
 Adobe aktiverar åtkomst för organisationen och tillhandahåller behörigheter åt den person som utses till administratör i organisationen. Administratören kan ge åtkomst till AEM Forms-utvecklare (användare) i organisationen så att de kan ansluta till tjänsten. Mer information finns i [Konfigurera den automatiserade konverteringstjänsten för formulär](configure-service.md).
 
-## PDF-formulär och språk som stöds {#supported-languages-and-pdf-forms}
+## PDF forms och språk {#supported-languages-and-pdf-forms} som stöds
 
 Tjänsten stöder icke-interaktiva PDF-formulär, formulär som är skapade med Adobe Acrobat, kända som AcroForms, och XFA-baserade formulär som är skapade med AEM Forms eller Adobe LiveCycle.
 
@@ -51,14 +51,14 @@ Den automatiserade konverteringstjänsten för formulär körs på Adobe-molnet.
 När AEM Forms-miljön har konfigurerats [laddar du upp PDF-formulär](convert-existing-forms-to-adaptive-forms.md) till AEM-instansen och [startar konverteringen](convert-existing-forms-to-adaptive-forms.md#run-the-conversion) för att konvertera PDF-formulären till anpassningsbara formulär. Tänk på följande innan du laddar upp formulären:
 
 * Ladda inte upp skyddade formulär. Tjänsten konverterar inte lösenordsskyddade och krypterade formulär.
-* Ladda inte upp inskannade formulär, formulär med färg, formulär som inte är på engelska eller ifyllda formulär. Sådana formulär stöds inte.
+* Överför inte skannade, färgade, icke-engelska och ifyllda formulär. Sådana formulär stöds inte.
 * Ladda inte upp PDF-formulär med mellanslag i filnamnet.
-* Ladda inte upp [PDF-portfolios](https://helpx.adobe.com/acrobat/using/overview-pdf-portfolios.html). Tjänsten konverterar inte en PDF-portfolio till anpassningsbara formulär.
+* Ladda inte upp [PDF-portfolios](https://helpx.adobe.com/acrobat/using/overview-pdf-portfolios.html). Tjänsten konverterar inte en PDF-Portfolio till ett anpassningsbart formulär.
 * Gör de föreslagna ändringarna i PDF-formulären som beskrivs i artikeln [Rekommenderad praxis och saker att tänka på](styles-and-pattern-considerations-and-best-practices.md).
 * Läs artikeln [Kända fel](known-issues.md) för att undvika fallgropar.
 
 ### 3. Granska konverterade formulär {#review-converted-forms}
 
-De faktiska formulären kan ha komplexa krav på datainhämtning när det gäller fältlayout, namngivning eller implicita förslag som kanske inte återges korrekt med AI-/ML-baserad detekteringslogik. När den automatiserade konverteringen är klar kan du använda [redigeraren för granskning och korrigering](review-correct-ui-edited.md) för att granska det konverterade formuläret och göra nödvändiga uppdateringar och generera förbättrade utdata som stämmer bättre överens med önskat resultat. När du har gjort nödvändiga ändringar skickar du in formuläret för konvertering igen.
+Real world forms can have complex data capture requirements in field layout, naming, or implicit ideas which may not be correctly capture by AI/ML based detection logic. När den automatiserade konverteringen är klar kan du använda [redigeraren för granskning och korrigering](review-correct-ui-edited.md) för att granska det konverterade formuläret och göra nödvändiga uppdateringar och generera förbättrade utdata som stämmer bättre överens med önskat resultat. När du har gjort nödvändiga ändringar skickar du in formuläret för konvertering igen.
 
-Hur lång tid den automatiserade konverteringen tar beror på en mängd olika faktorer, t.ex. storlek på inmatningsformuläret, formulärets komplexitet, lån i bearbetningskön för tjänsten. Användaren meddelas regelbundet om förloppet via statusindikatorn i mappen/filen. När konverteringen är klar skickas också en avisering via e-post till den konfigurerade e-postadressen.
+Hur lång tid det tar att automatisera konverteringen beror på olika faktorer, t.ex. storleken på indataformuläret, formulärets komplexitet, lånet i tjänstens behandlingskö. Användaren meddelas regelbundet om förloppet via statusindikatorn i mappen/filen. När konverteringen är klar skickas också en avisering via e-post till den konfigurerade e-postadressen.
