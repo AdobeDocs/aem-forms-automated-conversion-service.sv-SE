@@ -3,10 +3,10 @@ title: Konfigurera den automatiserade konverteringstjänsten för formulär
 description: Redo för AEM att använda tjänsten Automated forms conversion
 role: Affärsledare, administratör
 translation-type: tm+mt
-source-git-commit: 9baad788f3e871eb4ce2cbda4bbf4d2e2ac6dd95
+source-git-commit: a9bab62fbe5ecc4b233e9bc55b9e461a5967b471
 workflow-type: tm+mt
-source-wordcount: '2550'
-ht-degree: 8%
+source-wordcount: '2673'
+ht-degree: 7%
 
 ---
 
@@ -17,7 +17,7 @@ I den här hjälpen beskrivs hur en AEM kan konfigurera tjänsten Automated form
 
 * Installera, konfigurera och administrera Adobe Experience Manager- och AEM-paket,
 
-* Med operativsystemen Linux och Microsoft Windows
+* Med Linux® och Microsoft® Windows®
 
 * Konfigurera SMTP-e-postservrar
 
@@ -27,7 +27,7 @@ I den här hjälpen beskrivs hur en AEM kan konfigurera tjänsten Automated form
 
 ## Introduktion till{#onboarding}
 
-Tjänsten är tillgänglig utan kostnad för AEM 6.4 Forms och AEM6.5 Forms On-Premise-kunder och Adobe Managed Service-företagskunder. Du kan kontakta Adobes säljteam eller din Adobe-representant för att begära åtkomst till tjänsten.
+Tjänsten är kostnadsfri för kunder med AEM 6.4 Forms och AEM 6.5 Forms On-Premise och företagskunder med Adobe-Managed Service. Du kan kontakta Adobes säljteam eller din Adobe-representant för att begära åtkomst till tjänsten. Tjänsten är också tillgänglig kostnadsfritt och föraktiverat för AEM Forms som Cloud Service.
 
 Adobe aktiverar åtkomst för organisationen och tillhandahåller behörigheter åt den person som utses till administratör i organisationen. Administratören kan ge åtkomst till AEM Forms-utvecklare (användare) i organisationen så att de kan ansluta till tjänsten.
 
@@ -37,35 +37,37 @@ Du behöver följande för att kunna använda tjänsten Automated forms conversi
 
 * Tjänsten Automated forms conversion är aktiverad för din organisation
 * Ett Adobe ID-konto med administratörsbehörighet för konverteringstjänsten
-* En AEM 6.4- eller AEM 6.5-författarinstans med senaste AEM Service Pack
+* En igång AEM 6.4, AEM 6.5 eller AEM Forms som författarinstans av Cloud Servicen med senaste AEM Service Pack eller senaste uppdateringar.
 * En AEM användare (i din AEM instans) som är medlem i användargruppen formulär
 
 ## Konfigurera miljön {#setuptheservice}
 
 Innan du använder tjänsten förbereder du AEM författarinstans för att ansluta till tjänsten som körs på Adobe Cloud. Utför följande steg i den listade sekvensen för att förbereda instansen för tjänsten:
 
-1. [Hämta och installera AEM 6.4 eller AEM 6.5](#aemquickstart)
+1. [Ladda ned och installera AEM 6.4, AEM 6.5 eller ombord på AEM Forms som Cloud Service](#aemquickstart)
 1. [Hämta och installera det senaste AEM Service Pack](#servicepack)
 1. [Hämta och installera det senaste AEM Forms-tilläggspaketet](#downloadaemformsaddon)
 1. (valfritt) [Hämta och installera det senaste kopplingspaketet](#installConnectorPackage)
 1. [Skapa egna teman och mallar](#referencepackage)
 
-### Hämta och installera AEM 6.4 eller AEM 6.5 {#aemquickstart}
+### Ladda ned och installera AEM 6.4 eller AEM 6.5 eller ombord på AEM Forms som Cloud Service {#aemquickstart}
 
 
-Tjänsten automated forms conversion körs AEM författarinstansen. Du behöver AEM 6.4 eller AEM 6.5 för att konfigurera en AEM författarinstans. Om du inte har AEM igång kan du hämta det från följande platser:
+Tjänsten automated forms conversion körs AEM författarinstansen. Du behöver AEM 6.4, AEM 6.5 eller AEM Forms som Cloud Service för att konfigurera en AEM författarinstans.
 
-* Om du redan är AEM kan du hämta AEM 6.4 eller AEM 6.5 från [webbplatsen Adobe Licensing](http://licensing.adobe.com).
+* Om du inte har AEM 6.4 eller AEM 6.5 kan du ladda ned det från nedanstående platser. När du har laddat ned AEM finns instruktioner om hur du konfigurerar en AEM författarinstans i [distribuera och underhålla](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#defaultlocalinstall):
 
-* Om du är Adobe-partner använder du [Adobe Partner Training Program](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=82357Q) för att begära AEM 6.4 eller AEM 6.5.
+   * Om du redan är AEM kan du hämta AEM 6.4 eller AEM 6.5 från [webbplatsen Adobe Licensing](http://licensing.adobe.com).
 
-När du har laddat ned AEM finns instruktioner om hur du konfigurerar en AEM författarinstans i [distribuera och underhålla](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#defaultlocalinstall).
+   * Om du är Adobe-partner använder du [Adobe Partner Training Program](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=82357Q) för att begära AEM 6.4 eller AEM 6.5.
 
-### Hämta och installera AEM senaste Service Pack {#servicepack}
+* Om du använder AEM Forms som Cloud Service kan du läsa onboard to [AEM Forms as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/setup-environment/setup-forms-cloud-service.html?lang=en#setup-environment) and [setup a local development environment](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/setup-environment/setup-local-development-environment.html?lang=en#setup-environment).
+
+### (Endast för AEM 6.4 och AEM 6.5) Hämta och installera AEM senaste Service Pack {#servicepack}
 
 Hämta och installera det senaste AEM Service Pack. Mer information finns i [AEM 6.4 Service Pack Release Notes](https://helpx.adobe.com/experience-manager/6-4/release-notes/sp-release-notes.html) eller [AEM 6.5 Service Pack Release Notes](https://helpx.adobe.com/experience-manager/6-5/release-notes/sp-release-notes.html).
 
-### Hämta och installera AEM Forms-tilläggspaket {#downloadaemformsaddon}
+### (Endast för AEM 6.4 och AEM 6.5) Hämta och installera AEM Forms-tilläggspaketet {#downloadaemformsaddon}
 
 En AEM innehåller grundläggande formulärfunktioner. Konverteringstjänsten kräver AEM Forms alla funktioner. Ladda ned och installera AEM Forms-tilläggspaket för att utnyttja alla funktioner i AEM Forms. Paketet krävs för att konfigurera och köra konverteringstjänsten. Detaljerade instruktioner finns i [Installera och konfigurera datainhämtningsfunktioner.](https://helpx.adobe.com/experience-manager/6-5/forms/using/installing-configuring-aem-forms-osgi.html)
 
@@ -73,28 +75,30 @@ En AEM innehåller grundläggande formulärfunktioner. Konverteringstjänsten kr
 > Kontrollera att du utför de obligatoriska konfigurationerna efter installationen när du har installerat tilläggspaketet.
 
 
-### (Valfritt) Hämta och installera anslutningspaketet {#installConnectorPackage}
+<!-- ### (Optional) Download and install connector package  {#installConnectorPackage}
 
-Kopplingspaketet ger tidig åtkomst till de [funktioner och förbättringar för automatisk identifiering av logiska avsnitt](convert-existing-forms-to-adaptive-forms.md#run-the-conversion) som levererades i version AFC-2020.03.1. Installera inte paketet om du inte behöver funktioner och förbättringar i AFC-2020.03.1.  Du kan [hämta kopplingspaketet från AEM paketresurs](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/featurepack/AFCS-Connector-2020.03.1).
+The connector package provides early access to the [Auto-detect logical sections](convert-existing-forms-to-adaptive-forms.md#run-the-conversion) features and improvements delivered in release AFC-2020.03.1. Do not install the package if you do not require feature and improvements delivered in AFC-2020.03.1.  You can [download the connector package from AEM Package Share](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/featurepack/AFCS-Connector-2020.03.1). -->
 
 
 ### Skapa egna teman och mallar {#referencepackage}
 
-Om du startar AEM i [produktionsläge](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/production-ready.html) (nosampling content runmode) installeras inte referenspaketen. Referenspaketen innehåller exempelteman och mallar. automated forms conversion-tjänsten kräver minst ett tema och en mall för att konvertera en PDF forms till en anpassningsbar form. Skapa ett eget tema och en egen mall och [tjänstkonfiguration](#configure-the-cloud-service) om du vill använda anpassade mallar och teman innan du använder tjänsten.
+Om du startar AEM 6.4 eller AEM 6.5 i [produktionsläge](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/production-ready.html) (nosamplingsinnehållets körningsläge) installeras inte referenspaketen. Referenspaketen innehåller exempelteman och mallar. automated forms conversion-tjänsten kräver minst ett tema och en mall för att konvertera ett PDF-formulär till ett anpassningsbart formulär. Skapa ett eget tema och en egen mall och [tjänstkonfiguration](#configure-the-cloud-service) om du vill använda anpassade mallar och teman innan du använder tjänsten.
+
+Du kan också hämta och installera [AEM Forms Reference Assets](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)-paketet på din Author-instans. Det skapar vissa referensteman och mallar.
 
 ## Konfigurera tjänsten {#configure-the-service}
 
 Innan du fortsätter att konfigurera tjänsten och ansluter din lokala instans till tjänsten som körs i Adobe Cloud, ska du lära dig mer om vilka profiler och behörigheter som krävs för att ansluta till tjänsten. Tjänsten använder två olika typer av profiler, administratörer och utvecklare:
 
-* **Administratörer**: Administratörerna ansvarar för att hantera program och tjänster från Adobe för sin organisation. Administratörer ger utvecklare i sin organisation åtkomst till tjänsten Automated forms conversion som körs i Adobe Cloud. När en administratör har etablerats för en organisation får administratören ett e-postmeddelande med titeln **[!UICONTROL 'You now have administrator rights to manage Adobe software and services for your organization']**. Om du är administratör kontrollerar du om din postlåda innehåller e-post med den här rubriken och fortsätter till [ge utvecklare av din organisation åtkomst](#adduseranddevs).
+* **Administratörer**: Administratörerna ansvarar för att hantera program och tjänster från Adobe för sin organisation. Administratörer ger utvecklare i sin organisation åtkomst till tjänsten Automated forms conversion som körs i Adobe Cloud. När en administratör har etablerats för en organisation får administratören ett e-postmeddelande med titeln **[!UICONTROL 'You now have administrator rights to manage Adobe software and services for your organization']**. Om du är administratör kontrollerar du att postlådan innehåller e-post med tidigare nämnda titel och fortsätter till [bevilja åtkomst till utvecklare i organisationen](#adduseranddevs).
 
-![e-postadress för administratörsåtkomst](assets/admin-console-adobe-io-access-grantedx75.png)
+![E-postadress för administratörsåtkomst](assets/admin-console-adobe-io-access-grantedx75.png)
 
-* **Utvecklare**: En utvecklare ansluter en lokal AEM Forms-författarinstans till Automated forms conversion-tjänsten som körs i Adobe Cloud. När en administratör ger en utvecklare behörighet att ansluta till Automated forms conversion-tjänsten skickas ett e-postmeddelande med titeln Du har nu utvecklaråtkomst för att hantera Adobe API-integreringar för din organisation till utvecklaren. Om du är utvecklare kan du kontrollera om din postlåda har e-post med den här rubriken och fortsätta till [Anslut din lokala AEM till Automated forms conversion-tjänsten på Adobe Cloud.](#connectafcadobeio)
+* **Utvecklare**: En utvecklare ansluter en lokal AEM Forms-författarinstans till Automated forms conversion-tjänsten som körs i Adobe Cloud. När en administratör ger en utvecklare behörighet att ansluta till Automated forms conversion-tjänsten skickas ett e-postmeddelande med titeln Du har nu utvecklaråtkomst för att hantera Adobe API-integreringar för din organisation till utvecklaren. Om du är utvecklare kan du kontrollera om din postlåda innehåller e-post med den tidigare nämnda titeln och fortsätta till [Anslut din lokala AEM till Automated forms conversion-tjänsten på Adobe Cloud.](#connectafcadobeio)
 
-![e-postadress för utvecklaråtkomst](assets/email-developer-accessx94.png)
+![E-postadress för utvecklaråtkomstbidrag](assets/email-developer-accessx94.png)
 
-### (Endast för administratörer) Bevilja åtkomst till utvecklare av din organisation {#adduseranddevs}
+### (Endast för administratörer av AEM 6.4 och AEM 6.5) Bevilja åtkomst till utvecklare av din organisation {#adduseranddevs}
 
 När Adobe har aktiverat åtkomst för din organisation och gett administratören de behörigheter som krävs kan administratören logga in på Admin Console (detaljerade instruktioner nedan), skapa en profil och lägga till utvecklare i profilen. Utvecklare kan ansluta en lokal instans av AEM Forms till tjänsten Automated forms conversion i Adobe Cloud.
 
@@ -113,7 +117,7 @@ Utvecklare är medlemmar i din organisation som har utsetts att köra konverteri
    1. Ange utvecklarnas e-postadress och eventuellt för- och efternamn.
    1. Välj produktprofiler. Tryck på **[!UICONTROL Save]**.
 
-Upprepa stegen ovan för alla användare.  Mer information om hur du lägger till utvecklare finns i [Hantera utvecklare](https://helpx.adobe.com/enterprise/using/manage-developers.html).
+Upprepa stegen ovan för alla användare. Mer information om hur du lägger till utvecklare finns i [Hantera utvecklare](https://helpx.adobe.com/enterprise/using/manage-developers.html).
 
 När en administratör lägger till utvecklare i profilen Adobe I/O meddelas utvecklarna via e-post. När du har fått e-postmeddelandet kan utvecklarna fortsätta att [ansluta en lokal AEM Forms-instans med Automated forms conversion-tjänsten på Adobe Cloud](#connectafcadobeio).
 
@@ -131,12 +135,16 @@ När en administratör har gett dig utvecklaråtkomst kan du ansluta din lokala 
 
 Tjänsten Automated forms conversion använder Day CQ-e-posttjänsten för att skicka e-postmeddelanden. Dessa e-postmeddelanden innehåller information om lyckade eller misslyckade konverteringar. Om du väljer att inte få något meddelande hoppar du över dessa steg. Utför följande steg för att konfigurera Day CQ Mail Service:
 
-1. Gå till AEM konfigurationshanteraren på `http://localhost:4502/system/console/configMgr`
-1. Öppna Dag CQ Mail Service-konfigurationen. Ange ett värde för fälten **[!UICONTROL SMTP server host name]**, **[!UICONTROL SMTP server port]** och **[!UICONTROL From address]**. Klicka på **[!UICONTROL Save]**.
+* För AEM 6.4 Forms eller AEM 6.5 Forms:
 
-   Du kan kontakta din e-postleverantör eller IT-administratör för att få information om värdnamn och port för SMTP-servern. Du kan använda valfri giltig e-postadress i formulärfältet. Exempel: notification@example.com eller donotreply@example.com.
+   1. Gå till AEM konfigurationshanteraren på `http://localhost:4502/system/console/configMgr`
+   1. Öppna Dag CQ Mail Service-konfigurationen. Ange ett värde för fälten **[!UICONTROL SMTP server host name]**, **[!UICONTROL SMTP server port]** och **[!UICONTROL From address]**. Klicka på **[!UICONTROL Save]**.
 
-1. Öppna **[!UICONTROL Day CQ Link Externalizer]**-konfigurationen. I fältet **[!UICONTROL Domains]** anger du det faktiska värdnamnet eller IP-adressen och portnumret för lokala instanser, författare och publiceringsinstanser. Klicka på **[!UICONTROL Save]**.
+      Du kan kontakta din e-postleverantör eller IT-administratör för att få information om värdnamn och port för SMTP-servern. Du kan använda valfri giltig e-postadress i formulärfältet. Exempel: notification@example.com eller donotreply@example.com.
+
+   1. Öppna **[!UICONTROL Day CQ Link Externalizer]**-konfigurationen. I fältet **[!UICONTROL Domains]** anger du det faktiska värdnamnet eller IP-adressen och portnumret för lokala instanser, författare och publiceringsinstanser. Klicka på **[!UICONTROL Save]**.
+
+* För AEM Forms som Cloud Service [loggar du en supportanmälan för att aktivera e-posttjänsten](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=en#sending-email).
 
 #### Lägg till användare i gruppen {#adduserstousergroup} för formuläranvändare
 
@@ -148,7 +156,7 @@ Ange en e-postadress i profilen för den AEM användaren som ska köra tjänsten
 1. Ange en e-postadress i fältet **[!UICONTROL Email]** och tryck på **[!UICONTROL Save]**. E-postmeddelandena skickas till den angivna e-postadressen när konverteringen har slutförts eller misslyckats.
 1. Tryck på fliken **Grupper**. Skriv och välj gruppen **forms-users** på fliken Välj grupp. Tryck på **Spara och stäng**. Användaren är nu medlem i gruppen för användare av formulär.
 
-#### Hämta offentliga certifikat {#obtainpubliccertificates}
+#### (Endast för AEM 6.4 och AEM 6.5) Hämta offentliga certifikat {#obtainpubliccertificates}
 
 Med ett offentligt certifikat kan du autentisera din profil på Adobe I/O.
 
@@ -181,7 +189,7 @@ Med ett offentligt certifikat kan du autentisera din profil på Adobe I/O.
    <li>Step text</li>
    -->
 
-#### Konfigurera tjänst-API:erna på Adobe Developer Console {#createintegration}
+#### (Endast för AEM 6.4 och AEM 6.5) Konfigurera tjänst-API:erna på Adobe Developer Console {#createintegration}
 
 Om du vill använda Automated forms conversion-tjänsten skapar du ett projekt och lägger till API:t för automatisk Forms-konfigurationstjänst i projektet på Adobe Developer Console. Integreringen genererar API-nyckel, klienthemlighet, nyttolast (JWT).
 
@@ -216,12 +224,12 @@ Om du vill använda Automated forms conversion-tjänsten skapar du ett projekt o
 
    <br/> <br/>
 
-#### Konfigurera molntjänsten {#configure-the-cloud-service}
+#### Konfigurera Cloud Servicen {#configure-the-cloud-service}
 
-Skapa en molntjänstkonfiguration för att ansluta AEM till konverteringstjänsten. Du kan också ange en mall, ett tema och formulärfragment för en konvertering. Du kan skapa flera olika molntjänstkonfigurationer separat för varje formuläruppsättning. Du kan till exempel ha en separat konfiguration för säljavdelningsformulär och en separat konfiguration för kundsupportformulär. Så här skapar du en molntjänstkonfiguration:
+Skapa en Cloud Service-konfiguration för att ansluta AEM till konverteringstjänsten. Du kan också ange en mall, ett tema och formulärfragment för en konvertering. Du kan skapa flera olika molntjänstkonfigurationer separat för varje formuläruppsättning. Du kan till exempel ha en separat konfiguration för säljavdelningsformulär och en separat konfiguration för kundsupportformulär. Så här skapar du en molntjänstkonfiguration:
 
 1. Tryck på **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Tools]**> **[!UICONTROL Cloud Services]** > **[!UICONTROL Automate Forms Conversion Configuration]** på din AEM Forms-instans.
-1. Tryck på mappen **[!UICONTROL Global]** och tryck på **[!UICONTROL Create]**. Sidan där du skapar konfigurationen för Automated forms conversion visas. Konfigurationen skapas i mappen Global. Du kan också skapa konfigurationen i en annan mapp som redan finns eller skapa en ny mapp för dina konfigurationer.
+1. Tryck på mappen **[!UICONTROL Global]** och tryck på **[!UICONTROL Create]**. Sidan där du skapar konfigurationen för Automated forms conversion visas. Konfigurationen skapas i mappen Global. Du kan också skapa konfigurationen i en annan mapp som finns eller skapa en mapp för dina konfigurationer.
 
 1. På sidan **[!UICONTROL Create Automated Forms Conversion Configuration]** anger du värdet för följande fält och trycker på **[!UICONTROL Next]**.
 
@@ -254,7 +262,7 @@ Skapa en molntjänstkonfiguration för att ansluta AEM till konverteringstjänst
    </tr>
    <tr>
    <td>Aktivera analys</td>
-   <td>Markera alternativet om du vill aktivera Adobe Analytics för alla konverterade formulär. Kontrollera att Adobe Analytics är aktiverat för din AEM Forms-instans innan du använder alternativet.</td>
+   <td>(Endast för AEM 6.4 och AEM 6.5) Markera alternativet att aktivera Adobe Analytics för alla konverterade formulär. Kontrollera att Adobe Analytics är aktiverat för din AEM Forms-instans innan du använder alternativet.</td>
    </tr>
    </tbody>
    </table>
