@@ -3,14 +3,14 @@ cloud: Experience Cloud
 product: experience manager
 sub-product: konverteringstjänst för formulär
 solution: Experience Manager, Experience Manager Forms
-type: Dokumentation
+type: Documentation
 audience: end-user
 user-guide-title: Adobe Experience Manager Forms – automatiserad konverteringstjänst
 user-guide-description: Konvertera PDF Forms till responsiva och mobilklara HTML-formulär.
 breadcrumb-title: Guide för automatiserad konverteringstjänst för Forms
 breadcrumb-url: /docs/aem-forms-automated-conversion-service/using/introduction.html
-feature: Adaptiv Forms
-role: Yrkesverksamma inom affärsverksamhet
+feature: Adaptive Forms
+role: Business Practitioner
 translation-type: tm+mt
 source-git-commit: 8c4cf4ff72e9ca7e8daa76f495abd75a865cd2f7
 workflow-type: tm+mt

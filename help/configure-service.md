@@ -1,7 +1,7 @@
 ---
 title: Konfigurera den automatiserade konverteringstjänsten för formulär
 description: Redo för AEM att använda tjänsten Automated forms conversion
-role: Affärsledare, administratör
+role: Business Practitioner, Administrator
 translation-type: tm+mt
 source-git-commit: a9bab62fbe5ecc4b233e9bc55b9e461a5967b471
 workflow-type: tm+mt
