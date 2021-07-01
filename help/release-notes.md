@@ -1,14 +1,13 @@
 ---
 title: Nyheter Versionsinformation – konverteringstjänsten för automatiserade formulär
-description: 'Lär dig mer om de senaste funktionerna och åtgärdade fel för konverteringstjänsten för automatiserade formulär '
-translation-type: tm+mt
-source-git-commit: 70dc18347e072ccd7c1625f6831554ecfc13f2fb
+description: Lär dig mer om de senaste funktionerna och åtgärdade fel för konverteringstjänsten för automatiserade formulär
+exl-id: fccafbc9-28c1-4736-922c-24d675b25213
+source-git-commit: fd568dca4ac552a1d9695d13ece1d03b2c1457b1
 workflow-type: tm+mt
-source-wordcount: '386'
-ht-degree: 88%
+source-wordcount: '409'
+ht-degree: 84%
 
 ---
-
 
 # Versionsinformation
 
@@ -23,7 +22,13 @@ Konverteringstjänsten för automatiserade formulär förbättras fortlöpande. 
 * Specialinstruktioner
 * Framtida planer för ändringar
 
-## 03 mars 2021 (AFC-2021.02.2) {#mar-2021}
+## 24 juni 2021 (AFC-2021.06.2) {#june-2021}
+
+### Förbättringar {#june-2021-improvements}
+
+Förbättrad precision för att automatiskt identifiera logiska avsnitt i källformulären och konvertera dem till motsvarande adaptiva formulärpaneler.
+
+## 3 mars 2021 (AFC-2021.02.2) {#mar-2021}
 
 ### Förbättringar {#march-2021-improvements}
 
@@ -60,7 +65,7 @@ Som standard skapar tjänsten en separat toppnivåpanel för varje sida i ett PD
 
 Tjänsten är nu effektivare när det gäller att upptäcka numrerade och spaltade listor.
 
-### Specialinstruktioner  {#special-instructions}
+### Specialinstruktioner {#special-instructions}
 
 **Installera paketet Automated Forms Conversion Service connector**
 
