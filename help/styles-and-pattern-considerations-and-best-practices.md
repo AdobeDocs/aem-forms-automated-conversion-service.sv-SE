@@ -6,16 +6,15 @@ seo-description: Lista över format och mönster i PDF forms som tjänsten Autom
 uuid: e24773a2-be14-4184-a168-48aa976d459a
 topic-tags: introduction
 discoiquuid: 79f2026e-73a5-4bd1-b041-d1399b4ad23e
-translation-type: tm+mt
-source-git-commit: e2298422e0af9b1c678e7604be3efb6da377d7dd
+exl-id: 9ada091a-e7c6-40e9-8196-c568f598fc2a
+source-git-commit: 17d1c447d8aa68341214270932fb076b512422af
 workflow-type: tm+mt
 source-wordcount: '1259'
 ht-degree: 3%
 
 ---
 
-
-# God praxis och kända komplexa mönster {#Best-practices-and-considerations2}
+# Bästa praxis och kända komplexa mönster {#Best-practices-and-considerations2}
 
 Det här dokumentet innehåller riktlinjer och rekommendationer som formuläradministratörer, författare och utvecklare kan dra nytta av när de arbetar med [!DNL Automated Forms Conversion service]. Här diskuteras bästa praxis direkt från att förbereda källformulär till att korrigera komplexa mönster som kräver extra arbete för automatiserad konvertering. Dessa bästa metoder bidrar tillsammans till den övergripande prestandan och resultatet för [!DNL Automated Forms Conversion service].
 
@@ -40,7 +39,7 @@ När du använder ett XDP-formulär för konvertering utför du följande steg i
 
 * Analysera XDP-formuläret och åtgärda visuella problem. Kontrollera att källdokumentet använder avsedda kontroller och strukturer. Källformuläret kan t.ex. ha kryssrutor i stället för alternativknappar för en enskild markering. Ändra kryssrutorna till alternativknappar för att skapa ett anpassat formulär med avsedda komponenter.
 * [Lägg till bindningar i XDP-](http://www.adobe.com/go/learn_aemforms_designer_65) formuläret innan konverteringen startar. När bindningar är tillgängliga i XDP-källformuläret lägger tjänsten automatiskt till bindningar till motsvarande adaptiva formulärfält under konverteringen. Den sparar tid som krävs för att manuellt tillämpa bindningarna.
-* [Lägg till Adobe Sign-](https://helpx.adobe.com/sign/using/text-tag.html) taggar i XDP-filen. Tjänsten konverterar automatiskt Adobe Sign-taggar till motsvarande anpassningsbara formulärfält. Adaptiv Forms har stöd för ett begränsat antal Adobe Sign-fält. En fullständig lista över fält som stöds finns i [Använda Adobe Sign i en adaptiv form](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-advanced-authoring/working-with-adobe-sign.html)-dokumentation.
+* [Lägg till Adobe Sign-](https://helpx.adobe.com/sign/using/text-tag.html) taggar i XDP-filen. Tjänsten konverterar automatiskt Adobe Sign-taggar till motsvarande anpassningsbara formulärfält. Adaptiv Forms har stöd för ett begränsat antal Adobe Sign-fält. En fullständig lista över fält som stöds finns i [Använda Adobe Sign i en adaptiv form](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/working-with-adobe-sign.html?lang=en)-dokumentation.
 * Konvertera om möjligt komplexa tabeller i XDP-dokument till enkla tabeller. En tabell med formulärfält i tabellceller, celler med olika storlek, celler med rad- eller kolumnutvidgning, sammanfogade celler, partiella kanter eller utan synliga kantlinjer anses vara en komplex tabell. En tabell med någon av de ovannämnda posterna anses vara en komplex tabell.
 <!-- * Use sub-forms in XDP documents to create panels in adaptive forms. Service converts each sub-form to one or more adaptive form panels during conversion. -->
 
@@ -76,7 +75,7 @@ Tjänsten börjar identifiera och tilldela rätt fält eller paneler till dessa 
 
 
 
-### Alternativgrupp {#choice-group}
+### Urvalsgrupp  {#choice-group}
 
 | Mönster | Upplösning |
 |--- |--- |
