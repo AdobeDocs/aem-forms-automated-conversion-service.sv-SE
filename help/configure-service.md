@@ -2,14 +2,13 @@
 title: Konfigurera den automatiserade konverteringstjänsten för formulär
 description: Redo för AEM att använda tjänsten Automated forms conversion
 role: Business Practitioner, Administrator
-translation-type: tm+mt
-source-git-commit: a9bab62fbe5ecc4b233e9bc55b9e461a5967b471
+exl-id: 8f21560f-157f-41cb-ba6f-12a4d6e18555
+source-git-commit: 17d1c447d8aa68341214270932fb076b512422af
 workflow-type: tm+mt
-source-wordcount: '2673'
+source-wordcount: '2670'
 ht-degree: 7%
 
 ---
-
 
 # Konfigurera den automatiserade konverteringstjänsten för formulär {#about-this-help}
 
@@ -25,7 +24,7 @@ I den här hjälpen beskrivs hur en AEM kan konfigurera tjänsten Automated form
 
 **Watch the video or read the article to configure Automated Forms Conversion service** -->
 
-## Introduktion till{#onboarding}
+## Onboarding{#onboarding}
 
 Tjänsten är kostnadsfri för kunder med AEM 6.4 Forms och AEM 6.5 Forms On-Premise och företagskunder med Adobe-Managed Service. Du kan kontakta Adobes säljteam eller din Adobe-representant för att begära åtkomst till tjänsten. Tjänsten är också tillgänglig kostnadsfritt och föraktiverat för AEM Forms som Cloud Service.
 
@@ -67,7 +66,7 @@ Tjänsten automated forms conversion körs AEM författarinstansen. Du behöver 
 
 Hämta och installera det senaste AEM Service Pack. Mer information finns i [AEM 6.4 Service Pack Release Notes](https://helpx.adobe.com/experience-manager/6-4/release-notes/sp-release-notes.html) eller [AEM 6.5 Service Pack Release Notes](https://helpx.adobe.com/experience-manager/6-5/release-notes/sp-release-notes.html).
 
-### (Endast för AEM 6.4 och AEM 6.5) Hämta och installera AEM Forms-tilläggspaketet {#downloadaemformsaddon}
+### (Endast för AEM 6.4 och AEM 6.5) Hämta och installera AEM Forms tilläggspaket  {#downloadaemformsaddon}
 
 En AEM innehåller grundläggande formulärfunktioner. Konverteringstjänsten kräver AEM Forms alla funktioner. Ladda ned och installera AEM Forms-tilläggspaket för att utnyttja alla funktioner i AEM Forms. Paketet krävs för att konfigurera och köra konverteringstjänsten. Detaljerade instruktioner finns i [Installera och konfigurera datainhämtningsfunktioner.](https://helpx.adobe.com/experience-manager/6-5/forms/using/installing-configuring-aem-forms-osgi.html)
 
@@ -98,7 +97,7 @@ Innan du fortsätter att konfigurera tjänsten och ansluter din lokala instans t
 
 ![E-postadress för utvecklaråtkomstbidrag](assets/email-developer-accessx94.png)
 
-### (Endast för administratörer av AEM 6.4 och AEM 6.5) Bevilja åtkomst till utvecklare av din organisation {#adduseranddevs}
+### (Endast för administratörer av AEM 6.4 och AEM 6.5) Bevilja åtkomst till utvecklare i din organisation {#adduseranddevs}
 
 När Adobe har aktiverat åtkomst för din organisation och gett administratören de behörigheter som krävs kan administratören logga in på Admin Console (detaljerade instruktioner nedan), skapa en profil och lägga till utvecklare i profilen. Utvecklare kan ansluta en lokal instans av AEM Forms till tjänsten Automated forms conversion i Adobe Cloud.
 
@@ -131,7 +130,7 @@ När en administratör har gett dig utvecklaråtkomst kan du ansluta din lokala 
 * [Konfigurera tjänst-API:erna på Adobe Developer Console](#createintegration)
 * [Konfigurera molntjänsten](configure-service.md#configure-the-cloud-service)
 
-#### Konfigurera e-postmeddelanden {#configureemailnotification}
+#### Konfigurera e-postmeddelande {#configureemailnotification}
 
 Tjänsten Automated forms conversion använder Day CQ-e-posttjänsten för att skicka e-postmeddelanden. Dessa e-postmeddelanden innehåller information om lyckade eller misslyckade konverteringar. Om du väljer att inte få något meddelande hoppar du över dessa steg. Utför följande steg för att konfigurera Day CQ Mail Service:
 
@@ -146,9 +145,9 @@ Tjänsten Automated forms conversion använder Day CQ-e-posttjänsten för att s
 
 * För AEM Forms som Cloud Service [loggar du en supportanmälan för att aktivera e-posttjänsten](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=en#sending-email).
 
-#### Lägg till användare i gruppen {#adduserstousergroup} för formuläranvändare
+#### Lägg till användare i gruppen för formuläranvändare {#adduserstousergroup}
 
-Ange en e-postadress i profilen för den AEM användaren som ska köra tjänsten. Kontrollera att användaren är medlem i [formuläranvändaren](https://helpx.adobe.com/experience-manager/6-4/forms/using/forms-groups-privileges-tasks.html)-gruppen. E-post skickas till e-postadressen till den användare som kör konverteringen. Så här anger du en e-postadress för användaren och lägger till användare i användargruppen`e-formulär:
+Ange en e-postadress i profilen för den AEM användaren som ska köra tjänsten. Kontrollera att användaren är medlem i [formuläranvändaren](https://experienceleague.adobe.com/docs/experience-manager-65/forms/manage-administer-aem-forms/forms-groups-privileges-tasks.html)-gruppen. E-post skickas till e-postadressen till den användare som kör konverteringen. Så här anger du en e-postadress för användaren och lägger till användare i formuläranvändargruppen:
 
 1. Logga in på din AEM Forms-författarinstans som AEM. Använd dina lokala AEM för att logga in. Använd inte Adobe ID för att logga in. Tryck på **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Users]**.
 
@@ -156,7 +155,7 @@ Ange en e-postadress i profilen för den AEM användaren som ska köra tjänsten
 1. Ange en e-postadress i fältet **[!UICONTROL Email]** och tryck på **[!UICONTROL Save]**. E-postmeddelandena skickas till den angivna e-postadressen när konverteringen har slutförts eller misslyckats.
 1. Tryck på fliken **Grupper**. Skriv och välj gruppen **forms-users** på fliken Välj grupp. Tryck på **Spara och stäng**. Användaren är nu medlem i gruppen för användare av formulär.
 
-#### (Endast för AEM 6.4 och AEM 6.5) Hämta offentliga certifikat {#obtainpubliccertificates}
+#### (Endast för AEM 6.4 och AEM 6.5) Skaffa offentliga certifikat {#obtainpubliccertificates}
 
 Med ett offentligt certifikat kan du autentisera din profil på Adobe I/O.
 
