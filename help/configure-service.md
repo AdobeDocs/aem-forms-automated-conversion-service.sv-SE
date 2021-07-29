@@ -3,9 +3,9 @@ title: Konfigurera den automatiserade konverteringstjänsten för formulär
 description: Redo för AEM att använda tjänsten Automated forms conversion
 role: User, Admin
 exl-id: 8f21560f-157f-41cb-ba6f-12a4d6e18555
-source-git-commit: 6aae2035969e99abca0d310d8b023e2c22a9e938
+source-git-commit: 264208305996e98ff2dbccf0e63027b4c757754c
 workflow-type: tm+mt
-source-wordcount: '2670'
+source-wordcount: '2682'
 ht-degree: 7%
 
 ---
@@ -241,9 +241,7 @@ Skapa en Cloud Service-konfiguration för att ansluta AEM till konverteringstjä
    | Mall | Standardmall som ska användas för konverterade formulär. Du kan alltid ange en annan mall innan du påbörjar konverteringen. En mall innehåller grundläggande struktur och ursprungligt innehåll för ett adaptivt formulär. Du kan välja en mall bland de färdiga mallarna. Du kan också skapa en anpassad mall. |
    | Tema | Standardtema som ska användas på konverterade formulär. Du kan alltid ange ett annat tema innan du påbörjar konverteringen.  Du kan klicka på ikonen för att välja ett tema som ingår i rutan. Du kan också skapa ett anpassat tema. |
    | Befintliga fragment | Placering av befintliga fragment, om sådana finns. |
-   | Anpassad metamodell | Sökväg till .schema.json-filen för den anpassade metamodellen. |
-
-
+   | Anpassad metamodell | Sökväg till .schema.json-filen för den anpassade metamodellen. Du kan skapa separata metamodeller för engelska, franska, tyska och spanska. |
 
 1. På fliken **[!UICONTROL Advanced]** på sidan **[!UICONTROL Create Automated Forms Conversion Configuration]** anger du värdet för följande fält:
 
