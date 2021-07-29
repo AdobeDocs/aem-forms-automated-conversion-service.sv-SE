@@ -1,14 +1,13 @@
 ---
 title: Introduktion
-description: 'Påskynda konverteringen av utskriftsformulär till anpassningsbara formulär '
-translation-type: tm+mt
-source-git-commit: 53b88de185ed1b6669ecfc3c7c6649d5627741e9
+description: Påskynda konverteringen av utskriftsformulär till anpassningsbara formulär
+exl-id: edabeac8-cd66-48ca-a99f-9643a1c184cf
+source-git-commit: fed54ea64e19c77868e8e58e29e909cf4447f696
 workflow-type: tm+mt
-source-wordcount: '685'
-ht-degree: 69%
+source-wordcount: '690'
+ht-degree: 65%
 
 ---
-
 
 # Introduktion {#introduction-to-automated-forms-conversion-service}
 
@@ -22,19 +21,19 @@ Den automatiserade konverteringstjänsten för formulär hjälper till att påsk
 
 ![Det är enkelt. Du ger oss källformulären och överlåter allt till oss. Vi erbjuder vackra, anpassningsbara formulär. Du kan alltid finslipa resultatet. ](assets/pdf-to-adaptive-form-gitx50.gif)
 
-## Introduktion till {#onboarding}
+## Onboarding {#onboarding}
 
 Tjänsten är kostnadsfri för kunder med AEM 6.4 Forms och AEM 6.5 Forms On-Premise och företagskunder med Adobe-Managed Service. Du kan kontakta Adobes säljteam eller din Adobe-representant för att begära åtkomst till tjänsten. Tjänsten är också tillgänglig kostnadsfritt och föraktiverat för AEM Forms som Cloud Service.
 
 Adobe aktiverar åtkomst för organisationen och tillhandahåller behörigheter åt den person som utses till administratör i organisationen. Administratören kan ge åtkomst till AEM Forms-utvecklare (användare) i organisationen så att de kan ansluta till tjänsten. Mer information finns i [Konfigurera den automatiserade konverteringstjänsten för formulär](configure-service.md).
 
-## PDF forms och språk {#supported-languages-and-pdf-forms} som stöds
+## PDF forms och språk som stöds {#supported-languages-and-pdf-forms}
 
 Tjänsten stöder icke-interaktiva PDF-formulär, formulär som är skapade med Adobe Acrobat, kända som AcroForms, och XFA-baserade formulär som är skapade med AEM Forms eller Adobe LiveCycle.
 
 Tjänsten stöder även Adobe Sign-aktiverade PDF forms. Om PDF-källformuläret har Adobe Sign-texttaggar, bevarar tjänsten all Adobe Sign-relaterad information under konverteringen och associerar signerarinformationen som finns i PDF-källfilen med motsvarande adaptiva formulärfält. Funktionen är bara tillgänglig för AcroForms.
 
-Tjänsten kan endast konvertera formulär på engelska till anpassningsbara formulär. Du kan översätta de genererade anpassningsbara formulären till ett annat språk med [AEM:s översättningsflöde](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html).
+Tjänsten kan konvertera engelska, franska, tyska och spanska blanketter till anpassningsbara blanketter. Du kan också översätta de genererade anpassningsbara formulären till ett annat språk med [AEM översättningsarbetsflöde](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html).
 
 ## Konverteringsarbetsflöde  {#conversion-workflow}
 
