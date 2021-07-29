@@ -6,14 +6,13 @@ seo-description: Utöka standardmetamodellen för att lägga till mönster, vali
 uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
 topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
-translation-type: tm+mt
-source-git-commit: 77bdb4e88194bd634dea125852ff2a897bc24678
+exl-id: f679059c-18aa-4cb5-8368-ed27e96c20de
+source-git-commit: 3f91fc0541f8fe8dbc997ae0b401c8a0a49347dd
 workflow-type: tm+mt
-source-wordcount: '2372'
+source-wordcount: '2569'
 ht-degree: 1%
 
 ---
-
 
 # Utöka standardmetamodellen {#extend-the-default-meta-model}
 
@@ -25,9 +24,9 @@ Metamodellen är ett JSON-schema. Innan du börjar med metamodellen måste du se
 
 ## Standardmetamodell {#default-meta-model}
 
-Tjänsten Automated forms conversion har en standardmetamodell. Det är ett JSON-schema och finns i Adobe Cloud tillsammans med andra komponenter i tjänsten Automated forms conversion. Du kan hitta en kopia av metamodellen på den lokala AEM på: http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/global.schema.json. Du kan även [klicka här](assets/global.schema.json) för att komma åt eller hämta standardschemat.
+Tjänsten Automated forms conversion har en standardmetamodell. Det är ett JSON-schema och finns i Adobe Cloud tillsammans med andra komponenter i tjänsten Automated forms conversion. Du kan hitta en kopia av metamodellen på den lokala AEM på: http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/`global.schema.json`. Du kan även [klicka här](assets/en.globalschema.json) för att komma åt eller hämta det engelska språkschemat. Metamodellen för [franska](assets/fr.globalschema.json), [tyska](assets/de.globalschema.json) och [spanska](assets/es.globalschema.json) är också tillgänglig för hämtning.
 
-Schemat för metamodellen härleds från schemaentiteter på https://schema.org/docs/schemas.html. Den har Person, PostalAddress, LocalBusiness och fler enheter enligt definitionen på https://schema.org. Alla entiteter i metamodellen följer JSON-schemaobjekttypen. Följande kod representerar en exempelmetamodellstruktur:
+Schemat för metamodellen härleds från schemaentiteter på https://schema.org/docs/schemas.html. Den har Person, PostalAddress, LocalBusiness och fler entiteter enligt definitionen på https://schema.org. Alla entiteter i metamodellen följer JSON-schemaobjekttypen. Följande kod representerar en exempelmetamodellstruktur:
 
 ```
    "Entity": {
@@ -65,7 +64,7 @@ Följ de här stegen för att hämta standardmetamodellen till det lokala filsys
    <li>Step text</li>
    -->
 
-## Om metamodellen {#understanding-the-meta-model}
+## Metamodellen {#understanding-the-meta-model}
 
 En metamodell refererar till en JSON-schemafil som innehåller entiteter. Alla entiteter i JSON-schemafilen innehåller ett namn och ett ID. Varje entitet kan innehålla flera egenskaper. Enheterna och dess egenskaper kan variera beroende på domän. Du kan utöka en schemafil med nyckelord och fältkonfigurationer för att mappa schemaegenskaper till adaptiva formulärkomponenter.
 
@@ -215,7 +214,46 @@ Du kan använda egenskapen **aem:afProperties** i metamodellen för att definier
  </tbody> 
 </table>
 
-## Ändra anpassade formulärfält med hjälp av anpassad metamodell {#modify-adaptive-form-fields-using-custom-meta-model}
+## Skapa en anpassad metamodell på ditt eget språk{#language-specific-meta-model}
+
+Du kan skapa en språkspecifik metamodell. En sådan metamodell hjälper dig att skapa mappningsregler på valfritt språk. Med tjänsten Automated forms conversion kan du skapa metamodeller på följande språk:
+
+* Engelska (en)
+* French(fr)
+* German(de)
+* Spanska()
+
+Lägg till metataggen *aem:Language* i den översta metamodellen för att ange dess språk. Till exempel,
+
+```JSON
+"metaTags": {
+        "aem:Language": "de"
+    }
+```
+
+Engelska är standardspråket för metamodeller.
+
+### Att tänka på när du skapar en språkspecifik metamodell
+
+* Kontrollera att namnet på alla nycklar är på engelska. Till exempel emailAddress.
+* Kontrollera att alla entitetsreferenser och fördefinierade värden för alla *id*-nycklar är på engelska. Exempel:&quot;id&quot;: &quot;ContactPoint&quot; / &quot;$ref&quot;: &quot;Enhet&quot;.
+* Kontrollera att en beskrivning eller meddelanden som ingår i en metamodell för följande nycklar motsvarar metamodellens språk:
+   * aem:affKeyword
+   * title
+   * description
+   * enumNames
+   * shortDescription
+   * validatePictureClauseMessage
+
+   När språket för metamodellen till exempel är franska (&quot;aem:Language&quot;: &quot;fr&quot;) måste du se till att alla beskrivningar och meddelanden finns på franska.
+
+* Se till att alla [JSON-schemaegenskaper](#jsonschemaproperties) bara använder värden som stöds.
+
+I följande bild visas exempel på metamodell för engelska och motsvarande metamodell för franska språket:
+
+![](assets/language-specific-meta-model-comparison.png)
+
+## Ändra anpassade formulärfält med anpassad metamodell {#modify-adaptive-form-fields-using-custom-meta-model}
 
 Din organisation kan ha mönster och valideringar utöver de som anges i standardmetamodellen. Du kan utöka standardmetamodellen för att lägga till mönster, valideringar och entiteter som är specifika för din organisation. Tjänsten Automated forms conversion använder den anpassade metamodellen på formulärfälten under konverteringen. Du kan fortsätta uppdatera metamodellen när nya mönster, valideringar och enheter som är specifika för din organisation identifieras.
 
@@ -300,7 +338,7 @@ I den här anpassade metamodellen använder konverteringstjänsten texten i **ae
 }
 ```
 
-#### Konvertera ett formulärfält till kryssrutor av typen flerval i det adaptiva formuläret {#convert-a-form-field-to-multiple-choice-check-boxes-in-the-adaptive-form}
+#### Konvertera ett formulärfält till kryssrutor med flera val i det adaptiva formuläret {#convert-a-form-field-to-multiple-choice-check-boxes-in-the-adaptive-form}
 
 **Exempel**: Konvertera  **** landfält av strängtyp i formuläret före konvertering till kryssrutor i det adaptiva formuläret efter konvertering.
 
@@ -334,7 +372,7 @@ I den här anpassade metamodellen använder konverteringstjänsten text inom **a
 }
 ```
 
-#### Ändra formatet för ett formulärfält {#modify-the-format-of-a-form-field}
+#### Ändra format för ett formulärfält {#modify-the-format-of-a-form-field}
 
 **Exempel**: Ändra formatet för fältet  **E-** postadress till ett e-postformat.
 
@@ -350,7 +388,7 @@ I den här anpassade metamodellen använder konverteringstjänsten text inom **a
 }
 ```
 
-#### Lägg till valideringar i anpassade formulärfält {#add-validations-to-adaptive-form-fields}
+#### Lägga till valideringar i anpassade formulärfält {#add-validations-to-adaptive-form-fields}
 
 **Exempel 1:** Lägg till en validering i fältet  **Postnummer** i det adaptiva formuläret.
 
@@ -384,7 +422,7 @@ I den här anpassade metamodellen använder konverteringstjänsten text inom **a
 }
 ```
 
-#### Konvertera ett textfält till nedrullningsbar lista i anpassningsbart format {#convert-a-text-field-to-drop-down-list-in-the-adaptive-form}
+#### Konvertera ett textfält till nedrullningsbar lista i det adaptiva formuläret {#convert-a-text-field-to-drop-down-list-in-the-adaptive-form}
 
 **Exempel**: Konvertera  **** landfält av strängtyp i formuläret före konvertering till nedrullningsbara alternativ i det anpassade formuläret efter konvertering.
 
