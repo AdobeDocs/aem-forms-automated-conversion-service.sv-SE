@@ -7,9 +7,9 @@ uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
 topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
 exl-id: f679059c-18aa-4cb5-8368-ed27e96c20de
-source-git-commit: 3f91fc0541f8fe8dbc997ae0b401c8a0a49347dd
+source-git-commit: 28e07a0264edaaeef22d211f411f7908ca0abaed
 workflow-type: tm+mt
-source-wordcount: '2569'
+source-wordcount: '2591'
 ht-degree: 1%
 
 ---
@@ -221,23 +221,23 @@ Du kan skapa en språkspecifik metamodell. En sådan metamodell hjälper dig att
 * Engelska (en)
 * French(fr)
 * German(de)
-* Spanska()
+* Spanska
 
 Lägg till metataggen *aem:Language* i den översta metamodellen för att ange dess språk. Till exempel,
 
 ```JSON
 "metaTags": {
-        "aem:Language": "de"
+        "aem:Language": "fr"
     }
 ```
 
-Engelska är standardspråket för metamodeller.
+Om inget språk anges anser tjänsten att metamodellen är på engelska.
 
 ### Att tänka på när du skapar en språkspecifik metamodell
 
 * Kontrollera att namnet på alla nycklar är på engelska. Till exempel emailAddress.
-* Kontrollera att alla entitetsreferenser och fördefinierade värden för alla *id*-nycklar är på engelska. Exempel:&quot;id&quot;: &quot;ContactPoint&quot; / &quot;$ref&quot;: &quot;Enhet&quot;.
-* Kontrollera att en beskrivning eller meddelanden som ingår i en metamodell för följande nycklar motsvarar metamodellens språk:
+* Kontrollera att alla enhetsreferenser och fördefinierade värden för alla id-nycklar bara innehåller ASCII-tecken. Exempel:&quot;id&quot;: &quot;ContactPoint&quot; / &quot;$ref&quot;: &quot;#ContactPoint&quot;.
+* Se till att alla värden som motsvarar följande nycklar är på det angivna metamodellspråket:
    * aem:affKeyword
    * title
    * description
@@ -245,9 +245,9 @@ Engelska är standardspråket för metamodeller.
    * shortDescription
    * validatePictureClauseMessage
 
-   När språket för metamodellen till exempel är franska (&quot;aem:Language&quot;: &quot;fr&quot;) måste du se till att alla beskrivningar och meddelanden finns på franska.
+   När språket för metamodellen till exempel är franska (&quot;aem:Language&quot;: &quot;fr&quot;) måste du se till att alla beskrivningar och meddelanden är på franska.
 
-* Se till att alla [JSON-schemaegenskaper](#jsonschemaproperties) bara använder värden som stöds.
+* Se till att alla [JSON-schemaegenskaper](#jsonschemaproperties) bara använder värden som stöds. Egenskapen type kan till exempel bara omfatta de markerade värdena String, Number, Integer och Boolean.
 
 I följande bild visas exempel på metamodell för engelska och motsvarande metamodell för franska språket:
 
