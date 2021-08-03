@@ -5,14 +5,13 @@ description: 'Vanliga AFCS-problem och deras lösningar '
 seo-description: Vanliga AFCS-problem och deras lösningar
 contentOwner: khsingh
 topic-tags: forms
-translation-type: tm+mt
-source-git-commit: c413c5dc2da3a3e7e116b3355c63620f9dab17f8
+exl-id: e8406ed9-37f5-4f26-be97-ad042f9ca57c
+source-git-commit: 5353a071f8633b36fc73c34c5d7629228659e2ba
 workflow-type: tm+mt
-source-wordcount: '586'
-ht-degree: 100%
+source-wordcount: '661'
+ht-degree: 89%
 
 ---
-
 
 # Felsök den automatiserade konverteringstjänsten för formulär
 
@@ -33,6 +32,7 @@ Dokumentet innehåller grundläggande felsökningssteg för vanliga fel.
 | **Felmeddelande** <br> Inskannade formulär stöds inte.  <br><br>**Orsak** <br> PDF-formuläret innehåller endast inskannade bilder av formuläret och innehåller ingen innehållsstruktur. <br><br>**Lösning** <br> Tjänsten stöder inte konvertering av inskannade formulär eller en bild av ett formulär till ett anpassningsbart färdigt formulär. Du kan dock använda Adobe Acrobat för att konvertera bilden av ett formulär till ett PDF-formulär. Sedan kan du använda tjänsten för att konvertera PDF-formuläret till ett anpassningsbart formulär. Använd alltid en högkvalitativ bild av formuläret för konvertering i Acrobat. Det förbättrar kvaliteten på konverteringen. | ![Det går inte att ansluta till tjänsten.](assets/scanned-forms-error.png) |
 | **Felmeddelande** <br> Krypterat PDF-formulär stöds inte.  <br><br>**Orsak** <br>Mappen innehåller krypterade PDF-formulär. <br><br>**Lösning** <br> Tjänsten stöder inte konvertering av ett krypterat PDF-formulär till ett anpassningsbart färdigt formulär. Ta bort krypteringen, ladda upp det icke-krypterade formuläret och kör omvandlingen. | ![Det går inte att ansluta till tjänsten.](assets/secured-pdf-form.png) |
 | **Felmeddelande** <br> Det går inte att analysera metamodellen av JSON-schemat.  <br><br>**Orsak** <br> JSON-schemat som tillhandahålls tjänsten är inte korrekt formaterat, innehåller ogiltiga tecken eller använder ogiltig syntax för att mappa komponenter.  <br><br>**Lösning** <br> Kontrollera JSON-filens formatering. Du kan använda valfri JSON-verifierare online för att kontrollera schemats formatering och struktur. Mer information om metamodellens syntax finns i artikeln [Utöka standardmetamodellen](extending-the-default-meta-model.md). | ![Det går inte att ansluta till tjänsten.](assets/invalid-meta-model-schema.png) |
+| **Fel (endast i lokala miljöer)** <br> Alternativet  **[!UICONTROL Source Language]** anger inte rätt språk för ett adaptivt formulär. <br><br>**** <br> ReasonEgenskapen jcr:language för det adaptiva formuläret har inte angetts korrekt.  <br><br>**** <br> UpplösningÖppna CRX-DE-gruppen, navigera till  `/content/forms/af/`, öppna  `jcr:content` noden och ange värdet för noden till rätt språk. En lista över språk som stöds finns i [Lägg till lokaliseringsstöd för språk som inte stöds](https://experienceleague.adobe.com/docs/experience-manager-65/forms/manage-administer-aem-forms/supporting-new-language-localization.html#add-localization-support-for-non-supported-locales). | ![Det går inte att ansluta till tjänsten.](assets/aem-forms-translation-project-language-unavailable.png) |
 
 <!--
 
