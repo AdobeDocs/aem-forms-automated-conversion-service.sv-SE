@@ -6,10 +6,10 @@ seo-description: Innan du börjar använda tjänsten AEM Forms Automated forms c
 uuid: b1dc661b-ccd3-457f-acbb-4bd25db86e1e
 topic-tags: introduction
 discoiquuid: 9cd2363c-47a0-46e9-98cd-1fe088b9cd6e
-translation-type: tm+mt
-source-git-commit: 92cd241915ef5818fb004a8982674b4f6753c171
+exl-id: 35f59e02-e38e-473a-94c8-123e0a85ac8e
+source-git-commit: af05922f9eb76b7b0a30601824c6006fe555ea80
 workflow-type: tm+mt
-source-wordcount: '809'
+source-wordcount: '813'
 ht-degree: 1%
 
 ---
@@ -75,9 +75,8 @@ Innan du börjar använda tjänsten AEM Forms Automated forms conversion bör du
 * PDF forms som är större än 15 sidor stöds inte.
 * Krypterade, lösenordsskyddade och skyddade dokument konverteras inte. Ta bort kryptering eller lösenord innan konverteringen körs.
 * Komplexa tabeller som tabeller utan kanter, kapslade tabeller och tabeller med platshållarvärden stöds inte. Använd adaptiv formulärredigerare för att lägga till eller ändra komplexa tabeller efter konverteringen. Endast enkla tabeller med tomma fält, korrekta rubriker och tydliga gränser stöds.
-* Tjänsten konverterar endast engelska formulär till anpassningsbara formulär. Du kan översätta konverterade adaptiva formulär till ett annat språk med [AEM översättningsarbetsflöde](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html).
+* Tjänsten konverterar endast engelska, franska, tyska och spanska formulär till anpassningsbara formulär. Du kan översätta konverterade adaptiva formulär till ett annat språk med [AEM översättningsarbetsflöde](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html).
 * AEM 6.4 Forms stöder inte automatisk detektering av flerkolumnslayout för indataformulär.
 * Information som kodats med färger i PDF-källformulär överförs inte till adaptiv form.
 * Färger i PDF-källformuläret överförs inte till anpassningsbara formulärteman.
 * Färgat PDF forms behandlas som gråskaleformulär och fält identifieras därefter.
-
