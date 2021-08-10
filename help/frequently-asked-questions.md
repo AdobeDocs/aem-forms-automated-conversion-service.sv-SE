@@ -6,14 +6,13 @@ seo-description: vanliga frågor och svar om Automated forms conversion Service
 uuid: 0f6dc39c-99b7-49a4-8e9e-ecc4a35110c0
 topic-tags: introduction
 discoiquuid: e17c2d2c-8300-4467-aa01-57365697939f
-translation-type: tm+mt
-source-git-commit: 92cd241915ef5818fb004a8982674b4f6753c171
+exl-id: 3a29f8d4-8ea0-49eb-bfe0-0eab5f0c52c7
+source-git-commit: af05922f9eb76b7b0a30601824c6006fe555ea80
 workflow-type: tm+mt
-source-wordcount: '1825'
+source-wordcount: '1830'
 ht-degree: 4%
 
 ---
-
 
 # Vanliga frågor{#frequently-asked-questions}
 
@@ -32,7 +31,7 @@ ht-degree: 4%
    <p>Tjänsten kan konvertera icke-interaktiva PDF forms-, XFA-baserade XDP- och PDF forms samt AcroForms till adaptiva formulär. Tjänsten stöder inte skannade eller ifyllda formulär. Andra begränsningar finns i artikeln <a href="known-issues.md">Kända fel</a>.<br /> </p> 
     <p>Vi lägger regelbundet till stöd för andra källtyper. Håll avsnittet <a href="introduction.md">PDF-formulär som stöds</a> i bevakningslistan för en regelbunden uppdatering av nya funktioner och funktioner.</p>
 
-   Tjänsten kan endast konvertera formulär på engelska till anpassningsbara formulär. Du kan översätta de genererade anpassningsbara formulären till ett annat språk med [AEM:s översättningsflöde.](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)</br> </br>
+   Tjänsten kan endast konvertera engelska, franska, tyska och spanska blanketter till anpassningsbara blanketter. Du kan översätta de genererade anpassningsbara formulären till ett annat språk med [AEM:s översättningsflöde.](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)</br> </br>
 
 1. **Kan tjänsten producera en XDP istället för en adaptiv blankett?**
 
@@ -116,7 +115,7 @@ Tjänsten stöder endast tomma eller ofyllda formulär. Ladda inte upp ifyllda f
 
 1. **Hur mycket tid sparar tjänsten jämfört med den manuella processen att planera, skapa resurser (teman, mallar), skapa och publicera ett anpassat formulär?**
 
-   <p>Hur lång tid det tar beror på storleken och komplexiteten i indataformulären och antalet förfrågningar. Tjänsten har för avsikt att avsevärt minska time to value genom att konvertera PDF forms till anpassningsbara formulär i mycket snabbare takt jämfört med den manuella konverteringsprocessen. </p> <br />
+   <p>Hur lång tid det tar beror på storleken och komplexiteten i indataformulären och antalet förfrågningar. Tjänsten har för avsikt att avsevärt minska time to value genom att konvertera PDF forms till anpassningsbara formulär i mycket snabbare takt jämfört med den manuella konverteringen av formulär. </p> <br />
 
 1. **Vad ska jag göra om jag råkar ut för ett fel relaterat till RSA-bibliotek? Felmeddelandet liknar det som anges nedan:** <br/>
 
