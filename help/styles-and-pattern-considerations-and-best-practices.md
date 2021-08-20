@@ -7,7 +7,7 @@ uuid: e24773a2-be14-4184-a168-48aa976d459a
 topic-tags: introduction
 discoiquuid: 79f2026e-73a5-4bd1-b041-d1399b4ad23e
 exl-id: 9ada091a-e7c6-40e9-8196-c568f598fc2a
-source-git-commit: 65b0d6f6568ce7915b1a8bd85981bead967d869c
+source-git-commit: 9d107d2dfc64fd84d4f734ded5898612ce9a3295
 workflow-type: tm+mt
 source-wordcount: '1267'
 ht-degree: 3%
@@ -32,8 +32,8 @@ Du kan överföra alla PDF forms samtidigt eller i faser efter behov. Tänk på 
 * Ordna källdokumenten i en grupp om 8-15 dokument. Behåll källformulären med vanliga adaptiva formulärfragment i en enda batch.
 * Överför inte skyddade formulär. Tjänsten konverterar inte lösenordsskyddade och skyddade formulär.
 * Ladda inte upp [PDF-Portfolio](https://helpx.adobe.com/acrobat/using/overview-pdf-portfolios.html). Tjänsten konverterar inte en PDF-Portfolio till ett anpassningsbart formulär.
-* Skicka inte skannade, ifyllda och formulär på andra språk än engelska, franska, tyska och spanska. Sådana formulär stöds inte.
 * Ladda inte upp källformulär med blanksteg i filnamnet. Ta bort utrymmet från filnamnet innan du överför formulären.
+* Skicka inte skannade, ifyllda och formulär på andra språk än engelska, franska, tyska och spanska. Sådana formulär stöds inte.
 
 När du använder ett XDP-formulär för konvertering utför du följande steg innan du överför XPD-källformulären:
 
