@@ -1,15 +1,15 @@
 ---
 title: Vanliga frågor
-seo-title: Vanliga frågor
+seo-title: Frequently asked questions
 description: Vanliga frågor eller vanliga frågor
-seo-description: vanliga frågor och svar om Automated forms conversion Service
+seo-description: frequently asked questions for Automated Forms Conversion Service
 uuid: 0f6dc39c-99b7-49a4-8e9e-ecc4a35110c0
 topic-tags: introduction
 discoiquuid: e17c2d2c-8300-4467-aa01-57365697939f
 exl-id: 3a29f8d4-8ea0-49eb-bfe0-0eab5f0c52c7
-source-git-commit: af05922f9eb76b7b0a30601824c6006fe555ea80
+source-git-commit: 47261710e6616c27c210ac53bffcc2387a06ea7a
 workflow-type: tm+mt
-source-wordcount: '1830'
+source-wordcount: '1821'
 ht-degree: 4%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 4%
    <p>Tjänsten kan konvertera icke-interaktiva PDF forms-, XFA-baserade XDP- och PDF forms samt AcroForms till adaptiva formulär. Tjänsten stöder inte skannade eller ifyllda formulär. Andra begränsningar finns i artikeln <a href="known-issues.md">Kända fel</a>.<br /> </p> 
     <p>Vi lägger regelbundet till stöd för andra källtyper. Håll avsnittet <a href="introduction.md">PDF-formulär som stöds</a> i bevakningslistan för en regelbunden uppdatering av nya funktioner och funktioner.</p>
 
-   Tjänsten kan endast konvertera engelska, franska, tyska och spanska blanketter till anpassningsbara blanketter. Du kan översätta de genererade anpassningsbara formulären till ett annat språk med [AEM:s översättningsflöde.](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)</br> </br>
+   Tjänsten kan endast konvertera engelska, franska, tyska, spanska, italienska och portugisiska blanketter till anpassningsbara blanketter. Du kan översätta de genererade anpassningsbara formulären till ett annat språk med [AEM:s översättningsflöde.](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)</br> </br>
 
 1. **Kan tjänsten producera en XDP istället för en adaptiv blankett?**
 

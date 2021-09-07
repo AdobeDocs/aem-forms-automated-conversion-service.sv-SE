@@ -1,15 +1,15 @@
 ---
 title: Utöka standardmetamodellen
-seo-title: Utöka standardmetamodellen
+seo-title: Extend the default meta-model
 description: Utöka standardmetamodellen för att lägga till mönster, valideringar och enheter som är specifika för din organisation och tillämpa konfigurationer på anpassningsbara formulärfält medan du kör tjänsten Automated forms conversion.
-seo-description: Utöka standardmetamodellen för att lägga till mönster, valideringar och enheter som är specifika för din organisation och tillämpa konfigurationer på anpassningsbara formulärfält medan du kör tjänsten Automated forms conversion.
+seo-description: Extend the default meta-model to add pattern, validations, and entities specific to your organization and apply configurations to adaptive form fields while running the Automated Forms Conversion service.
 uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
 topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
 exl-id: f679059c-18aa-4cb5-8368-ed27e96c20de
-source-git-commit: 28e07a0264edaaeef22d211f411f7908ca0abaed
+source-git-commit: 47261710e6616c27c210ac53bffcc2387a06ea7a
 workflow-type: tm+mt
-source-wordcount: '2591'
+source-wordcount: '2565'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ Metamodellen är ett JSON-schema. Innan du börjar med metamodellen måste du se
 
 ## Standardmetamodell {#default-meta-model}
 
-Tjänsten Automated forms conversion har en standardmetamodell. Det är ett JSON-schema och finns i Adobe Cloud tillsammans med andra komponenter i tjänsten Automated forms conversion. Du kan hitta en kopia av metamodellen på den lokala AEM på: http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/`global.schema.json`. Du kan även [klicka här](assets/en.globalschema.json) för att komma åt eller hämta det engelska språkschemat. Metamodellen för [franska](assets/fr.globalschema.json), [tyska](assets/de.globalschema.json) och [spanska](assets/es.globalschema.json) är också tillgänglig för hämtning.
+Tjänsten Automated forms conversion har en standardmetamodell. Det är ett JSON-schema och finns i Adobe Cloud tillsammans med andra komponenter i tjänsten Automated forms conversion. Du kan hitta en kopia av metamodellen på den lokala AEM på: http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/`global.schema.json`. Du kan även [klicka här](assets/en.globalschema.json) för att komma åt eller hämta det engelska språkschemat. Metamodellen för [franska](assets/fr.globalschema.json), [tyska](assets/de.globalschema.json) [spanska](assets/es.globalschema.json), [italienska](assets/it.globalschema.json) och [portugisiska](assets/pt_br.globalschema.json) är också tillgänglig för hämtning.
 
 Schemat för metamodellen härleds från schemaentiteter på https://schema.org/docs/schemas.html. Den har Person, PostalAddress, LocalBusiness och fler entiteter enligt definitionen på https://schema.org. Alla entiteter i metamodellen följer JSON-schemaobjekttypen. Följande kod representerar en exempelmetamodellstruktur:
 
@@ -222,6 +222,8 @@ Du kan skapa en språkspecifik metamodell. En sådan metamodell hjälper dig att
 * French(fr)
 * German(de)
 * Spanska
+* Italian(it)
+* Portugisiska (pt-br)
 
 Lägg till metataggen *aem:Language* i den översta metamodellen för att ange dess språk. Till exempel,
 

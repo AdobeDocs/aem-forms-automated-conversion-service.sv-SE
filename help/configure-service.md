@@ -3,9 +3,9 @@ title: Konfigurera den automatiserade konverteringstjänsten för formulär
 description: Redo för AEM att använda tjänsten Automated forms conversion
 role: User, Admin
 exl-id: 8f21560f-157f-41cb-ba6f-12a4d6e18555
-source-git-commit: 264208305996e98ff2dbccf0e63027b4c757754c
+source-git-commit: 47261710e6616c27c210ac53bffcc2387a06ea7a
 workflow-type: tm+mt
-source-wordcount: '2682'
+source-wordcount: '2684'
 ht-degree: 7%
 
 ---
@@ -72,7 +72,6 @@ En AEM innehåller grundläggande formulärfunktioner. Konverteringstjänsten kr
 
 >[!NOTE]
 > Kontrollera att du utför de obligatoriska konfigurationerna efter installationen när du har installerat tilläggspaketet.
-
 
 <!-- ### (Optional) Download and install connector package  {#installConnectorPackage}
 
@@ -161,7 +160,7 @@ Med ett offentligt certifikat kan du autentisera din profil på Adobe I/O.
 
 1. Logga in på din AEM Forms-författarinstans. Navigera till **[!UICONTROL Tools]**> **[!UICONTROL Security]** > **[!UICONTROL Adobe IMS Configurations]**. Tryck på **[!UICONTROL Create]**. Sidan **[!UICONTROL Adobe IMS Technical Account Configuration]** visas.
 
-   ![Sidan Konfiguration av tekniskt konto för Adobe IMS](assets/adobe-ims-technical-account-configuration.png)
+   ![Sidan Konfiguration av Adobe IMS Technical Account](assets/adobe-ims-technical-account-configuration.png)
 
 1. Välj **[!UICONTROL Automated Forms Conversion Service]** i molnlösningen.
 
@@ -204,7 +203,7 @@ Om du vill använda Automated forms conversion-tjänsten skapar du ett projekt o
 
    ![Ange titel, API-nyckel, klienthemlighet och nyttolast  ](assets/ims-configuration-details.png)
 
-1. Ange API-nyckel och klienthemlighet på Adobe IMS-tekniksida. Använd de värden som anges på JWT (Service Account) på Adobe Developer Console-sidan.
+1. På Adobe IMS Technical page anger du API Key och Client Secret. Använd de värden som anges på JWT (Service Account) på Adobe Developer Console-sidan.
 
    >[!NOTE]
    >
@@ -241,7 +240,7 @@ Skapa en Cloud Service-konfiguration för att ansluta AEM till konverteringstjä
    | Mall | Standardmall som ska användas för konverterade formulär. Du kan alltid ange en annan mall innan du påbörjar konverteringen. En mall innehåller grundläggande struktur och ursprungligt innehåll för ett adaptivt formulär. Du kan välja en mall bland de färdiga mallarna. Du kan också skapa en anpassad mall. |
    | Tema | Standardtema som ska användas på konverterade formulär. Du kan alltid ange ett annat tema innan du påbörjar konverteringen.  Du kan klicka på ikonen för att välja ett tema som ingår i rutan. Du kan också skapa ett anpassat tema. |
    | Befintliga fragment | Placering av befintliga fragment, om sådana finns. |
-   | Anpassad metamodell | Sökväg till .schema.json-filen för den anpassade metamodellen. Du kan skapa separata metamodeller för engelska, franska, tyska och spanska. |
+   | Anpassad metamodell | Sökväg till .schema.json-filen för den anpassade metamodellen. Du kan skapa separata metamodeller för engelska, franska, tyska, spanska, italienska och portugisiska. |
 
 1. På fliken **[!UICONTROL Advanced]** på sidan **[!UICONTROL Create Automated Forms Conversion Configuration]** anger du värdet för följande fält:
 

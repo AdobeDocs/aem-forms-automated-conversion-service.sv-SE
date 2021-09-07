@@ -2,10 +2,10 @@
 title: Nyheter Versionsinformation – konverteringstjänsten för automatiserade formulär
 description: Lär dig mer om de senaste funktionerna och åtgärdade fel för konverteringstjänsten för automatiserade formulär
 exl-id: fccafbc9-28c1-4736-922c-24d675b25213
-source-git-commit: 19412c37f354fd47b661de114f286147c93c5b9e
+source-git-commit: 833cada8efcc3f0a0e5788c1ab99a95d814e0153
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '421'
+ht-degree: 71%
 
 ---
 
@@ -21,6 +21,10 @@ Konverteringstjänsten för automatiserade formulär förbättras fortlöpande. 
 * Inaktuell funktionalitet
 * Specialinstruktioner
 * Framtida planer för ändringar
+
+## 29 juli 2021 (AFC-2021.08.0) {#aug-2021}
+
+* Möjlighet att konvertera PDF forms på italienska och portugisiska till ett adaptivt format har lagts till.
 
 ## 29 juli 2021 (AFC-2021.07.2) {#july-2021}
 

@@ -2,9 +2,9 @@
 title: Introduktion
 description: Påskynda konverteringen av utskriftsformulär till anpassningsbara formulär
 exl-id: edabeac8-cd66-48ca-a99f-9643a1c184cf
-source-git-commit: af05922f9eb76b7b0a30601824c6006fe555ea80
+source-git-commit: 47261710e6616c27c210ac53bffcc2387a06ea7a
 workflow-type: tm+mt
-source-wordcount: '699'
+source-wordcount: '703'
 ht-degree: 64%
 
 ---
@@ -33,7 +33,7 @@ Tjänsten stöder icke-interaktiva PDF-formulär, formulär som är skapade med 
 
 Tjänsten stöder även Adobe Sign-aktiverade PDF forms. Om PDF-källformuläret har Adobe Sign-texttaggar, bevarar tjänsten all Adobe Sign-relaterad information under konverteringen och associerar signerarinformationen som finns i PDF-källfilen med motsvarande adaptiva formulärfält. Funktionen är bara tillgänglig för AcroForms.
 
-Tjänsten kan konvertera engelska, franska, tyska och spanska blanketter till anpassningsbara blanketter. Du kan också översätta de genererade anpassningsbara formulären till ett annat språk med [AEM översättningsarbetsflöde](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html).
+Tjänsten kan konvertera engelska, franska, tyska, spanska, italienska och portugisiska blanketter till anpassningsbara blanketter. Du kan också översätta de genererade anpassningsbara formulären till ett annat språk med [AEM översättningsarbetsflöde](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html).
 
 ## Konverteringsarbetsflöde  {#conversion-workflow}
 
@@ -50,7 +50,7 @@ Den automatiserade konverteringstjänsten för formulär körs på Adobe-molnet.
 När AEM Forms-miljön har konfigurerats [laddar du upp PDF-formulär](convert-existing-forms-to-adaptive-forms.md) till AEM-instansen och [startar konverteringen](convert-existing-forms-to-adaptive-forms.md#run-the-conversion) för att konvertera PDF-formulären till anpassningsbara formulär. Tänk på följande innan du laddar upp formulären:
 
 * Ladda inte upp skyddade formulär. Tjänsten konverterar inte lösenordsskyddade och krypterade formulär.
-* Överför inte skannade, färgade, ifyllda formulär och formulär på andra språk än engelska, franska, tyska och spanska. Sådana formulär stöds inte.
+* Överför inte skannade, färgade, ifyllda formulär och formulär på andra språk än engelska, franska, tyska, spanska, italienska och portugisiska. Sådana formulär stöds inte.
 * Ladda inte upp PDF-formulär med mellanslag i filnamnet.
 * Ladda inte upp [PDF-portfolios](https://helpx.adobe.com/acrobat/using/overview-pdf-portfolios.html). Tjänsten konverterar inte en PDF-Portfolio till ett anpassningsbart formulär.
 * Gör de föreslagna ändringarna i PDF-formulären som beskrivs i artikeln [Rekommenderad praxis och saker att tänka på](styles-and-pattern-considerations-and-best-practices.md).

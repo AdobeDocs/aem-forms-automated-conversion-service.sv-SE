@@ -1,16 +1,16 @@
 ---
 title: 'Rekommenderad praxis och saker att tänka på '
-seo-title: 'Rekommenderad praxis och saker att tänka på '
+seo-title: Best practices and considerations
 description: Bästa praxis och överväganden för tjänsten Automated forms conversion
-seo-description: Lista över format och mönster i PDF forms som tjänsten Automated forms conversion tycker är svår att identifiera
+seo-description: List of styles and patterns in source PDF forms which Automated Forms Conversion service finds difficult to identify
 uuid: e24773a2-be14-4184-a168-48aa976d459a
 topic-tags: introduction
 discoiquuid: 79f2026e-73a5-4bd1-b041-d1399b4ad23e
 exl-id: 9ada091a-e7c6-40e9-8196-c568f598fc2a
-source-git-commit: 9d107d2dfc64fd84d4f734ded5898612ce9a3295
+source-git-commit: 47261710e6616c27c210ac53bffcc2387a06ea7a
 workflow-type: tm+mt
-source-wordcount: '1267'
-ht-degree: 3%
+source-wordcount: '1247'
+ht-degree: 2%
 
 ---
 
@@ -33,7 +33,7 @@ Du kan överföra alla PDF forms samtidigt eller i faser efter behov. Tänk på 
 * Överför inte skyddade formulär. Tjänsten konverterar inte lösenordsskyddade och skyddade formulär.
 * Ladda inte upp [PDF-Portfolio](https://helpx.adobe.com/acrobat/using/overview-pdf-portfolios.html). Tjänsten konverterar inte en PDF-Portfolio till ett anpassningsbart formulär.
 * Ladda inte upp källformulär med blanksteg i filnamnet. Ta bort utrymmet från filnamnet innan du överför formulären.
-* Skicka inte skannade, ifyllda och formulär på andra språk än engelska, franska, tyska och spanska. Sådana formulär stöds inte.
+* Skicka inte skannade, ifyllda och formulär på andra språk än engelska, franska, tyska, spanska, italienska och portugisiska. Sådana formulär stöds inte.
 
 När du använder ett XDP-formulär för konvertering utför du följande steg innan du överför XPD-källformulären:
 
