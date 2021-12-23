@@ -1,61 +1,61 @@
 ---
-source-git-commit: 2f85c45eda63751a60997d670804c34e21634359
+source-git-commit: 1cef5bea746a63d0c8f8819f919c75f5d6aa96e9
 workflow-type: tm+mt
 source-wordcount: '534'
 ht-degree: 2%
 
 ---
-# Contributing to Adobe Experience Manager Cloud Service Documentation
+# Bidra till AEM Forms Automated Conversion Service Documentation
 
-Thank you for choosing to contribute to Adobe Experience Manager Cloud Service documentation! We welcome content contributions from our entire reader community as well as from fellow Adobe employees.
+Tack för att du väljer att delta i dokumentationen till AEM Forms Automated Conversion Service! Vi välkomnar bidrag till innehåll från hela vår läsarcommunity och från medarbetare i Adobe.
 
-This file describes how you can contribute as well as points out the guidelines to follow when making your contributions.
+I den här filen beskrivs hur du kan bidra samt vilka riktlinjer du ska följa när du gör dina bidrag.
 
-## Adobe Open Source Code of Conduct
+## Adobe uppförandekod med öppen källkod
 
-[](code-of-conduct.md) By contributing to AEM documentation, you agree to adhere to this code of conduct. [](mailto:Grp-opensourceoffice@adobe.com)
+Detta projekt har antagit [Adobe uppförandekod med öppen källkod](code-of-conduct.md). Genom att bidra till AEM dokumentation samtycker du till att följa denna uppförandekod. Rapportera oacceptabla beteenden till [Grp-opensourceoffice@adobe.com](mailto:Grp-opensourceoffice@adobe.com).
 
-## Guidelines for Contributing
+## Riktlinjer för bidrag
 
-While we welcome any contributions to improve AEM documentation, we do ask that contributions adhere to certain guidelines and standards where possible. [](guidelines.md)
+Vi välkomnar alla bidrag för att förbättra AEM dokumentation, men vi kräver att bidragen följer vissa riktlinjer och standarder där det är möjligt. Granska [Riktlinjer för att bidra till AEM dokumentation](guidelines.md) för mer information.
 
-## How to Contribute
+## Använda Contribute
 
-We want to make it as easy as possible to submit your contributions. You can contribute in two ways:
+Vi vill göra det så enkelt som möjligt att lämna in dina bidrag. Du kan bidra på två sätt:
 
-* [Create an issue](#create-an-issue)
-* [Create a pull request](#create-a-pull-request)
+* [Skapa ett problem](#create-an-issue)
+* [Skapa en pull-begäran](#create-a-pull-request)
 
-Which method you choose depends on how comfortable you are editing the documentation in GitHub yourself.
+Vilken metod du väljer beror på hur bekväm du själv redigerar dokumentationen i GitHub.
 
 >[!NOTE]
 >
->[](https://www.adobe.com/legal/terms.html)
+>Bidrag som du skickar in omfattas av [Adobe användarvillkor.](https://www.adobe.com/legal/terms.html)
 
-### Create an Issue {#create-an-issue}
+### Skapa ett problem {#create-an-issue}
 
-Do you have a suggestion, observation about the current docs, or question the way something is described? Then please create an issue. Issues are also excellent if you have something to contribute, but don&#39;t feel comfortable editing the docs or making a pull request yourself.
+Har du ett förslag, synpunkter på aktuella dokument eller frågor om hur något beskrivs? Skapa sedan ett problem. Problem är också bra om du har något att bidra med, men inte känner dig bekväm med att redigera dokumenten eller göra en pull-förfrågan själv.
 
-Issues allow you to easily describe your idea for improvement to the docs and an AEM Docs Team member can review it. ****
+Med hjälp av olika problem kan du enkelt beskriva din idé om hur du kan förbättra dokumenten, och en AEM Docs Team-medlem kan granska den. Klicka bara på **Logga ett problem** överst på den högra navigeringspanelen på en sida för att skapa ett problem.
 
-### Create a Pull Request {#create-a-pull-request}
+### Skapa en pull-begäran {#create-a-pull-request}
 
-If you see a problem and know exactly how to fix it, consider creating a pull request. Pull requests allow you to make your own edits to the documentation, which are then reviewed for inclusion by an AEM Docs Team member. ****
+Om du ser ett problem och vet exakt hur du löser det kan du skapa en pull-begäran. Dragningsbegäranden gör att du kan göra egna ändringar i dokumentationen, som sedan granskas för att inkluderas av en AEM Docs Team-medlem. Klicka bara på **Redigera den här sidan** överst på den högra navigeringspanelen på en sida för att göra de föreslagna ändringarna och skapa pull-begäran.
 
-[](https://opensource.adobe.com/cla.html)  Detta ger Adobe tillstånd att återdistribuera dina bidrag som en del av projektet. You only need to submit an Adobe CLA one time, so if you have submitted one previously, you are good to go!
+Alla pull-begäranden måste åtföljas av en signerad [licensavtal för medverkande eller CLA.](https://opensource.adobe.com/cla.html)  Detta ger Adobe tillstånd att återdistribuera dina bidrag som en del av projektet. Du behöver bara skicka ett Adobe CLA en gång, så om du har skickat ett tidigare är du redo att gå!
 
-### Quick Video Introduction
+### Introduktion till snabbvideo
 
-Have a look at the following video for a quick overview of how to create issues and pull requests.
+Titta på följande video för att få en snabb översikt över hur du skapar problem och skickar in förfrågningar.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27069)
 
-### Contributions from Adobe Employees
+### Bidrag från anställda i Adobe
 
-`AdobeDocs`
+Om du är anställd i Adobe och har ett bidrag, använd `AdobeDocs` i företagsgit.
 
-We of course are happy for any contribution and will review your contribution if it is made on the public repository, however pull requests from Adobe employees are easier to process and can be approved faster on the corporate repo. Please make sure that any proprietary information is only discussed on the corporate repo.
+Vi är naturligtvis glada över eventuella bidrag och kommer att granska ditt bidrag om det görs i den offentliga databasen, men det är lättare att behandla förfrågningar från Adobe anställda och de kan godkännas snabbare i företagets rapport. Se till att all företagsinformation endast behandlas i företagets rapport.
 
-## Further Information
+## Ytterligare information
 
-[](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html)
+Se [Adobe Docs Contributor Guide](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html) om du vill ha mer information om hur du använder utvecklingsplattformen GitHub.
