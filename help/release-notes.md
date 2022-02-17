@@ -2,10 +2,10 @@
 title: Nyheter Versionsinformation – konverteringstjänsten för automatiserade formulär
 description: Lär dig mer om de senaste funktionerna och åtgärdade fel för konverteringstjänsten för automatiserade formulär
 exl-id: fccafbc9-28c1-4736-922c-24d675b25213
-source-git-commit: 833cada8efcc3f0a0e5788c1ab99a95d814e0153
+source-git-commit: eab71506513605728d8f925ab6e7e9bead7ca6fc
 workflow-type: tm+mt
-source-wordcount: '421'
-ht-degree: 71%
+source-wordcount: '451'
+ht-degree: 66%
 
 ---
 
@@ -22,7 +22,11 @@ Konverteringstjänsten för automatiserade formulär förbättras fortlöpande. 
 * Specialinstruktioner
 * Framtida planer för ändringar
 
-## 29 juli 2021 (AFC-2021.08.0) {#aug-2021}
+## 24 feb 2022 (AFC-2022.02.0) {#feb-2022}
+
+* Förbättrade funktioner för [automatiskt konvertera avsnitt till fragment](convert-existing-forms-to-adaptive-forms.md) för att förbättra återgivningshastigheten för konverterade formulär och göra det enklare att läsa in stora formulär i en adaptiv formulärredigerare.
+
+## 29 aug 2021 (AFC-2021.08.0) {#aug-2021}
 
 * Möjlighet att konvertera PDF forms på italienska och portugisiska till ett adaptivt format har lagts till.
 
@@ -57,7 +61,6 @@ Lagt till stöd för att konvertera PDF forms i färg till anpassningsbara formu
 ### Förbättringar {#jul-2020-improvements}
 
 Förbättringar av den automatiserade konverteringen av fält för text, formulär och urvalsgrupper till motsvarande adaptiva formulärkomponenter.
-
 
 ## 20 mars 2020 (AFC-2020.03.1) {#mar-2020}
 
