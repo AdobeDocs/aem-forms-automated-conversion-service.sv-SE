@@ -1,18 +1,17 @@
 ---
-title: 'Rekommenderad praxis och saker att tänka på '
+title: Rekommenderad praxis och saker att tänka på
 description: PUBLICERA INTE
-seo-description: PUBLICERA INTE
+seo-description: DO NOT PUBLISH
 page-status-flag: never-activated
 uuid: c2821264-39e2-44f8-b234-835c46f33fd5
 topic-tags: introduction
 discoiquuid: b786e40a-202e-4e17-a2f5-1f77c46538c2
 privatebeta: true
 index: false
-translation-type: tm+mt
 source-git-commit: b2d29c22a275f2dc6a82593cf5e441c8da0bba13
 workflow-type: tm+mt
-source-wordcount: '546'
-ht-degree: 7%
+source-wordcount: '543'
+ht-degree: 4%
 
 ---
 
@@ -27,7 +26,7 @@ AEM Forms tjänst för automatisk konvertering konverterar ett PDF-formulär til
 
 automated forms conversion är utbildad i ett stort antal blanketter. Den identifierar enkelt fält i ett källformulär och skapar anpassningsbara formulär. Det finns dock vissa fält och format i PDF forms som är lätta att se för det mänskliga ögat men svåra att förstå för tjänsten. Tjänsten kan tilldela vissa fält eller format andra än tillämpliga fälttyper eller paneler. Alla sådana fält- och formatmönster listas nedan.
 
-Tjänsten börjar identifiera och tilldela rätt fält eller paneler till dessa mönster när den lär sig av källdata. Du kan använda redigeraren [Granska och korrigera](review-correct-ui-edited.md) för att korrigera sådana problem. Innan du börjar åtgärda problemen eller läser mer bör du bekanta dig med [adaptiva formulärkomponenter](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html).
+Tjänsten börjar identifiera och tilldela rätt fält eller paneler till dessa mönster när den lär sig av källdata. Just nu kan du använda [Granska och korrigera](review-correct-ui-edited.md) för att åtgärda sådana problem. Innan du börjar åtgärda problemen eller läser mer, bör du bekanta dig med [adaptiva formulärkomponenter](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html).
 
 ## Allmänt {#general}
 
@@ -59,7 +58,7 @@ Tjänsten börjar identifiera och tilldela rätt fält eller paneler till dessa 
  </tbody>
 </table>
 
-## Alternativgrupp {#choice-group}
+## Urvalsgrupp  {#choice-group}
 
 <table border="1" cellpadding="1" cellspacing="0" width="100%"> 
  <tbody>

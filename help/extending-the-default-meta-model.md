@@ -10,7 +10,7 @@ exl-id: f679059c-18aa-4cb5-8368-ed27e96c20de
 source-git-commit: e3ba3807668084495acb77f57ea2da6d5a53e626
 workflow-type: tm+mt
 source-wordcount: '2565'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -146,7 +146,7 @@ Metamodellen stöder följande gemensamma egenskaper för JSON-schema för adapt
      <li>boolesk: Skapar en adaptiv formulärkomponent för switch.</li>
      </ul><p>Mer information om hur du använder egenskapen type i en metamodell finns i <strong>Ändra typ av formulärfält</strong> in <a href="#custommetamodelexamples">Exempel på anpassade metamodeller.</a></p></td> 
   </tr>
-  <td><p>pattern</p></td> 
+  <td><p>mönster</p></td> 
    <td> 
     <p>Egenskapen pattern begränsar värdet för det genererade adaptiva formulärfältet baserat på ett reguljärt uttryck. Följande kod i metamodellen begränsar till exempel värdet för det genererade adaptiva formulärfältet till tio siffror:<br>"pattern": "/\\d{10}/"<br>Följande kod i metamodellen begränsar på liknande sätt värdet för ett fält till ett visst datumformat.<br> "pattern": "date{DD MMMM, YYYY}",</p> </td> 
   </tr>
@@ -193,7 +193,7 @@ Du kan använda **aem:afProperties** i metamodellen för att definiera följande
    <td> 
     <p>Egenskapen multiLine konverterar ett källformulärfält till ett fält med flera rader i det adaptiva formuläret efter konverteringen. Mer information finns i <strong>Konvertera ett strängfält till ett flerradigt fält</strong> in <a href="#custommetamodelexamples">Exempel på anpassade metamodeller.</a></p> </td> 
   </tr>
-  <td><p>mandatory</p></td> 
+  <td><p>obligatoriskt</p></td> 
    <td> 
     <p>Den obligatoriska egenskapen anger indata för ett adaptivt formulärfält efter konvertering som obligatoriskt.<br>Mer information finns i <strong>Lägga till valideringar i anpassade formulärfält</strong> in <a href="#custommetamodelexamples">Exempel på anpassade metamodeller.</a></p>
     </td> 

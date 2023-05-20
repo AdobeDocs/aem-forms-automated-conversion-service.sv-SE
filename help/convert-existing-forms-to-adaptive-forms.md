@@ -1,5 +1,5 @@
 ---
-title: 'Konvertera PDF-formulär till anpassningsbara formulär '
+title: Konvertera PDF-formulär till anpassningsbara formulär
 seo-title: Convert PDF forms to adaptive forms
 description: Kör tjänsten Automated forms conversion för att konvertera PDF forms till anpassningsbara formulär
 seo-description: Run the Automated Forms Conversion service to convert PDF forms to adaptive forms
