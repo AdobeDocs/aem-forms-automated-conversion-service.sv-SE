@@ -1,13 +1,14 @@
 ---
 title: Utöka standardmetamodellen
-seo-title: Extend the default meta-model
 description: Utöka standardmetamodellen för att lägga till mönster, valideringar och enheter som är specifika för din organisation och tillämpa konfigurationer på anpassningsbara formulärfält medan du kör tjänsten Automated forms conversion.
-seo-description: Extend the default meta-model to add pattern, validations, and entities specific to your organization and apply configurations to adaptive form fields while running the Automated Forms Conversion service.
-uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
+solution: Experience Manager Forms
+feature: Adaptive Forms
+topic: Administration
 topic-tags: forms
-discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
+role: Admin, Developer
+level: Beginner, Intermediate
 exl-id: f679059c-18aa-4cb5-8368-ed27e96c20de
-source-git-commit: 298d6c0641d7b416edb5b2bcd5fec0232f01f4c7
+source-git-commit: e95b4ed35f27f920b26c05f3398529f825948f1f
 workflow-type: tm+mt
 source-wordcount: '2565'
 ht-degree: 0%
