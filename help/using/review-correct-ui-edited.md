@@ -2,15 +2,15 @@
 title: Granska och korrigera konverterade formulär
 description: Granska och korrigera de adaptiva formulär som konverterats av tjänsten Automated forms conversion.
 solution: Experience Manager Forms
-feature: Adaptive Forms
+feature: Adaptive Forms, Foundation Components
 topic: Administration
 topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: 64330fa2-aa9d-4ba4-96df-b75deed3e693
-source-git-commit: e95b4ed35f27f920b26c05f3398529f825948f1f
+source-git-commit: 919886cda2ec50ddb9b403cbb0e92fec2821c10e
 workflow-type: tm+mt
-source-wordcount: '2518'
+source-wordcount: '2510'
 ht-degree: 0%
 
 ---
@@ -36,23 +36,23 @@ Redigeraren Review and Correct är ett lättanvänt gränssnitt. Den har följan
 * Innehållsläsare: Du kan använda innehållsläsaren för att ändra ett elements position. I innehållsläsaren kan du dra och släppa ett formulärobjekt för att ändra dess position. Du kan till exempel flytta en tabell före en textruta. Det ändrar tabbordningen för utdata i anpassat format.
 * Egenskapsläsaren: Här visas egenskaperna för ett markerat fält. Du kan också ändra egenskaperna.
 * Verktygsfält: Verktygsfältet visas högst upp i redigeraren. Här visas verktyg för att lägga till, ändra, gruppera, dela upp och ta bort fält.
-* Öppna egenskaper: Alternativet Öppna egenskaper visas när användaren trycker på ![](assets/properties.png) ikon. Du kan klicka på öppna egenskaper för att öppna formuläregenskaper och visa ytterligare alternativ.
+* Öppna egenskaper: Alternativet Öppna egenskaper visas när användaren trycker på ![](assets/properties.png) -ikon. Du kan klicka på öppna egenskaper för att öppna formuläregenskaper och visa ytterligare alternativ.
 * Filterknapp: Filterknappen ![](assets/toggle_eye.png) är högst upp i redigeraren. Du kan filtrera fälten så att endast texter, fält, urvalsgrupper, paneler eller alla komponenter visas.
-* Spara-knapp: The **[!UICONTROL Save]** finns i det övre högra hörnet av redigeraren. Du kan också använda pilen bredvid knappen Spara för att visa alternativet att skicka formuläret för konvertering.
+* Spara-knappen: **[!UICONTROL Save]** knappen finns i det övre högra hörnet av redigeraren. Du kan också använda pilen bredvid knappen Spara för att visa alternativet att skicka formuläret för konvertering.
 
-* PDF: Redigeraren visar PDF-källdokumentet och lägger över det med identifierade fält. Du kan använda verktygen i verktygsfältet för att ändra fälten.
-* Sidor: Ett källformulär kan ha flera sidor. Redigeraren har en knapp i det övre högra hörnet för att navigera mellan sidorna.
+* PDF-formulär: Redigeraren visar källdokumentet PDF och övertäcker det med identifierade fält. Du kan använda verktygen i verktygsfältet för att ändra fälten.
+* Sidor: Ett källformulär kan innehålla flera sidor. Redigeraren har en knapp i det övre högra hörnet för att navigera mellan sidorna.
 
 ![Granska och korrigera användargränssnitt](assets/reviewcorrectui.png)
 
 **S.** Content Browser **B.** Egenskapsläsaren **C.** Verktygsfält **D.** Egenskapsknapp **E.** Filterknapp **F.** Knappen Spara **G.** PDF-formulär med överlägg av identifierade fält
 
-Efter den första lyckade konverteringen lägger konverteringstjänsten över PDF-källdokumentet med identifierade fält och komponenter. Dessa fält eller komponenter är av typen: Text, fält, panel, alternativgrupp och tabell:
+Efter den första lyckade konverteringen lägger konverteringstjänsten över PDF-källdokumentet med identifierade fält och komponenter. Dessa fält eller komponenter är av typen: Text, Fält, Panel, Alternativgrupp och Tabell:
 
 * Text: Oformaterad text i PDF-källdokumentet. Till exempel texten Låneprogram i bilden ovan.
 * Fält: Kombination av text- eller ikonetikett som är kopplad till ett värde eller en inmatningsruta. Till exempel namnet på fältet Förnamn i bilden ovan. Den har en textetikett och en inmatningsruta. Ett fält har stöd för datatyperna text, numerisk, listruta, datum, e-post, telefonnummer, signatur, valuta och lösenord.
 * Panel: Logisk samling med innehåll och komponenter. Exempel: Personinformation för panelerna Person 1 och Person 2 i bilden ovan.
-* Urvalsgrupp: Kombination av text som är kopplad till flera alternativ: kryssruta och alternativknapp. Exempel: Marital status och Befintlig kund i bilden ovan.\
+* Alternativgrupp: En kombination av text som är kopplad till flera alternativ: kryssruta och alternativknapp. Exempel: Marital status och Befintlig kund i bilden ovan.\
   Beroende på urvalsgruppens bildtext och dess alternativ för flerval konverterar konverteringstjänsten automatiskt en urvalsgrupp till en alternativknapp eller en kryssruta för flerval. Om det till exempel finns **Välj någon** som urvalsgruppbeskrivning eller flervalsalternativ låter dig bara välja ett alternativ, **Ja** eller **Nej** konverteringstjänsten konverterar automatiskt urvalsgruppen till en alternativknapp med ett enda val. Om det finns **Markera alla som gäller** eller **Markera flera** som urvalsgruppbeskrivning eller flervalsalternativ låter dig välja flera alternativ, konverterar konverteringstjänsten automatiskt urvalsgruppen till en kryssruta där du kan markera flera alternativ.
 
 * Tabell: En 2D-tabell med information som representeras i kolumner och rader. Du kan lägga till eller ta bort rader eller kolumner i en tabell.
@@ -87,27 +87,27 @@ Om du vill börja granska konverteringar väljer du PDF-källdokumentet som anv�
 
    * Om du vill dela upp en panel markerar du panelen och trycker på ikonen Dela upp i verktygsfältet. Panelen är uppdelad och underordnade fält i den uppdelade panelen justeras till det överordnade fältet. Tryck **[!UICONTROL Save]**för att spara ändringarna.
 
-1. **Skapa logiska textgrupper**: Validera de identifierade texterna för fullständighet och korrekthet. Kontrollera också att texterna är logiskt placerade i rätt paneler eller grupper. I en layout med flera kolumner kan du till exempel placera texten för en logisk grupp i en annan grupp.
+1. **Skapa logiska grupper av text**: Validera de identifierade texterna för fullständighet och korrekthet. Kontrollera också att texterna är logiskt placerade i rätt paneler eller grupper. I en layout med flera kolumner kan du till exempel placera texten för en logisk grupp i en annan grupp.
 
    * Använd filtret för att granska om texten är fullständig och korrekt ![](assets/toggle_eye.png) om du bara vill visa text, klicka på varje text och validera. Åtgärda stavnings-, stavnings- eller grammatikproblem, om sådana finns.
 
-   * Om du vill lägga till text i formuläret trycker du på plusknappen (+) och trycker på **[!UICONTROL Text]**. Rita rutan, öppna egenskapsläsaren och skriv texten som ska läggas till i rutan Innehåll.
+   * Om du vill lägga till text i formuläret trycker du på +-knappen och trycker på **[!UICONTROL Text]**. Rita rutan, öppna egenskapsläsaren och skriv texten som ska läggas till i rutan Innehåll.
 
-1. **Granska tabeller:** Se till att alla kantlinjer i tabellen identifieras. Se även till att innehållet i cellerna identifieras korrekt.
+1. **Granskningstabeller:** Se till att alla kantlinjer i tabellen identifieras. Se även till att innehållet i cellerna identifieras korrekt.
 
-   * Om du vill identifiera missade kanter använder du **[!UICONTROL Add Column]** eller **[!UICONTROL Add Row]** alternativ.
+   * Använd knappen **[!UICONTROL Add Column]** eller **[!UICONTROL Add Row]** alternativ.
 
    * Om du vill ta bort extra kantlinjer använder du **[!UICONTROL Delete Column]** eller **[!UICONTROL Delete Row]** alternativ.
 
-När du har gjort nödvändiga ändringar trycker du på **[!UICONTROL Save & Convert]** för att skicka om PDF forms till konverteringstjänsten. Varje fält konverteras till en motsvarande adaptiv fältkomponent. Efter konverteringen hämtas de uppdaterade resurserna, inklusive det adaptiva formuläret och schemat, till din AEM Forms-instans. Beroende på hur komplicerat formuläret är kan det ta lite tid att slutföra konverteringen.
+När du har gjort nödvändiga ändringar trycker du på **[!UICONTROL Save & Convert]** för att skicka om PDF forms till konverteringstjänsten. Varje fält konverteras till motsvarande adaptiva fältkomponent. Efter konverteringen hämtas de uppdaterade resurserna, inklusive det adaptiva formuläret och schemat, till din AEM Forms-instans. Beroende på hur komplicerat formuläret är kan det ta lite tid att slutföra konverteringen.
 
 ![Spara och konvertera](assets/save-and-convert.png)
 
-När du har utfört de grundläggande kontrollerna kan du granska formuläret för att åtgärda problem som är specifika för organisationen. De här problemen kan vara relaterade till att lägga till saknade fält, och mycket annat. Du kan visa [Använda verktygen Gransknings- och Korrigera-redigerare](review-correct-ui-edited.md#use-the-review-and-correct-editor-tools) om du vill veta mer om alla verktyg som redigeraren har för att åtgärda sådana problem.
+När du har utfört de grundläggande kontrollerna kan du granska formuläret för att åtgärda problem som är specifika för organisationen. De här problemen kan vara relaterade till att lägga till saknade fält, och mycket annat. Du kan visa [Använda verktygen för granskning och korrigering](review-correct-ui-edited.md#use-the-review-and-correct-editor-tools) om du vill veta mer om alla verktyg som redigeraren har för att åtgärda sådana problem.
 
-Du kan också arbeta med att identifiera identiska problem som uppstår i nästan alla dina formulär och rapportera sådana mönster till Adobe. Använd redigeraren Granska och korrigera tills du uppnår önskad effekt.
+Du kan också arbeta med att identifiera identiska problem som uppstår i nästan alla dina formulär och rapportera sådana mönster till Adobe. Använd redigeraren Granska och korrigera tills önskad upplevelse är nådd.
 
-## Använda verktygen Gransknings- och Korrigera-redigerare {#use-the-review-and-correct-editor-tools}
+## Använda verktygen för granskning och korrigering {#use-the-review-and-correct-editor-tools}
 
 Med gransknings- och korrigeringsredigeraren kan du
 
@@ -126,9 +126,9 @@ Konverteringstjänsten kanske inte identifierar vissa komponenter i utskriftsfor
 
 ![](assets/add-component.gif)
 
-Om du vill lägga till en komponent i formuläret trycker du på **[!UICONTROL +]** och trycka **[!UICONTROL Field]**. Rita en ruta som omfattar etiketten och inmatningsrutan för fältet. I exempelbilden ovan används till exempel fältkomponenten för att lägga till **Födelsedatum** etikett och värderuta nedanför till formuläret. När du ritar rutan identifierar konverteringstjänsten fälttypen. Du kan ändra fälttypen i egenskapswebbläsaren om det behövs. När du har skapat komponenten öppnar du egenskapsläsaren och anger komponentens egenskaper.
+Om du vill lägga till en komponent i formuläret trycker du på **[!UICONTROL +]** och knacka **[!UICONTROL Field]**. Rita en ruta som omfattar etiketten och inmatningsrutan för fältet. I exempelbilden ovan används till exempel fältkomponenten för att lägga till **Födelsedatum** etikett och värderuta nedanför till formuläret. När du ritar rutan identifierar konverteringstjänsten fälttypen. Du kan ändra fälttypen i egenskapswebbläsaren om det behövs. När du har skapat komponenten öppnar du egenskapsläsaren och anger komponentens egenskaper.
 
-Tryck **[!UICONTROL Save]** om du vill spara ändringarna eller använda knappen **[!UICONTROL Save & Convert]** för att skicka om PDF forms till konverteringstjänsten.
+Tryck **[!UICONTROL Save]** om du vill spara ändringarna eller använda **[!UICONTROL Save & Convert]** för att skicka om PDF forms till konverteringstjänsten.
 
 ### Lägga till eller redigera en tabell {#addedittable}
 
@@ -137,7 +137,7 @@ Konverteringen kan göra att ett fåtal celler, gränser eller innehåll i en ta
 * Om du vill markera en tabell klickar du på en cell i tabellen.
 * Om du vill ändra egenskaper för en cell, till exempel namn, titel eller typ, dubbelklickar du på en cell. Du kan också dubbelklicka på cellen för att ändra innehållet, markera ett fält som krävs och välja andra egenskaper.
 * Om du vill lägga till/identifiera en helt oidentifierad eller ny tabell i formuläret använder du **[!UICONTROL +]** verktyg.
-* Om du vill ändra storlek på celler eller rader i en tabell klickar du en gång på tabellens tomma område, håller pekaren över rad- eller kolumngränsen när markören ändras, markerar och flyttar gränsen. Klicka på **[!UICONTROL Done]** för att genomföra ändringarna. Du kan trycka på **[!UICONTROL ESC]** om du vill ta bort storleksändringen.
+* Om du vill ändra storlek på celler eller rader i en tabell klickar du en gång på tabellens tomma område, håller pekaren över rad- eller kolumngränsen när markören ändras, markerar och flyttar gränsen. När du har ändrat storlek klickar du **[!UICONTROL Done]** för att genomföra ändringarna. Du kan trycka **[!UICONTROL ESC]** om du vill ta bort storleksändringen.
 
 * Om du vill lägga till eller ta bort rader eller kolumner markerar du en cell i tabellraden och markerar **[!UICONTROL Add Row]**, **[!UICONTROL Add Column]**, **[!UICONTROL Delete Row]**, eller **[!UICONTROL Delete Column]** från ![](assets/table_18x18.png) -menyn.
 
@@ -167,25 +167,25 @@ Med konverteringstjänsten kan du skapa paneler som har komponenter utan relatio
 
 * Om du vill ta bort en panel markerar du panelen och trycker på Dela upp ![Dela upp](assets/ungroupX18.png). Panelen tas bort och panelens underordnade komponenter flyttas till den överordnade komponenten. Du kan också använda [ta bort komponent](review-correct-ui-edited.md#delete-a-panel-or-component) om du vill ta bort en panel och dess underordnade.
 
-* Om du vill skapa en panel använder du Ctrl-tangenten (Windows eller Linux) eller Ctrl-tangenten (Mac) för att markera relaterade komponenter och trycker sedan på ![grupp](assets/group.jpg) för att skapa en panel. Öppna egenskapsbläddraren och ange panelens egenskaper.
+* Om du vill skapa en panel använder du Ctrl-tangenten (Windows eller Linux) eller Ctrl-tangenten (Mac) för att markera relaterade komponenter och trycker sedan på ![grupp](assets/group.jpg) för att skapa en panel. Öppna egenskapsbläddraren för att ange panelens egenskaper.
 
-Tryck **[!UICONTROL Save]** om du vill spara ändringarna eller använda knappen **[!UICONTROL Save & Convert]** för att skicka om PDF forms till konverteringstjänsten.
+Tryck **[!UICONTROL Save]** om du vill spara ändringarna eller använda **[!UICONTROL Save & Convert]** för att skicka om PDF forms till konverteringstjänsten.
 
 ### Ta bort en panel eller komponent {#delete-a-panel-or-component}
 
 Konverteringstjänsten kan identifiera vissa felaktiga paneler eller komponenter. De flesta av dessa komponenter i panelerna är icke-relaterade. Du kan ta bort sådana paneler eller komponenter.
 
-Om du vill ta bort en panel eller komponent markerar du en panel eller komponent och trycker på borttagningen ![](assets/delete-icon.png) ikon. Tryck på **[!UICONTROL Confirm]**. Den markerade panelen eller komponenten tas bort. När du tar bort en panel tas även panelens underordnade bort. Du kan använda Ctrl-tangenten (Windows eller Linux) eller Ctrl-tangenten (Mac) för att markera flera komponenter eller paneler.
+Om du vill ta bort en panel eller komponent markerar du en panel eller komponent och trycker på borttagningen ![](assets/delete-icon.png) -ikon. Tryck på **[!UICONTROL Confirm]**. Den markerade panelen eller komponenten tas bort. När du tar bort en panel tas även panelens underordnade bort. Du kan använda Ctrl-tangenten (Windows eller Linux) eller Ctrl-tangenten (Mac) för att markera flera komponenter eller paneler.
 
 ### Ange egenskaper för en komponent {#set-properties-of-a-component}
 
 Varje komponent i formuläret har en uppsättning egenskaper som namn, titel, typ. Om du vill ange egenskaperna för en komponent markerar du komponenten och trycker på egenskapsläsaren. Egenskaper för den markerade komponenten visas. Ändra eller ange egenskaperna.
 
-Tryck **[!UICONTROL Save]** om du vill spara ändringarna eller använda knappen **[!UICONTROL Save & Convert]** för att skicka om PDF forms till konverteringstjänsten.
+Tryck **[!UICONTROL Save]** om du vill spara ändringarna eller använda **[!UICONTROL Save & Convert]** för att skicka om PDF forms till konverteringstjänsten.
 
 ### Skicka ett formulär för konvertering {#send-a-form-for-conversion}
 
-När du har gjort alla ändringar du behöver i gransknings- och korrigeringsredigeraren kan du skicka om formuläret för konvertering. Om du vill skicka formuläret för konvertering trycker du på **[!UICONTROL Save & Convert]**. The **[!UICONTROL Sent for conversion label]** används i den mapp som innehåller källdokumentet och det uppdaterade källformuläret överförs till konverteringstjänsten som körs på Adobe I/O.
+När du har gjort alla ändringar du behöver i gransknings- och korrigeringsredigeraren kan du skicka om formuläret för konvertering. Skicka formuläret för konvertering genom att trycka på **[!UICONTROL Save & Convert]**. The **[!UICONTROL Sent for conversion label]** används i den mapp som innehåller källdokumentet och det uppdaterade källformuläret överförs till konverteringstjänsten som körs på Adobe I/O.
 
 Beroende på formulärets komplexitet kan det ta lite tid att konvertera formuläret. När konverteringen är klar hämtas det konverterade adaptiva formuläret och relaterade resurser till datorn. Du kan granska formuläret i redigeraren när konverteringen är klar och öppna det adaptiva formuläret i [adaptiv formulärredigerare](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html) för den slutliga uppsättningen korrigeringar, om det behövs.
 

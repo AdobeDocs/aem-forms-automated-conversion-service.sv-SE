@@ -2,16 +2,16 @@
 title: Introduktion till tjänsten automated forms conversion
 description: Påskynda konverteringen av utskriftsformulär till anpassningsbara formulär
 solution: Experience Manager Forms
-feature: Adaptive Forms
+feature: Adaptive Forms, Foundation Components
 topic: Administration
 topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: edabeac8-cd66-48ca-a99f-9643a1c184cf
-source-git-commit: e95b4ed35f27f920b26c05f3398529f825948f1f
+source-git-commit: 919886cda2ec50ddb9b403cbb0e92fec2821c10e
 workflow-type: tm+mt
-source-wordcount: '708'
-ht-degree: 63%
+source-wordcount: '703'
+ht-degree: 58%
 
 ---
 
@@ -29,7 +29,7 @@ Den automatiserade konverteringstjänsten för formulär hjälper till att påsk
 
 ## Onboarding {#onboarding}
 
-Tjänsten är kostnadsfri för kunder med AEM 6.4 Forms och AEM 6.5 Forms On-Premise och företagskunder med Adobe-Managed Service. Du kan kontakta Adobes säljteam eller din Adobe-representant för att begära åtkomst till tjänsten. Tjänsten är också tillgänglig kostnadsfritt och föraktiverat för as a Cloud Service AEM Forms-kunder.
+Tjänsten är kostnadsfri för kunder med AEM 6.4 Forms och AEM 6.5 Forms On-Premise och företagskunder med Adobe-Managed Service. Du kan kontakta Adobe säljteam eller din Adobe-representant för att begära åtkomst till tjänsten. Tjänsten är också tillgänglig kostnadsfritt och föraktiverat för as a Cloud Service AEM Forms-kunder.
 
 Adobe aktiverar åtkomst för organisationen och tillhandahåller behörigheter åt den person som utses till administratör i organisationen. Administratören kan ge åtkomst till AEM Forms-utvecklare (användare) i organisationen så att de kan ansluta till tjänsten. Mer information finns i [Konfigurera den automatiserade konverteringstjänsten för formulär](configure-service.md).
 
@@ -37,11 +37,11 @@ Adobe aktiverar åtkomst för organisationen och tillhandahåller behörigheter 
 
 Tjänsten stöder icke-interaktiva PDF-formulär, formulär som är skapade med Adobe Acrobat, kända som AcroForms, och XFA-baserade formulär som är skapade med AEM Forms eller Adobe LiveCycle.
 
-Tjänsten stöder även Adobe Sign-aktiverade PDF forms. Om källformuläret för PDF har Adobe Sign-texttaggar, bevarar tjänsten all Adobe Sign-relaterad information under konverteringen och associerar signerarinformationen som finns i källformuläret för PDF med motsvarande adaptiva formulärfält. Funktionen är bara tillgänglig för AcroForms.
+Tjänsten har även stöd för Adobe Sign-aktiverade PDF forms. Om källformuläret för PDF har Adobe Sign-texttaggar, bevarar tjänsten all Adobe Sign-relaterad information under konverteringen och associerar signerarinformationen som finns i källformuläret för PDF med motsvarande adaptiva formulärfält. Funktionen är bara tillgänglig för AcroForms.
 
 Tjänsten kan konvertera engelska, franska, tyska, spanska, italienska och portugisiska blanketter till anpassningsbara blanketter. Du kan också översätta de genererade anpassningsbara formulären till ett annat språk med [Arbetsflöde för AEM](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html).
 
-## Konverteringsarbetsflöde  {#conversion-workflow}
+## Arbetsflöde för konvertering  {#conversion-workflow}
 
 Den automatiserade konverteringstjänsten för formulär körs på Adobe-molnet. Du ansluter AEM-instansen till tjänsten, laddar upp formulär till AEM-instansen och startar konverteringen. Hela konverteringsprocessen listas nedan:
 
@@ -51,7 +51,7 @@ Den automatiserade konverteringstjänsten för formulär körs på Adobe-molnet.
 
 Den automatiserade konverteringstjänsten för formulär körs på Adobe-molnet. [Konfigurera Adobe I/O-konto för organisationen och anslut din lokala AEM-instans](configure-service.md) till konverteringstjänsten som körs på Adobe-molnet.
 
-### 2. Konvertera PDF-formulär till anpassningsbara formulär {#use-the-conversion-service}
+### 2. Konvertera PDF forms till anpassningsbara formulär {#use-the-conversion-service}
 
 När AEM Forms-miljön har konfigurerats [laddar du upp PDF-formulär](convert-existing-forms-to-adaptive-forms.md) till AEM-instansen och [startar konverteringen](convert-existing-forms-to-adaptive-forms.md#run-the-conversion) för att konvertera PDF-formulären till anpassningsbara formulär. Tänk på följande innan du laddar upp formulären:
 

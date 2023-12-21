@@ -1,23 +1,21 @@
 ---
-title: Konvertera PDF-formulär till anpassningsbara formulär
+title: Konvertera PDF forms till anpassningsbara formulär
 seo-title: Convert PDF forms to adaptive forms
 description: Kör tjänsten Automated forms conversion för att konvertera PDF forms till anpassningsbara formulär
 seo-description: Run the Automated Forms Conversion service to convert PDF forms to adaptive forms
-uuid: 49fcd5c0-0e72-496d-9831-00f79d582f57
 contentOwner: khsingh
 topic-tags: forms
-discoiquuid: 9358219c-6079-4552-92b9-b427a23811af
-exl-id: 415e05b5-5a90-490c-bf7c-d3365ce95e24
-source-git-commit: 298d6c0641d7b416edb5b2bcd5fec0232f01f4c7
+feature: Adaptive Forms, Foundation Components
+source-git-commit: 444cc37ec6fa2af2d8d2952efd18368a5725e881
 workflow-type: tm+mt
-source-wordcount: '1631'
-ht-degree: 7%
+source-wordcount: '1612'
+ht-degree: 6%
 
 ---
 
-# Konvertera PDF-formulär till anpassningsbara formulär {#convert-print-forms-to-adaptive-forms}
+# Konvertera PDF forms till anpassningsbara formulär {#convert-print-forms-to-adaptive-forms}
 
-Tjänsten AEM Forms Automated forms conversion, som drivs av Adobe Sensei, konverterar automatiskt PDF forms till enhetsvänliga och responsiva adaptiva formulär. Oavsett om du använder icke-interaktiv PDF forms, Acro Forms eller XFA-baserad PDF forms kan Automated forms conversion-tjänsten enkelt konvertera dessa formulär till anpassningsbara formulär. Mer information om funktioner, konverteringsarbetsflöde och introduktionsinformation finns i [automated forms conversion](introduction.md) service.
+Tjänsten AEM Forms Automated forms conversion, som drivs av Adobe Sensei, konverterar automatiskt PDF forms till enhetsvänliga och responsiva adaptiva formulär. Oavsett om du använder icke-interaktiv PDF forms, Acro Forms eller XFA-baserad PDF forms kan Automated forms conversion-tjänsten enkelt konvertera dessa formulär till anpassningsbara formulär. Mer information om funktioner, konverteringsarbetsflöde och introduktionsinformation finns i [Automated forms conversion](introduction.md) service.
 
 ## Krav {#pre-requisites}
 
@@ -45,7 +43,7 @@ Konverteringstjänsten konverterar PDF forms som finns i din AEM Forms-instans t
 * Behåll mappstorleken mindre än 10 MB. Behåll inte formulär i en undermapp.
 * Behåll antalet sidor i ett formulär under 15.
 * Överför inte skyddade formulär. Tjänsten konverterar inte lösenordsskyddade och skyddade formulär.
-* Ladda inte upp källformulär med blanksteg i filnamnet. Ta bort utrymmet från filnamnet innan du överför formulären.
+* Ladda inte upp källformulär med blanksteg i filnamnet. Ta bort utrymmet från filens namn innan du överför formulären.
 * Ladda inte upp [PDF-portfolios](https://helpx.adobe.com/acrobat/using/overview-pdf-portfolios.html). Tjänsten konverterar inte PDF Portfolio till en anpassningsbar form.
 * Läs [Kända fel](known-issues.md) och [Bästa praxis och överväganden](styles-and-pattern-considerations-and-best-practices.md) och gör föreslagna ändringar i formulär.
 
@@ -54,9 +52,9 @@ Utför följande steg för att överföra formulären som ska konverteras till e
 1. Logga in på AEM Forms-instansen.
 
 1. Tryck **[!UICONTROL Adobe Experience Manager]** ![](assets/adobeexperiencemanager.png) > **[!UICONTROL Navigation]** ![](assets/compass.png) > **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**.
-1. Tryck på **[!UICONTROL Create]**> **[!UICONTROL Folder]**. Ange **Titel** och **Namn** i mappen. Tryck på **[!UICONTROL Create]**. En mapp skapas.
+1. Tryck **[!UICONTROL Create]**> **[!UICONTROL Folder]**. Ange **Titel** och **Namn** i mappen. Tryck på **[!UICONTROL Create]**. En mapp skapas.
 1. Tryck för att öppna den nyligen skapade mappen.
-1. Tryck på **[!UICONTROL Create]**> **[!UICONTROL File Upload]**. Markera formulären som ska överföras och klicka på **[!UICONTROL Open]** och klicka **[!UICONTROL Upload]**. Formulären överförs.
+1. Tryck **[!UICONTROL Create]**> **[!UICONTROL File Upload]**. Markera formulären som ska överföras och klicka på **[!UICONTROL Open]** och klicka **[!UICONTROL Upload]**. Formulären överförs.
 
 ### Kör konverteringen {#run-the-conversion}
 
@@ -108,7 +106,7 @@ Om du väljer det här alternativet genererar konverteringstjänsten ett adaptiv
   >[!NOTE]
   > Använd inte en responsiv layoutmall när du använder alternativet Konvertera avsnitt automatiskt till fragment.
   > Använd gransknings- och korrigeringsredigeraren för att sammanfoga små paneler till en stor. Det minskar antalet fragment i den konverterade adaptiva formen.
-  > Om du får undantaget &quot;för många samtal&quot;,
+  > Om du får undantaget för många samtal,
   >
   > * strukturera om formuläret för att skapa en förenklad hierarki
   > * [öka värdet för parametern sling.max.call]till ett tillräckligt högt tal tills undantaget försvinner.
@@ -117,7 +115,7 @@ Om du väljer det här alternativet genererar konverteringstjänsten ett adaptiv
 1. Tryck på **[!UICONTROL Start Conversion]**. Konverteringen har startats. Konverteringsförloppet visas i mappen eller formuläret tills konverteringen pågår. Meddelandet ersätts av ett annat statusmeddelande (Konverterad, Delvis konverterad eller Konvertering misslyckades) när konverteringen är klar. När konverteringen är klar skickas även ett e-postmeddelande med status på den konfigurerade e-postadressen:
 
    * Vid en lyckad konvertering hämtas det konverterade adaptiva formuläret och det relaterade schemat till den sökväg som anges i **[!UICONTROL Basic]** i konverteringsdialogrutan. Formulärfragment och motsvarande schema hämtas bara om alternativet Extrahera fragment är markerat innan konverteringen startas.
-   * Vid en misslyckad konvertering visas **[!UICONTROL Conversion Failed]** meddelandet visas om alla indataformulär inte kan konverteras eller om **[!UICONTROL Partially Failed]** visas när bara ett fåtal av alla indataformulär inte kan konverteras. Ett statusmeddelande skickas på [konfigurerad e-postadress](configure-service.md#configureemailnotification) och ett fel loggas i filen error.log.
+   * Om konverteringen misslyckas **[!UICONTROL Conversion Failed]** meddelandet visas om alla indataformulär inte kan konverteras eller om **[!UICONTROL Partially Failed]** visas när bara ett fåtal av alla indataformulär inte kan konverteras. Ett e-postmeddelande om status skickas på [konfigurerad e-postadress](configure-service.md#configureemailnotification) och ett fel loggas i filen error.log.
 
    Om du konverterar ett XFA-baserat PDF-formulär till ett adaptivt formulär kopplar konverteringstjänsten automatiskt PDF-formuläret till det konverterade adaptiva formuläret som dokumentmall. Efter konverteringen kan du öppna de adaptiva formuläregenskaperna för att visa postmallen Dokument i **[!UICONTROL Document of Record Template Configuration]** avsnitt i **[!UICONTROL Form Model]** -fliken. </br>
 
