@@ -4,10 +4,11 @@ mini-toc-levels: 2
 git-repo: https://github.com/AdobeDocs/aem-forms-automated-conversion-service.sv-SE
 index: y
 feature-set: Experience Manager Forms
-source-git-commit: 8c4cf4ff72e9ca7e8daa76f495abd75a865cd2f7
+recommendations: noDisplay
+source-git-commit: 1373f17cab404bcf0384f22d717cc2aef6d213bf
 workflow-type: tm+mt
-source-wordcount: '130'
-ht-degree: 1%
+source-wordcount: '128'
+ht-degree: 0%
 
 ---
 
@@ -24,7 +25,7 @@ Filen metadata.md innehåller metadata på postnivå som skickas till TOC.md-fil
 | getting-started-url | Länk till hjälpsidan Komma igång |
 | tutorials-url | Länka till videosjälvstudiekurser - antingen hjälpstudiekurser eller självstudiekurser på engelska |
 | mini-toc-nivåer | Anger antalet rubriknivåer som visas i den högra listen. standard är 2 |
-| git-repo | Anger platsen för den överordnad rapporten för intern användning |
+| git-repo | Anger platsen för huvudrapporten för intern användning |
 
 I filen TOC.md
 
