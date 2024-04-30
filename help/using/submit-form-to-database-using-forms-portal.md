@@ -1,12 +1,12 @@
 ---
 title: Skicka adaptiva blanketter till databasen med Forms Portal
-description: Utöka standardmetamodellen för att lägga till mönster, valideringar och enheter som är specifika för din organisation och tillämpa konfigurationer på anpassningsbara formulärfält medan du kör tjänsten Automated forms conversion.
+description: Utöka standardmetamodellen för att lägga till mönster, valideringar och enheter som är specifika för din organisation och tillämpa konfigurationer på anpassningsbara formulärfält när du kör tjänsten Automated forms conversion (AFCS).
 uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
 topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
-source-git-commit: 298d6c0641d7b416edb5b2bcd5fec0232f01f4c7
+source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
 workflow-type: tm+mt
-source-wordcount: '1152'
+source-wordcount: '1159'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Integrera adaptiva blanketter med databaser med Forms Portal {#submit-forms-to-database-using-forms-portal}
 
-Med tjänsten Automated forms conversion kan du konvertera ett icke-interaktivt PDF-formulär, ett Acro-formulär eller ett XFA-baserat PDF-formulär till ett anpassningsbart formulär. När du startar konverteringsprocessen kan du generera ett anpassat formulär antingen med eller utan databindningar.
+Med tjänsten Automated forms conversion (AFCS) kan du konvertera ett icke-interaktivt PDF-formulär, ett Acro-formulär eller ett XFA-baserat PDF-formulär till en adaptiv form. När du startar konverteringsprocessen kan du generera ett anpassat formulär antingen med eller utan databindningar.
 
 Om du väljer att generera ett adaptivt formulär utan databindningar kan du integrera det konverterade adaptiva formuläret med en formulärdatamodell, ett XML-schema eller ett JSON-schema efter konverteringen. Men om du genererar ett adaptivt formulär med databindningar associerar konverteringstjänsten automatiskt de adaptiva formulären med ett JSON-schema och skapar en databindning mellan fälten som finns i det adaptiva formuläret och JSON-schemat. Sedan kan du integrera det anpassade formuläret med en valfri databas, fylla i data i formuläret och skicka det till databasen med hjälp av Forms Portal.
 
@@ -31,7 +31,7 @@ Exemplet, som behandlas i den här artikeln, är en referensimplementering av an
 * Konfigurera en AEM 6.4- eller 6.5-författarinstans
 * Installera [senaste Service Pack](https://helpx.adobe.com/experience-manager/aem-releases-updates.html) för AEM
 * Senaste versionen av AEM Forms-tilläggspaketet
-* Konfigurera [Tjänsten automated forms conversion](configure-service.md)
+* Konfigurera [Tjänsten automated forms conversion (AFCS)](configure-service.md)
 * Konfigurera en databas. Databasen som används i exempelimplementeringen är MySQL 5.6.24. Du kan emellertid integrera det konverterade adaptiva formuläret med valfri databas.
 
 ## Konfigurera anslutning mellan AEM och databas {#set-up-connection-aem-instance-database}
@@ -52,7 +52,7 @@ Utför följande steg på alla författare- och publiceringsinstanser för att i
 
 1. Navigera till http://[server]:[port]/system/console/depfinder och sök efter paketet com.mysql.jdbc.
 1. I kolumnen Exporterad av kontrollerar du om paketet exporteras av något paket. Fortsätt om paketet inte exporteras av något paket.
-1. Navigera till http://[server]:[port]/system/console/bundles och klicka **[!UICONTROL Install/Update]**.
+1. Navigera till http://[server]:[port]/system/console/bundles och klicka på **[!UICONTROL Install/Update]**.
 1. Klicka **[!UICONTROL Choose File]** och bläddra till filen mysql-connector-java-5.1.39-bin.jar. Välj även **[!UICONTROL Start Bundle]** och **[!UICONTROL Refresh Packages]** kryssrutor.
 1. Klicka **[!UICONTROL Install]** eller **[!UICONTROL Update]**. Starta om servern när du är klar.
 1. (Endast Windows) Stäng av operativsystemets brandvägg.
@@ -191,7 +191,7 @@ Utför följande konfigurationssteg för att skapa en anslutning mellan AEM och 
     </tr>
     </tbody> 
     </table>
-1. Låt andra konfigurationer vara som de är och klicka på **[!UICONTROL Save]**.
+1. Låt andra konfigurationer vara och klicka **[!UICONTROL Save]**.
 1. Sök och klicka för att öppna **[!UICONTROL Apache Sling Connection Pooled DataSource]** i redigeringsläge i webbkonsolkonfigurationen. Ange värdena för egenskaperna enligt följande tabell:
 
    <table> 
@@ -245,7 +245,7 @@ Utför följande konfigurationssteg för att skapa en anslutning mellan AEM och 
     <td><p>100000</p></td>
     </tr>
      <tr> 
-    <td><p>Testa om Born</p></td> 
+    <td><p>Testa om Borgen</p></td> 
     <td><p>Markerad</p></td>
     </tr>
      <tr> 
@@ -273,7 +273,7 @@ Utför följande steg på alla författare- och publiceringsinstanser för att i
 
 1. Gå till AEM *http://[värd]:[port]/crx/packmgr/*.
 1. Klicka på **[!UICONTROL Upload Package]**.
-1. Bläddra för att välja **aem-fp-db-integration-sample-pkg-6.1.2.zip** paketera och klicka på **[!UICONTROL OK]**.
+1. Välj **aem-fp-db-integration-sample-pkg-6.1.2.zip** paketera och klicka **[!UICONTROL OK]**.
 1. Klicka **[!UICONTROL Install]** bredvid paketet för att installera paketet.
 
 ## Konfigurera det konverterade adaptiva formuläret för integrering med Forms Portal {#configure-converted-adaptive-form-for-forms-portal-integration}
@@ -282,7 +282,7 @@ Utför följande steg för att aktivera adaptiv formulärinlämning på Forms Po
 1. [Kör konverteringen](convert-existing-forms-to-adaptive-forms.md#start-the-conversion-process) för att konvertera ett källformulär till ett anpassningsbart formulär.
 1. Öppna det adaptiva formuläret i redigeringsläge.
 1. Tryck på formulärbehållaren och välj Konfigurera ![Konfigurera hjälpformulär](assets/configure-adaptive-form.png).
-1. I **[!UICONTROL Submission]** avsnitt, markera **[!UICONTROL Forms Portal Submit Action]** från **[!UICONTROL Submit Action]** nedrullningsbar lista.
+1. I **[!UICONTROL Submission]** avsnitt, markera **[!UICONTROL Forms Portal Submit Action]** från **[!UICONTROL Submit Action]** listruta.
 1. Tryck ![Spara mallprincip](assets/edit_template_done.png) för att spara inställningarna.
 
 ## Skapa och konfigurera Forms Portal-sidan {#create-configure-forms-portal-page}
@@ -294,8 +294,8 @@ Så här skapar du en Forms Portal-sida och konfigurerar den så att du kan skic
 1. Välj en mall för sidan och tryck på **[!UICONTROL Next]**, ange en rubrik för sidan och tryck på **[!UICONTROL Create]**.
 1. Tryck **[!UICONTROL Edit]** för att konfigurera sidan.
 1. Tryck på i sidhuvudet ![Redigera mall](assets/edit_template_sites.png)  > **[!UICONTROL Edit Template]** för att öppna sidans mall.
-1. Tryck på Layoutbehållare och tryck på ![Redigera mallprincip](assets/edit_template_policy.png). I **[!UICONTROL Allowed Components]** -fliken, aktivera **[!UICONTROL Document Services]** och **[!UICONTROL Document Services Predicates]** och trycka ![Spara mallprincip](assets/edit_template_done.png).
+1. Tryck på Layout Container (Layoutbehållare) och tryck på ![Redigera mallprincip](assets/edit_template_policy.png). I **[!UICONTROL Allowed Components]** -fliken, aktivera **[!UICONTROL Document Services]** och **[!UICONTROL Document Services Predicates]** och trycka ![Spara mallprincip](assets/edit_template_done.png).
 1. Infoga **[!UICONTROL Search & Lister]** -komponenten på sidan. Därför listas alla befintliga adaptiva formulär som finns i AEM på sidan.
-1. Infoga **[!UICONTROL Drafts & Submissions]** -komponenten på sidan. Två flikar, **[!UICONTROL Draft Forms]** och **[!UICONTROL Submitted Forms]**, visas på Forms Portal-sidan. The **[!UICONTROL Draft Forms]** visar även det konverterade adaptiva formuläret som genererats med stegen i [Konfigurera det konverterade adaptiva formuläret för integrering med Forms Portal](#configure-converted-adaptive-form-for-forms-portal-integration)
+1. Infoga **[!UICONTROL Drafts & Submissions]** -komponenten på sidan. Två flikar, **[!UICONTROL Draft Forms]** och **[!UICONTROL Submitted Forms]**, visas på Forms Portal-sidan. The **[!UICONTROL Draft Forms]** visar även det konverterade adaptiva formuläret som genererats med hjälp av stegen i [Konfigurera det konverterade adaptiva formuläret för integrering med Forms Portal](#configure-converted-adaptive-form-for-forms-portal-integration)
 
 1. Tryck **[!UICONTROL Preview]**, tryck på det konverterade adaptiva formuläret, ange värden för adaptiva formulärfält och skicka det. De värden som du anger för adaptiva formulärfält skickas till den integrerade databasen.

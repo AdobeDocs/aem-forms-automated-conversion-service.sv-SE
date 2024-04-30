@@ -1,6 +1,6 @@
 ---
 title: Granska och korrigera konverterade formulär
-description: Granska och korrigera de adaptiva formulär som konverterats av tjänsten Automated forms conversion.
+description: Granska och korrigera de adaptiva formulär som konverterats av tjänsten Automated forms conversion (AFCS).
 solution: Experience Manager Forms
 feature: Adaptive Forms, Foundation Components
 topic: Administration
@@ -8,16 +8,16 @@ topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: 64330fa2-aa9d-4ba4-96df-b75deed3e693
-source-git-commit: 919886cda2ec50ddb9b403cbb0e92fec2821c10e
+source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
 workflow-type: tm+mt
-source-wordcount: '2510'
+source-wordcount: '2512'
 ht-degree: 0%
 
 ---
 
 # Granska och korrigera konverterade formulär{#review-and-correct-converted-forms}
 
-AEM Forms Automated forms conversion-tjänsten identifierar fält, innehåll och layout för indata-PDF-dokument och konverterar PDF-dokumentet till ett anpassat formulär. Utdataanpassningsbara formulär kan innehålla några få saknade eller felaktigt konverterade fält. Du kan använda redigeraren Granska och korrigera för att göra förbättringar i identifierade fält och återskapa det adaptiva formuläret för att få ett resultat som ligger närmare det önskade resultatet. Efter den första konverteringen kan du öppna indatadokumentet PDF i redigeraren för att:
+AEM Forms Automated forms conversion-tjänsten (AFCS) identifierar fält, innehåll och layout i det inmatade PDF-dokumentet och konverterar PDF-dokumentet till ett anpassningsbart formulär. Utdataanpassningsbara formulär kan innehålla några få saknade eller felaktigt konverterade fält. Du kan använda redigeraren Granska och korrigera för att göra förbättringar i identifierade fält och återskapa det adaptiva formuläret för att få ett resultat som ligger närmare det önskade resultatet. Efter den första konverteringen kan du öppna indatadokumentet PDF i redigeraren för att:
 
 * Visa alla fält och innehåll som identifieras vid konverteringen
 * Identifiera fält och innehåll som saknas under konverteringen

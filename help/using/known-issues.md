@@ -1,6 +1,6 @@
 ---
 title: Kända fel
-description: Kända fel och begränsningar för tjänsten Automated forms conversion
+description: Kända problem och begränsningar för tjänsten Automated forms conversion (AFCS)
 solution: Experience Manager Forms
 feature: Adaptive Forms
 topic: Administration
@@ -8,16 +8,16 @@ topic-tags: introduction
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: 35f59e02-e38e-473a-94c8-123e0a85ac8e
-source-git-commit: 43616abd46a17a8eeda30a116f09b88780ce9a77
+source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
 workflow-type: tm+mt
-source-wordcount: '794'
-ht-degree: 1%
+source-wordcount: '789'
+ht-degree: 0%
 
 ---
 
 # Kända fel och begränsningar {#known-issues-limitations}
 
-Innan du börjar använda tjänsten AEM Forms Automated forms conversion bör du läsa igenom följande kända problem och begränsningar:
+Innan du börjar använda tjänsten AEM Forms Automated forms conversion (AFCS) bör du läsa igenom följande kända problem och begränsningar:
 
 ## Kända fel {#known-issues}
 
@@ -76,7 +76,7 @@ Innan du börjar använda tjänsten AEM Forms Automated forms conversion bör du
 * PDF forms som är större än 15 sidor stöds inte.
 * Krypterade, lösenordsskyddade och skyddade dokument konverteras inte. Ta bort kryptering eller lösenord innan konverteringen körs.
 * Komplexa tabeller som tabeller utan kanter, kapslade tabeller och tabeller med platshållarvärden stöds inte. Använd adaptiv formulärredigerare för att lägga till eller ändra komplexa tabeller efter konverteringen. Endast enkla tabeller med tomma fält, korrekta rubriker och tydliga gränser stöds.
-* Tjänsten konverterar endast engelska, franska, tyska, spanska, italienska och portugisiska blanketter till anpassningsbara blanketter. Du kan översätta konverterade adaptiva formulär till ett annat språk med [Arbetsflöde för AEM](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html).
+* Tjänsten konverterar endast engelska, franska, tyska, spanska, italienska och portugisiska till anpassningsbara blanketter. Du kan översätta konverterade adaptiva formulär till ett annat språk med [Arbetsflöde för AEM](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html).
 * AEM 6.4 Forms stöder inte automatisk detektering av flerkolumnslayout för indataformulär.
 * Information som kodats med PDF i källformat överförs inte till adaptiv form.
 * Färger på PDF-källformen överförs inte till anpassningsbara formulärteman.

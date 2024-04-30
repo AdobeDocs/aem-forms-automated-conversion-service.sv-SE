@@ -1,5 +1,5 @@
 ---
-title: Introduktion till tjänsten automated forms conversion
+title: Introduktion till tjänsten automated forms conversion (AFCS)
 description: Påskynda konverteringen av utskriftsformulär till anpassningsbara formulär
 solution: Experience Manager Forms
 feature: Adaptive Forms, Foundation Components
@@ -8,16 +8,16 @@ topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: edabeac8-cd66-48ca-a99f-9643a1c184cf
-source-git-commit: 919886cda2ec50ddb9b403cbb0e92fec2821c10e
+source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
 workflow-type: tm+mt
-source-wordcount: '703'
-ht-degree: 58%
+source-wordcount: '711'
+ht-degree: 52%
 
 ---
 
-# Introduktion {#introduction-to-automated-forms-conversion-service}
+# Tjänsten automated forms conversion (AFCS) {#introduction-to-automated-forms-conversion-service}
 
-Den automatiserade konverteringstjänsten för formulär hjälper till att påskynda digitisering och modernisering av upplevelsen av datainhämtning genom automatiserad konvertering av PDF-formulär till anpassningsbara formulär. Tjänsten, som drivs av Adobe Sensei, konverterar automatiskt PDF-formulären till anpassningsbara formulär som är smidiga för enheten, lättanvända och HTML5-baserade. Tjänsten drar nytta av de befintliga investeringarna i PDF-formulär och XFA och tillämpar även lämpliga valideringar, styling och layout för anpassningsbara formulärfält under konverteringen. Tjänsten hjälper till med att:
+Tjänsten Automated forms conversion (AFCS) snabbar upp digitaliseringen och moderniseringen av datainhämtningen genom automatiserad konvertering av PDF forms till anpassningsbara formulär. Tjänsten, som drivs av Adobe Sensei, konverterar automatiskt PDF-formulären till anpassningsbara formulär som är smidiga för enheten, lättanvända och HTML5-baserade. Tjänsten drar nytta av de befintliga investeringarna i PDF-formulär och XFA och tillämpar även lämpliga valideringar, styling och layout för anpassningsbara formulärfält under konverteringen. Tjänsten hjälper till med att:
 
 * Spara den manuella arbetskraft som krävs för att konvertera utskriftsformulär till anpassningsbara formulär
 * Tillämpa mönster och lämpliga valideringar under konverteringen
@@ -43,13 +43,13 @@ Tjänsten kan konvertera engelska, franska, tyska, spanska, italienska och portu
 
 ## Arbetsflöde för konvertering  {#conversion-workflow}
 
-Den automatiserade konverteringstjänsten för formulär körs på Adobe-molnet. Du ansluter AEM-instansen till tjänsten, laddar upp formulär till AEM-instansen och startar konverteringen. Hela konverteringsprocessen listas nedan:
+Tjänsten Automated forms conversion (AFCS) körs i Adobe Cloud. Du ansluter AEM-instansen till tjänsten, laddar upp formulär till AEM-instansen och startar konverteringen. Hela konverteringsprocessen listas nedan:
 
 ![Arbetsflöde](assets/conversion-workflow.png)
 
 ### 1. Konfigurera miljön {#set-up-the-environment}
 
-Den automatiserade konverteringstjänsten för formulär körs på Adobe-molnet. [Konfigurera Adobe I/O-konto för organisationen och anslut din lokala AEM-instans](configure-service.md) till konverteringstjänsten som körs på Adobe-molnet.
+Tjänsten Automated forms conversion (AFCS) körs i Adobe Cloud. [Konfigurera Adobe I/O-konto för organisationen och anslut din lokala AEM-instans](configure-service.md) till konverteringstjänsten som körs på Adobe-molnet.
 
 ### 2. Konvertera PDF forms till anpassningsbara formulär {#use-the-conversion-service}
 

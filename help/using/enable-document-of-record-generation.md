@@ -10,23 +10,23 @@ level: Beginner, Intermediate
 page-status-flag: never-activated
 contentOwner: khsingh
 exl-id: c24313cd-2b9b-4209-9505-a8e14d8dc530
-source-git-commit: e95b4ed35f27f920b26c05f3398529f825948f1f
+source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
 workflow-type: tm+mt
 source-wordcount: '856'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-# Rekommenderade arbetsflöden för att aktivera generering av dokument över dataposter för anpassningsbara formulär {#recommended-workflows-dor-generation}
+# Rekommenderade arbetsflöden för att aktivera dokumentgenerering för adaptiva formulär {#recommended-workflows-dor-generation}
 
-Med hjälp av DoR (Document of Record) kan du registrera den information som du anger och skicka in i en anpassningsbar form så att du kan hänvisa till den senare.
+Med hjälp av DoR (Document of Record) kan du spara information som du anger och skicka i en anpassningsbar form så att du kan hänvisa till den senare.
 I DoR används en basmall för att definiera dess layout. Du kan generera en DoR-fil antingen med en standardmall eller genom att associera en annan mall med det adaptiva formuläret.
 
 ![Genererat arkivdokument](assets/document_of_record.gif)
 
 Mer information om hur du genererar en DoR finns i [Generera arkivdokument för anpassningsbara formulär](https://helpx.adobe.com/experience-manager/6-5/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.html).
 
-The [Tjänsten automated forms conversion](/help/using/introduction.md) konverterar följande källformulär till anpassningsbara formulär:
+The [Tjänsten automated forms conversion (AFCS)](/help/using/introduction.md) konverterar följande källformulär till anpassningsbara formulär:
 
 * icke-interaktiv PDF forms
 * Acro Forms
@@ -87,7 +87,7 @@ I den här artikeln beskrivs de rekommenderade sökvägarna för att generera en
 
 ## Generera arkivdokument för icke-interaktiv PDF forms {#generate-document-of-record-non-interactive-pdf}
 
-Om du använder ett icke-interaktivt PDF-formulär som källformulär för tjänsten Automated forms conversion kan du:
+Om du använder ett icke-interaktivt PDF-formulär som källformulär för tjänsten Automated forms conversion (AFCS) kan du:
 
 * aktivera DoR-generering innan adaptiv formulärkonvertering används för att generera DoR med en standardmall
 * eller redigera anpassningsbara formuläregenskaper efter adaptiv formulärkonvertering för att aktivera DoR-generering med standardformulärmallar eller någon annan formulärmall
@@ -121,7 +121,7 @@ När du skickar det konverterade adaptiva formuläret genereras DoR automatiskt 
 
 ## Generera urkunder för Acro Forms eller XFA-baserad PDF forms {#generate-document-of-record-acroform-xfaform}
 
-Om du använder ett Acro-formulär eller ett XFA-baserat PDF-formulär som källformulär för tjänsten Automated forms conversion kan du:
+Om du använder ett Acro-formulär eller ett XFA-baserat PDF-formulär som källformulär för tjänsten Automated forms conversion (AFCS) kan du:
 
 * aktivera DoR-generering före adaptiv formulärkonvertering för att generera DoR med källformuläret som mall
 

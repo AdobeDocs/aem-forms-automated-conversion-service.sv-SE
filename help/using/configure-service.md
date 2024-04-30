@@ -1,6 +1,6 @@
 ---
-title: Konfigurera den automatiserade konverteringstjänsten för formulär
-description: Redo för AEM att använda tjänsten Automated forms conversion
+title: Konfigurera tjänsten Automated forms conversion (AFCS)
+description: Redo för AEM att använda tjänsten Automated forms conversion (AFCS)
 solution: Experience Manager Forms
 feature: Adaptive Forms
 topic: Administration
@@ -8,16 +8,16 @@ topic-tags: forms
 role: Admin, Developer, User
 level: Beginner, Intermediate
 exl-id: 8f21560f-157f-41cb-ba6f-12a4d6e18555
-source-git-commit: e95b4ed35f27f920b26c05f3398529f825948f1f
+source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
 workflow-type: tm+mt
-source-wordcount: '2684'
-ht-degree: 6%
+source-wordcount: '2655'
+ht-degree: 3%
 
 ---
 
-# Konfigurera den automatiserade konverteringstjänsten för formulär {#about-this-help}
+# Konfigurera tjänsten Automated forms conversion (AFCS) {#about-this-help}
 
-I den här hjälpen beskrivs hur en AEM kan konfigurera tjänsten Automated forms conversion för att automatisera konverteringen av PDF forms till adaptiva formulär. Den här hjälpen är till för IT-administratörer och AEM på din organisation. Informationen baseras på antagandet att alla som läser den här hjälpen känner till följande tekniker:
+I den här hjälpen beskrivs hur en AEM kan konfigurera tjänsten Automated forms conversion (AFCS) för att automatisera konverteringen av PDF forms till adaptiva formulär. Den här hjälpen är till för IT-administratörer och AEM på din organisation. Informationen baseras på antagandet att alla som läser den här hjälpen känner till följande tekniker:
 
 * Installera, konfigurera och administrera Adobe Experience Manager- och AEM-paket,
 
@@ -27,19 +27,19 @@ I den här hjälpen beskrivs hur en AEM kan konfigurera tjänsten Automated form
 
 <!--- >[!VIDEO](https://video.tv.adobe.com/v/29267/) 
 
-**Watch the video or read the article to configure Automated Forms Conversion service** -->
+**Watch the video or read the article to configure Automated Forms Conversion service (AFCS)** -->
 
 ## Onboarding{#onboarding}
 
-Tjänsten är kostnadsfri för kunder med AEM 6.4 Forms och AEM 6.5 Forms On-Premise och företagskunder med Adobe-Managed Service. Du kan kontakta Adobes säljteam eller din Adobe-representant för att begära åtkomst till tjänsten. Tjänsten är också tillgänglig kostnadsfritt och föraktiverat för as a Cloud Service AEM Forms-kunder.
+Tjänsten är kostnadsfri för kunder med AEM 6.4 Forms och AEM 6.5 Forms On-Premise och företagskunder med Adobe-Managed Service. Du kan kontakta Adobe säljteam eller din Adobe-representant för att begära åtkomst till tjänsten. Tjänsten är också tillgänglig kostnadsfritt och föraktiverat för as a Cloud Service AEM Forms-kunder.
 
-Adobe aktiverar åtkomst för organisationen och tillhandahåller behörigheter åt den person som utses till administratör i organisationen. Administratören kan ge åtkomst till AEM Forms-utvecklare (användare) i organisationen så att de kan ansluta till tjänsten.
+Adobe aktiverar åtkomst för organisationen och tillhandahåller behörigheter åt den person som utses till administratör i organisationen. Administratören kan ge AEM Forms-utvecklare (användare) i din organisation åtkomst till tjänsten.
 
 ## Förutsättningar {#prerequisites}
 
-Du behöver följande för att kunna använda tjänsten Automated forms conversion:
+Du behöver följande för att kunna använda tjänsten Automated forms conversion (AFCS):
 
-* Tjänsten Automated forms conversion är aktiverad för din organisation
+* Tjänsten Automated forms conversion (AFCS) är aktiverad för din organisation
 * Ett Adobe ID-konto med administratörsbehörighet för konverteringstjänsten
 * En AEM 6.4-, AEM 6.5- eller AEM Forms as a Cloud Service-författarinstans med senaste AEM Service Pack eller senaste uppdateringar.
 * En AEM användare (i din AEM instans) som är medlem i användargruppen formulär
@@ -57,7 +57,7 @@ Innan du använder tjänsten förbereder du AEM författarinstans för att anslu
 ### Hämta och installera AEM 6.4 eller AEM 6.5 eller ombord på AEM Forms as a Cloud Service {#aemquickstart}
 
 
-Tjänsten automated forms conversion körs AEM författarinstansen. Du måste AEM 6.4, AEM 6.5 eller AEM Forms as a Cloud Service för att kunna konfigurera en AEM författarinstans.
+Tjänsten Automated forms conversion (AFCS) körs AEM författarinstansen. Du måste AEM 6.4, AEM 6.5 eller AEM Forms as a Cloud Service för att kunna konfigurera en AEM författarinstans.
 
 * Om du inte har AEM 6.4 eller AEM 6.5 kan du ladda ned det från nedanstående platser. När du har laddat ned AEM finns instruktioner om hur du konfigurerar en AEM författarinstans i [driftsätta och underhålla](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#defaultlocalinstall).:
 
@@ -86,7 +86,7 @@ The connector package provides early access to the [Auto-detect logical sections
 
 ### Skapa egna teman och mallar {#referencepackage}
 
-Om du börjar AEM 6.4 eller AEM 6.5 tum [produktionsläge](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/production-ready.html) (inget innehållets körningsläge) installeras inte referenspaketen. Referenspaketen innehåller exempelteman och mallar. Tjänsten Automated forms conversion kräver minst ett tema och en mall för att konvertera ett PDF-formulär till ett anpassningsbart formulär. Skapa ett eget tema och en egen mall [tjänstkonfiguration](#configure-the-cloud-service) om du vill använda egna mallar och teman innan du använder tjänsten.
+Om du börjar AEM 6.4 eller AEM 6.5 tum [produktionsläge](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/production-ready.html) (inget innehållets körningsläge) installeras inte referenspaketen. Referenspaketen innehåller exempelteman och mallar. Tjänsten Automated forms conversion (AFCS) kräver minst ett tema och en mall för att konvertera ett PDF-formulär till ett anpassningsbart formulär. Skapa ett eget tema och en egen mall [tjänstkonfiguration](#configure-the-cloud-service) om du vill använda egna mallar och teman innan du använder tjänsten.
 
 Du kan även hämta och installera [AEM Forms Reference Assets](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html) paket på din Author-instans. Det skapar vissa referensteman och mallar.
 
@@ -94,21 +94,21 @@ Du kan även hämta och installera [AEM Forms Reference Assets](https://experien
 
 Innan du fortsätter att konfigurera tjänsten och ansluter din lokala instans till tjänsten som körs i Adobe Cloud, ska du lära dig mer om vilka profiler och behörigheter som krävs för att ansluta till tjänsten. Tjänsten använder två olika typer av profiler, administratörer och utvecklare:
 
-* **Administratörer**: Administratörerna ansvarar för att hantera program och tjänster från Adobe för sin organisation. Administratörer ger utvecklare i sin organisation åtkomst till tjänsten Automated forms conversion som körs i Adobe Cloud. När en administratör har etablerats för en organisation får administratören ett e-postmeddelande med titeln **[!UICONTROL 'You now have administrator rights to manage Adobe software and services for your organization']**. Om du är administratör kontrollerar du att postlådan innehåller e-post med den tidigare nämnda titeln och fortsätter till [ge utvecklare av din organisation åtkomst](#adduseranddevs).
+* **Administratörer**: Administratörer ansvarar för att hantera program och tjänster från Adobe i sin organisation. Administratörer ger utvecklare i sin organisation åtkomst till tjänsten Automated forms conversion (AFCS) som körs i Adobe Cloud. När en administratör har etablerats för en organisation får administratören ett e-postmeddelande med titeln **[!UICONTROL 'You now have administrator rights to manage Adobe software and services for your organization']**. Om du är administratör kontrollerar du att postlådan innehåller e-post med den tidigare nämnda titeln och fortsätter till [ge utvecklare av din organisation åtkomst](#adduseranddevs).
 
 ![E-postadress för administratörsåtkomst](assets/admin-console-adobe-io-access-grantedx75.png)
 
-* **Utvecklare**: En utvecklare ansluter en lokal AEM Forms-författarinstans till Automated forms conversion-tjänsten som körs i Adobe Cloud. När en administratör ger en utvecklare behörighet att ansluta till Automated forms conversion-tjänsten skickas ett e-postmeddelande med titeln Du har nu utvecklaråtkomst för att hantera Adobe API-integreringar för din organisation till utvecklaren. Om du är utvecklare kan du kontrollera om din postlåda innehåller e-post med den tidigare nämnda titeln och fortsätta till [Koppla din lokala AEM till Automated forms conversion-tjänsten på Adobe Cloud.](#connectafcadobeio)
+* **Utvecklare**: En utvecklare ansluter en lokal AEM Forms-författarinstans till tjänsten Automated forms conversion (AFCS) som körs i Adobe Cloud. När en administratör ger en utvecklare behörighet att ansluta till tjänsten Automated forms conversion (AFCS), skickas ett e-postmeddelande med titeln Du har nu utvecklaråtkomst för att hantera Adobe API-integreringar för din organisation till utvecklaren. Om du är utvecklare kan du kontrollera om din postlåda innehåller e-post med den tidigare nämnda titeln och fortsätta till [Koppla din lokala AEM till Automated forms conversion-tjänsten på Adobe Cloud.](#connectafcadobeio)
 
 ![E-postadress för utvecklaråtkomstbidrag](assets/email-developer-accessx94.png)
 
 ### (Endast för administratörer av AEM 6.4 och AEM 6.5) Bevilja åtkomst till utvecklare i din organisation {#adduseranddevs}
 
-När Adobe har aktiverat åtkomst för din organisation och gett administratören de behörigheter som krävs kan administratören logga in på Admin Console (detaljerade instruktioner nedan), skapa en profil och lägga till utvecklare i profilen. Utvecklare kan ansluta en lokal instans av AEM Forms till tjänsten Automated forms conversion i Adobe Cloud.
+När Adobe har aktiverat åtkomst för din organisation och gett administratören de behörigheter som krävs kan administratören logga in på Admin Console (detaljerade instruktioner nedan), skapa en profil och lägga till utvecklare i profilen. Utvecklare kan ansluta en lokal instans av AEM Forms till tjänsten Automated forms conversion (AFCS) i Adobe Cloud.
 
-Utvecklare är medlemmar i din organisation som har utsetts att köra konverteringstjänsten. Endast de utvecklare som läggs till i tjänstprofilen i Adobe Automated forms conversion har rätt att använda tjänsten Automated forms conversion. Följ stegen nedan för att skapa en profil och lägga till utvecklare i den. Minst en profil krävs för att ge utvecklare i organisationen nödvändig åtkomst:
+Utvecklare är medlemmar i din organisation som har utsetts att köra konverteringstjänsten. Endast de utvecklare som läggs till i AFCS-profilen (Adobe service) har rätt att använda tjänsten Automated forms conversion (AFCS). Följ stegen nedan för att skapa en profil och lägga till utvecklare i den. Minst en profil krävs för att ge utvecklare i organisationen nödvändig åtkomst:
 
-1. Logga in på [Admin Console](https://adminconsole.adobe.com/). Använd **Adobe ID** av administratören som har tilldelats tjänsten Automated forms conversion för inloggning. Använd inte något annat ID eller Federated ID för att logga in.
+1. Logga in på [Admin Console](https://adminconsole.adobe.com/). Använd **Adobe ID** för administratör som har tilldelats att använda tjänsten Automated forms conversion (AFCS) för inloggning. Använd inte något annat ID eller Federated ID för att logga in.
 1. Klicka på **[!UICONTROL Automated Forms Conversion]** alternativ.
 1. Klicka **[!UICONTROL New Profile]** i **[!UICONTROL Products]** -fliken.
 1. Ange **[!UICONTROL Name]**, **[!UICONTROL Display Name]** och **[!UICONTROL Description]** för profilen. Klicka på **[!UICONTROL Done]**. En profil skapas.
@@ -119,15 +119,15 @@ Utvecklare är medlemmar i din organisation som har utsetts att köra konverteri
    1. I [Admin Console](https://adminconsole.adobe.com/enterprise)navigera till fliken Översikt.
    1. Klicka **[!UICONTROL Assign Developers]** på det produktkort som krävs.
    1. Ange utvecklarnas e-postadress och eventuellt för- och efternamn.
-   1. Välj produktprofiler. Tryck på **[!UICONTROL Save]**.
+   1. Välj produktprofiler. Tryck **[!UICONTROL Save]**.
 
 Upprepa stegen ovan för alla användare. Mer information om hur du lägger till utvecklare finns i [Hantera utvecklare](https://helpx.adobe.com/enterprise/using/manage-developers.html).
 
 När en administratör lägger till utvecklare i profilen Adobe I/O meddelas utvecklarna via e-post. Efter att ha tagit emot e-postmeddelandet kan utvecklarna fortsätta med att [ansluta en lokal AEM Forms-instans med tjänsten Automated forms conversion i Adobe Cloud](#connectafcadobeio).
 
-### (Endast för utvecklare) Anslut din lokala AEM Forms-instans till tjänsten Automated forms conversion i Adobe Cloud {#connectafcadobeio}
+### (Endast för utvecklare) Anslut din lokala AEM Forms-instans till tjänsten Automated forms conversion (AFCS) i Adobe Cloud {#connectafcadobeio}
 
-När en administratör har gett dig utvecklaråtkomst kan du ansluta din lokala AEM Forms-instans till tjänsten Automated forms conversion som körs i Adobe Cloud. Utför följande steg i den listade sekvensen för att ansluta din AEM Forms-instans till tjänsten:
+När en administratör har gett dig utvecklaråtkomst kan du ansluta den lokala AEM Forms-instansen till tjänsten Automated forms conversion (AFCS) som körs i Adobe Cloud. Utför följande steg i den listade sekvensen för att ansluta din AEM Forms-instans till tjänsten:
 
 * [Konfigurera e-postmeddelanden](configure-service.md#configureemailnotification)
 * [Lägg till användare i gruppen för formuläranvändare](#adduserstousergroup)
@@ -137,7 +137,7 @@ När en administratör har gett dig utvecklaråtkomst kan du ansluta din lokala 
 
 #### Konfigurera e-postmeddelande {#configureemailnotification}
 
-Tjänsten Automated forms conversion använder Day CQ-e-posttjänsten för att skicka e-postmeddelanden. Dessa e-postmeddelanden innehåller information om lyckade eller misslyckade konverteringar. Om du väljer att inte få något meddelande hoppar du över dessa steg. Utför följande steg för att konfigurera Day CQ Mail Service:
+Tjänsten Automated forms conversion (AFCS) använder Day CQ-e-posttjänsten för att skicka e-postmeddelanden. Dessa e-postmeddelanden innehåller information om lyckade eller misslyckade konverteringar. Om du väljer att inte ta emot meddelanden hoppar du över dessa steg. Utför följande steg för att konfigurera Day CQ Mail Service:
 
 * För AEM 6.4 Forms eller AEM 6.5 Forms:
 
@@ -170,9 +170,9 @@ Med ett offentligt certifikat kan du autentisera din profil på Adobe I/O.
 
 1. Välj **[!UICONTROL Automated Forms Conversion Service]** i molnlösningen.
 
-1. Välj **[!UICONTROL Create new certificate]** och ange ett alias. Aliaset används som namn på dialogrutan. Tryck på **[!UICONTROL Create certificate]**. En dialogruta visas. Klicka på **[!UICONTROL OK]**. Certifikatet skapas.
+1. Välj **[!UICONTROL Create new certificate]** och ange ett alias. Aliaset fungerar som namn på dialogrutan. Tryck på **[!UICONTROL Create certificate]**. En dialogruta visas. Klicka på **[!UICONTROL OK]**. Certifikatet skapas.
 
-1. Tryck **[!UICONTROL Download Public Key]** och spara *AEM-Adobe-IMS.crt* certifikatfil på din dator. Certifikatfilen används för [Konfigurera tjänst-API:erna på Adobe Developer Console](#createintegration). Tryck på **[!UICONTROL Next]**.
+1. Tryck **[!UICONTROL Download Public Key]** och spara *AEM-Adobe-IMS.crt* certifikatfil på din dator. Certifikatfilen används för [Konfigurera tjänst-API:erna på Adobe Developer Console](#createintegration). Tryck **[!UICONTROL Next]**.
 
 1. Ange följande:
 
@@ -195,15 +195,15 @@ Med ett offentligt certifikat kan du autentisera din profil på Adobe I/O.
 
 #### (Endast för AEM 6.4 och AEM 6.5) Konfigurera tjänst-API:erna på Adobe Developer Console {#createintegration}
 
-Om du vill använda tjänsten Automated forms conversion skapar du ett projekt och lägger till API:t för automatisk Forms-konfigurationstjänst i projektet på Adobe Developer Console. Integreringen genererar API-nyckel, klienthemlighet, nyttolast (JWT).
+Om du vill använda tjänsten Automated forms conversion (AFCS) skapar du ett projekt och lägger till API:t för automatisk Forms-konfigurationstjänst i projektet på Adobe Developer Console. Integreringen genererar API-nyckel, klienthemlighet, nyttolast (JWT).
 
 1. Logga in på [https://console.adobe.io/](https://console.adobe.io/). Använd ditt Adobe ID-utvecklarkonto som administratören har konfigurerat för inloggning på Adobe I/O-konsolen.
 1. Välj organisation i det övre högra hörnet. Kontakta administratören om du inte känner till din organisation.
 1. Tryck på **[!UICONTROL Create new project]**. En skärm för att komma igång med ditt nya projekt visas. Tryck på **[!UICONTROL Add API]**. En skärm med en lista över alla API:er som är aktiverade för ditt konto visas.
-1. Välj **[!UICONTROL Automated Forms Conversion service]** och trycka **[!UICONTROL Next]**. En skärm som konfigurerar API:t visas.
-1. Välj [!UICONTROL Upload your public key] kan du ladda upp filen AEM-Adobe-IMS.crt som du laddat ned i [Hämta offentliga certifikat](#obtainpubliccertificates) och trycka **[!UICONTROL Next]**. Alternativet Skapa ett nytt tjänstkonto (JWT) visas. Tryck på **[!UICONTROL Next]**.
-1. Välj en produktprofil och tryck **[!UICONTROL Save configured API]**. Markera profilen som skapades när [ge utvecklare av din organisation åtkomst](#adduseranddevs). Kontakta administratören om du inte vet vilken profil du ska välja.
-1. Tryck **[!UICONTROL Service Account (JWT)]** om du vill visa API-nyckeln, klienthemligheten och annan information som krävs för att ansluta den lokala AEM till tjänsten Automated forms conversion. Informationen på sidan används för att skapa IMS-konfigurationer på den lokala datorn.
+1. Välj **[!UICONTROL Automated Forms Conversion service]** och knacka **[!UICONTROL Next]**. En skärm som konfigurerar API:t visas.
+1. Välj [!UICONTROL Upload your public key] kan du ladda upp filen AEM-Adobe-IMS.crt som du laddat ned i [Hämta offentliga certifikat](#obtainpubliccertificates) och trycka **[!UICONTROL Next]**. Alternativet Skapa ett nytt tjänstkonto (JWT) visas. Tryck **[!UICONTROL Next]**.
+1. Välj en produktprofil och tryck **[!UICONTROL Save configured API]**. Markera profilen som skapades när [ge utvecklare av din organisation åtkomst](#adduseranddevs). Om du inte vet vilken profil du ska välja kontaktar du administratören.
+1. Tryck **[!UICONTROL Service Account (JWT)]** om du vill visa API-nyckeln, klienthemligheten och annan information som krävs för att ansluta den lokala AEM till tjänsten Automated forms conversion (AFCS). Informationen på sidan används för att skapa IMS-konfigurationer på den lokala datorn.
 
 1. Öppna sidan IMS-konfiguration på den lokala instansen. Du lämnade den här sidan öppen i slutet av avsnittet [Hämta ett offentligt certifikat ](#obtainpubliccertificates).
 
@@ -235,18 +235,18 @@ Skapa en Cloud Service-konfiguration för att ansluta AEM till konverteringstjä
 1. Tryck på **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Tools]**> **[!UICONTROL Cloud Services]** > **[!UICONTROL Automate Forms Conversion Configuration]**.
 1. Tryck på **[!UICONTROL Global]** mapp och tryck **[!UICONTROL Create]**. Sidan där du skapar konfigurationen för Automated forms conversion visas. Konfigurationen skapas i mappen Global. Du kan också skapa konfigurationen i en annan mapp som finns eller skapa en mapp för dina konfigurationer.
 
-1. På **[!UICONTROL Create Automated Forms Conversion Configuration]** anger du ett värde för följande fält och trycker **[!UICONTROL Next]**.
+1. På **[!UICONTROL Create Automated Forms Conversion Configuration]** anger du ett värde för följande fält och trycker på **[!UICONTROL Next]**.
 
    | Fält | Beskrivning |
    |--- |--- |
    | Titel | Unik rubrik för konfigurationen. Titeln visas i användargränssnittet som används för att starta konverteringen. |
    | Namn | Unikt namn för konfigurationen. Konfigurationen sparas i CRX-Repository med det angivna namnet. Namnet kan vara identiskt med titeln. |
    | Miniatyrplats | Platsen för miniatyrbilden för konfigurationen. |
-   | Tjänst-URL | URL för tjänsten Automated forms conversion på Adobe Cloud. Använd `https://aemformsconversion.adobe.io/` URL. |
+   | Tjänst-URL | URL för tjänsten Automated forms conversion (AFCS) i Adobe Cloud. Använd `https://aemformsconversion.adobe.io/` URL. |
    | Mall | Standardmall som ska användas för konverterade formulär. Du kan alltid ange en annan mall innan du påbörjar konverteringen. En mall innehåller grundläggande struktur och ursprungligt innehåll för ett adaptivt formulär. Du kan välja en mall bland de färdiga mallarna. Du kan också skapa en anpassad mall. |
    | Tema | Standardtema som ska användas på konverterade formulär. Du kan alltid ange ett annat tema innan du påbörjar konverteringen.  Du kan klicka på ikonen för att välja ett tema som ingår i rutan. Du kan också skapa ett anpassat tema. |
-   | Befintliga fragment | Placering av befintliga fragment, om sådana finns. |
-   | Anpassad metamodell | Sökväg till .schema.json-filen för den anpassade metamodellen. Du kan skapa separata metamodeller för engelska, franska, tyska, spanska, italienska och portugisiska. |
+   | Befintliga segment | Placering av befintliga fragment, om sådana finns. |
+   | Anpassad metamodell | Sökväg till .schema.json-filen för anpassad metamodell. Du kan skapa separata metamodeller för engelska, franska, tyska, spanska, italienska och portugisiska. |
 
 1. I **[!UICONTROL Advanced]** -fliken i **[!UICONTROL Create Automated Forms Conversion Configuration]** page, specify value for the following field:
 
@@ -270,7 +270,7 @@ Skapa en Cloud Service-konfiguration för att ansluta AEM till konverteringstjä
    </table>
 
    * När källan är ett XFA-baserat formulär med tillägget .XDP, behåller DOR-utdatafilen XFA-layouten, annars använder konverteringstjänsten en mall som inte finns i rutan för att generera DOR för andra XFA-baserade formulär.
-   * När ett XFA-formulär skickas sparas data från formuläret som ett XML-element eller ett attribut. Till exempel, `<Amount currency="USD"> 10.00 </Amount>`. Valutan sparas som ett attribut och valutabelopp, 10.00 sparas som ett element. Skicka data från ett anpassat formulär har inga attribut, utan bara element. När ett XFA-baserat formulär konverteras till ett adaptivt formulär innehåller de adaptiva data som skickas ett element för varje sådant attribut. Till exempel,
+   * När ett XFA-formulär skickas sparas data från formuläret som ett XML-element eller ett attribut. Till exempel: `<Amount currency="USD"> 10.00 </Amount>`. Valutan sparas som ett attribut och valutabelopp, 10.00 sparas som ett element. Skicka data från ett anpassat formulär har inga attribut, utan bara element. När ett XFA-baserat formulär konverteras till ett adaptivt formulär innehåller de adaptiva uppgifterna för att skicka formulär ett element för varje sådant attribut. Exempel:
 
    ```css
       {

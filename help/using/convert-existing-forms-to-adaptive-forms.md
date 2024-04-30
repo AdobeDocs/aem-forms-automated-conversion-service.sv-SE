@@ -1,27 +1,28 @@
 ---
 title: Konvertera PDF forms till anpassningsbara formulär
 seo-title: Convert PDF forms to adaptive forms
-description: Kör tjänsten Automated forms conversion för att konvertera PDF forms till anpassningsbara formulär
-seo-description: Run the Automated Forms Conversion service to convert PDF forms to adaptive forms
+description: Kör tjänsten Automated forms conversion (AFCS) för att konvertera PDF forms till anpassningsbara formulär
+seo-description: Run the Automated Forms Conversion service (AFCS) to convert PDF forms to adaptive forms
 contentOwner: khsingh
 topic-tags: forms
 feature: Adaptive Forms, Foundation Components
-source-git-commit: 444cc37ec6fa2af2d8d2952efd18368a5725e881
+exl-id: 415e05b5-5a90-490c-bf7c-d3365ce95e24
+source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
 workflow-type: tm+mt
-source-wordcount: '1612'
+source-wordcount: '1616'
 ht-degree: 6%
 
 ---
 
 # Konvertera PDF forms till anpassningsbara formulär {#convert-print-forms-to-adaptive-forms}
 
-Tjänsten AEM Forms Automated forms conversion, som drivs av Adobe Sensei, konverterar automatiskt PDF forms till enhetsvänliga och responsiva adaptiva formulär. Oavsett om du använder icke-interaktiv PDF forms, Acro Forms eller XFA-baserad PDF forms kan Automated forms conversion-tjänsten enkelt konvertera dessa formulär till anpassningsbara formulär. Mer information om funktioner, konverteringsarbetsflöde och introduktionsinformation finns i [Automated forms conversion](introduction.md) service.
+Tjänsten AEM Forms Automated forms conversion (AFCS), som drivs av Adobe Sensei, konverterar automatiskt PDF forms till enhetsvänliga och responsiva adaptiva formulär. Vare sig du använder icke-interaktiv PDF forms, Acro Forms eller XFA-baserad PDF forms kan tjänsten Automated forms conversion enkelt konvertera dessa formulär till adaptiva formulär. Mer information om funktioner, konverteringsarbetsflöde och introduktionsinformation finns i [Automated forms conversion](introduction.md) service.
 
 ## Krav {#pre-requisites}
 
 * [**Konfigurera konverteringstjänsten**](configure-service.md)
 
-* **Förbered [mallar](https://helpx.adobe.com/experience-manager/6-5/forms/using/template-editor.html) som ska användas på konverterade formulär:** Om du använder en mall kan du använda en enhetlig profilering för alla anpassade formulär. Tjänsten Automated forms conversion extraherar inte och använder inte heller sidhuvud och sidfot i källdokumenten i PDF. Du kan använda adaptiva formulärmallar för att ange sidhuvud och sidfot. Sidhuvud och sidfot som anges i mallen används i det adaptiva formuläret under konverteringen. När du skapar en mapp för mallarna väljer du **[!UICONTROL Browse configurations]** för alla.
+* **Förbered [mallar](https://helpx.adobe.com/experience-manager/6-5/forms/using/template-editor.html) som ska användas på konverterade formulär:** Om du använder en mall kan du använda en enhetlig profilering för alla anpassade formulär. Automated forms conversion service (AFCS) extraherar inte och använder inte sidhuvud och sidfot i källdokument i PDF. Du kan använda adaptiva formulärmallar för att ange sidhuvud och sidfot. Sidhuvud och sidfot som anges i mallen används i det adaptiva formuläret under konverteringen. När du skapar en mapp för mallarna väljer du **[!UICONTROL Browse configurations]** för alla.
 
 * **Förbered [teman](https://helpx.adobe.com/experience-manager/6-5/forms/using/themes.html) som ska användas på konverterade formulär:** Om du använder ett tema kan du använda en konsekvent stil på alla anpassade former i din organisation.
 

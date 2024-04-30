@@ -1,6 +1,6 @@
 ---
 title: Utöka standardmetamodellen
-description: Utöka standardmetamodellen för att lägga till mönster, valideringar och enheter som är specifika för din organisation och tillämpa konfigurationer på anpassningsbara formulärfält medan du kör tjänsten Automated forms conversion.
+description: Utöka standardmetamodellen för att lägga till mönster, valideringar och enheter som är specifika för din organisation och tillämpa konfigurationer på anpassningsbara formulärfält när du kör tjänsten Automated forms conversion (AFCS).
 solution: Experience Manager Forms
 feature: Adaptive Forms
 topic: Administration
@@ -8,16 +8,16 @@ topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: f679059c-18aa-4cb5-8368-ed27e96c20de
-source-git-commit: e95b4ed35f27f920b26c05f3398529f825948f1f
+source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
 workflow-type: tm+mt
-source-wordcount: '2565'
+source-wordcount: '2569'
 ht-degree: 0%
 
 ---
 
 # Utöka standardmetamodellen {#extend-the-default-meta-model}
 
-Tjänsten Automated forms conversion identifierar och extraherar formulärobjekt från källformulär. Semantisk mappning hjälper tjänsten att bestämma hur de extraherade objekten ska visas i en adaptiv form. Ett källformulär kan t.ex. ha många olika typer av representationer av ett datum. Med semantisk mappning kan du mappa alla representationer av formulärobjekt för datum i källformuläret med datumkomponenten i de adaptiva formulären. Med semantisk mappning kan tjänsten förkonfigurera och tillämpa valideringar, regler, datamönster, hjälptext och hjälpmedelsegenskaper på adaptiva formulärkomponenter under konverteringen.
+Tjänsten Automated forms conversion (AFCS) identifierar och extraherar formulärobjekt från källformulär. Semantisk mappning hjälper tjänsten att bestämma hur de extraherade objekten ska visas i en adaptiv form. Ett källformulär kan t.ex. ha många olika typer av representationer av ett datum. Med semantisk mappning kan du mappa alla representationer av formulärobjekt för datum i källformuläret med datumkomponenten i de adaptiva formulären. Med semantisk mappning kan tjänsten förkonfigurera och tillämpa valideringar, regler, datamönster, hjälptext och hjälpmedelsegenskaper på adaptiva formulärkomponenter under konverteringen.
 
 ![](assets/meta-model.gif)
 
@@ -25,7 +25,7 @@ Metamodellen är ett JSON-schema. Innan du börjar med metamodellen måste du se
 
 ## Standardmetamodell {#default-meta-model}
 
-Tjänsten Automated forms conversion har en standardmetamodell. Det är ett JSON-schema och finns i Adobe Cloud tillsammans med andra komponenter i tjänsten Automated forms conversion. Du kan hitta en kopia av metamodellen på den lokala AEM på: http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/`global.schema.json`. Du kan också [klicka här](assets/en.globalschema.json) för att få tillgång till eller ladda ned det engelska språkschemat. Metamodellen för [Franska](assets/fr.globalschema.json), [Tyska](assets/de.globalschema.json) [Spanska](assets/es.globalschema.json), [Italienska](assets/it.globalschema.json)och [Portugisiska](assets/pt_br.globalschema.json) finns också för nedladdning.
+Tjänsten Automated forms conversion (AFCS) har en standardmetamodell. Det är ett JSON-schema och finns i Adobe Cloud tillsammans med andra komponenter i tjänsten Automated forms conversion (AFCS). Du kan hitta en kopia av metamodellen på den lokala AEM på: http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/`global.schema.json`. Du kan också [klicka här](assets/en.globalschema.json) för att få tillgång till eller ladda ned det engelska språkschemat. Metamodellen för [Franska](assets/fr.globalschema.json), [Tyska](assets/de.globalschema.json) [Spanska](assets/es.globalschema.json), [Italienska](assets/it.globalschema.json)och [Portugisiska](assets/pt_br.globalschema.json) finns också för nedladdning.
 
 Schemat för metamodellen härleds från schemaentiteter på https://schema.org/docs/schemas.html. Den har Person, PostalAddress, LocalBusiness och fler entiteter enligt definitionen på https://schema.org. Alla entiteter i metamodellen följer JSON-schemaobjekttypen. Följande kod representerar en exempelmetamodellstruktur:
 
@@ -98,7 +98,7 @@ En metamodell refererar till en JSON-schemafil som innehåller entiteter. Alla e
     }
 ```
 
-I det här exemplet **Händelse** representerar namnet på en entitet med ett värde för **id** as **Eventid**. Händelseentiteten innehåller flera egenskaper:
+I detta exempel **Händelse** representerar namnet på en entitet med ett värde för **id** as **Eventid**. Händelseentiteten innehåller flera egenskaper:
 
 * startDate
 * endDate
@@ -120,7 +120,7 @@ I det här exemplet söker konverteringstjänsten efter nyckelorden telefon, tel
 
 ### JSON-schemaegenskaper för genererade adaptiva formulärfält {#jsonschemaproperties}
 
-Metamodellen stöder följande gemensamma egenskaper för JSON-schema för adaptiva formulärfält som genereras med tjänsten Automated forms conversion:
+Metamodellen stöder följande gemensamma egenskaper för JSON-schema för adaptiva formulärfält som genereras med tjänsten Automated forms conversion (AFCS):
 
 <table> 
  <tbody> 
@@ -141,10 +141,10 @@ Metamodellen stöder följande gemensamma egenskaper för JSON-schema för adapt
    <td> 
     <p>Egenskapen type definierar datatypen för det genererade adaptiva formulärfältet. Möjliga värden för egenskapen title är:</p>
     <ul> 
-     <li>sträng: Skapar ett anpassat formulärfält av textdatatyp.</li> 
-     <li>tal: Skapar ett adaptivt formulärfält av numerisk datatyp.</li>
+     <li>string: Skapar ett adaptivt formulärfält av textdatatyp.</li> 
+     <li>number: Skapar ett adaptivt formulärfält av numerisk datatyp.</li>
      <li>heltal: Skapar ett adaptivt formulärfält av numerisk datatyp med subtype inställd på heltal.</li>
-     <li>boolesk: Skapar en adaptiv formulärkomponent för switch.</li>
+     <li>booleskt: Skapar en adaptiv formulärkomponent för switch.</li>
      </ul><p>Mer information om hur du använder egenskapen type i en metamodell finns i <strong>Ändra typ av formulärfält</strong> in <a href="#custommetamodelexamples">Exempel på anpassade metamodeller.</a></p></td> 
   </tr>
   <td><p>mönster</p></td> 
@@ -157,14 +157,14 @@ Metamodellen stöder följande gemensamma egenskaper för JSON-schema för adapt
   </tr>
   <td><p>enum och enumNames</p></td> 
    <td> 
-    <p>Egenskaperna enum och enumNames begränsar värdena för fälten för nedrullningsbara menyer, kryssrutor och alternativknappar till en fast uppsättning. Värden som anges i enumNames visas i användargränssnittet. Värdena som anges med enum-egenskapen används för beräkning.<br>Mer information finns i <strong>Konvertera ett formulärfält till kryssrutor med flera val i det adaptiva formuläret</strong>, <strong>Konvertera ett textfält till nedrullningsbar lista i det adaptiva formuläret</strong>och <strong>Lägg till ytterligare alternativ i listrutan</strong> in <a href="#custommetamodelexamples">Exempel på anpassade metamodeller.</a></p> </td> 
+    <p>Egenskaperna enum och enumNames begränsar värdena för fälten för nedrullningsbara menyer, kryssrutor och alternativknappar till en fast uppsättning. Värden som anges i enumNames visas i användargränssnittet. Värdena som anges med enum-egenskapen används för beräkning.<br>Mer information finns i <strong>Konvertera ett formulärfält till kryssrutor med flera val i det adaptiva formuläret</strong>, <strong>Konvertera ett textfält till listruta i det adaptiva formuläret</strong>och <strong>Lägg till ytterligare alternativ i listrutan</strong> in <a href="#custommetamodelexamples">Exempel på anpassade metamodeller.</a></p> </td> 
   </tr>
  </tbody> 
 </table>
 
 ### Nyckelordsbaserad sökning som använder egenskaper för genererade adaptiva formulärfält {#keywordsearch}
 
-Tjänsten Automated forms conversion utför en nyckelordssökning i källformuläret under konverteringen. När fälten som uppfyller sökvillkoren har filtrerats används egenskaperna som definierats för fälten i metamodellen av konverteringstjänsten för de anpassade formulärfälten som genererats.
+Tjänsten Automated forms conversion (AFCS) utför en nyckelordssökning i källformuläret under konverteringen. När fälten som uppfyller sökvillkoren har filtrerats används egenskaperna som definierats för fälten i metamodellen av konverteringstjänsten för de anpassade formulärfälten som genererats.
 
 Nyckelord refereras med **aem:affKeyword** -egenskap.
 
@@ -177,11 +177,11 @@ Nyckelord refereras med **aem:affKeyword** -egenskap.
 }
 ```
 
-I det här exemplet använder konverteringstjänsten texten i **aem:affKeyword** som ett söknyckelord. När du har hämtat **Bankkontonummer** text i formuläret konverteras fältet till **tal** text med **type** -egenskap.
+I det här exemplet använder konverteringstjänsten texten i **aem:affKeyword** som ett söknyckelord. Efter hämtning av **Bankkontonummer** text i formuläret konverteras fältet till **tal** text med **type** -egenskap.
 
 ### Ytterligare egenskaper för genererade adaptiva formulärfält {#additionalproperties}
 
-Du kan använda **aem:afProperties** i metamodellen för att definiera följande ytterligare egenskaper för fält med adaptiva formulär som genererats med tjänsten Automated forms conversion:
+Du kan använda **aem:afProperties** i metamodellen för att definiera följande ytterligare egenskaper för fält med adaptiva formulär som genereras med tjänsten Automated forms conversion (AFCS):
 
 <table> 
  <tbody> 
@@ -206,7 +206,7 @@ Du kan använda **aem:afProperties** i metamodellen för att definiera följande
   </tr>
   <td><p>sling:resourceType och guideNodeClass</p></td> 
    <td> 
-    <p>sling:resourceType- och guideNodeClass-egenskaper gör att du kan mappa ett formulärfält till en motsvarande adaptiv formulärkomponent.<br>Mer information finns i <strong>Konvertera ett formulärfält till kryssrutor med flera val i det adaptiva formuläret</strong> och <strong>Konvertera ett textfält till nedrullningsbar lista i det adaptiva formuläret</strong> in <a href="#custommetamodelexamples">Exempel på anpassade metamodeller.</a></p> </td> 
+    <p>sling:resourceType- och guideNodeClass-egenskaper gör att du kan mappa ett formulärfält till en motsvarande adaptiv formulärkomponent.<br>Mer information finns i <strong>Konvertera ett formulärfält till kryssrutor med flera val i det adaptiva formuläret</strong> och <strong>Konvertera ett textfält till listruta i det adaptiva formuläret</strong> in <a href="#custommetamodelexamples">Exempel på anpassade metamodeller.</a></p> </td> 
   </tr>
   <td><p>validatePictureClause</p></td> 
    <td> 
@@ -217,7 +217,7 @@ Du kan använda **aem:afProperties** i metamodellen för att definiera följande
 
 ## Skapa en anpassad metamodell på ditt eget språk{#language-specific-meta-model}
 
-Du kan skapa en språkspecifik metamodell. En sådan metamodell hjälper dig att skapa mappningsregler på valfritt språk. Med tjänsten Automated forms conversion kan du skapa metamodeller på följande språk:
+Du kan skapa en språkspecifik metamodell. En sådan metamodell hjälper dig att skapa mappningsregler på valfritt språk. Med tjänsten Automated forms conversion (AFCS) kan du skapa metamodeller på följande språk:
 
 * Engelska (en)
 * French(fr)
@@ -226,7 +226,7 @@ Du kan skapa en språkspecifik metamodell. En sådan metamodell hjälper dig att
 * Italian(it)
 * Portugisiska (pt-br)
 
-Lägg till *aem:Language* metatag-taggen längst upp i en metamodell för att ange dess språk. Till exempel,
+Lägg till *aem:Language* metatag-taggen längst upp i en metamodell för att ange dess språk. Exempel:
 
 ```JSON
 "metaTags": {
@@ -239,7 +239,7 @@ Om inget språk anges anser tjänsten att metamodellen är på engelska.
 ### Att tänka på när du skapar en språkspecifik metamodell
 
 * Kontrollera att namnet på alla nycklar är på engelska. Till exempel emailAddress.
-* Kontrollera att alla enhetsreferenser och fördefinierade värden för alla id-nycklar bara innehåller ASCII-tecken. Exempel:&quot;id&quot;: &quot;ContactPoint&quot; / &quot;$ref&quot;: &quot;#ContactPoint&quot;.
+* Kontrollera att alla enhetsreferenser och fördefinierade värden för alla id-nycklar bara innehåller ASCII-tecken. Exempel: &quot;id&quot;: &quot;ContactPoint&quot; / &quot;$ref&quot;: &quot;#ContactPoint&quot;.
 * Se till att alla värden som motsvarar följande nycklar är på det angivna metamodellspråket:
    * aem:affKeyword
    * title
@@ -248,9 +248,9 @@ Om inget språk anges anser tjänsten att metamodellen är på engelska.
    * shortDescription
    * validatePictureClauseMessage
 
-  När språket för metamodellen till exempel är franska (&quot;aem:Language&quot;: &quot;fr&quot;) måste du se till att alla beskrivningar och meddelanden är på franska.
+  Om t.ex. metamodellens språk är franska (&quot;aem:Language&quot;: &quot;fr&quot;) kontrollerar du att alla beskrivningar och meddelanden är på franska.
 
-* Se till att alla [JSON-schemaegenskaper](#jsonschemaproperties) använder endast värden som stöds. Egenskapen type kan till exempel bara omfatta de valda värdena String, Number, Integer och Boolean.
+* Se till att alla [JSON-schemaegenskaper](#jsonschemaproperties) använder endast värden som stöds. Egenskapen type kan till exempel bara omfatta de markerade värdena String, Number, Integer och Boolean.
 
 I följande bild visas exempel på metamodell för engelska och motsvarande metamodell för franska språket:
 
@@ -258,9 +258,9 @@ I följande bild visas exempel på metamodell för engelska och motsvarande meta
 
 ## Ändra anpassade formulärfält med anpassad metamodell {#modify-adaptive-form-fields-using-custom-meta-model}
 
-Din organisation kan ha mönster och valideringar utöver de som anges i standardmetamodellen. Du kan utöka standardmetamodellen för att lägga till mönster, valideringar och entiteter som är specifika för din organisation. Tjänsten Automated forms conversion använder den anpassade metamodellen på formulärfälten under konverteringen. Du kan fortsätta uppdatera metamodellen när nya mönster, valideringar och enheter som är specifika för din organisation identifieras.
+Din organisation kan ha mönster och valideringar utöver de som anges i standardmetamodellen. Du kan utöka standardmetamodellen för att lägga till mönster, valideringar och entiteter som är specifika för din organisation. Tjänsten Automated forms conversion (AFCS) tillämpar den anpassade metamodellen på formulärfälten under konverteringen. Du kan fortsätta uppdatera metamodellen när nya mönster, valideringar och enheter som är specifika för din organisation identifieras.
 
-I Automated forms conversion-tjänsten används en standardmetamodell som sparas på följande plats för att mappa källformulärfält till anpassade formulärfält under konverteringen:
+I tjänsten Automated forms conversion (AFCS) används en standardmetamodell som sparas på följande plats för att mappa källformulärfält till anpassade formulärfält under konverteringen:
 
 http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/global.schema.json
 
@@ -296,7 +296,7 @@ Några vanliga exempel på hur du använder en anpassad metamodell för att änd
 
 **Exempel:** Ändra etiketten för bankkontonumret i formuläret till Anpassat kontonummer i det adaptiva formuläret efter konvertering.
 
-I den här anpassade metamodellen använder konverteringstjänsten **title** som ett söknyckelord. När du har hämtat **Bankkontonummer** text i formuläret ersätter konverteringstjänsten texten med **Kundkontonummer** strängen som anges med **jcr:title** -egenskapen i **aem:afProperties** -avsnitt.
+I den här anpassade metamodellen använder konverteringstjänsten **title** som ett söknyckelord. Efter hämtning av **Bankkontonummer** text i formuläret ersätter konverteringstjänsten texten med **Kundkontonummer** strängen som anges med **jcr:title** -egenskapen i **aem:afProperties** -avsnitt.
 
 ```
 {
@@ -314,7 +314,7 @@ I den här anpassade metamodellen använder konverteringstjänsten **title** som
 
 **Exempel**: Ändra **Bankkontonummer** textfält i formuläret före konvertering till ett taltypsfält i det adaptiva formuläret efter konvertering.
 
-I den här anpassade metamodellen använder konverteringstjänsten texten i **aem:affKeyword** som ett söknyckelord. När du har hämtat **Bankkontonummer** text i formuläret konverteras fältet till en taltyp med hjälp av **type** -egenskap.
+I den här anpassade metamodellen använder konverteringstjänsten texten i **aem:affKeyword** som ett söknyckelord. Efter hämtning av **Bankkontonummer** text i formuläret konverteras fältet till en taltyp med hjälp av **type** -egenskap.
 
 ```
 {
@@ -329,7 +329,7 @@ I den här anpassade metamodellen använder konverteringstjänsten texten i **ae
 
 **Exempel**: Lägg till hjälptext i **Bankkontonummer** fält i anpassningsbart format.
 
-I den här anpassade metamodellen använder konverteringstjänsten texten i **aem:affKeyword** som ett söknyckelord. När du har hämtat **Bankkontonummer** text i formuläret, lägger konverteringstjänsten till hjälptexten i det adaptiva formulärfältet med hjälp av **description** -egenskap.
+I den här anpassade metamodellen använder konverteringstjänsten texten i **aem:affKeyword** som ett söknyckelord. Efter hämtning av **Bankkontonummer** text i formuläret, lägger konverteringstjänsten till hjälptexten i det adaptiva formulärfältet med hjälp av **description** -egenskap.
 
 ```
 {
@@ -345,7 +345,7 @@ I den här anpassade metamodellen använder konverteringstjänsten texten i **ae
 
 **Exempel**: Konvertera **Land** fält av strängtyp i formuläret före konvertering till kryssrutor i det adaptiva formuläret efter konvertering.
 
-I den här anpassade metamodellen använder konverteringstjänsten text i **aem:affKeyword** som ett söknyckelord. När du har hämtat **Land** text i formuläret konverteras fältet till följande kryssrutor med hjälp av **enum** egenskap:
+I den här anpassade metamodellen använder konverteringstjänsten text i **aem:affKeyword** som ett söknyckelord. Efter hämtning av **Land** text i formuläret konverteras fältet till följande kryssrutor med hjälp av **enum** egenskap:
 
 * Indien
 * England
@@ -379,7 +379,7 @@ I den här anpassade metamodellen använder konverteringstjänsten text i **aem:
 
 **Exempel**: Ändra formatet för **E-postadress** till ett e-postformat.
 
-I den här anpassade metamodellen använder konverteringstjänsten text i **aem:affKeyword** som ett söknyckelord. När du har hämtat **E-postadress** text i formuläret konverteras fältet till ett e-postformat med hjälp av **format** -egenskap.
+I den här anpassade metamodellen använder konverteringstjänsten text i **aem:affKeyword** som ett söknyckelord. Efter hämtning av **E-postadress** text i formuläret konverteras fältet till ett e-postformat med hjälp av **format** -egenskap.
 
 ```
 {
@@ -395,7 +395,7 @@ I den här anpassade metamodellen använder konverteringstjänsten text i **aem:
 
 **Exempel 1:** Lägg till en validering i **Postnummer** fält i det adaptiva formuläret.
 
-I den här anpassade metamodellen använder konverteringstjänsten text i **aem:affKeyword** som söknyckelord. När du har hämtat **Postnummer** text i formuläret lägger konverteringstjänsten till en validering i fältet med hjälp av **validatePictureClause** egenskap som definieras i **aem:afProperties** -avsnitt. Baserat på valideringen är indata som du anger för **Postnummer** fältet i det adaptiva formuläret efter konverteringen måste innehålla sex tecken.
+I den här anpassade metamodellen använder konverteringstjänsten text i **aem:affKeyword** som söknyckelord. Efter hämtning av **Postnummer** text i formuläret lägger konverteringstjänsten till en validering i fältet med hjälp av **validatePictureClause** egenskap som definieras i **aem:afProperties** -avsnitt. Baserat på valideringen är indata som du anger för **Postnummer** fältet i det adaptiva formuläret efter konverteringen måste innehålla sex tecken.
 
 ```
 {
@@ -411,7 +411,7 @@ I den här anpassade metamodellen använder konverteringstjänsten text i **aem:
 
 **Exempel 2:** Lägg till en validering i **Bankkontonummer** fält i det adaptiva formuläret.
 
-I den här anpassade metamodellen använder konverteringstjänsten text i **aem:affKeyword** som söknyckelord. När du har hämtat **Bankkontonummer** text i formuläret lägger konverteringstjänsten till en validering i fältet med hjälp av **obligatoriskt** egenskap som definieras i **aem:afProperties** -avsnitt. Baserat på valideringen måste du ange ett värde för **Bankkontonummer** fält innan formuläret skickas efter konvertering.
+I den här anpassade metamodellen använder konverteringstjänsten text i **aem:affKeyword** som söknyckelord. Efter hämtning av **Bankkontonummer** text i formuläret lägger konverteringstjänsten till en validering i fältet med hjälp av **obligatoriskt** egenskap som definieras i **aem:afProperties** -avsnitt. Baserat på valideringen måste du ange ett värde för **Bankkontonummer** fält innan formuläret skickas efter konvertering.
 
 ```
 {
@@ -425,11 +425,11 @@ I den här anpassade metamodellen använder konverteringstjänsten text i **aem:
 }
 ```
 
-#### Konvertera ett textfält till nedrullningsbar lista i det adaptiva formuläret {#convert-a-text-field-to-drop-down-list-in-the-adaptive-form}
+#### Konvertera ett textfält till listruta i det adaptiva formuläret {#convert-a-text-field-to-drop-down-list-in-the-adaptive-form}
 
 **Exempel**: Konvertera **Land** fält av strängtyp i formuläret före konvertering till nedrullningsbara alternativ i det adaptiva formuläret efter konvertering.
 
-I den här anpassade metamodellen använder konverteringstjänsten text i **aem:affKeyword** som söknyckelord. När du har hämtat **Land** text i formuläret konverterar konverteringstjänsten fältet till följande alternativ i listrutan med hjälp av **enum** egenskap:
+I den här anpassade metamodellen använder konverteringstjänsten text i **aem:affKeyword** som söknyckelord. Efter hämtning av **Land** text i formuläret konverterar konverteringstjänsten fältet till följande alternativ i listrutan med hjälp av **enum** egenskap:
 
 * Indien
 * England
@@ -463,7 +463,7 @@ I den här anpassade metamodellen använder konverteringstjänsten text i **aem:
 
 **Exempel:** Lägg till **Sri Lanka** som ett extra alternativ till en befintlig nedrullningsbar lista med en anpassad metamodell.
 
-Om du vill lägga till ett extra alternativ uppdaterar du **enum** med det nya alternativet. I det här exemplet uppdaterar du **enum** egenskap med **Sri Lanka** som ett extra alternativ. Värden som anges i **enum** egenskapsvisning i listrutan.
+Uppdatera **enum** med det nya alternativet. I det här exemplet uppdaterar du **enum** egenskap med **Sri Lanka** som ett extra alternativ. Värden som anges i **enum** egenskapsvisning i listrutan.
 
 ```
 {
@@ -491,7 +491,7 @@ Om du vill lägga till ett extra alternativ uppdaterar du **enum** med det nya a
 
 **Exempel:** Konvertera **Adress** fält av strängtyp till ett flerradigt fält i formuläret efter konvertering.
 
-I den här anpassade metamodellen använder konverteringstjänsten text i **aem:affKeyword** som söknyckelord. När du har hämtat **Adress** text i formuläret, konverterar tjänsten textfältet till ett fält med flera rader med hjälp av **multiLine** egenskap som definieras i **aem:afProperties** -avsnitt.
+I den här anpassade metamodellen använder konverteringstjänsten text i **aem:affKeyword** som söknyckelord. Efter hämtning av **Adress** text i formuläret, konverterar tjänsten textfältet till ett fält med flera rader med hjälp av **multiLine** egenskap som definieras i **aem:afProperties** -avsnitt.
 
 ```
 {

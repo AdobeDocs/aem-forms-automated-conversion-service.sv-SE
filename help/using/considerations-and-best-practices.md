@@ -1,5 +1,5 @@
 ---
-title: Rekommenderad praxis och saker att tänka på
+title: Bästa praxis och överväganden
 description: PUBLICERA INTE
 seo-description: DO NOT PUBLISH
 page-status-flag: never-activated
@@ -8,15 +8,15 @@ topic-tags: introduction
 discoiquuid: b786e40a-202e-4e17-a2f5-1f77c46538c2
 privatebeta: true
 index: false
-source-git-commit: 298d6c0641d7b416edb5b2bcd5fec0232f01f4c7
+source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
 workflow-type: tm+mt
-source-wordcount: '543'
-ht-degree: 4%
+source-wordcount: '539'
+ht-degree: 3%
 
 ---
 
 
-# Rekommenderad praxis och saker att tänka på {#do-not-publish-best-practices-and-considerations}
+# Bästa praxis och överväganden {#do-not-publish-best-practices-and-considerations}
 
 <!--
 [DO NOT PUBLISH]
@@ -24,9 +24,9 @@ ht-degree: 4%
 
 AEM Forms tjänst för automatisk konvertering konverterar ett PDF-formulär till ett anpassningsbart formulär. Tjänsten använder artificiell intelligens och maskininlärningsalgoritmer för att förstå källformulärets layout och fält. Alla maskininlärningstjänster lär sig kontinuerligt av källdata och skapar bättre resultat vid varje förändring. Dessa tjänster lär sig av upplevelser som människor.
 
-automated forms conversion är utbildad i ett stort antal blanketter. Den identifierar enkelt fält i ett källformulär och skapar anpassningsbara formulär. Det finns dock vissa fält och format i PDF forms som är lätta att se för det mänskliga ögat men svåra att förstå för tjänsten. Tjänsten kan tilldela vissa fält eller format andra än tillämpliga fälttyper eller paneler. Alla sådana fält- och formatmönster listas nedan.
+Automated forms conversion-tjänsten (AFCS) har utbildats på ett stort antal formulär. Den identifierar enkelt fält i ett källformulär och skapar anpassningsbara formulär. Det finns dock vissa fält och format i PDF forms som är lätta att se för det mänskliga ögat men svåra att förstå för tjänsten. Tjänsten kan tilldela vissa fält eller format andra än tillämpliga fälttyper eller paneler. Alla sådana fält- och formatmönster listas nedan.
 
-Tjänsten börjar identifiera och tilldela rätt fält eller paneler till dessa mönster när den lär sig av källdata. Just nu kan du använda [Granska och korrigera](review-correct-ui-edited.md) för att åtgärda sådana problem. Innan du börjar åtgärda problemen eller läser mer, bör du bekanta dig med [adaptiva formulärkomponenter](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html).
+Tjänsten börjar identifiera och tilldela rätt fält eller paneler till dessa mönster när den lär sig av källdata. Du kan använda [Granska och korrigera](review-correct-ui-edited.md) för att åtgärda sådana problem. Innan du börjar åtgärda problemen eller läser mer, bekanta dig med [adaptiva formulärkomponenter](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html).
 
 ## Allmänt {#general}
 

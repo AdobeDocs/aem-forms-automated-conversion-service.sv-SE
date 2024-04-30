@@ -1,6 +1,6 @@
 ---
-title: Rekommenderad praxis och saker att tänka på
-description: Bästa praxis och överväganden för tjänsten Automated forms conversion
+title: Bästa praxis och överväganden
+description: Bästa praxis och överväganden för tjänsten Automated forms conversion (AFCS)
 solution: Experience Manager Forms
 feature: Adaptive Forms
 topic: Administration
@@ -8,32 +8,32 @@ topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: 9ada091a-e7c6-40e9-8196-c568f598fc2a
-source-git-commit: e95b4ed35f27f920b26c05f3398529f825948f1f
+source-git-commit: 4b227a2cd0253b8ab471007b41787de60c2a1851
 workflow-type: tm+mt
-source-wordcount: '1247'
-ht-degree: 2%
+source-wordcount: '1229'
+ht-degree: 1%
 
 ---
 
 # Bästa praxis och kända komplexa mönster {#Best-practices-and-considerations2}
 
-Det här dokumentet innehåller riktlinjer och rekommendationer som formuläradministratörer, författare och utvecklare kan dra nytta av när de arbetar med [!DNL Automated Forms Conversion service]. Här diskuteras bästa praxis direkt från att förbereda källformulär till att korrigera komplexa mönster som kräver extra arbete för automatiserad konvertering. Dessa bästa metoder bidrar tillsammans till prestanda och resultat för [!DNL Automated Forms Conversion service].
+Det här dokumentet innehåller riktlinjer och rekommendationer som formuläradministratörer, författare och utvecklare kan dra nytta av när de arbetar med [!DNL Automated Forms Conversion service] (AFCS). Här diskuteras bästa praxis direkt från att förbereda källformulär till att korrigera komplexa mönster som kräver extra arbete för automatiserad konvertering. Dessa bästa metoder bidrar tillsammans till prestanda och resultat för [!DNL Automated Forms Conversion service] (AFCS).
 
 ## God praxis
 
-Konverteringstjänsten konverterar PDF forms som finns på din AEM [!DNL Forms] -instans till adaptiva formulär. De bästa metoderna nedan hjälper dig att förbättra konverteringshastigheten och exaktheten. Dessutom kan du spara tid på konverteringsaktiviteter med hjälp av de här metoderna.
+Konverteringstjänsten konverterar PDF forms som finns på din AEM [!DNL Forms] -instans till adaptiva formulär. De bästa metoderna nedan hjälper dig att förbättra konverteringshastigheten och exaktheten. Dessutom kan du spara tid på konverteringsaktiviteter med hjälp av de här bästa metoderna.
 
 ### Innan du överför källan
 
 Du kan överföra alla PDF forms samtidigt eller i faser efter behov. Tänk på följande innan du laddar upp formulären:
 
 * Behåll antalet formulär i en mapp under 15 och behåll det totala antalet sidor i en mapp under 50.
-* Låt mappen vara mindre än 10 MB. Lägg inte formulär i en undermapp.
+* Låt mappen vara mindre än 10 MB. Behåll inte formulär i en undermapp.
 * Behåll antalet sidor i ett formulär under 15.
 * Ordna källdokumenten i en grupp om 8-15 dokument. Behåll källformulären med vanliga adaptiva formulärfragment i en enda batch.
 * Överför inte skyddade formulär. Tjänsten konverterar inte lösenordsskyddade och skyddade formulär.
 * Överför inte [PDF Portfolio](https://helpx.adobe.com/acrobat/using/overview-pdf-portfolios.html). Tjänsten konverterar inte PDF Portfolio till en anpassningsbar form.
-* Ladda inte upp källformulär med blanksteg i filnamnet. Ta bort utrymmet från filnamnet innan du överför formulären.
+* Ladda inte upp källformulär med blanksteg i filnamnet. Ta bort utrymmet från filens namn innan du överför formulären.
 * Skicka inte skannade, ifyllda och formulär på andra språk än engelska, franska, tyska, spanska, italienska och portugisiska. Sådana formulär stöds inte.
 
 När du använder ett XDP-formulär för konvertering utför du följande steg innan du överför XPD-källformulären:
@@ -59,9 +59,9 @@ När du använder ett XDP-formulär för konvertering utför du följande steg i
 
 AEM [!DNL Forms Automated Conversion service] använder artificiell intelligens och maskininlärningsalgoritmer för att förstå källformulärets layout och fält. Alla maskininlärningstjänster lär sig kontinuerligt av källdata och skapar bättre resultat vid varje förändring. Dessa tjänster lär sig av erfarenheter som människor.
 
-[!DNL Automated Forms Conversion service] har utbildats i en stor uppsättning formulär. Den identifierar enkelt fält i ett källformulär och skapar anpassningsbara formulär. Det finns dock vissa fält och format i PDF forms som är lätta att se för det mänskliga ögat men svåra att förstå för tjänsten. Tjänsten kan tilldela vissa fält eller format andra fälttyper eller paneler än de som är tillämpliga. Alla sådana fält- och formatmönster listas nedan.
+[!DNL Automated Forms Conversion service] har utbildats i en stor uppsättning formulär. Den identifierar enkelt fält i ett källformulär och skapar anpassningsbara formulär. Det finns dock vissa fält och format i PDF forms som är lätta att se för det mänskliga ögat men svåra att förstå för tjänsten. Tjänsten kan tilldela vissa fält eller format andra typer av fält eller paneler än de som är tillämpliga. Alla sådana fält- och formatmönster listas nedan.
 
-Tjänsten börjar identifiera och tilldela rätt fält eller paneler till dessa mönster när den lär sig av källdata. Just nu kan du använda [Granska och korrigera](review-correct-ui-edited.md) för att åtgärda sådana problem. Innan du börjar åtgärda problemen eller läser mer, bör du bekanta dig med [adaptiva formulärkomponenter](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html).
+Tjänsten börjar identifiera och tilldela rätt fält eller paneler till dessa mönster när den lär sig av källdata. Du kan använda [Granska och korrigera](review-correct-ui-edited.md) för att åtgärda sådana problem. Innan du börjar åtgärda problemen eller läser mer, bekanta dig med [adaptiva formulärkomponenter](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html).
 
 ### Allmänna mönster {#general}
 
@@ -71,8 +71,8 @@ Tjänsten börjar identifiera och tilldela rätt fält eller paneler till dessa 
 | **Mönster** <br>Tjänsten kan inte identifiera text och fält i tätt format. <br><br>**Upplösning** <br> Öka bredden mellan text och fält i ett kompakt formulär innan konverteringen startar. |  |
 | **Mönster** <br>Tjänsten stöder inte skannade formulär. <br><br>**Upplösning** <br>Använd inte skannade formulär. | ![Skannat formulär](assets/scanned-forms.png) |
 | **Mönster** <br>Tjänsten extraherar inte bilder och text i bilder. <br><br>**Upplösning** <br> Lägg till bilder eller text manuellt i konverterade formulär. | ![Bild med textformulär](assets/best-practice-image-with-text.png) |
-| **Mönster** <br>Tabeller med prickade eller otydliga gränser och kanter konverteras inte. <br><br>**Upplösning** <br>Använd tabeller med tydliga gränser och ramar. stöds. | ![Otydligt tabellformulär](assets/best-practice-table-dotted-non-clear.png) |
-| **Mönster** <br> Anpassade formulär har inte stöd för lodrät text som skrivs ut. Tjänsten konverterar alltså inte lodrät text till motsvarande Adaptiv Forms-text. <br><br>**Upplösning** <br> Använd adaptiv formulärredigerare för att lägga till lodrät text, om det behövs. | ![Otydligt tabellformulär](assets/vertical-text.png) |
+| **Mönster** <br>Tabeller med prickade eller otydliga gränser och kanter konverteras inte. <br><br>**Upplösning** <br>Använd tabeller med tydliga gränser och ramar. stöds. | ![Ej genomskinligt tabellformulär](assets/best-practice-table-dotted-non-clear.png) |
+| **Mönster** <br> Anpassade formulär har inte stöd för lodrät text som skrivs ut. Tjänsten konverterar alltså inte lodrät text till motsvarande Adaptiv Forms-text. <br><br>**Upplösning** <br> Använd adaptiv formulärredigerare för att lägga till lodrät text, om det behövs. | ![Ej genomskinligt tabellformulär](assets/vertical-text.png) |
 
 
 

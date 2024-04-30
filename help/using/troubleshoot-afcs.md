@@ -1,5 +1,5 @@
 ---
-title: Felsök den automatiserade konverteringstjänsten för formulär
+title: Felsök den automatiserade konverteringstjänsten för formulär (AFCS)
 description: Vanliga AFCS-problem och deras lösningar
 solution: Experience Manager Forms
 feature: Adaptive Forms
@@ -9,14 +9,14 @@ role: Admin, Developer
 level: Beginner, Intermediate
 contentOwner: khsingh
 exl-id: e8406ed9-37f5-4f26-be97-ad042f9ca57c
-source-git-commit: e95b4ed35f27f920b26c05f3398529f825948f1f
+source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
 workflow-type: tm+mt
-source-wordcount: '649'
-ht-degree: 89%
+source-wordcount: '655'
+ht-degree: 85%
 
 ---
 
-# Felsök den automatiserade konverteringstjänsten för formulär
+# Felsök den automatiserade konverteringstjänsten för formulär (AFCS)
 
 Dokumentet innehåller grundläggande felsökningssteg för vanliga fel.
 
@@ -27,7 +27,7 @@ Dokumentet innehåller grundläggande felsökningssteg för vanliga fel.
 | Fel | Exempel |
 |--- |--- |
 | **Felmeddelande** <br> Sidhuvudets åtkomsttoken är inte tillgängligt. <br><br> **Orsak** <br> En administratör har skapat flera IMS-konfigurationer, eller så kan IMS-konfigurationen inte nå AFCS-tjänsten på Adobe-molnet. <br><br>**Lösning** <br> Om det finns flera konfigurationer tar du bort samtliga konfigurationer och [skapar en ny konfiguration](configure-service.md#obtainpubliccertificates). <br> Om det endast finns en konfiguration använder du **hälsokontroll** för att [kontrollera anslutningen](configure-service.md#createintegrationoption). | ![Sidhuvudets åtkomsttoken är inte tillgängligt](assets/invalid-ims-configurations.png) |
-| **Felmeddelande** <br> Det går inte att ansluta till tjänsten.  <br><br>**Orsak** <br> Felaktig URL för tjänsten, eller så nämns ingen URL för tjänsten i molntjänsterna för den automatiserade konverteringstjänsten för formulär. <br><br>**Lösning** <br> Korrigera [URL för tjänsten](configure-service.md#configure-the-cloud-service) i molntjänsterna för den automatiserade konverteringstjänsten för formulär. | ![Det går inte att ansluta till tjänsten.](assets/wrong-service-url-configured.png) |
+| **Felmeddelande** <br> Det går inte att ansluta till tjänsten.  <br><br>**Orsak** <br> Felaktig tjänst-URL eller ingen tjänst-URL anges i molntjänsterna för tjänsten Automated forms conversion (AFCS). <br><br>**Upplösning** <br> Korrigera [Tjänst-URL](configure-service.md#configure-the-cloud-service) i Automated forms conversion Service (AFCS) Cloud-tjänster. | ![Det går inte att ansluta till tjänsten.](assets/wrong-service-url-configured.png) |
 | **Felmeddelande** <br> Tjänsten kunde inte konvertera formuläret.  <br><br>**Orsak** <br> Problem med din nätverksanslutning, tjänsten är inte tillgänglig på grund av planerat underhåll eller avbrott på Adobe-molnet. <br><br>**Lösning** <br> Lös problemen med nätverksanslutningen och kontrollera tjänstens status på https://status.adobe.com/ för att se planerade eller oplanerade avbrott. | ![Det går inte att ansluta till tjänsten.](assets/conversion-failure.png) |
 | **Felmeddelande** <br> Antalet sidor är fler än 15.  <br><br>**Orsak** <br> Källformuläret består av fler än 15 sidor.  <br><br>**Lösning** <br> Använd Adobe Acrobat för att dela formulär med fler än 15 sidor. Minska antalet sidor i ett formulär till färre än 15. | ![Det går inte att ansluta till tjänsten.](assets/number-of-pages.png) |
 | **Felmeddelande** <br> Antalet filer är fler än 15.  <br><br>**Orsak** <br>  Mappen innehåller fler än 15 formulär. <br><br>**Lösning** <br> Minska antalet formulär i mappen till färre än eller lika med 15. Minska det totala antalet sidor i en mapp till färre än 50. Minska mappens storlek till mindre än 10 MB. Lägg inte formulär i en undermapp. Organisera källformulären i en grupp med 8–15 formulär. | ![Det går inte att ansluta till tjänsten.](assets/number-of-pages.png) |
@@ -52,7 +52,7 @@ Dokumentet innehåller grundläggande felsökningssteg för vanliga fel.
 <td><img alt="The access token header is not available" src="assets/invalid-ims-configuration.png" /></td>
 </tr>
 <tr>
-<td><strong>Error Message</strong> <br> Unable to connect to the service.  <br><br><strong>Reason</strong> <br> Incorrect service URL or no service URL is mentioned in Automated Forms Conversion Service cloud services. <br><br><strong>Resolution</strong> <br> Correct <a href="configure-service.md#configure-the-cloud-service">Service URL</a> in Automated Forms Conversion Service Cloud services.</td>
+<td><strong>Error Message</strong> <br> Unable to connect to the service.  <br><br><strong>Reason</strong> <br> Incorrect service URL or no service URL is mentioned in Automated Forms Conversion Service (AFCS) cloud services. <br><br><strong>Resolution</strong> <br> Correct <a href="configure-service.md#configure-the-cloud-service">Service URL</a> in Automated Forms Conversion Service (AFCS) Cloud services.</td>
 <td><img alt="Unable to connect to the service." src="assets/wrong-endpoint-configured.png" /></td>
 </tr>
 <tr>
