@@ -13,7 +13,7 @@ role: User
 source-git-commit: 298d6c0641d7b416edb5b2bcd5fec0232f01f4c7
 workflow-type: tm+mt
 source-wordcount: '87'
-ht-degree: 100%
+ht-degree: 36%
 
 ---
 
@@ -22,14 +22,14 @@ ht-degree: 100%
 
 + [Introduktion](introduction.md)
 + [Versionsinformation](release-notes.md)
-+ [Rekommenderad praxis och saker att tänka på](styles-and-pattern-considerations-and-best-practices.md)
++ [Bästa praxis och överväganden](styles-and-pattern-considerations-and-best-practices.md)
 + [Konfigurera tjänsten](configure-service.md)
-+ [Konvertera utskriftsformulär till anpassningsbara formulär](convert-existing-forms-to-adaptive-forms.md)
++ [Konvertera tryckta formulär till anpassningsbara formulär](convert-existing-forms-to-adaptive-forms.md)
 + [Granska och korrigera konverterade formulär](review-correct-ui-edited.md)
 + [Utöka standardmetamodellen](extending-the-default-meta-model.md)
-+ [Rekommenderad ifyllning baserad på datakälla och skicka in arbetsflöden för anpassningsbara formulär](prefill-submit-forms.md)
-+ [Rekommenderade arbetsflöden för att aktivera generering av dokument över dataposter för anpassningsbara formulär](enable-document-of-record-generation.md)
-+ [Integrera anpassningsbara formulär med databas med hjälp av AEM-arbetsflöde](submit-converted-adaptive-form-to-database.md)
-+ [Vanliga frågor](frequently-asked-questions.md)
++ [Rekommenderade arbetsflöden för förifyllnad och inskickning av datakällor för anpassningsbara formulär](prefill-submit-forms.md)
++ [Rekommenderade arbetsflöden för att aktivera dokumentgenerering för adaptiva formulär](enable-document-of-record-generation.md)
++ [Integrera anpassningsbara blanketter med databaser med hjälp av AEM arbetsflöde](submit-converted-adaptive-form-to-database.md)
++ [Frågor och svar](frequently-asked-questions.md)
 + [Kända fel](known-issues.md)
-+ [Felsök](troubleshoot-afcs.md)
++ [Felsökning](troubleshoot-afcs.md)

@@ -22,11 +22,11 @@ ht-degree: 0%
 Med hjälp av DoR (Document of Record) kan du spara information som du anger och skicka i en anpassningsbar form så att du kan hänvisa till den senare.
 I DoR används en basmall för att definiera dess layout. Du kan generera en DoR-fil antingen med en standardmall eller genom att associera en annan mall med det adaptiva formuläret.
 
-![Genererat arkivdokument](assets/document_of_record.gif)
+![Skapat postdokument](assets/document_of_record.gif)
 
-Mer information om hur du genererar en DoR finns i [Generera arkivdokument för anpassningsbara formulär](https://helpx.adobe.com/experience-manager/6-5/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.html).
+Mer information om hur du genererar en DoR-referens finns i [Skapa postdokument för anpassningsbara formulär](https://helpx.adobe.com/experience-manager/6-5/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.html).
 
-The [Tjänsten automated forms conversion (AFCS)](/help/using/introduction.md) konverterar följande källformulär till anpassningsbara formulär:
+Tjänsten [Automated forms conversion (AFCS)](/help/using/introduction.md) konverterar följande källformulär till anpassningsbara formulär:
 
 * icke-interaktiv PDF forms
 * Acro Forms
@@ -43,7 +43,7 @@ I följande tabell visas ett exempel på hur DoR-mallen som du använder påverk
 <table> 
  <tbody>
  <tr>
-  <td><p><strong>Källformulär</strong></p></td>
+  <td><p><strong>Source Form</strong></p></td>
   <td><p><strong>Genererad DoR</strong></p></td> 
    </tr>
   <tr>
@@ -63,7 +63,7 @@ I den här artikeln beskrivs de rekommenderade sökvägarna för att generera en
 <table> 
  <tbody> 
   <tr> 
-   <th><strong>Källformulär</strong></th> 
+   <th><strong>Source Form</strong></th> 
    <th><strong>Metoder som genererar DoR</strong></th> 
   </tr> 
   <tr> 
@@ -94,11 +94,11 @@ Om du använder ett icke-interaktivt PDF-formulär som källformulär för tjän
 
 ### Aktivera DoR-generering före konvertering för att generera DoR med standardmall {#generate-document-of-record-using-cloud-configuration}
 
-1. Välj **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Automated Forms Conversion Configuration]** > Egenskaper för molnkonfiguration som används för konvertering > **[!UICONTROL Advanced]** > **[!UICONTROL Generate Document of Record]** alternativ.
+1. Välj **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Automated Forms Conversion Configuration]** > Egenskaper för molnkonfiguration som används för konvertering > **[!UICONTROL Advanced]** > alternativet **[!UICONTROL Generate Document of Record]**.
 
-   ![Generera postdokument med molnkonfiguration](assets/generate_dor_cloud_config.gif)
+   ![Skapa dokument för post med molnkonfiguration](assets/generate_dor_cloud_config.gif)
 
-1. Tryck **[!UICONTROL Save & Close]** för att spara inställningarna.
+1. Tryck på **[!UICONTROL Save & Close]** för att spara inställningarna.
 
 1. [Kör konverteringen](/help/using/convert-existing-forms-to-adaptive-forms.md). Se till att du använder den molnkonfiguration som har redigerats i steg 1 av dessa instruktioner.
 När du skickar det konverterade adaptiva formuläret genereras DoR automatiskt med standardmallen.
@@ -109,15 +109,15 @@ Om du inte aktiverar DoR-generering innan du konverterar källformuläret till e
 
 1. [Kör konverteringen](/help/using/convert-existing-forms-to-adaptive-forms.md) på det icke-interaktiva PDF-formuläret för att generera ett adaptivt formulär.
 
-1. Markera det adaptiva formuläret i dialogrutan **[!UICONTROL output]** mapp och tryck **[!UICONTROL Properties]**.
+1. Markera det adaptiva formuläret i mappen **[!UICONTROL output]** och tryck på **[!UICONTROL Properties]**.
 
-1. I **[!UICONTROL Form Model]** -fliken, expandera **[!UICONTROL Document of Record Template Configuration]** avsnitt och markera **[!UICONTROL Generate Document of Record]**.
+1. Expandera avsnittet **[!UICONTROL Document of Record Template Configuration]** på fliken **[!UICONTROL Form Model]** och välj **[!UICONTROL Generate Document of Record]**.
 
    ![Generera postdokument](assets/generate_dor_af_properties.png)
 
-1. Tryck **[!UICONTROL Save & Close]** för att spara inställningarna.
+1. Tryck på **[!UICONTROL Save & Close]** för att spara inställningarna.
 
-När du skickar det konverterade adaptiva formuläret genereras DoR automatiskt med standardmallen. Om du vill koppla en annan DoR-mall till det konverterade adaptiva formuläret kan du välja **[!UICONTROL Associate form template as the Document of Record template]** alternativ.
+När du skickar det konverterade adaptiva formuläret genereras DoR automatiskt med standardmallen. Om du vill koppla en annan DoR-mall till det konverterade adaptiva formuläret kan du välja alternativet **[!UICONTROL Associate form template as the Document of Record template]**.
 
 ## Generera urkunder för Acro Forms eller XFA-baserad PDF forms {#generate-document-of-record-acroform-xfaform}
 
@@ -129,13 +129,13 @@ Om du använder ett Acro-formulär eller ett XFA-baserat PDF-formulär som käll
 
 ### Aktivera DoR-generering före konvertering för att generera DoR med källformulärsmallen {#use-input-form-as-template-to-generate-document-of-record}
 
-1. Välj **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Automated Forms Conversion Configuration]** > Egenskaper för molnkonfiguration som används för konvertering > **[!UICONTROL Advanced]** > **[!UICONTROL Generate Document of Record]** alternativ.
+1. Välj **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Automated Forms Conversion Configuration]** > Egenskaper för molnkonfiguration som används för konvertering > **[!UICONTROL Advanced]** > alternativet **[!UICONTROL Generate Document of Record]**.
 
-1. Tryck **[!UICONTROL Save & Close]** för att spara inställningarna.
+1. Tryck på **[!UICONTROL Save & Close]** för att spara inställningarna.
 
 1. [Kör konverteringen](/help/using/convert-existing-forms-to-adaptive-forms.md). Se till att du använder den molnkonfiguration som har redigerats i steg 1 av dessa instruktioner.
 Konverteringstjänsten kopplar automatiskt Acro-formuläret eller XFA-formuläret PDF till det konverterade adaptiva formuläret som DoR-mallen.
-Du kan öppna de adaptiva formuläregenskaperna för att visa DoR-mallen i dialogrutan **[!UICONTROL Document of Record Template Configuration]** avsnitt i **[!UICONTROL Form Model]** -fliken.
+Du kan öppna de adaptiva formuläregenskaperna för att visa DoR-mallen i avsnittet **[!UICONTROL Document of Record Template Configuration]** på fliken **[!UICONTROL Form Model]**.
 
    ![Redigera anpassningsbara formuläregenskaper för att generera arkivdokument](assets/generate_dor_af_properties_xdp_acro.png)
 
@@ -145,9 +145,9 @@ Du kan öppna de adaptiva formuläregenskaperna för att visa DoR-mallen i dialo
 
 1. [Kör konverteringen](/help/using/convert-existing-forms-to-adaptive-forms.md) på det icke-interaktiva PDF-formuläret för att generera ett adaptivt formulär.
 
-1. Markera det adaptiva formuläret i dialogrutan **[!UICONTROL output]** mapp och tryck **[!UICONTROL Properties]**.
+1. Markera det adaptiva formuläret i mappen **[!UICONTROL output]** och tryck på **[!UICONTROL Properties]**.
 
-1. I **[!UICONTROL Form Model]** -fliken, expandera **[!UICONTROL Document of Record Template Configuration]** avsnitt och markera **[!UICONTROL Generate Document of Record]** för att aktivera DoR-generering med standardmallen.
-Du kan också välja **[!UICONTROL Associate form template as the Document of Record template]** och välj mallen för att aktivera DoR-generering med hjälp av källformulärsmallen eller någon annan formulärmall.
+1. Utöka avsnittet **[!UICONTROL Document of Record Template Configuration]** på fliken **[!UICONTROL Form Model]** och välj **[!UICONTROL Generate Document of Record]** för att aktivera DoR-generering med standardmallen.
+Du kan också välja alternativet **[!UICONTROL Associate form template as the Document of Record template]** och välja mallen för att aktivera DoR-generering med hjälp av källformulärsmallen eller någon annan formulärmall.
 
-1. Tryck **[!UICONTROL Save & Close]** för att spara inställningarna.
+1. Tryck på **[!UICONTROL Save & Close]** för att spara inställningarna.

@@ -10,8 +10,8 @@ level: Beginner, Intermediate
 exl-id: fccafbc9-28c1-4736-922c-24d675b25213
 source-git-commit: e95b4ed35f27f920b26c05f3398529f825948f1f
 workflow-type: tm+mt
-source-wordcount: '451'
-ht-degree: 66%
+source-wordcount: '487'
+ht-degree: 64%
 
 ---
 
@@ -30,11 +30,11 @@ Konverteringstjänsten för automatiserade formulär förbättras fortlöpande. 
 
 ## 24 feb 2022 (AFC-2022.02.0) {#feb-2022}
 
-* Förbättrade funktioner för [automatiskt konvertera avsnitt till fragment](convert-existing-forms-to-adaptive-forms.md) för att förbättra återgivningshastigheten för konverterade formulär och göra det enklare att läsa in stora formulär i en adaptiv formulärredigerare.
+* Funktioner för att [automatiskt konvertera avsnitt till fragment](convert-existing-forms-to-adaptive-forms.md) har lagts till för att förbättra återgivningshastigheten för konverterade formulär och göra det enklare att läsa in stora formulär i en adaptiv formulärredigerare.
 
 ## 29 aug 2021 (AFC-2021.08.0) {#aug-2021}
 
-* Möjlighet att konvertera PDF forms på italienska och portugisiska till ett adaptivt format har lagts till.
+* Förbättrade funktioner för att konvertera PDF forms på italienska och portugisiska till anpassade formulär.
 
 ## 29 juli 2021 (AFC-2021.07.2) {#july-2021}
 
@@ -86,6 +86,6 @@ Tjänsten är nu effektivare när det gäller att upptäcka numrerade och spalta
 
 **Installera paketet Automated Forms Conversion Service connector**
 
-Du behöver kopplingspaketet 1.1.38 eller senare för att kunna använda de senaste funktionerna och förbättringarna som levererades i version AFC-2020.03.1.
+Du behöver kopplingspaketet 1.1.38 eller senare för att kunna använda de senaste funktionerna och förbättringarna i version AFC-2020.03.1.
 
 Om du redan har en miljö som är installerad och körs för konvertering av automatiserade formulär kan du använda de senaste funktionerna i konverteringstjänsten genom att installera det senaste Service Pack-paketet, det senaste AEM Forms-tilläggspaketet och det senaste kopplingspaketet, i angiven ordning. För detaljerade instruktioner, se artikel [Konfigurera konverteringstjänsten för automatiserade formulär](configure-service.md).

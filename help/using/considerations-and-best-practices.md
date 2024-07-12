@@ -1,6 +1,6 @@
 ---
 title: Bästa praxis och överväganden
-description: PUBLICERA INTE
+description: DO NOT PUBLISH
 seo-description: DO NOT PUBLISH
 page-status-flag: never-activated
 uuid: c2821264-39e2-44f8-b234-835c46f33fd5
@@ -26,7 +26,7 @@ AEM Forms tjänst för automatisk konvertering konverterar ett PDF-formulär til
 
 Automated forms conversion-tjänsten (AFCS) har utbildats på ett stort antal formulär. Den identifierar enkelt fält i ett källformulär och skapar anpassningsbara formulär. Det finns dock vissa fält och format i PDF forms som är lätta att se för det mänskliga ögat men svåra att förstå för tjänsten. Tjänsten kan tilldela vissa fält eller format andra än tillämpliga fälttyper eller paneler. Alla sådana fält- och formatmönster listas nedan.
 
-Tjänsten börjar identifiera och tilldela rätt fält eller paneler till dessa mönster när den lär sig av källdata. Du kan använda [Granska och korrigera](review-correct-ui-edited.md) för att åtgärda sådana problem. Innan du börjar åtgärda problemen eller läser mer, bekanta dig med [adaptiva formulärkomponenter](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html).
+Tjänsten börjar identifiera och tilldela rätt fält eller paneler till dessa mönster när den lär sig av källdata. Du kan använda redigeraren [Granska och korrigera](review-correct-ui-edited.md) för att korrigera sådana problem. Innan du börjar åtgärda problemen eller läser mer bör du bekanta dig med [adaptiva formulärkomponenter](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html).
 
 ## Allmänt {#general}
 

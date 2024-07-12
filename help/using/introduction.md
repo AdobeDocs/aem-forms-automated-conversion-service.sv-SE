@@ -29,7 +29,7 @@ Tjänsten Automated forms conversion (AFCS) snabbar upp digitaliseringen och mod
 
 ## Onboarding {#onboarding}
 
-Tjänsten är kostnadsfri för kunder med AEM 6.4 Forms och AEM 6.5 Forms On-Premise och företagskunder med Adobe-Managed Service. Du kan kontakta Adobe säljteam eller din Adobe-representant för att begära åtkomst till tjänsten. Tjänsten är också tillgänglig kostnadsfritt och föraktiverat för as a Cloud Service AEM Forms-kunder.
+Tjänsten är kostnadsfri för kunder med AEM 6.4 Forms och AEM 6.5 Forms On-Premise och företagskunder med Adobe-Managed Service. Du kan kontakta Adobe säljteam eller din Adobe-representant för att begära åtkomst till tjänsten. Tjänsten är också tillgänglig kostnadsfritt och föraktiverad för AEM Forms as a Cloud Service kunder.
 
 Adobe aktiverar åtkomst för organisationen och tillhandahåller behörigheter åt den person som utses till administratör i organisationen. Administratören kan ge åtkomst till AEM Forms-utvecklare (användare) i organisationen så att de kan ansluta till tjänsten. Mer information finns i [Konfigurera den automatiserade konverteringstjänsten för formulär](configure-service.md).
 
@@ -39,7 +39,7 @@ Tjänsten stöder icke-interaktiva PDF-formulär, formulär som är skapade med 
 
 Tjänsten har även stöd för Adobe Sign-aktiverade PDF forms. Om källformuläret för PDF har Adobe Sign-texttaggar, bevarar tjänsten all Adobe Sign-relaterad information under konverteringen och associerar signerarinformationen som finns i källformuläret för PDF med motsvarande adaptiva formulärfält. Funktionen är bara tillgänglig för AcroForms.
 
-Tjänsten kan konvertera engelska, franska, tyska, spanska, italienska och portugisiska blanketter till anpassningsbara blanketter. Du kan också översätta de genererade anpassningsbara formulären till ett annat språk med [Arbetsflöde för AEM](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html).
+Tjänsten kan konvertera engelska, franska, tyska, spanska, italienska och portugisiska blanketter till anpassningsbara blanketter. Du kan också översätta de genererade anpassade formulären till ett annat språk med hjälp av [AEM översättningsarbetsflöde](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html).
 
 ## Arbetsflöde för konvertering  {#conversion-workflow}
 

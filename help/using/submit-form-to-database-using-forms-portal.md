@@ -20,7 +20,7 @@ Om du väljer att generera ett adaptivt formulär utan databindningar kan du int
 
 Följande bild visar olika steg i integreringen av ett konverterat adaptivt formulär i en databas med hjälp av Forms Portal:
 
-![databasintegration](assets/database_integration.gif)
+![databasintegrering](assets/database_integration.gif)
 
 I den här artikeln beskrivs de stegvisa instruktionerna för att köra alla dessa integrationssteg.
 
@@ -29,9 +29,9 @@ Exemplet, som behandlas i den här artikeln, är en referensimplementering av an
 ## Krav {#pre-requisites}
 
 * Konfigurera en AEM 6.4- eller 6.5-författarinstans
-* Installera [senaste Service Pack](https://helpx.adobe.com/experience-manager/aem-releases-updates.html) för AEM
+* Installera [senaste Service Pack](https://helpx.adobe.com/experience-manager/aem-releases-updates.html) för din AEM
 * Senaste versionen av AEM Forms-tilläggspaketet
-* Konfigurera [Tjänsten automated forms conversion (AFCS)](configure-service.md)
+* Konfigurera tjänsten [Automated forms conversion (AFCS)](configure-service.md)
 * Konfigurera en databas. Databasen som används i exempelimplementeringen är MySQL 5.6.24. Du kan emellertid integrera det konverterade adaptiva formuläret med valfri databas.
 
 ## Konfigurera anslutning mellan AEM och databas {#set-up-connection-aem-instance-database}
@@ -50,11 +50,11 @@ En anslutning mellan en AEM och en MYSQL-databas skapas:
 
 Utför följande steg på alla författare- och publiceringsinstanser för att installera filen mysql-connector-java-5.1.39-bin.jar:
 
-1. Navigera till http://[server]:[port]/system/console/depfinder och sök efter paketet com.mysql.jdbc.
+1. Gå till http://[server]:[port]/system/console/depfinder och sök efter paketet com.mysql.jdbc.
 1. I kolumnen Exporterad av kontrollerar du om paketet exporteras av något paket. Fortsätt om paketet inte exporteras av något paket.
-1. Navigera till http://[server]:[port]/system/console/bundles och klicka på **[!UICONTROL Install/Update]**.
-1. Klicka **[!UICONTROL Choose File]** och bläddra till filen mysql-connector-java-5.1.39-bin.jar. Välj även **[!UICONTROL Start Bundle]** och **[!UICONTROL Refresh Packages]** kryssrutor.
-1. Klicka **[!UICONTROL Install]** eller **[!UICONTROL Update]**. Starta om servern när du är klar.
+1. Gå till http://[server]:[port]/system/console/bundles och klicka på **[!UICONTROL Install/Update]**.
+1. Klicka på **[!UICONTROL Choose File]** och bläddra till filen mysql-connector-java-5.1.39-bin.jar. Markera även kryssrutorna **[!UICONTROL Start Bundle]** och **[!UICONTROL Refresh Packages]**.
+1. Klicka på **[!UICONTROL Install]** eller **[!UICONTROL Update]**. Starta om servern när du är klar.
 1. (Endast Windows) Stäng av operativsystemets brandvägg.
 
 ### Skapa schema och tabeller i databasen {#create-schema-and-tables-in-database}
@@ -69,7 +69,7 @@ Utför följande steg för att skapa schema och tabeller i databasen:
 
    där **formsportal** refererar till schemats namn.
 
-1. Skapa en **data** i databasschemat med följande SQL-sats:
+1. Skapa en **data**-tabell i databasschemat med följande SQL-sats:
 
    ```sql
     CREATE TABLE `data` (
@@ -81,7 +81,7 @@ Utför följande steg för att skapa schema och tabeller i databasen:
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
    ```
 
-1. Skapa en **metadata** i databasschemat med följande SQL-sats:
+1. Skapa en **metadata**-tabell i databasschemat med följande SQL-sats:
 
    ```sql
    CREATE TABLE `metadata` (
@@ -121,7 +121,7 @@ Utför följande steg för att skapa schema och tabeller i databasen:
        ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
    ```
 
-1. Skapa en **ytterligare metadatafunktioner** i databasschemat med följande SQL-sats:
+1. Skapa en **ytterligare metadatatabell** i databasschemat med följande SQL-sats:
 
    ```sql
    CREATE TABLE `additionalmetadatatable` (
@@ -133,7 +133,7 @@ Utför följande steg för att skapa schema och tabeller i databasen:
        ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
    ```
 
-1. Skapa en **kommentarbar** i databasschemat med följande SQL-sats:
+1. Skapa en **kommentarbar**-tabell i databasschemat med följande SQL-sats:
 
    ```sql
    CREATE TABLE `commenttable` (
@@ -148,7 +148,7 @@ Utför följande steg för att skapa schema och tabeller i databasen:
 
 Utför följande konfigurationssteg för att skapa en anslutning mellan AEM och MYSQL-databasen:
 
-1. Gå till sidan AEM Web Console Configuration på *http://[värd]:[port]/system/console/configMgr*.
+1. Gå till AEM webbkonsolkonfigurationssida på *http://[host]:[port]/system/console/configMgr*.
 1. Klicka för att öppna **[!UICONTROL Forms Portal Draft and Submission Configuration]** i redigeringsläge.
 1. Ange värdena för egenskaperna enligt följande tabell:
 
@@ -191,7 +191,7 @@ Utför följande konfigurationssteg för att skapa en anslutning mellan AEM och 
     </tr>
     </tbody> 
     </table>
-1. Låt andra konfigurationer vara och klicka **[!UICONTROL Save]**.
+1. Låt andra konfigurationer vara som de är och klicka på **[!UICONTROL Save]**.
 1. Sök och klicka för att öppna **[!UICONTROL Apache Sling Connection Pooled DataSource]** i redigeringsläge i webbkonsolkonfigurationen. Ange värdena för egenskaperna enligt följande tabell:
 
    <table> 
@@ -267,35 +267,35 @@ Utför följande konfigurationssteg för att skapa en anslutning mellan AEM och 
 
 Utför följande steg på alla författare- och publiceringsinstanser för att installera och konfigurera exemplet:
 
-1. Hämta följande **aem-fp-db-integration-sample-pkg-6.1.2.zip** till filsystemet.
+1. Hämta följande **aem-fp-db-integration-sample-pkg-6.1.2.zip** -paket till filsystemet.
 
 [Hämta fil](assets/aem-fp-db-integration-sample-pkg-6.1.2.zip)
 
-1. Gå till AEM *http://[värd]:[port]/crx/packmgr/*.
+1. Gå till AEM på *http://[host]:[port]/crx/packmgr/*.
 1. Klicka på **[!UICONTROL Upload Package]**.
-1. Välj **aem-fp-db-integration-sample-pkg-6.1.2.zip** paketera och klicka **[!UICONTROL OK]**.
-1. Klicka **[!UICONTROL Install]** bredvid paketet för att installera paketet.
+1. Bläddra till paketet **aem-fp-db-integration-sample-pkg-6.1.2.zip** och klicka på **[!UICONTROL OK]**.
+1. Klicka på **[!UICONTROL Install]** bredvid paketet för att installera paketet.
 
 ## Konfigurera det konverterade adaptiva formuläret för integrering med Forms Portal {#configure-converted-adaptive-form-for-forms-portal-integration}
 
 Utför följande steg för att aktivera adaptiv formulärinlämning på Forms Portal-sidan:
-1. [Kör konverteringen](convert-existing-forms-to-adaptive-forms.md#start-the-conversion-process) för att konvertera ett källformulär till ett anpassningsbart formulär.
+1. [Kör konverteringen](convert-existing-forms-to-adaptive-forms.md#start-the-conversion-process) för att konvertera ett källformulär till ett anpassat formulär.
 1. Öppna det adaptiva formuläret i redigeringsläge.
-1. Tryck på formulärbehållaren och välj Konfigurera ![Konfigurera hjälpformulär](assets/configure-adaptive-form.png).
-1. I **[!UICONTROL Submission]** avsnitt, markera **[!UICONTROL Forms Portal Submit Action]** från **[!UICONTROL Submit Action]** listruta.
-1. Tryck ![Spara mallprincip](assets/edit_template_done.png) för att spara inställningarna.
+1. Tryck på formulärbehållaren och välj Konfigurera ![Anpassa formulär](assets/configure-adaptive-form.png).
+1. I avsnittet **[!UICONTROL Submission]** väljer du **[!UICONTROL Forms Portal Submit Action]** i listrutan **[!UICONTROL Submit Action]**.
+1. Tryck på ![Spara mallprincip](assets/edit_template_done.png) för att spara inställningarna.
 
 ## Skapa och konfigurera Forms Portal-sidan {#create-configure-forms-portal-page}
 
 Så här skapar du en Forms Portal-sida och konfigurerar den så att du kan skicka adaptiva formulär på den här sidan:
 
-1. Logga in på AEM författarinstans och tryck på **[!UICONTROL Adobe Experience Manager]** >  **[!UICONTROL Sites]**.
+1. Logga in på AEM författarinstans och tryck på **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Sites]**.
 1. Välj den plats där du vill spara den nya Forms Portal-sidan och tryck på **[!UICONTROL Create]** > **[!UICONTROL Page]**.
-1. Välj en mall för sidan och tryck på **[!UICONTROL Next]**, ange en rubrik för sidan och tryck på **[!UICONTROL Create]**.
-1. Tryck **[!UICONTROL Edit]** för att konfigurera sidan.
-1. Tryck på i sidhuvudet ![Redigera mall](assets/edit_template_sites.png)  > **[!UICONTROL Edit Template]** för att öppna sidans mall.
-1. Tryck på Layout Container (Layoutbehållare) och tryck på ![Redigera mallprincip](assets/edit_template_policy.png). I **[!UICONTROL Allowed Components]** -fliken, aktivera **[!UICONTROL Document Services]** och **[!UICONTROL Document Services Predicates]** och trycka ![Spara mallprincip](assets/edit_template_done.png).
-1. Infoga **[!UICONTROL Search & Lister]** -komponenten på sidan. Därför listas alla befintliga adaptiva formulär som finns i AEM på sidan.
-1. Infoga **[!UICONTROL Drafts & Submissions]** -komponenten på sidan. Två flikar, **[!UICONTROL Draft Forms]** och **[!UICONTROL Submitted Forms]**, visas på Forms Portal-sidan. The **[!UICONTROL Draft Forms]** visar även det konverterade adaptiva formuläret som genererats med hjälp av stegen i [Konfigurera det konverterade adaptiva formuläret för integrering med Forms Portal](#configure-converted-adaptive-form-for-forms-portal-integration)
+1. Välj sidans mall, tryck på **[!UICONTROL Next]**, ange en rubrik för sidan och tryck på **[!UICONTROL Create]**.
+1. Tryck på **[!UICONTROL Edit]** för att konfigurera sidan.
+1. I sidhuvudet trycker du på ![Redigera mall](assets/edit_template_sites.png) > **[!UICONTROL Edit Template]** för att öppna sidans mall.
+1. Tryck på Layoutbehållare och tryck på ![Redigera mallprincip](assets/edit_template_policy.png). Aktivera alternativen **[!UICONTROL Document Services]** och **[!UICONTROL Document Services Predicates]** på fliken **[!UICONTROL Allowed Components]** och tryck sedan på ![Spara mallprofil](assets/edit_template_done.png).
+1. Infoga komponenten **[!UICONTROL Search & Lister]** på sidan. Därför listas alla befintliga adaptiva formulär som finns i AEM på sidan.
+1. Infoga komponenten **[!UICONTROL Drafts & Submissions]** på sidan. Två flikar, **[!UICONTROL Draft Forms]** och **[!UICONTROL Submitted Forms]**, visas på Forms Portal-sidan. På fliken **[!UICONTROL Draft Forms]** visas även det konverterade adaptiva formuläret som genererats med stegen som beskrivs i [Konfigurera det konverterade adaptiva formuläret för integrering med Forms Portal](#configure-converted-adaptive-form-for-forms-portal-integration)
 
-1. Tryck **[!UICONTROL Preview]**, tryck på det konverterade adaptiva formuläret, ange värden för adaptiva formulärfält och skicka det. De värden som du anger för adaptiva formulärfält skickas till den integrerade databasen.
+1. Tryck på **[!UICONTROL Preview]**, tryck på det konverterade adaptiva formuläret, ange värden för adaptiva formulärfält och skicka det. De värden som du anger för adaptiva formulärfält skickas till den integrerade databasen.
