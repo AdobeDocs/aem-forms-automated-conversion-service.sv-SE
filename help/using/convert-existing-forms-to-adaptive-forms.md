@@ -70,8 +70,10 @@ När du har överfört formulären och konfigurerat tjänsten utför du följand
 
    1. Kontrollera att du har aktiverat [kärnkomponenter](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/introduction) på din AEM Forms-instans. Om det inte är aktiverat kan du [aktivera kärnkomponenter i din AEM 6.5](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components) - eller [Cloud Service-miljö](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/setup-configure-migrate/enable-adaptive-forms-core-components).
    1. Välj en [huvudkomponentbaserad adaptiv formulärmall och ett tema](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/sample-themes-templates-form-data-models-core-components) enligt bilden nedan:
+
       ![Välj adaptiv formulärmall](assets/select-af-template-1.png).
    1. Tryck på **[!UICONTROL Start Conversion]** för att konvertera PDF till ett kärnkomponentbaserat formulär.
+
    >[!NOTE]
    > * Egenskaper som databindning eller datamodellschema är inte tillgängliga för grundläggande komponentbaserade adaptiva formulär, men de är tillgängliga för grundkomponenter.
    > * [Granska och korrigera de konverterade formulären](#review-and-correct-the-converted-forms) är inte tillgängligt för kärnkomponentbaserade formulär.
@@ -102,7 +104,7 @@ Om du väljer det här alternativet genererar konverteringstjänsten ett adaptiv
    >[!NOTE]
    >
    >
-   > * Du kan bara använda alternativet **[!UICONTROL  Extract Fragment]** eller **[!UICONTROL Use existing adaptive form fragments]** åt gången. Du kan inte använda båda alternativen samtidigt.
+   > * Du kan bara använda alternativet **[!UICONTROL &#x200B; Extract Fragment]** eller **[!UICONTROL Use existing adaptive form fragments]** åt gången. Du kan inte använda båda alternativen samtidigt.
    > * Du kan bara använda alternativet **[!UICONTROL Use existing adaptive form fragments]** med icke-interaktiva PDF forms. Andra formulärtyper stöds inte ännu.
    > * Du kan bara använda obundna fragment eller fragment som är bundna till ett JSON-schema med den automatiserade konverteringstjänsten. Använd inte XFA-fragment. XFA-fragment stöds inte.
    >

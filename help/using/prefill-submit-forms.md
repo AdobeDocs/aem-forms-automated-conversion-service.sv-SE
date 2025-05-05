@@ -225,7 +225,7 @@ Mer information om hur du använder JSON-schema som formulärmodell i adaptiva f
 
 ## Generera anpassningsbara formulär utan databindning {#generate-adaptive-forms-with-no-data-binding}
 
-Använd tjänsten [Automated forms conversion för att konvertera](convert-existing-forms-to-adaptive-forms.md) exempellåneansökningsformuläret [](#sample-adaptive-form) till ett anpassningsbart formulär utan databindning. Kontrollera att du markerar kryssrutan **[!UICONTROL Generate adaptive form(s) without data bindings]** för att generera det adaptiva formuläret utan databindning.
+Använd tjänsten [Automated forms conversion för att konvertera](convert-existing-forms-to-adaptive-forms.md) exempellåneansökningsformuläret [&#128279;](#sample-adaptive-form) till ett anpassningsbart formulär utan databindning. Kontrollera att du markerar kryssrutan **[!UICONTROL Generate adaptive form(s) without data bindings]** för att generera det adaptiva formuläret utan databindning.
 
 ![Anpassat formulär utan databindning](assets/generate_af_without_binding.png)
 
@@ -379,7 +379,7 @@ Välj **Sökande** > **Namn** i fältet Bindningsreferens och tryck sedan på ![
 
 ## Generera anpassningsbara formulär med JSON-bindning {#generate-adaptive-forms-with-json-binding}
 
-Använd tjänsten [Automated forms conversion (AFCS) för att konvertera](convert-existing-forms-to-adaptive-forms.md) exempellåneansökningsformuläret [](#sample-adaptive-form) till ett anpassningsbart formulär med databindning. Kontrollera att du inte markerar kryssrutan **[!UICONTROL Generate adaptive form(s) without data bindings]** när du genererar det adaptiva formuläret.
+Använd tjänsten [Automated forms conversion (AFCS) för att konvertera](convert-existing-forms-to-adaptive-forms.md) exempellåneansökningsformuläret [&#128279;](#sample-adaptive-form) till ett anpassningsbart formulär med databindning. Kontrollera att du inte markerar kryssrutan **[!UICONTROL Generate adaptive form(s) without data bindings]** när du genererar det adaptiva formuläret.
 
 ![Anpassat formulär med JSON-bindning](assets/generate_af_with_data_bindings.png)
 

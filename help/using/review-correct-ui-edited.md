@@ -85,7 +85,7 @@ Om du vill börja granska konverteringar markerar du PDF-källdokumentet som anv
 
    * Om du vill ta bort en panel markerar du panelen och trycker på ikonen Ta bort ![](assets/delete-icon.png) i verktygsfältet. Tryck på **[!UICONTROL Confirm]** i bekräftelsedialogrutan. Tryck på **[!UICONTROL Save]** för att spara ändringarna.
 
-   * Om du vill dela upp en panel markerar du panelen och trycker på ikonen Dela upp i verktygsfältet. Panelen är uppdelad och underordnade fält i den uppdelade panelen justeras till det överordnade fältet. Tryck på **[!UICONTROL Save]**för att spara ändringarna.
+   * Om du vill dela upp en panel markerar du panelen och trycker på ikonen Dela upp i verktygsfältet. Panelen är uppdelad och underordnade fält i den uppdelade panelen justeras till det överordnade fältet. Tryck på **[!UICONTROL Save]**&#x200B;för att spara ändringarna.
 
 1. **Skapa logiska grupper av text**: Verifiera de identifierade texterna för fullständighet och korrekthet. Kontrollera också att texterna är logiskt placerade i rätt paneler eller grupper. I en layout med flera kolumner kan du till exempel placera texten för en logisk grupp i en annan grupp.
 

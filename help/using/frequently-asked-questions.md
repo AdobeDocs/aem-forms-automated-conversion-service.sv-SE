@@ -101,7 +101,7 @@ Tjänsten stöder endast tomma eller ofyllda formulär. Ladda inte upp ifyllda f
    <p>Hur lång tid det tar beror på storleken och komplexiteten i indataformulären och antalet förfrågningar. Tjänsten har för avsikt att avsevärt minska time to value genom att konvertera PDF forms till anpassningsbara formulär i mycket snabbare takt jämfört med den manuella konverteringen av formulär. </p> <br />
 
 1. **Vad gör jag om jag råkar ut för ett fel som är relaterat till RSA-bibliotek? Felmeddelandet liknar meddelandet som anges nedan:** <br/>
-   `*ERROR* [0:0:0:0:0:0:0:1 [1565757652491] POST /content/dam/formsanddocuments/demo004.affBatchProcessor.html HTTP/1.1] org.apache.sling.engine.impl.SlingRequestProcessorImpl service: Uncaught Throwable java.lang.NoClassDefFoundError: Could not initialize class com.rsa.cryptoj.o.dl at com.rsa.jsafe.JSAFE_SecureRandom.getInstance(Unknown Source) at com.adobe.internal.pdfm.util.Util.appendRandomNumberToPrefix(Util.java: 169) [com.adobe.aemfd.adobe-aemfd-assembler:6.0.34] at com.adobe.internal.pdfm.logging.JobLog.&amp;lt;init&amp;gt;(JobLog.java:126) [com.adobe.aemfd.adobe-aemfd-assembler:6.0.34]` <br>
+   `*ERROR* [0:0:0:0:0:0:0:1 [1565757652491] POST /content/dam/formsanddocuments/demo004.affBatchProcessor.html HTTP/1.1] org.apache.sling.engine.impl.SlingRequestProcessorImpl service: Uncaught Throwable java.lang.NoClassDefFoundError: Could not initialize class com.rsa.cryptoj.o.dl at com.rsa.jsafe.JSAFE_SecureRandom.getInstance(Unknown Source) at com.adobe.internal.pdfm.util.Util.appendRandomNumberToPrefix(Util.java: 169) [com.adobe.aemfd.adobe-aemfd-assembler:6.0.34] at com.adobe.internal.pdfm.logging.JobLog.&lt;init&gt;(JobLog.java:126) [com.adobe.aemfd.adobe-aemfd-assembler:6.0.34]` <br>
 Ovannämnda fel inträffar när startdelegering inte har konfigurerats för RSA/BouncyCastle-bibliotek. Utför följande steg för att lösa problemet:
    <p> </p>
 
@@ -109,6 +109,7 @@ Ovannämnda fel inträffar när startdelegering inte har konfigurerats för RSA/
    1. Lägg till följande egenskaper i filen sling.properties:<br/> `sling.bootdelegation.class.com.rsa.jsafe.provider.JsafeJCE=com.rsa.*`<br />  `sling.bootdelegation.class.org.bouncycastle.jce.provider.BouncyCastleProvider=org.bouncycastle.*`<br /> `sling.bootdelegation.xerces=org.apache.xerces.*`
    1. Spara och stäng filen. <br/>
    1. Starta AEM.<br/>
+
    <br/>
 
 1. **Hur ändrar jag automatiskt skiftläget för adaptiv formulärtext?**

@@ -47,4 +47,4 @@ Project maintainers who do not follow or enforce the Code of Conduct in good fai
 
 ## Attribution
 
-[](https://contributor-covenant.org)[](https://contributor-covenant.org/version/1/4/)
+[&#128279;](https://contributor-covenant.org) [&#128279;](https://contributor-covenant.org/version/1/4/)

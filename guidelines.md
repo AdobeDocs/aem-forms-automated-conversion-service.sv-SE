@@ -37,9 +37,9 @@ Exceptions to this rule apply to the release notes where known issues can be lis
 
 Any ideas you may have to improve AEM documentation are welcome as contributions. ** They are not intended to be used to answer your questions about how to use AEM, implement your AEM project, or solve technical problems.
 
-[](https://experienceleague.adobe.com/?support-solution=Experience+Manager#home)[](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community)
+[&#128279;](https://experienceleague.adobe.com/?support-solution=Experience+Manager#home) [&#128279;](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community)
 
-******
+**&#x200B;**&#x200B;**
 
 ### Contributions must clearly reference affected documentation pages.
 
@@ -65,13 +65,13 @@ Remember, readers of AEM documentation are worldwide and can not be expected to 
 
 #### Follow Microsoft Manual of Style
 
-[](https://docs.microsoft.com/en-us/style-guide/welcome/)
+[&#128279;](https://docs.microsoft.com/en-us/style-guide/welcome/)
 
 ### Formatering
 
 | Objekt | Format |
 |---|---|
-| UI Element or option | **** |
+| UI Element or option | **&#x200B;**&#x200B;|
 | Filename, path, user-input, parameter-values | `monospaced` |
 | Code, command line | ```Code Block``` |
 
@@ -87,6 +87,6 @@ Try to avoid any direct references to a specific version throughout the document
 
 ### Use of Day, AEM, CQ, CRX
 
-********
+**&#x200B;**&#x200B;**&#x200B;**
 
 Day, Day Software, CQ, and CRX should not be used except where unavoidable such as in class names or referring to the history of AEM.

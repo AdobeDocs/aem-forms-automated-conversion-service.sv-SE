@@ -11,6 +11,6 @@ This is the repository for AEM Forms Automated Conversion Service documentation.
 
 Your contributions to the documentation are welcome. Please see the following resources:
 
-* [](contributing.md)
-* [](guidelines.md)
-* [](code-of-conduct.md)
+* [&#128279;](contributing.md)
+* [&#128279;](guidelines.md)
+* [&#128279;](code-of-conduct.md)
