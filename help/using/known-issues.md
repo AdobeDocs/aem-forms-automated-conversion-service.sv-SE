@@ -37,7 +37,7 @@ Innan du börjar använda tjänsten AEM Forms Automated Forms Conversion (AFCS) 
    * XFA-skript stöds inte. Skript för att automatiskt generera värden för en nedrullningsbar komponent.
    * Metamodellen fungerar inte för alternativgruppen
    * Alternativet för alternativgrupper med ett enda tecken identifieras inte
-   * När källdokumentet är en dynamisk XFA (.XDP) och [ definierar beteendet för XFA-egenskaper i en adaptiv form ](https://helpx.adobe.com/experience-manager/6-5/forms/using/xfa-api-supported-in-adaptive-form.html#supportedxfaelementsandtheirmappinginadaptiveformsbr) respekteras inte egenskapen presence för källdokumentet. Ett fält i källdokumentet är t.ex. dolt och ett skript gör fältet synligt. Fältet förblir synligt i det anpassningsbara utdataformuläret.
+   * När källdokumentet är en dynamisk XFA (.XDP) och [ definierar beteendet för XFA-egenskaper i en adaptiv form ](https://helpx.adobe.com/se/experience-manager/6-5/forms/using/xfa-api-supported-in-adaptive-form.html#supportedxfaelementsandtheirmappinginadaptiveformsbr) respekteras inte egenskapen presence för källdokumentet. Ett fält i källdokumentet är t.ex. dolt och ett skript gör fältet synligt. Fältet förblir synligt i det anpassningsbara utdataformuläret.
 
 * När du använder alternativet **Använd AcroForm-indata som DoR (Document of Record) för genererade adaptiva formulär** bör du tänka på följande:
 
@@ -76,7 +76,7 @@ Innan du börjar använda tjänsten AEM Forms Automated Forms Conversion (AFCS) 
 * PDF forms som är större än 15 sidor stöds inte.
 * Krypterade, lösenordsskyddade och skyddade dokument konverteras inte. Ta bort kryptering eller lösenord innan konverteringen körs.
 * Komplexa tabeller som tabeller utan kanter, kapslade tabeller och tabeller med platshållarvärden stöds inte. Använd adaptiv formulärredigerare för att lägga till eller ändra komplexa tabeller efter konverteringen. Endast enkla tabeller med tomma fält, korrekta rubriker och tydliga gränser stöds.
-* Tjänsten konverterar endast engelska, franska, tyska, spanska, italienska och portugisiska till anpassningsbara blanketter. Du kan översätta konverterade adaptiva formulär till ett annat språk med hjälp av [AEM översättningsarbetsflöde](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html).
+* Tjänsten konverterar endast engelska, franska, tyska, spanska, italienska och portugisiska till anpassningsbara blanketter. Du kan översätta konverterade adaptiva formulär till ett annat språk med hjälp av [AEM översättningsarbetsflöde](https://helpx.adobe.com/se/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html).
 * AEM 6.4 Forms stöder inte automatisk detektering av flerkolumnslayout för indataformulär.
 * Information som är kodad med färger i PDF-källformulär överförs inte till adaptiv form.
 * PDF-formulärets källfärger överförs inte till anpassningsbara formulärteman.

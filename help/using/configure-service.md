@@ -56,21 +56,21 @@ Innan du använder tjänsten förbereder du din AEM-författarinstans för att a
 
 Tjänsten Automated Forms Conversion (AFCS) körs på AEM Author Instance. Du måste ha AEM 6.5 eller AEM Forms as a Cloud Service för att kunna konfigurera en AEM-författarinstans.
 
-* Om du inte har AEM 6.5 installerat laddar du ned det från nedanstående platser. När du har hämtat AEM finns instruktioner om hur du konfigurerar en AEM-författarinstans i [Distribuera och underhålla](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#defaultlocalinstall).:
+* Om du inte har AEM 6.5 installerat laddar du ned det från nedanstående platser. När du har hämtat AEM finns instruktioner om hur du konfigurerar en AEM-författarinstans i [Distribuera och underhålla](https://helpx.adobe.com/se/experience-manager/6-5/sites/deploying/using/deploy.html#defaultlocalinstall).:
 
    * Om du redan är AEM-kund hämtar du AEM 6.5 från [Adobe licenswebbplats](http://licensing.adobe.com).
 
    * Om du är Adobe partner kan du använda [Adobe Partner Training Program](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=82357Q) för att begära AEM 6.5.
 
-* Om du använder AEM Forms as a Cloud Service kan du läsa mer i [AEM Forms as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/setup-environment/setup-forms-cloud-service.html?lang=en#setup-environment) och [konfigurera en lokal utvecklingsmiljö](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/setup-environment/setup-local-development-environment.html?lang=en#setup-environment).
+* Om du använder AEM Forms as a Cloud Service kan du läsa mer i [AEM Forms as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/setup-environment/setup-forms-cloud-service.html?lang=sv-SE#setup-environment) och [konfigurera en lokal utvecklingsmiljö](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/setup-environment/setup-local-development-environment.html?lang=sv-SE#setup-environment).
 
 ### 2. (Endast för AEM 6.5) Hämta och installera AEM senaste Service Pack {#servicepack}
 
-Hämta och installera den senaste versionen av AEM Service Pack. Mer information finns i [AEM 6.5 Service Pack versionsinformation](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/release-notes/release-notes).
+Hämta och installera den senaste versionen av AEM Service Pack. Mer information finns i [AEM 6.5 Service Pack versionsinformation](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/release-notes/release-notes).
 
 ### 3. (Endast för AEM 6.5) Hämta och installera AEM Forms-tilläggspaket  {#downloadaemformsaddon}
 
-En AEM-instans innehåller grundläggande formulärfunktioner. Konverteringstjänsten kräver AEM Forms alla funktioner. Ladda ned och installera AEM Forms-tilläggspaket för att utnyttja alla funktioner i AEM Forms. Paketet krävs för att konfigurera och köra konverteringstjänsten. Detaljerade instruktioner finns i [Installera och konfigurera datainhämtningsfunktioner.](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi)
+En AEM-instans innehåller grundläggande formulärfunktioner. Konverteringstjänsten kräver AEM Forms alla funktioner. Ladda ned och installera AEM Forms-tilläggspaket för att utnyttja alla funktioner i AEM Forms. Paketet krävs för att konfigurera och köra konverteringstjänsten. Detaljerade instruktioner finns i [Installera och konfigurera datainhämtningsfunktioner.](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi)
 https://adminconsole.adobe.com/
 >[!NOTE]
 > Kontrollera att du utför de obligatoriska konfigurationerna efter installationen när du har installerat tilläggspaketet.
@@ -119,7 +119,7 @@ Följ stegen nedan för att skapa en profil och lägga till utvecklare i den. Mi
    1. Ange utvecklarnas e-postadress och eventuellt för- och efternamn.
    1. Välj produktprofiler. Klicka på **[!UICONTROL Save]**.
 
-Upprepa stegen ovan för alla användare. Mer information om hur du lägger till utvecklare finns i [Hantera utvecklare](https://helpx.adobe.com/enterprise/using/manage-developers.html).
+Upprepa stegen ovan för alla användare. Mer information om hur du lägger till utvecklare finns i [Hantera utvecklare](https://helpx.adobe.com/se/enterprise/using/manage-developers.html).
 
 När en administratör har lagt till utvecklare i Adobe I/O-profilen meddelas utvecklarna via e-post (om den är konfigurerad).
 
@@ -137,7 +137,7 @@ Automated Forms Conversion service (AFCS) uses the Day CQ mail service to send e
 
    3. Open the **[!UICONTROL Day CQ Link Externalizer]** configuration. In the **[!UICONTROL Domains]** field, specify the actual host name or IP address and port number for local, author, and publish instances. Click **[!UICONTROL Save]**.
 
-* For AEM Forms as a Cloud Service, [log a support ticket to enable the email service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=en#sending-email). -->
+* For AEM Forms as a Cloud Service, [log a support ticket to enable the email service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=sv-SE#sending-email). -->
 
 ### Lägg till användare i gruppen för formuläranvändare {#adduserstousergroup}
 

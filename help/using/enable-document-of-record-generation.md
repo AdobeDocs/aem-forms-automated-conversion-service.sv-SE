@@ -24,7 +24,7 @@ I DoR används en basmall för att definiera dess layout. Du kan generera en DoR
 
 ![Skapat postdokument](assets/document_of_record.gif)
 
-Mer information om hur du genererar en DoR-referens finns i [Skapa postdokument för anpassningsbara formulär](https://helpx.adobe.com/experience-manager/6-5/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.html).
+Mer information om hur du genererar en DoR-referens finns i [Skapa postdokument för anpassningsbara formulär](https://helpx.adobe.com/se/experience-manager/6-5/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.html).
 
 Tjänsten [Automated forms conversion (AFCS)](/help/using/introduction.md) konverterar följande källformulär till anpassningsbara formulär:
 

@@ -63,7 +63,7 @@ Efter den första lyckade konverteringen lägger konverteringstjänsten över PD
 
 ### Innan du börjar {#before-you-start}
 
-* Gransknings- och korrigeringsredigeraren stöder inte fragment. Använd inte redigeraren för att granska konverteringar som hade alternativet **Extrahera fragment** aktiverat under konverteringar. Du kan använda den [anpassningsbara formulärredigeraren](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html) för sådana konverteringar.
+* Gransknings- och korrigeringsredigeraren stöder inte fragment. Använd inte redigeraren för att granska konverteringar som hade alternativet **Extrahera fragment** aktiverat under konverteringar. Du kan använda den [anpassningsbara formulärredigeraren](https://helpx.adobe.com/se/experience-manager/6-5/forms/using/introduction-forms-authoring.html) för sådana konverteringar.
 
 * Gransknings- och korrigeringsredigeraren har inte ångringsåtgärd. Använd knappen Spara bara för att spara ändringarna permanent.
 
@@ -187,7 +187,7 @@ Tryck på knappen **[!UICONTROL Save]** om du vill spara ändringarna eller anv�
 
 När du har gjort alla ändringar du behöver i gransknings- och korrigeringsredigeraren kan du skicka om formuläret för konvertering. Om du vill skicka formuläret för konvertering trycker du på **[!UICONTROL Save & Convert]**. **[!UICONTROL Sent for conversion label]** tillämpas på den mapp som innehåller källdokumentet och det uppdaterade källformuläret överförs till konverteringstjänsten som körs på Adobe I/O.
 
-Beroende på formulärets komplexitet kan det ta lite tid att konvertera formuläret. När konverteringen är klar hämtas det konverterade adaptiva formuläret och relaterade resurser till datorn. Du kan granska formuläret i redigeraren när konverteringen är klar och öppna det adaptiva formuläret i [adaptiv formulärredigerare](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html) för att se den slutliga uppsättningen korrigeringar, om det behövs.
+Beroende på formulärets komplexitet kan det ta lite tid att konvertera formuläret. När konverteringen är klar hämtas det konverterade adaptiva formuläret och relaterade resurser till datorn. Du kan granska formuläret i redigeraren när konverteringen är klar och öppna det adaptiva formuläret i [adaptiv formulärredigerare](https://helpx.adobe.com/se/experience-manager/6-5/forms/using/introduction-forms-authoring.html) för att se den slutliga uppsättningen korrigeringar, om det behövs.
 
 Om du skickar om ett formulär för konvertering efter att ha uppdaterat formuläret i en anpassad formulärredigerare, försvinner alla ändringar som gjorts i ett anpassat formulär. Du kan bara öppna ett formulär i granskningsläge och korrigera redigeraren efter en lyckad konvertering.
 

@@ -58,7 +58,7 @@ I den här artikeln beskrivs de rekommenderade arbetsflödena för att förifyll
   <tr>
   <td></td> 
    <td> 
-    <p><strong>Alternativ 1</strong>: Du <a href="#generate-adaptive-forms-with-no-data-binding">genererar ett adaptivt formulär utan databindning</a> med tjänsten Automated forms conversion (AFCS) och konfigurerar JSON-schemat som datakälla. Du binder de adaptiva formulärfälten till JSON-schemat manuellt och <a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/prepopulate-adaptive-form-fields.html#Supportedprotocolsforprefillinguserdata" target="_blank">använder något av de protokoll som stöds</a> för att förifylla fältvärden. Ändra fältvärdena, om det behövs, och skicka data till crx-databasen.</p></td> 
+    <p><strong>Alternativ 1</strong>: Du <a href="#generate-adaptive-forms-with-no-data-binding">genererar ett adaptivt formulär utan databindning</a> med tjänsten Automated forms conversion (AFCS) och konfigurerar JSON-schemat som datakälla. Du binder de adaptiva formulärfälten till JSON-schemat manuellt och <a href="https://helpx.adobe.com/se/experience-manager/6-5/forms/using/prepopulate-adaptive-form-fields.html#Supportedprotocolsforprefillinguserdata" target="_blank">använder något av de protokoll som stöds</a> för att förifylla fältvärden. Ändra fältvärdena, om det behövs, och skicka data till crx-databasen.</p></td> 
   </tr>
   <tr>
   <td></td> 
@@ -78,7 +78,7 @@ I den här artikeln beskrivs de rekommenderade arbetsflödena för att förifyll
   <tr>
   <td><p>XSD-schema</p></td> 
    <td> 
-    <p>Du väljer XSD-schema som datakälla. Baserat på den valda datakällan <a href="#generate-adaptive-forms-with-no-data-binding">skapar du ett anpassat formulär utan databindning</a> med tjänsten Automated forms conversion (AFCS) och konfigurerar XSD-schemat som datakälla. Du binder de adaptiva formulärfälten till XSD-schemat manuellt och <a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/prepopulate-adaptive-form-fields.html#Supportedprotocolsforprefillinguserdata" target="_blank">använder något av de protokoll som stöds</a> för att förifylla fältvärden. Ändra fältvärdena, om det behövs, och skicka data till crx-databasen.</p>
+    <p>Du väljer XSD-schema som datakälla. Baserat på den valda datakällan <a href="#generate-adaptive-forms-with-no-data-binding">skapar du ett anpassat formulär utan databindning</a> med tjänsten Automated forms conversion (AFCS) och konfigurerar XSD-schemat som datakälla. Du binder de adaptiva formulärfälten till XSD-schemat manuellt och <a href="https://helpx.adobe.com/se/experience-manager/6-5/forms/using/prepopulate-adaptive-form-fields.html#Supportedprotocolsforprefillinguserdata" target="_blank">använder något av de protokoll som stöds</a> för att förifylla fältvärden. Ändra fältvärdena, om det behövs, och skicka data till crx-databasen.</p>
     </td> 
   </tr>
   <tr>
@@ -102,7 +102,7 @@ Informationen i den här artikeln bygger på antagandet att alla som läser den 
 
 ## Krav {#pre-requisites}
 
-* Konfigurera en [AEM författarinstans](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html)
+* Konfigurera en [AEM författarinstans](https://helpx.adobe.com/se/experience-manager/6-5/sites/deploying/using/deploy.html)
 * Konfigurera tjänsten [Automated forms conversion (AFCS) på AEM författarinstans](configure-service.md)
 
 ## Exempel på anpassningsbart formulär {#sample-adaptive-form}
@@ -171,7 +171,7 @@ Exempel på XSD-schema för låneansökan
 
 [Hämta fil](assets/loanapplication.xsd)
 
-Mer information om hur du använder XSD-schema som formulärmodell i adaptiva formulär finns i [Skapa adaptiva formulär med XML-schema](https://helpx.adobe.com/experience-manager/6-5/forms/using/adaptive-form-xml-schema-form-model.html).
+Mer information om hur du använder XSD-schema som formulärmodell i adaptiva formulär finns i [Skapa adaptiva formulär med XML-schema](https://helpx.adobe.com/se/experience-manager/6-5/forms/using/adaptive-form-xml-schema-form-model.html).
 
 Om du använder ett JSON-schema som formulärmodell för att köra användningsfallen, skapar du en JSON-fil med följande text:
 
@@ -221,7 +221,7 @@ Exempelschema för låneansökan - JSON
 
 [Hämta fil](assets/demo_schema.json)
 
-Mer information om hur du använder JSON-schema som formulärmodell i adaptiva formulär finns i [Skapa adaptiva formulär med JSON-schema](https://helpx.adobe.com/experience-manager/6-5/forms/using/adaptive-form-json-schema-form-model.html).
+Mer information om hur du använder JSON-schema som formulärmodell i adaptiva formulär finns i [Skapa adaptiva formulär med JSON-schema](https://helpx.adobe.com/se/experience-manager/6-5/forms/using/adaptive-form-json-schema-form-model.html).
 
 ## Generera anpassningsbara formulär utan databindning {#generate-adaptive-forms-with-no-data-binding}
 
@@ -245,10 +245,10 @@ Användningsfall: Du genererar ett adaptivt formulär utan databindning med tjä
 
 Innan användningsexemplet körs:
 
-* [Konfigurera MySQL-databasen som datakälla](https://helpx.adobe.com/experience-manager/6-5/forms/using/configure-data-sources.html#configurerelationaldatabase)
-* [Skapa formulärdatamodellen](https://helpx.adobe.com/experience-manager/6-5/forms/using/work-with-form-data-model.html)
+* [Konfigurera MySQL-databasen som datakälla](https://helpx.adobe.com/se/experience-manager/6-5/forms/using/configure-data-sources.html#configurerelationaldatabase)
+* [Skapa formulärdatamodellen](https://helpx.adobe.com/se/experience-manager/6-5/forms/using/work-with-form-data-model.html)
 
-Baserat på användningsfallet skapar du formulärdatamodellen **loanapplication** och binder lästjänstargumentet till ett **[!UICONTROL Literal]**-värde. Det literala värdet för telefonnummer måste vara en av de poster som konfigurerats i schemat **sökande** i MySQL-databasen. Tjänsterna använder värdet som argument för att hämta information från datakällan. Du kan också välja [Användarprofilattribut eller Begär attribut](https://helpx.adobe.com/experience-manager/6-5/forms/using/work-with-form-data-model.html#bindargument) i listrutan **[!UICONTROL Binding To]**
+Baserat på användningsfallet skapar du formulärdatamodellen **loanapplication** och binder lästjänstargumentet till ett **[!UICONTROL Literal]**-värde. Det literala värdet för telefonnummer måste vara en av de poster som konfigurerats i schemat **sökande** i MySQL-databasen. Tjänsterna använder värdet som argument för att hämta information från datakällan. Du kan också välja [Användarprofilattribut eller Begär attribut](https://helpx.adobe.com/se/experience-manager/6-5/forms/using/work-with-form-data-model.html#bindargument) i listrutan **[!UICONTROL Binding To]**
 
 ![Konfigurera formulärdatamodell](assets/configure_model_object.png)
 
@@ -283,7 +283,7 @@ Utför följande steg:
 
 **Användningsfall:** Du genererar ett adaptivt formulär utan databindning med tjänsten Automated forms conversion (AFCS) och konfigurerar MYSQL-databasen som datakälla. Du binder de adaptiva formulärfälten med regelredigeraren till förifyllda fältvärden. Ändra fältvärdena, om det behövs, och skicka data till crx-databasen.
 
-Utför följande steg för att använda [regelredigeraren](https://helpx.adobe.com/experience-manager/6-5/forms/using/rule-editor.html) för att anropa formulärdatamodelltjänsten för att binda fält och förifyllda värden i ett anpassat formulär:
+Utför följande steg för att använda [regelredigeraren](https://helpx.adobe.com/se/experience-manager/6-5/forms/using/rule-editor.html) för att anropa formulärdatamodelltjänsten för att binda fält och förifyllda värden i ett anpassat formulär:
 
 1. Markera **exempelformuläret för låneansökan** i mappen **[!UICONTROL output]** och tryck på **[!UICONTROL Edit]**.
 1. Tryck på konfigurationsikonen på fliken **[!UICONTROL Content]**:

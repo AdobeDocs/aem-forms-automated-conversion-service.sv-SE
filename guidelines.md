@@ -37,7 +37,7 @@ Exceptions to this rule apply to the release notes where known issues can be lis
 
 Any ideas you may have to improve AEM documentation are welcome as contributions. ** They are not intended to be used to answer your questions about how to use AEM, implement your AEM project, or solve technical problems.
 
-[&#128279;](https://experienceleague.adobe.com/?support-solution=Experience+Manager#home) [&#128279;](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community)
+[&#128279;](https://experienceleague.adobe.com/sv?support-solution=Experience+Manager#home) [&#128279;](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community)
 
 **&#x200B;**&#x200B;**
 

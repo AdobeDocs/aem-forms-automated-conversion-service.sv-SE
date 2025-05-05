@@ -13,15 +13,15 @@ ht-degree: 5%
 
 # Konvertera PDF forms till anpassningsbara formulär {#convert-print-forms-to-adaptive-forms}
 
-AEM Forms Automated Forms Conversion Service (AFCS), som drivs av Adobe Sensei, konverterar automatiskt din PDF forms till enhetsvänliga och responsiva adaptiva formulär <!--foundation and [core components](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/introduction)-->. Vare sig du använder icke-interaktiva PDF forms-, Acro Forms- eller XFA-baserade PDF forms kan tjänsten Automated Forms Conversion (AFCS) enkelt konvertera dessa formulär till anpassningsbara formulär. Mer information om funktioner, konverteringsarbetsflöde och introduktionsinformation finns i tjänsten [Automatiserad formulärkonvertering](introduction.md).
+AEM Forms Automated Forms Conversion Service (AFCS), som drivs av Adobe Sensei, konverterar automatiskt din PDF forms till enhetsvänliga och responsiva adaptiva formulär <!--foundation and [core components](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/introduction)-->. Vare sig du använder icke-interaktiva PDF forms-, Acro Forms- eller XFA-baserade PDF forms kan tjänsten Automated Forms Conversion (AFCS) enkelt konvertera dessa formulär till anpassningsbara formulär. Mer information om funktioner, konverteringsarbetsflöde och introduktionsinformation finns i tjänsten [Automatiserad formulärkonvertering](introduction.md).
 
 ## Krav {#pre-requisites}
 
 * [**Konfigurera konverteringstjänsten**](configure-service.md)
 
-* **Förbered [mallarna](https://helpx.adobe.com/experience-manager/6-5/forms/using/template-editor.html) som ska användas i konverterade formulär:** Med en mall kan du använda konsekvent profilering i alla anpassade formulär. Tjänsten Automated Forms Conversion (AFCS) extraherar och använder inte heller sidhuvud och sidfot i PDF-källdokument. Du kan använda adaptiva formulärmallar för att ange sidhuvud och sidfot. Sidhuvud och sidfot som anges i mallen används i det adaptiva formuläret under konverteringen. När du skapar en mapp för mallarna väljer du alternativet **[!UICONTROL Browse configurations]** för alla.
+* **Förbered [mallarna](https://helpx.adobe.com/se/experience-manager/6-5/forms/using/template-editor.html) som ska användas i konverterade formulär:** Med en mall kan du använda konsekvent profilering i alla anpassade formulär. Tjänsten Automated Forms Conversion (AFCS) extraherar och använder inte heller sidhuvud och sidfot i PDF-källdokument. Du kan använda adaptiva formulärmallar för att ange sidhuvud och sidfot. Sidhuvud och sidfot som anges i mallen används i det adaptiva formuläret under konverteringen. När du skapar en mapp för mallarna väljer du alternativet **[!UICONTROL Browse configurations]** för alla.
 
-* **Förbered de [teman](https://helpx.adobe.com/experience-manager/6-5/forms/using/themes.html) som ska användas på konverterade formulär:** Med ett tema kan du använda en konsekvent stil på alla anpassade former i organisationen.
+* **Förbered de [teman](https://helpx.adobe.com/se/experience-manager/6-5/forms/using/themes.html) som ska användas på konverterade formulär:** Med ett tema kan du använda en konsekvent stil på alla anpassade former i organisationen.
 
 * **(valfritt)** [**Konvertera PDF forms-källfilen till Adobe Sign-formulär**](frequently-asked-questions.md)
 
@@ -42,7 +42,7 @@ Konverteringstjänsten konverterar PDF forms som finns i din AEM Forms-instans t
 * Behåll antalet sidor i ett formulär under 15.
 * Överför inte skyddade formulär. Tjänsten konverterar inte lösenordsskyddade och skyddade formulär.
 * Ladda inte upp källformulär med blanksteg i filnamnet. Ta bort utrymmet från filens namn innan du överför formulären.
-* Ladda inte upp [PDF-portfolios](https://helpx.adobe.com/acrobat/using/overview-pdf-portfolios.html). Tjänsten konverterar inte en PDF Portfolio till ett anpassningsbart formulär.
+* Ladda inte upp [PDF-portfolios](https://helpx.adobe.com/se/acrobat/using/overview-pdf-portfolios.html). Tjänsten konverterar inte en PDF Portfolio till ett anpassningsbart formulär.
 * Läs avsnitten [Kända fel](known-issues.md) och [God praxis och överväganden](styles-and-pattern-considerations-and-best-practices.md) och gör föreslagna formulärändringar.
 
 Utför följande steg för att överföra formulären som ska konverteras till en mapp på din AEM Forms-instans:
@@ -68,8 +68,8 @@ När du har överfört formulären och konfigurerat tjänsten utför du följand
 
    Ovanstående konverteringsinställning krävs för att konvertera PDF forms till grundläggande formulär. Så här konverterar du ett PDF-formulär till en Core Components-baserad adaptiv form:
 
-   1. Kontrollera att du har aktiverat [kärnkomponenter](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/introduction) på din AEM Forms-instans. Om det inte är aktiverat kan du [aktivera kärnkomponenter i din AEM 6.5](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components) - eller [Cloud Service-miljö](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/setup-configure-migrate/enable-adaptive-forms-core-components).
-   1. Välj en [huvudkomponentbaserad adaptiv formulärmall och ett tema](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/sample-themes-templates-form-data-models-core-components) enligt bilden nedan:
+   1. Kontrollera att du har aktiverat [kärnkomponenter](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/introduction) på din AEM Forms-instans. Om det inte är aktiverat kan du [aktivera kärnkomponenter i din AEM 6.5](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components) - eller [Cloud Service-miljö](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/forms/setup-configure-migrate/enable-adaptive-forms-core-components).
+   1. Välj en [huvudkomponentbaserad adaptiv formulärmall och ett tema](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/sample-themes-templates-form-data-models-core-components) enligt bilden nedan:
 
       ![Välj adaptiv formulärmall](assets/select-af-template-1.png).
    1. Tryck på **[!UICONTROL Start Conversion]** för att konvertera PDF till ett kärnkomponentbaserat formulär.
@@ -85,7 +85,7 @@ När du har överfört formulären och konfigurerat tjänsten utför du följand
    * Ange en plats där du vill spara genererade adaptiva formulär och motsvarande schema. Du kan använda standardsökvägar eller ange anpassade sökvägar.
    * Använd alternativet **Generera adaptiva formulär utan bindningar till datamodell** för att välja om du vill generera ett adaptivt formulär med eller utan bindningar till datamodellen.
 Om du inte väljer det här alternativet associerar konverteringstjänsten automatiskt de adaptiva formulären med ett JSON-schema och skapar en databindning mellan fälten som är tillgängliga i det adaptiva formuläret och JSON-schemat. Fältet **[!UICONTROL Save generated data model schema at]** visar standardplatsen för att spara det genererade JSON-schemat. Du kan också anpassa platsen för att spara det genererade schemat.
-Om du väljer det här alternativet genererar konverteringstjänsten ett adaptivt formulär utan bindningar till datamodellen. När konverteringen är klar kan du koppla ett adaptivt formulär till en formulärdatamodell, ett XML-schema eller ett JSON-schema. Mer information finns i [Skapa ett anpassat formulär](https://helpx.adobe.com/experience-manager/6-5/forms/using/creating-adaptive-form.html).
+Om du väljer det här alternativet genererar konverteringstjänsten ett adaptivt formulär utan bindningar till datamodellen. När konverteringen är klar kan du koppla ett adaptivt formulär till en formulärdatamodell, ett XML-schema eller ett JSON-schema. Mer information finns i [Skapa ett anpassat formulär](https://helpx.adobe.com/se/experience-manager/6-5/forms/using/creating-adaptive-form.html).
 
    <!--
 
@@ -124,7 +124,7 @@ Om du väljer det här alternativet genererar konverteringstjänsten ett adaptiv
   >
   > * strukturera om formuläret för att skapa en förenklad hierarki
   > * [öka värdet för parametern sling.max.call]till ett tillräckligt högt tal tills undantaget försvinner.
-  > * [öka storleken på cachen](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/configure-aem-forms/configure-adaptive-forms-cache.html). Felet inträffar om formuläret är för komplext, har ett stort antal tabeller och hierarkisk struktur på flera nivåer.
+  > * [öka storleken på cachen](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/configure-aem-forms/configure-adaptive-forms-cache.html?lang=sv-SE). Felet inträffar om formuläret är för komplext, har ett stort antal tabeller och hierarkisk struktur på flera nivåer.
 
 1. Tryck på **[!UICONTROL Start Conversion]**. Konverteringen har startats. Konverteringsförloppet visas i mappen eller formuläret tills konverteringen pågår. Meddelandet ersätts av ett annat statusmeddelande (Konverterad, Delvis konverterad eller Konvertering misslyckades) när konverteringen är klar. När konverteringen är klar skickas även ett e-postmeddelande med status på den konfigurerade e-postadressen:
 

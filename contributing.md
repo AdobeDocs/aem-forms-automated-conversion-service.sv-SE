@@ -58,4 +58,4 @@ Vi är naturligtvis glada över eventuella bidrag och kommer att granska ditt bi
 
 ## Ytterligare information
 
-Se [Adobe Docs Contributor Guide](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html) om du vill ha mer information om hur du använder utvecklingsplattformen GitHub.
+Se [Adobe Docs Contributor Guide](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=sv-SE) om du vill ha mer information om hur du använder utvecklingsplattformen GitHub.

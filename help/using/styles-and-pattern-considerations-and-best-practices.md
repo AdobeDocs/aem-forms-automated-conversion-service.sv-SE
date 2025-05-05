@@ -32,7 +32,7 @@ Du kan överföra alla PDF forms samtidigt eller i faser efter behov. Tänk på 
 * Behåll antalet sidor i ett formulär under 15.
 * Ordna källdokumenten i en grupp om 8-15 dokument. Behåll källformulären med vanliga adaptiva formulärfragment i en enda batch.
 * Överför inte skyddade formulär. Tjänsten konverterar inte lösenordsskyddade och skyddade formulär.
-* Överför inte [PDF Portfolio](https://helpx.adobe.com/acrobat/using/overview-pdf-portfolios.html). Tjänsten konverterar inte PDF Portfolio till en anpassningsbar form.
+* Överför inte [PDF Portfolio](https://helpx.adobe.com/se/acrobat/using/overview-pdf-portfolios.html). Tjänsten konverterar inte PDF Portfolio till en anpassningsbar form.
 * Ladda inte upp källformulär med blanksteg i filnamnet. Ta bort utrymmet från filens namn innan du överför formulären.
 * Skicka inte skannade, ifyllda och formulär på andra språk än engelska, franska, tyska, spanska, italienska och portugisiska. Sådana formulär stöds inte.
 
@@ -40,7 +40,7 @@ När du använder ett XDP-formulär för konvertering utför du följande steg i
 
 * Analysera XDP-formuläret och åtgärda visuella problem. Kontrollera att källdokumentet använder avsedda kontroller och strukturer. Källformuläret kan t.ex. ha kryssrutor i stället för alternativknappar för en enskild markering. Ändra kryssrutorna till alternativknappar för att skapa ett anpassat formulär med avsedda komponenter.
 * [Lägg till bindningar i XDP-formuläret](http://www.adobe.com/go/learn_aemforms_designer_65) innan konverteringen startas. När bindningar är tillgängliga i XDP-källformuläret lägger tjänsten automatiskt till bindningar till motsvarande adaptiva formulärfält under konverteringen. Den sparar tid som krävs för att manuellt tillämpa bindningarna.
-* [Lägg till Adobe Sign-taggar](https://helpx.adobe.com/sign/using/text-tag.html) i XDP-filen. Tjänsten konverterar automatiskt Adobe Sign-taggar till motsvarande anpassningsbara formulärfält. Adaptiv Forms har stöd för ett begränsat antal Adobe Sign-fält. En fullständig lista över fält som stöds finns i [Använda Adobe Sign i ett adaptivt formulär](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/working-with-adobe-sign.html?lang=en) -dokumentation.
+* [Lägg till Adobe Sign-taggar](https://helpx.adobe.com/se/sign/using/text-tag.html) i XDP-filen. Tjänsten konverterar automatiskt Adobe Sign-taggar till motsvarande anpassningsbara formulärfält. Adaptiv Forms har stöd för ett begränsat antal Adobe Sign-fält. En fullständig lista över fält som stöds finns i [Använda Adobe Sign i ett adaptivt formulär](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/working-with-adobe-sign.html?lang=sv-SE) -dokumentation.
 * Konvertera om möjligt komplexa tabeller i XDP-dokument till enkla tabeller. En tabell med formulärfält i tabellceller, celler med olika storlek, celler med rad- eller kolumnutvidgning, sammanfogade celler, partiella kanter eller utan synliga kantlinjer anses vara en komplex tabell. En tabell med någon av de ovannämnda posterna anses vara en komplex tabell.
 <!-- * Use sub-forms in XDP documents to create panels in adaptive forms. Service converts each sub-form to one or more adaptive form panels during conversion. -->
 
@@ -61,7 +61,7 @@ AEM [!DNL Forms Automated Conversion service] använder artificiell intelligens 
 
 [!DNL Automated Forms Conversion service] är utbildad i en stor uppsättning formulär. Den identifierar enkelt fält i ett källformulär och skapar anpassningsbara formulär. Det finns dock vissa fält och format i PDF forms som är lätta att se för det mänskliga ögat men svåra att förstå för tjänsten. Tjänsten kan tilldela vissa fält eller format andra typer av fält eller paneler än de som är tillämpliga. Alla sådana fält- och formatmönster listas nedan.
 
-Tjänsten börjar identifiera och tilldela rätt fält eller paneler till dessa mönster när den lär sig av källdata. Du kan använda redigeraren [Granska och korrigera](review-correct-ui-edited.md) för att korrigera sådana problem. Innan du börjar åtgärda problemen eller läser mer bör du bekanta dig med [adaptiva formulärkomponenter](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html).
+Tjänsten börjar identifiera och tilldela rätt fält eller paneler till dessa mönster när den lär sig av källdata. Du kan använda redigeraren [Granska och korrigera](review-correct-ui-edited.md) för att korrigera sådana problem. Innan du börjar åtgärda problemen eller läser mer bör du bekanta dig med [adaptiva formulärkomponenter](https://helpx.adobe.com/se/experience-manager/6-5/forms/using/introduction-forms-authoring.html).
 
 ### Allmänna mönster {#general}
 

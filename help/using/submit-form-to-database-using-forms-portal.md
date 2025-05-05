@@ -29,7 +29,7 @@ Exemplet, som behandlas i den här artikeln, är en referensimplementering av an
 ## Krav {#pre-requisites}
 
 * Konfigurera en AEM 6.4- eller 6.5-författarinstans
-* Installera [senaste Service Pack](https://helpx.adobe.com/experience-manager/aem-releases-updates.html) för din AEM
+* Installera [senaste Service Pack](https://helpx.adobe.com/se/experience-manager/aem-releases-updates.html) för din AEM
 * Senaste versionen av AEM Forms-tilläggspaketet
 * Konfigurera tjänsten [Automated forms conversion (AFCS)](configure-service.md)
 * Konfigurera en databas. Databasen som används i exempelimplementeringen är MySQL 5.6.24. Du kan emellertid integrera det konverterade adaptiva formuläret med valfri databas.

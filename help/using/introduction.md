@@ -39,7 +39,7 @@ Tjänsten stöder icke-interaktiva PDF-formulär, formulär som är skapade med 
 
 Tjänsten har även stöd för Adobe Sign-aktiverade PDF forms. Om källformuläret för PDF har Adobe Sign-texttaggar, bevarar tjänsten all Adobe Sign-relaterad information under konverteringen och associerar signerarinformationen som finns i källformuläret för PDF med motsvarande adaptiva formulärfält. Funktionen är bara tillgänglig för AcroForms.
 
-Tjänsten kan konvertera engelska, franska, tyska, spanska, italienska och portugisiska blanketter till anpassningsbara blanketter. Du kan också översätta de genererade anpassade formulären till ett annat språk med hjälp av [AEM översättningsarbetsflöde](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html).
+Tjänsten kan konvertera engelska, franska, tyska, spanska, italienska och portugisiska blanketter till anpassningsbara blanketter. Du kan också översätta de genererade anpassade formulären till ett annat språk med hjälp av [AEM översättningsarbetsflöde](https://helpx.adobe.com/se/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html).
 
 ## Arbetsflöde för konvertering  {#conversion-workflow}
 
@@ -58,7 +58,7 @@ När AEM Forms-miljön har konfigurerats [laddar du upp PDF-formulär](convert-e
 * Ladda inte upp skyddade formulär. Tjänsten konverterar inte lösenordsskyddade och krypterade formulär.
 * Överför inte skannade, färgade, ifyllda formulär och formulär på andra språk än engelska, franska, tyska, spanska, italienska och portugisiska. Sådana formulär stöds inte.
 * Ladda inte upp PDF-formulär med mellanslag i filnamnet.
-* Ladda inte upp [PDF-portfolios](https://helpx.adobe.com/acrobat/using/overview-pdf-portfolios.html). Tjänsten konverterar inte PDF Portfolio till en anpassningsbar form.
+* Ladda inte upp [PDF-portfolios](https://helpx.adobe.com/se/acrobat/using/overview-pdf-portfolios.html). Tjänsten konverterar inte PDF Portfolio till en anpassningsbar form.
 * Gör de föreslagna ändringarna i PDF-formulären som beskrivs i artikeln [Rekommenderad praxis och saker att tänka på](styles-and-pattern-considerations-and-best-practices.md).
 * Läs artikeln [Kända fel](known-issues.md) för att undvika fallgropar.
 

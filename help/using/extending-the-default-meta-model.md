@@ -201,7 +201,7 @@ Du kan använda egenskapen **aem:afProperties** i metamodellen för att definier
   </tr>
   <td><p>jcr:title</p></td> 
    <td> 
-    <p>Egenskapen jcr:title, med JSON-schemaegenskapen title, gör att du kan ändra etiketten för ett adaptivt formulärfält efter konverteringen.<br>Mer information finns i <strong>Ändra etiketten för ett formulärfält</strong> i <a href="#custommetamodelexamples">Exempel på anpassade metamodeller.</a><br>Se <a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/adaptive-form-json-schema-form-model.html" target="_blank">Skapa adaptiva formulär med JSON-schema</a> för mer information om fler egenskaper som du kan tillämpa på adaptiva formulärfält med JSON-schema.</p>
+    <p>Egenskapen jcr:title, med JSON-schemaegenskapen title, gör att du kan ändra etiketten för ett adaptivt formulärfält efter konverteringen.<br>Mer information finns i <strong>Ändra etiketten för ett formulärfält</strong> i <a href="#custommetamodelexamples">Exempel på anpassade metamodeller.</a><br>Se <a href="https://helpx.adobe.com/se/experience-manager/6-5/forms/using/adaptive-form-json-schema-form-model.html" target="_blank">Skapa adaptiva formulär med JSON-schema</a> för mer information om fler egenskaper som du kan tillämpa på adaptiva formulärfält med JSON-schema.</p>
     <p></p></td> 
   </tr>
   <td><p>sling:resourceType och guideNodeClass</p></td> 

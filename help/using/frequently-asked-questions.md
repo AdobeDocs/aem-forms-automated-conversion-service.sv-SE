@@ -29,7 +29,7 @@ ht-degree: 2%
    <p>Tjänsten kan konvertera icke-interaktiva PDF forms-, XFA-baserade XDP- och PDF forms samt AcroForms till adaptiva formulär. Tjänsten stöder inte skannade eller ifyllda formulär. Andra begränsningar finns i artikeln <a href="known-issues.md">Kända fel</a>.<br />. </p> 
     <p>Vi lägger regelbundet till stöd för andra källtyper. Håll avsnittet <a href="introduction.md">supportedPDF-formulär</a> på bevakningslistan för att få en regelbunden uppdatering om nya funktioner och funktioner.</p>
 
-   Tjänsten kan endast konvertera engelska, franska, tyska, spanska, italienska och portugisiska till anpassningsbara blanketter. Du kan översätta genererade adaptiva formulär till ett annat språk med hjälp av [AEM översättningsarbetsflöde.](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)</br> </br>
+   Tjänsten kan endast konvertera engelska, franska, tyska, spanska, italienska och portugisiska till anpassningsbara blanketter. Du kan översätta genererade adaptiva formulär till ett annat språk med hjälp av [AEM översättningsarbetsflöde.](https://helpx.adobe.com/se/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)</br> </br>
 
 1. **Kan tjänsten producera en XDP i stället för ett adaptivt formulär?**
    <p>Tjänsten producerar inte XDP-utdata. Vi lägger regelbundet till funktioner och tjänster. Håll avsnittet <a href="introduction.md">Språk som stöds och PDF forms</a> på bevakningslistan för att få en regelbunden uppdatering av nya funktioner och funktioner.</p> <br>
@@ -43,8 +43,8 @@ ht-degree: 2%
 1. **Kan tjänsten konvertera ett Microsoft Word-formulär till anpassningsbara formulär?**
    <p>Nej, tjänsten konverterar inte ett Microsoft Word-formulär till ett anpassat formulär. Du kan spara ett Microsoft Word-formulär i PDF och konvertera PDF-formuläret till ett anpassat formulär. Hela processen är </p> <br>
 
-   1. Använd Adobe Acrobat för att [konvertera Word-dokument till ett icke-interaktivt PDF](https://helpx.adobe.com/acrobat/how-to/create-pdf-files-word-excel-website.html).
-   1. Använd Adobe Acrobat för att [konvertera det producerade PDF forms till ifyllbart PDF-formulär](https://helpx.adobe.com/acrobat/how-to/convert-word-excel-paper-pdf-forms.html).
+   1. Använd Adobe Acrobat för att [konvertera Word-dokument till ett icke-interaktivt PDF](https://helpx.adobe.com/se/acrobat/how-to/create-pdf-files-word-excel-website.html).
+   1. Använd Adobe Acrobat för att [konvertera det producerade PDF forms till ifyllbart PDF-formulär](https://helpx.adobe.com/se/acrobat/how-to/convert-word-excel-paper-pdf-forms.html).
    1. Använd Adobe Acrobat för att uppdatera och korrigera formulärfält manuellt.
    1. Spara formuläret PDF. Nu kan du använda formuläret med konverteringstjänsten för att generera ett anpassat formulär. Du kan också använda formuläret som en dokumentmall.
 
@@ -77,10 +77,10 @@ De vanligaste orsakerna till att konverteringen misslyckas är:</p>
     <p> </p> <br>
 
 1. **Identifierar och använder tjänsten teckensnitt från PDF i källformulär för anpassningsbara utdata?**
-   <p>Format och layout för ett responsivt HTML-formulär skiljer sig i allmänhet från PDF eller pappersbaserade formulär. För att ge stöd för enhetlig layout och formatering i hela organisationen används <a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/themes.html">teman för att formatera ett formulär</a>. I konverteringstjänsten används de teckensnitt och teckensnittsformat som anges i det tema som används under konverteringen. Du kan ändra teckensnitt och teckensnittsformat för temat för att ge komponenterna i ett anpassat formulär ett distinkt utseende.</p> <br>
+   <p>Format och layout för ett responsivt HTML-formulär skiljer sig i allmänhet från PDF eller pappersbaserade formulär. För att ge stöd för enhetlig layout och formatering i hela organisationen används <a href="https://helpx.adobe.com/se/experience-manager/6-5/forms/using/themes.html">teman för att formatera ett formulär</a>. I konverteringstjänsten används de teckensnitt och teckensnittsformat som anges i det tema som används under konverteringen. Du kan ändra teckensnitt och teckensnittsformat för temat för att ge komponenterna i ett anpassat formulär ett distinkt utseende.</p> <br>
 
 1. **Extraherar tjänsten automatiskt JavaScript från XDP-baserade formulär och använder den på motsvarande adaptiva formulär?**
-   <p>Tjänsten konverterar inte automatiskt skript av XFA-baserade formulär eller Acro Forms till motsvarande anpassningsbara formulärregler. Du (formulärförfattare) kan använda <a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/rule-editor.html">regelredigeraren</a> för att lägga till interaktivitet i ett anpassat formulär.</p> <br>
+   <p>Tjänsten konverterar inte automatiskt skript av XFA-baserade formulär eller Acro Forms till motsvarande anpassningsbara formulärregler. Du (formulärförfattare) kan använda <a href="https://helpx.adobe.com/se/experience-manager/6-5/forms/using/rule-editor.html">regelredigeraren</a> för att lägga till interaktivitet i ett anpassat formulär.</p> <br>
 
 1. **Vissa formulärobjekt konverteras inte korrekt till adaptiva formulärkomponenter. Hur löser jag problemet?**
    <p>Automated forms conversion-tjänsten (AFCS) har utbildats på ett stort antal formulär. Men AI/ML-baserade program begränsas av utbildningsdata och -mönster. Det kan finnas flera fälttyper, layouter, mönster och sammanhang som är märkbara för människans uppfattning, men som är svåra att hantera automatiskt. Tjänsten kanske inte kan identifiera sådana objekt eller kan identifiera dem felaktigt. Du kan använda redigeraren <a href="review-correct-ui-edited.md" target="_blank">Granska och korrigera</a> för att göra nödvändiga ändringar i det välbekanta pappersformuläret baserat på layouten i indataformuläret.</p> <br/>
@@ -121,4 +121,4 @@ Ovannämnda fel inträffar när startdelegering inte har konfigurerats för RSA/
 1. **Hur skapar jag ett Adobe Sign-aktiverat PDF-formulär?**
    </p>Så här skapar du ett Adobe Sign-aktiverat PDF-formulär:</p>
 
-   Lägg till [Adobe Sign-texttaggar](https://helpx.adobe.com/sign/using/text-tag.html) i fältnamn eller använd alternativet [Konvertera till Adobe Sign-formulär](https://helpx.adobe.com/sign/using/create-forms-with-acrobat.html) .
+   Lägg till [Adobe Sign-texttaggar](https://helpx.adobe.com/se/sign/using/text-tag.html) i fältnamn eller använd alternativet [Konvertera till Adobe Sign-formulär](https://helpx.adobe.com/se/sign/using/create-forms-with-acrobat.html) .
